@@ -1,0 +1,93 @@
+Left,LeftDLC,Right,RightDLC,IsFerry
+Albania,West Balkans,Montenegro,West Balkans,
+Albania,West Balkans,Kosovo,West Balkans,
+Albania,West Balkans,North Macedonia,West Balkans,
+Albania,West Balkans,Greece,Greece,
+Albania,West Balkans,Italy,Italia,true
+Austria,,Germany,,
+Austria,,Czech Republic,,
+Austria,,Slovakia,,
+Austria,,Hungary,Going East!,
+Austria,,Slovenia,West Balkans,
+Austria,,Italy,,
+Austria,,Switzerland,,
+Belgium,,Netherlands,,
+Belgium,,Germany,,
+Belgium,,Luxembourg,,
+Belgium,,France,,
+Bosnia and Herzegovina,West Balkans,Croatia,West Balkans,
+Bosnia and Herzegovina,West Balkans,Serbia,West Balkans,
+Bosnia and Herzegovina,West Balkans,Montenegro,West Balkans,
+Bulgaria,Road to the Black Sea,Romania,Road to the Black Sea,
+Bulgaria,Road to the Black Sea,Serbia,West Balkans,
+Bulgaria,Road to the Black Sea,North Macedonia,West Balkans,
+Bulgaria,Road to the Black Sea,Greece,Greece,
+Bulgaria,Road to the Black Sea,Turkiye,Road to the Black Sea,
+Croatia,West Balkans,Slovenia,West Balkans,
+Croatia,West Balkans,Hungary,Going East!,
+Croatia,West Balkans,Serbia,West Balkans,
+Croatia,West Balkans,Italy,Italia,true
+Czech Republic,,Czech Republic,Going East!,
+Czech Republic,,Germany,,
+Czech Republic,,Poland,,
+Czech Republic,,Slovakia,,
+Denmark,Scandinavia,Germany,,
+Denmark,Scandinavia,Sweden,Scandinavia,
+Denmark,Scandinavia,United Kingdom,,true
+Denmark,Scandinavia,Norway,Scandinavia,true
+Estonia,Beyond the Baltic Sea,Russia,Beyond the Baltic Sea,
+Estonia,Beyond the Baltic Sea,Latvia,Beyond the Baltic Sea,
+Estonia,Beyond the Baltic Sea,Finland,Beyond the Baltic Sea,true
+Estonia,Beyond the Baltic Sea,Sweden,Scandinavia,true
+Finland,Beyond the Baltic Sea,Finland,Nordic Horizons,
+Finland,Beyond the Baltic Sea,Russia,Beyond the Baltic Sea,
+Finland,Beyond the Baltic Sea,Sweden,Scandinavia,true
+Finland,Nordic Horizons,Sweden,Nordic Horizons,
+Finland,Nordic Horizons,Norway,Nordic Horizons,
+Finland,Beyond the Baltic Sea,Germany,,true
+France,,France,Vive la France !,
+France,,Luxembourg,,
+France,,Germany,,
+France,,Switzerland,,
+France,,Italy,,
+France,Vive la France !,Spain,Iberia,
+France,,United Kingdom,,
+Germany,,Poland,,
+Germany,,Austria,,
+Germany,,Switzerland,,
+Germany,,Netherlands,,
+Germany,,Sweden,Scandinavia,true
+Germany,,Latvia,Beyond the Baltic Sea,true
+Greece,Greece,North Macedonia,West Balkans,
+Greece,Greece,Turkiye,Road to the Black Sea,
+Greece,Greece,Italy,Italia,true
+Hungary,Going East!,Slovakia,,
+Hungary,Going East!,Slovenia,West Balkans,
+Hungary,Going East!,Serbia,West Balkans,
+Hungary,Going East!,Romania,Road to the Black Sea,
+Italy,,Italy,Italia,
+Italy,,Switzerland,,
+Italy,,Slovenia,West Balkans,
+Italy,Italia,Spain,Iberia,true
+Kaliningrad,Beyond the Baltic Sea,Lithuania,Beyond the Baltic Sea,
+Kaliningrad,Beyond the Baltic Sea,Poland,Going East!,
+Kosovo,West Balkans,Serbia,West Balkans,
+Kosovo,West Balkans,North Macedonia,West Balkans,
+Kosovo,West Balkans,Montenegro,West Balkans,
+Latvia,Beyond the Baltic Sea,Russia,Beyond the Baltic Sea,
+Latvia,Beyond the Baltic Sea,Lithuania,Beyond the Baltic Sea,
+Latvia,Beyond the Baltic Sea,Sweden,Scandinavia,true
+Lithuania,Beyond the Baltic Sea,Poland,Going East!,
+Montenegro,West Balkans,Serbia,West Balkans,
+Netherlands,,United Kingdom,,true
+North Macedonia,West Balkans,Serbia,West Balkans,
+Norway,Scandinavia,Sweden,Scandinavia,
+Norway,Nordic Horizons,Sweden,Nordic Horizons,
+Poland,,Poland,Going East!,
+Poland,Going East!,Kaliningrad,Beyond the Baltic Sea,
+Poland,Going East!,Lithuania,Beyond the Baltic Sea,
+Poland,Going East!,Slovakia,Going East!,
+Poland,Going East!,Sweden,Scandinavia,true
+Portugal,Iberia,Spain,Iberia,
+Romania,Road to the Black Sea,Serbia,West Balkans,
+Spain,Iberia,United Kingdom,,true
