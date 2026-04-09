@@ -28,7 +28,7 @@ public static class Data
       new Check(
         Name: d["City"]!,
         Region: new(
-          DLCName: d["DLC"] ?? "",
+          DLCName: d["DLC"] ?? "Base Game",
           StateName: d["State"]!
         ),
         FerryRequired: d["FerryRequired"] == "true"
@@ -43,14 +43,14 @@ public static class Data
   public const string CompaniesFN = "companies";
   public static readonly CSVObjectDictionary<string, bool> Companies =
     CSVObjectDictionary.ParseObjectsFromFile(string.Format(CsvPath, CompaniesFN),
-      d => KeyValuePair.Create(d["Company"] ?? "", true));
+      d => KeyValuePair.Create(d["Company"] ?? "Base Game", true));
 
   public const string CompanyLocationsFN = "company-locations";
   public static readonly CSVObjectCollection<Check> CompanyLocations =
     CSVObjectCollection.ParseObjectsFromFile(string.Format(CsvPath, CompanyLocationsFN), d => new Check(
       Name: d["Company"]!,
       Region: new(
-        DLCName: d["DLC"] ?? "",
+        DLCName: d["DLC"] ?? "Base Game",
         StateName: d["State"]!
       ),
       FerryRequired: d["FerryRequired"] == "true"
@@ -68,11 +68,11 @@ public static class Data
   public static readonly CSVObjectCollection<Connection> Connections =
     CSVObjectCollection.ParseObjectsFromFile(string.Format(CsvPath, ConnectionsFN), d => new Connection(
       Region1: new(
-        DLCName: d["LeftDLC"] ?? "",
+        DLCName: d["LeftDLC"] ?? "Base Game",
         StateName: d["Left"]!
       ),
       Region2: new(
-        DLCName: d["RightDLC"] ?? "",
+        DLCName: d["RightDLC"] ?? "Base Game",
         StateName: d["Right"]!
       ),
       FerryRequired: d["IsFerry"] == "true"
@@ -81,14 +81,14 @@ public static class Data
   public const string DLCsFN = "dlcs";
   public static readonly CSVObjectDictionary<string, bool> DLCs =
     CSVObjectDictionary.ParseObjectsFromFile(string.Format(CsvPath, DLCsFN),
-      d => KeyValuePair.Create(d["DLC"] ?? "", true));
+      d => KeyValuePair.Create(d["DLC"] ?? "Base Game", true));
 
   public const string PhotoTrophiesFN = "photo-trophies";
   public static readonly CSVObjectCollection<Check> PhotoTrophies =
     CSVObjectCollection.ParseObjectsFromFile(string.Format(CsvPath, PhotoTrophiesFN), d => new Check(
       Name: d["Trophy"]!,
       Region: new(
-        DLCName: d["DLC"] ?? "",
+        DLCName: d["DLC"] ?? "Base Game",
         StateName: d["State"]!
       ),
       FerryRequired: d["FerryRequired"] == "true"
@@ -98,14 +98,14 @@ public static class Data
   public static readonly CSVObjectCollection<Region> QuickTravel =
     CSVObjectCollection.ParseObjectsFromFile(string.Format(CsvPath, QuickTravelFN), d => new Region(
       StateName: d["State"]!,
-      DLCName: d["DLC"] ?? ""
+      DLCName: d["DLC"] ?? "Base Game"
     ));
 
   public const string RegionsFN = "regions";
   public static readonly CSVObjectCollection<Region> Regions =
     CSVObjectCollection.ParseObjectsFromFile(string.Format(CsvPath, RegionsFN), d => new Region(
       StateName: d["State"]!,
-      DLCName: d["DLC"] ?? ""
+      DLCName: d["DLC"] ?? "Base Game"
     ));
 
   public const string StatesFN = "states";
@@ -117,7 +117,7 @@ public static class Data
     CSVObjectCollection.ParseObjectsFromFile(string.Format(CsvPath, TrucksFN), d => new Truck(
       Make: d["Make"]!,
       Model: d["Model"]!,
-      DLC: d["DLC"] ?? ""
+      DLC: d["DLC"] ?? "Base Game"
     ));
 
   public const string TruckDealersFN = "truck-dealers";
@@ -125,7 +125,7 @@ public static class Data
     CSVObjectCollection.ParseObjectsFromFile(string.Format(CsvPath, TruckDealersFN), d => new Check(
       Name: d["Make"]!,
       Region: new(
-        DLCName: d["DLC"] ?? "",
+        DLCName: d["DLC"] ?? "Base Game",
         StateName: d["State"]!
       ),
       FerryRequired: d["FerryRequired"] == "true"
@@ -148,7 +148,7 @@ public static class Data
     CSVObjectCollection.ParseObjectsFromFile(string.Format(CsvPath, ViewpointsFN), d => new Check(
       Name: d["Viewpoint"]!,
       Region: new(
-        DLCName: d["DLC"] ?? "",
+        DLCName: d["DLC"] ?? "Base Game",
         StateName: d["State"]!
       ),
       FerryRequired: d["FerryRequired"] == "true"
