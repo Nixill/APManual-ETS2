@@ -160,6 +160,22 @@ public static class Data
 }
 #endregion
 
+#region Data Counters
+public static class DataCounters
+{
+  public const int MaxLevel = 36;
+  public readonly static int TotalStates = Data.States.Count;
+  public readonly static int TotalChecks = Data.Cities.Count + Data.Companies.Count + Data.PhotoTrophies.Count +
+    Data.Viewpoints.Count + MaxLevel;
+  public readonly static int MaxChecksByState = Data.States.Keys.Max(s =>
+    Data.Cities.Count(c => c.Value.Region.StateName == s)
+    + Data.CompanyLocations.Where(cl => cl.Region.StateName == s).DistinctBy(cl => cl.Name).Count()
+    + Data.PhotoTrophies.Count(pt => pt.Region.StateName == s)
+    + Data.Viewpoints.Count(vp => vp.Region.StateName == s)
+  );
+}
+#endregion
+
 #region Consistency Class
 // ensure I'm using consistent names by declaring them as consts or methods
 public static class Str
@@ -228,6 +244,11 @@ public static class Str
   public static class Option
   {
     public const string BankLoanItem = "bank_loan_approval_item";
+    public const string ChecksMaxOverallCount = "checks_max_count";
+    public const string ChecksMaxStateCount = "checks_state_count_max";
+    public const string ChecksMaxWithinState = "checks_within_state_max";
+    public const string ChecksPercentStateCount = "checks_state_chance_percent";
+    public const string ChecksPercentWithinState = "checks_chance_percent";
     public const string Citysanity = "enable_citysanity";
     public const string Companysanity = "enable_companysanity";
     public const string Dealersanity = "enable_dealersanity";
@@ -250,6 +271,7 @@ public static class Str
     public const string SkillScatter = "skill_scatter";
     public const string SkillScatterCondensed = "condensed";
     public const string SkillScatterSpread = "spread";
+    public const string TruckContractItems = "truck_contract_items";
     public const string TrailerContractItem = "trailer_contract_item";
     public const string Viewpointsanity = "enable_viewpointsanity";
     public const string ViewpointsanityFindTV = "find_tv";
@@ -258,7 +280,13 @@ public static class Str
 
   public static class OptionGroup
   {
+    public const string CheckReduction = "Check Reduction";
+    public const string CheckToggles = "Check/Sanity Toggles";
+    public const string DLCs = "DLCs";
     public const string DeliveryTokens = "Delivery Tokens";
+    public const string ItemRequirements = "Item Requirements";
+    public const string PlayerLevels = "Player Levels";
+    public const string SecretDeliveries = "Secret Deliveries";
   }
 
   public static class Region
@@ -385,6 +413,48 @@ public static class JsonDefs
   static KeyValuePair<string, JsonNode?> KVPA(string key, JsonArray arr) => new(key, arr);
   static JsonObject Obj(JsonObject obj) => obj;
   static JsonArray Arr(JsonArray arr) => arr;
+
+  static JsonArray Split(string input) => [.. Split1(input)];
+
+  const int YamlWidth = 100;
+
+  static IEnumerable<string> Split1(string input)
+  {
+    string[] lines = [.. input.Split("\n\n").Select(l => l.Replace("\n", " "))];
+    bool isSplit = false;
+
+    foreach (string protoline in lines)
+    {
+      if (isSplit) yield return "";
+      foreach (string line in protoline.Split("\\n"))
+      {
+        foreach (string lineOut in Split2(line))
+        {
+          yield return lineOut;
+        }
+      }
+      isSplit = true;
+    }
+  }
+
+  static IEnumerable<string> Split2(string input)
+  {
+    while (input.Length > YamlWidth)
+    {
+      int index;
+      if ((index = input.LastIndexOf(' ', YamlWidth)) > -1 || (index = input.IndexOf(' ')) > -1)
+      {
+        yield return input[..index];
+        input = input[(index + 1)..];
+      }
+      else
+      {
+        yield return input;
+        input = "";
+      }
+    }
+    yield return input;
+  }
   #endregion
 
   #region ├╴game.json
@@ -801,54 +871,292 @@ public static class JsonDefs
     .. GetSecretDeliveryOptions(),
     .. GetDLCOptions(),
     .. GetChecksOptions(),
+    .. GetLevelsOptions(),
     .. GetItemRequiresOptions(),
     .. GetChecksReductionOptions()
   ];
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetDeliveryTokensOptions() => [
-    KVPO(Str.Option.DeliveryTokensAvailable, [
-      KVP(Str.Syntax.OptionDisplayName, "Available Delivery Tokens"),
-      KVPA(Str.Syntax.OptionDescription, [
-        "Number of Delivery Tokens available in the multiworld item pool.",
-        "",
-        "If the number of items exceeds the number of checks, this value may be reduced to accommodate. If so, the",
-        $"{Str.Option.DeliveryTokensRequired} option will be reduced proportionally."
-      ]),
+  static KeyValuePair<string, JsonNode?> ToggleOption(string name, string displayName, string description,
+    bool defaultValue) => KVPO(name, [
+      KVP(Str.Syntax.OptionDisplayName, displayName),
+      KVPA(Str.Syntax.OptionDescription, Split(description)),
+      KVP(Str.Syntax.OptionType, Str.Syntax.OptionTypeToggle),
+      KVP(Str.Syntax.OptionDefaultValue, defaultValue)
+    ]);
+
+  static KeyValuePair<string, JsonNode?> RangeOption(string name, string displayName, string description,
+    int rangeStart, int rangeEnd, int defaultValue, params (string Name, int Value)[] values) => KVPO(name, Obj([
+      KVP(Str.Syntax.OptionDisplayName, displayName),
+      KVPA(Str.Syntax.OptionDescription, Split(description)),
       KVP(Str.Syntax.OptionType, Str.Syntax.OptionTypeRange),
-      KVP(Str.Syntax.OptionRangeStart, 1),
-      KVP(Str.Syntax.OptionRangeEnd, 100),
-      KVP(Str.Syntax.OptionGroup, Str.OptionGroup.DeliveryTokens)
-    ]),
+      KVP(Str.Syntax.OptionRangeStart, rangeStart),
+      KVP(Str.Syntax.OptionRangeEnd, rangeEnd),
+      KVP(Str.Syntax.OptionDefaultValue, defaultValue)
+    ]).WithIf(values.Length > 0, Str.Syntax.OptionValues, Obj([.. values.Select(t => KVP(t.Name, t.Value))])));
 
-    KVPO(Str.Option.DeliveryTokensRequired, [
-      KVP(Str.Syntax.OptionDisplayName, "Required Delivery Tokens"),
-      KVPA(Str.Syntax.OptionDescription, [
-        $"Number of Delivery Tokens needed to win. This value must not exceed {Str.Option.DeliveryTokensAvailable}, and",
-        "will automatically be reduced to that value if applicable.",
-        "",
-        $"If the number of items exceeds the number of checks, {Str.Option.DeliveryTokensAvailable} may be reduced to",
-        "accommodate. If so, this option will be reduced proportionally."
-      ]),
-      KVP(Str.Syntax.OptionType, Str.Syntax.OptionTypeRange),
-      KVP(Str.Syntax.OptionRangeStart, 1),
-      KVP(Str.Syntax.OptionRangeEnd, 100),
-      KVP(Str.Syntax.OptionGroup, Str.OptionGroup.DeliveryTokens)
-    ])
-  ];
+  static KeyValuePair<string, JsonNode?> ChoiceOption(string name, string displayName, string description,
+    string defaultValue, params (string Name, int Value)[] values) => KVPO(name, [
+      KVP(Str.Syntax.OptionDisplayName, displayName),
+      KVPA(Str.Syntax.OptionDescription, Split(description)),
+      KVP(Str.Syntax.OptionType, Str.Syntax.OptionTypeChoice),
+      KVPO(Str.Syntax.OptionValues, [.. values.Select(t => KVP(t.Name, t.Value))]),
+      KVP(Str.Syntax.OptionDefaultValue, defaultValue)
+    ]);
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetSecretDeliveryOptions() => [
-    KVPO(Str.Option.SecretDeliveriesAvailable, [
-      KVP(Str.Syntax.OptionDisplayName, "Secret Deliveries Available"),
-      KVPA(Str.Syntax.OptionDescription, [
-        "Number of total secret deliveries available.",
-        "",
-        "If the number of items exceeds the number of checks, this option may be reduced to accommodate. If so,",
-        $"{Str.Option.SecretDeliveriesRequired} will be reduced proportionally. {Str.Option.SecretDeliveryInstructionParts}",
-        "will not be reduced."
-      ]),
+  static IEnumerable<KeyValuePair<string, JsonNode?>> OptionGroup(string group,
+    params IEnumerable<KeyValuePair<string, JsonNode?>> options)
+  {
+    foreach ((string _, JsonNode? node) in options)
+    {
+      if (node is JsonObject obj) obj[Str.Syntax.OptionGroup] = group;
+    }
+    return options;
+  }
 
-    ])
-  ]
+  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetDeliveryTokensOptions() => OptionGroup(
+    Str.OptionGroup.DeliveryTokens,
+
+    RangeOption(Str.Option.DeliveryTokensAvailable, "Available Delivery Tokens", $"""
+      Number of Delivery Tokens available in the multiworld item pool.
+
+      If the number of items exceeds the number of locations, this value
+      may be reduced to accommodate. If so, the {Str.Option.DeliveryTokensRequired}
+      option will be reduced proportionally.
+      """, 1, 100, 25),
+
+    RangeOption(Str.Option.DeliveryTokensRequired, "Required Delivery Tokens", $"""
+      Number of Delivery Tokens needed to win. This value must not exceed
+      {Str.Option.DeliveryTokensAvailable}, and this value will
+      automatically be reduced to that value if applicable.
+
+      If the number of items exceeds the number of locations,
+      {Str.Option.DeliveryTokensAvailable} may be reduced to accommodate.
+      If so, this option will be reduced proportionally.
+      """, 1, 100, 25)
+  );
+
+  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetSecretDeliveryOptions() => OptionGroup(
+    Str.OptionGroup.SecretDeliveries,
+
+    RangeOption(Str.Option.SecretDeliveriesAvailable, "Secret Deliveries Available", $"""
+      Number of total Secret Deliveries available.
+
+      If the number of items exceeds the number of locations, this option
+      may be reduced to accommodate. If so, {Str.Option.SecretDeliveriesRequired}
+      will be reduced proportionally. {Str.Option.SecretDeliveryInstructionParts}
+      will not be reduced.
+      """, 1, 20, 10),
+
+    RangeOption(Str.Option.SecretDeliveriesRequired, "Secret Deliveries Required", $"""
+      Number of Secret Deliveries that must be completed to goal. Must not
+      exceed {Str.Option.SecretDeliveriesAvailable}, and this value will
+      automatically be reduced to that value if applicable.
+
+      If the number of items exceeds the number of locations,
+      {Str.Option.SecretDeliveriesAvailable} may be reduced to
+      accommodate. If so, this option will be reduced proportionally.
+      {Str.Option.SecretDeliveryInstructionParts} will not be reduced.
+      """, 1, 20, 10),
+
+    RangeOption(Str.Option.SecretDeliveryInstructionParts, "Secret Delivery Instruction Parts", $"""
+      Number of separate parts to the instructions of each Secret
+      Delivery.
+
+      Not all parts must be found in order to perform a Secret Delivery;
+      once the instructions are decipherable, the delivery may be
+      performed.
+
+      This option will not be affected by location truncation.
+      """, 1, 5, 2)
+  );
+
+  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetDLCOptions() => OptionGroup(
+    Str.OptionGroup.DLCs,
+
+    Data.DLCs.Keys.Select(entry => ToggleOption(Str.Option.DLC(entry), $"Enable {entry} DLC", $"""
+      Whether or not the {entry} DLC, and all the checks within its
+      bounds, should be enabled for this AP.
+      """, false))
+  );
+
+  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetChecksOptions() => OptionGroup(
+    Str.OptionGroup.CheckToggles,
+
+    ToggleOption(Str.Option.Citysanity, "Enable Citysanity", $"""
+      Whether or not cities should be checks. If so, the check is
+      performed by driving into the city; the check may be cleared when
+      the "(City Name) Discovered" popup appears.
+      """, true),
+
+    ToggleOption(Str.Option.Companysanity, "Enable Companysanity", $"""
+      Whether or not companies should be checks. If so, the player may
+      choose one of the following:\n
+      - A check is performed when driving onto any of that company's
+      depots. (The check may be cleared when the map tile turns yellow.)\n
+      - A check is performed when performing a delivery to that company.
+      (The check may be cleared when the results screen appears.)\n
+      - A check is performed when performing a delivery to or for that
+      company. (The checm kay be cleared when the results screen appears.)
+      """, false),
+
+    ChoiceOption(Str.Option.Photosanity, "Enable Photosanity", $"""
+      Whether or not photo trophies should be checks. If so, the check is
+      performed when you take the photo with the name of the monument on
+      the screen.
+
+      The {Str.Item.Camera} item is required before you can take photos,
+      but you can choose to start with it in your inventory.
+      """, Str.Option.Disabled,
+      [(Str.Option.Disabled, 0), (Str.Option.PhotosanityFindCamera, 1), (Str.Option.PhotosanityStartWithCamera, 2)]),
+
+    ChoiceOption(Str.Option.Viewpointsanity, "Enable Viewpointsanity", $"""
+      Whether or not viewpoints should be checks. If so, the check is
+      performed when you finish watching the viewpoint cutscene and
+      control is returned to the player.
+
+      The {Str.Item.Television} item is required before you can watch
+      viewpoints, but you can choose to start with it in your inventory.
+      """, Str.Option.Disabled,
+      [(Str.Option.Disabled, 0), (Str.Option.ViewpointsanityFindTV, 1), (Str.Option.ViewpointsanityStartWithTV, 2)])/* ,
+    
+    ToggleOption(Str.Option.Dealersanity, "Enable Dealersanity", $"""
+      Whether or not truck dealers should be checks. If so, the check is
+      performed when the "(Brand) Truck Dealer Discovered" message appears
+      and the ? icon on the map changes to a truck icon. Entering the
+      truck dealer property is not required.
+      """, false),
+    
+    ToggleOption(Str.Option.Recruitmentsanity, "Enable Recruitsanity", $"""
+      Whether or not recruitment agencies should be checks. If so, the
+      check is performed when the "You have discovered a recruitment
+      agency" message appears and the ? icon on the map changes to a
+      magnifying glass icon. Entering the recruitment agency property is
+      not required.
+      """, false) */
+  );
+
+  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetLevelsOptions() => OptionGroup(
+    Str.OptionGroup.PlayerLevels,
+
+    RangeOption(Str.Option.LevelChecks, "Player Level Checks", $"""
+      How many player levels should be checks? All levels from 1 to the
+      specified number will be included. The check is performed when the
+      level shown on the left side of the bar is at least the level being
+      checked.
+
+      If this is set to 0, no level checks apply.
+
+      If the goal is set to {Str.Victory.PlayerLevelReached}, this option
+      must have a value of at least 1.
+      """, 0, DataCounters.MaxLevel, 0),
+
+    ChoiceOption(Str.Option.SkillScatter, "Skill Scattering Method", $"""
+      How should player skills be handled?
+
+      {Str.Option.Disabled}: Do not scatter skill options. When you level
+      up, you have free rein to choose where you put your skill points.
+
+      {Str.Option.SkillScatterSpread}: Scatter skill options throughout
+      the multiworld item pool. You may not use skill points upon leveling
+      up unless you have the relevant skill option item.
+
+      {Str.Option.SkillScatterCondensed}: Randomize skill options within
+      level-up checks. For each level-up check, a random skill item will
+      be granted, which must be applied immediately. Once you exceed the
+      last level-up check, you have free choice on how to spend your
+      remaining skill points. If {Str.Option.LevelChecks} is 0, this has
+      no effect.
+      """, Str.Option.Disabled,
+      [(Str.Option.Disabled, 0), (Str.Option.SkillScatterSpread, 1), (Str.Option.SkillScatterCondensed, 2)])
+  );
+
+  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetItemRequiresOptions() => OptionGroup(
+    Str.OptionGroup.ItemRequirements,
+
+    ChoiceOption(Str.Option.BankLoanItem, "Bank Loan Approval", $"""
+      A {Str.Item.BankLoan} is required before you can take any loans
+      from the bank. Should it be part of the multiworld item pool,
+      requiring you to find it, or should it be part of your starting
+      inventory and always be available?
+      """, Str.Option.ItemInStartingInventory,
+      [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)]),
+
+    ChoiceOption(Str.Option.TruckContractItems, "Truck Contracts", $"""
+      Truck Contracts are required before you can buy any trucks from
+      truck dealers. Should they be part of the multiworld item pool,
+      requiring you to find them, or should they be part of your starting
+      inventory and always be available?
+      """, Str.Option.ItemInStartingInventory,
+      [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)]),
+
+    ChoiceOption(Str.Option.TrailerContractItem, "Trailer Contract", $"""
+      A {Str.Item.TrailerContract} is required before you can purchase any
+      trailers. Should it be part of the multiworld item pool, requiring
+      you to find it, or should it be part of your starting inventory and
+      always be avaialble?
+      """, Str.Option.ItemInStartingInventory,
+      [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)]),
+
+    ChoiceOption(Str.Option.QuickTravelTicketItem, "Quick Travel Ticket", $"""
+      A {Str.Item.QuickTravelTicket} is required before you can quick
+      travel to an undiscovered city (whether through its DLC opening or
+      through Convoy). Should it be part of the multiworld item pool,
+      requiring you to find it, or should it be part of your starting
+      inventory and always be available? 
+      
+      It can be disabled outright, such that quick traveling is never in
+      logic, so long as all the enabled DLCs are connected to each other
+      (otherwise, this will be set to {Str.Option.ItemInStartingInventory}).
+      """, Str.Option.ItemInStartingInventory,
+      [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)])
+  );
+
+  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetChecksReductionOptions() => OptionGroup(
+    Str.OptionGroup.CheckReduction,
+    RangeOption(Str.Option.ChecksPercentStateCount, "% of States containing Checks", $"""
+      What percent of states (or countries) should contain locations? Note
+      that other states will still have Keys, and you must obtain those
+      Keys before driving in those states.
+
+      The options in this category are applied in the following order:
+      {Str.Option.ChecksPercentStateCount}, {Str.Option.ChecksMaxStateCount},
+      {Str.Option.ChecksPercentWithinState}, {Str.Option.ChecksMaxWithinState},
+      {Str.Option.ChecksMaxOverallCount}.
+      """, 1, 100, 100),
+
+    RangeOption(Str.Option.ChecksMaxStateCount, "# of States Containing Checks", $"""
+      How many states (or countries) should contain locations? Note that
+      other accessible states will still have Keys , and you must obtain
+      those Keys before driving in those states.
+
+      Setting this higher than the number of states that exists has no
+      effect besides future-proofing your yaml. The default value is the
+      number of states that exist so far.
+      """, 1, 100, DataCounters.TotalStates),
+
+    RangeOption(Str.Option.ChecksPercentWithinState, "% Chance of Each Check", $"""
+      What should the chance be of each location appearing in the AP?
+      """, 1, 100, 100),
+
+    RangeOption(Str.Option.ChecksMaxWithinState, "# of Checks Per State", $"""
+      What is the maximum number of checks that should appear in each
+      state? Companies are considered stateless and are not affected by
+      this option.
+
+      Setting this higher than the number of checks per state that exists
+      has no effect besides future-proofing your yaml. The default value
+      is the highest max number per state.
+      """, 1, 1000, DataCounters.MaxChecksByState),
+
+    RangeOption(Str.Option.ChecksMaxOverallCount, "# of Checks", $"""
+      What is the maximum number of checks that should be present in the
+      multiworld?
+
+      Setting this higher than the number of checks that exists has no
+      effect besides future-proofing your yaml. The default value is the
+      highest existing number so far.
+      """, 1, 10000, DataCounters.TotalChecks)
+  );
   #endregion
 }
 #endregion
