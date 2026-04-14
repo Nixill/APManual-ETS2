@@ -1,0 +1,146 @@
+{
+  "Albania (Country)": {},
+  "Austria (Country)": {},
+  "Belgium (Country)": {},
+  "Bosnia and Herzegovina (Country)": {},
+  "Bulgaria (Country)": {},
+  "Croatia (Country)": {},
+  "Czech Republic (Country)": {},
+  "Denmark (Country)": {},
+  "Estonia (Country)": {},
+  "Finland (Country)": {},
+  "France (Country)": {},
+  "Germany (Country)": {},
+  "Greece (Country)": {},
+  "Hungary (Country)": {},
+  "Italy (Country)": {},
+  "Kaliningrad (Country)": {},
+  "Kosovo (Country)": {},
+  "Latvia (Country)": {},
+  "Lithuania (Country)": {},
+  "Luxembourg (Country)": {},
+  "Montenegro (Country)": {},
+  "Netherlands (Country)": {},
+  "North Macedonia (Country)": {},
+  "Norway (Country)": {},
+  "Poland (Country)": {},
+  "Portugal (Country)": {},
+  "Romania (Country)": {},
+  "Russia (Country)": {},
+  "Serbia (Country)": {},
+  "Slovakia (Country)": {},
+  "Slovenia (Country)": {},
+  "Spain (Country)": {},
+  "Sweden (Country)": {},
+  "Switzerland (Country)": {},
+  "Turkiye (Country)": {},
+  "United Kingdom (Country)": {},
+  "Going East! (DLC)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dlc_going_east"
+    ]
+  },
+  "Scandinavia (DLC)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dlc_scandinavia"
+    ]
+  },
+  "Vive la France ! (DLC)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dlc_vive_la_france"
+    ]
+  },
+  "Italia (DLC)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dlc_italia"
+    ]
+  },
+  "Beyond the Baltic Sea (DLC)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dlc_beyond_the_baltic_sea"
+    ]
+  },
+  "Road to the Black Sea (DLC)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dlc_road_to_the_black_sea"
+    ]
+  },
+  "Iberia (DLC)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dlc_iberia"
+    ]
+  },
+  "West Balkans (DLC)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dlc_west_balkans"
+    ]
+  },
+  "Greece (DLC)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dlc_greece"
+    ]
+  },
+  "Nordic Horizons (DLC)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dlc_nordic_horizons"
+    ]
+  },
+  "Krone Trailer Pack (DLC)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dlc_krone_trailer_pack"
+    ]
+  },
+  "Feldbinder Trailer Pack (DLC)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dlc_feldbinder_trailer_pack"
+    ]
+  },
+  "City": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_citysanity"
+    ]
+  },
+  "Viewpoint": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_viewpointsanity"
+    ]
+  },
+  "Photo Trophy": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_photosanity"
+    ]
+  },
+  "Company": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_companysanity"
+    ]
+  },
+  "Recruitment Agency Branch": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_recruitmentsanity"
+    ]
+  },
+  "Truck Dealer": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_dealersanity"
+    ]
+  }
+}

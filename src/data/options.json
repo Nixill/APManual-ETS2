@@ -1,0 +1,458 @@
+{
+  "core": {
+    "death_link": {
+      "description": [
+        "Enable or disable death link support. If enabled:",
+        "",
+        "Upon receiving a death, the player must get towed or navigate to the nearest service station.",
+        "",
+        "Upon being towed to a service station or completing a delivery with over 5% cargo damage, the player",
+        "must send a death."
+      ]
+    },
+    "goal": {
+      "description": [
+        "Goal condition:",
+        "",
+        "All Delivery Tokens Collected: Collect a certain number of Delivery Tokens (see the \"Delivery",
+        "Tokens\" group of the options), then activate the win button to win.",
+        "",
+        "All Secret Deliveries Completed: Collect instructions for secret deliveries (see the \"Secret",
+        "Deliveries\" group of the options, and the patch file from the multiworld host), then follow those",
+        "instructions to win.",
+        "",
+        "Max Player Level Check Reached: Reach a certain level in career progression (see the",
+        "\"player_level_checks\" option), then activate the win button to win."
+      ]
+    }
+  },
+  "user": {
+    "delivery_tokens_available": {
+      "display_name": "Available Delivery Tokens",
+      "description": [
+        "Number of Delivery Tokens available in the multiworld item pool.",
+        "",
+        "If the number of items exceeds the number of locations, this value may be reduced to accommodate. If",
+        "so, the delivery_tokens_required option will be reduced proportionally."
+      ],
+      "type": "range",
+      "range_start": 1,
+      "range_end": 100,
+      "default": 25,
+      "group": "Delivery Tokens"
+    },
+    "delivery_tokens_required": {
+      "display_name": "Required Delivery Tokens",
+      "description": [
+        "Number of Delivery Tokens needed to win. This value must not exceed delivery_tokens_available, and",
+        "this value will automatically be reduced to that value if applicable.",
+        "",
+        "If the number of items exceeds the number of locations, delivery_tokens_available may be reduced to",
+        "accommodate. If so, this option will be reduced proportionally."
+      ],
+      "type": "range",
+      "range_start": 1,
+      "range_end": 100,
+      "default": 25,
+      "group": "Delivery Tokens"
+    },
+    "secret_deliveries_available": {
+      "display_name": "Secret Deliveries Available",
+      "description": [
+        "Number of total Secret Deliveries available.",
+        "",
+        "If the number of items exceeds the number of locations, this option may be reduced to accommodate.",
+        "If so, secret_deliveries_required will be reduced proportionally. secret_delivery_instruction_parts",
+        "will not be reduced."
+      ],
+      "type": "range",
+      "range_start": 1,
+      "range_end": 20,
+      "default": 10,
+      "group": "Secret Deliveries"
+    },
+    "secret_deliveries_required": {
+      "display_name": "Secret Deliveries Required",
+      "description": [
+        "Number of Secret Deliveries that must be completed to goal. Must not exceed",
+        "secret_deliveries_available, and this value will automatically be reduced to that value if",
+        "applicable.",
+        "",
+        "If the number of items exceeds the number of locations, secret_deliveries_available may be reduced",
+        "to accommodate. If so, this option will be reduced proportionally. secret_delivery_instruction_parts",
+        "will not be reduced."
+      ],
+      "type": "range",
+      "range_start": 1,
+      "range_end": 20,
+      "default": 10,
+      "group": "Secret Deliveries"
+    },
+    "secret_delivery_instruction_parts": {
+      "display_name": "Secret Delivery Instruction Parts",
+      "description": [
+        "Number of separate parts to the instructions of each Secret Delivery.",
+        "",
+        "Not all parts must be found in order to perform a Secret Delivery; once the instructions are",
+        "decipherable, the delivery may be performed.",
+        "",
+        "This option will not be affected by location truncation."
+      ],
+      "type": "range",
+      "range_start": 1,
+      "range_end": 5,
+      "default": 2,
+      "group": "Secret Deliveries"
+    },
+    "enable_dlc_base_game": {
+      "display_name": "Enable Base Game DLC",
+      "description": [
+        "Whether or not the Base Game DLC, and all the checks within its bounds, should be enabled for this",
+        "AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_dlc_going_east": {
+      "display_name": "Enable Going East! DLC",
+      "description": [
+        "Whether or not the Going East! DLC, and all the checks within its bounds, should be enabled for this",
+        "AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_dlc_scandinavia": {
+      "display_name": "Enable Scandinavia DLC",
+      "description": [
+        "Whether or not the Scandinavia DLC, and all the checks within its bounds, should be enabled for this",
+        "AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_dlc_vive_la_france": {
+      "display_name": "Enable Vive la France ! DLC",
+      "description": [
+        "Whether or not the Vive la France ! DLC, and all the checks within its bounds, should be enabled for",
+        "this AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_dlc_italia": {
+      "display_name": "Enable Italia DLC",
+      "description": [
+        "Whether or not the Italia DLC, and all the checks within its bounds, should be enabled for this AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_dlc_beyond_the_baltic_sea": {
+      "display_name": "Enable Beyond the Baltic Sea DLC",
+      "description": [
+        "Whether or not the Beyond the Baltic Sea DLC, and all the checks within its bounds, should be",
+        "enabled for this AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_dlc_road_to_the_black_sea": {
+      "display_name": "Enable Road to the Black Sea DLC",
+      "description": [
+        "Whether or not the Road to the Black Sea DLC, and all the checks within its bounds, should be",
+        "enabled for this AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_dlc_iberia": {
+      "display_name": "Enable Iberia DLC",
+      "description": [
+        "Whether or not the Iberia DLC, and all the checks within its bounds, should be enabled for this AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_dlc_west_balkans": {
+      "display_name": "Enable West Balkans DLC",
+      "description": [
+        "Whether or not the West Balkans DLC, and all the checks within its bounds, should be enabled for",
+        "this AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_dlc_greece": {
+      "display_name": "Enable Greece DLC",
+      "description": [
+        "Whether or not the Greece DLC, and all the checks within its bounds, should be enabled for this AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_dlc_nordic_horizons": {
+      "display_name": "Enable Nordic Horizons DLC",
+      "description": [
+        "Whether or not the Nordic Horizons DLC, and all the checks within its bounds, should be enabled for",
+        "this AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_dlc_krone_trailer_pack": {
+      "display_name": "Enable Krone Trailer Pack DLC",
+      "description": [
+        "Whether or not the Krone Trailer Pack DLC, and all the checks within its bounds, should be enabled",
+        "for this AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_dlc_feldbinder_trailer_pack": {
+      "display_name": "Enable Feldbinder Trailer Pack DLC",
+      "description": [
+        "Whether or not the Feldbinder Trailer Pack DLC, and all the checks within its bounds, should be",
+        "enabled for this AP."
+      ],
+      "type": "toggle",
+      "default": false
+    },
+    "enable_citysanity": {
+      "display_name": "Enable Citysanity",
+      "description": [
+        "Whether or not cities should be checks. If so, the check is performed by driving into the city; the",
+        "check may be cleared when the \"(City Name) Discovered\" popup appears."
+      ],
+      "type": "toggle",
+      "default": true,
+      "group": "Check/Sanity Toggles"
+    },
+    "enable_companysanity": {
+      "display_name": "Enable Companysanity",
+      "description": [
+        "Whether or not companies should be checks. If so, the player may choose one of the following:",
+        " - A check is performed when driving onto any of that company's depots. (The check may be cleared",
+        "when the map tile turns yellow.)",
+        " - A check is performed when performing a delivery to that company. (The check may be cleared when",
+        "the results screen appears.)",
+        " - A check is performed when performing a delivery to or for that company. (The checm kay be cleared",
+        "when the results screen appears.)"
+      ],
+      "type": "toggle",
+      "default": false,
+      "group": "Check/Sanity Toggles"
+    },
+    "enable_photosanity": {
+      "display_name": "Enable Photosanity",
+      "description": [
+        "Whether or not photo trophies should be checks. If so, the check is performed when you take the",
+        "photo with the name of the monument on the screen.",
+        "",
+        "The Camera item is required before you can take photos, but you can choose to start with it in your",
+        "inventory."
+      ],
+      "type": "choice",
+      "values": {
+        "disabled": 0,
+        "find_camera": 1,
+        "start_with_camera": 2
+      },
+      "default": "disabled",
+      "group": "Check/Sanity Toggles"
+    },
+    "enable_viewpointsanity": {
+      "display_name": "Enable Viewpointsanity",
+      "description": [
+        "Whether or not viewpoints should be checks. If so, the check is performed when you finish watching",
+        "the viewpoint cutscene and control is returned to the player.",
+        "",
+        "The TV item is required before you can watch viewpoints, but you can choose to start with it in your",
+        "inventory."
+      ],
+      "type": "choice",
+      "values": {
+        "disabled": 0,
+        "find_tv": 1,
+        "start_with_tv": 2
+      },
+      "default": "disabled",
+      "group": "Check/Sanity Toggles"
+    },
+    "player_level_checks": {
+      "display_name": "Player Level Checks",
+      "description": [
+        "How many player levels should be checks? All levels from 1 to the specified number will be included.",
+        "The check is performed when the level shown on the left side of the bar is at least the level being",
+        "checked.",
+        "",
+        "If this is set to 0, no level checks apply.",
+        "",
+        "If the goal is set to Max Player Level Check Reached, this option must have a value of at least 1."
+      ],
+      "type": "range",
+      "range_start": 0,
+      "range_end": 36,
+      "default": 0,
+      "group": "Player Levels"
+    },
+    "skill_scatter": {
+      "display_name": "Skill Scattering Method",
+      "description": [
+        "How should player skills be handled?",
+        "",
+        "disabled: Do not scatter skill options. When you level up, you have free rein to choose where you",
+        "put your skill points.",
+        "",
+        "spread: Scatter skill options throughout the multiworld item pool. You may not use skill points upon",
+        "leveling up unless you have the relevant skill option item.",
+        "",
+        "condensed: Randomize skill options within level-up checks. For each level-up check, a random skill",
+        "item will be granted, which must be applied immediately. Once you exceed the last level-up check,",
+        "you have free choice on how to spend your remaining skill points. If player_level_checks is 0, this",
+        "has no effect."
+      ],
+      "type": "choice",
+      "values": {
+        "disabled": 0,
+        "spread": 1,
+        "condensed": 2
+      },
+      "default": "disabled",
+      "group": "Player Levels"
+    },
+    "bank_loan_approval_item": {
+      "display_name": "Bank Loan Approval",
+      "description": [
+        "A Bank Loan Approval is required before you can take any loans from the bank. Should it be part of",
+        "the multiworld item pool, requiring you to find it, or should it be part of your starting inventory",
+        "and always be available?"
+      ],
+      "type": "choice",
+      "values": {
+        "in_starting_inventory": 0,
+        "in_item_pool": 1
+      },
+      "default": "in_starting_inventory",
+      "group": "Item Requirements"
+    },
+    "truck_contract_items": {
+      "display_name": "Truck Contracts",
+      "description": [
+        "Truck Contracts are required before you can buy any trucks from truck dealers. Should they be part",
+        "of the multiworld item pool, requiring you to find them, or should they be part of your starting",
+        "inventory and always be available?"
+      ],
+      "type": "choice",
+      "values": {
+        "in_starting_inventory": 0,
+        "in_item_pool": 1
+      },
+      "default": "in_starting_inventory",
+      "group": "Item Requirements"
+    },
+    "trailer_contract_item": {
+      "display_name": "Trailer Contract",
+      "description": [
+        "A Trailer Contract is required before you can purchase any trailers. Should it be part of the",
+        "multiworld item pool, requiring you to find it, or should it be part of your starting inventory and",
+        "always be avaialble?"
+      ],
+      "type": "choice",
+      "values": {
+        "in_starting_inventory": 0,
+        "in_item_pool": 1
+      },
+      "default": "in_starting_inventory",
+      "group": "Item Requirements"
+    },
+    "quick_travel_item": {
+      "display_name": "Quick Travel Ticket",
+      "description": [
+        "A Quick Travel Ticket is required before you can quick travel to an undiscovered city (whether",
+        "through its DLC opening or through Convoy). Should it be part of the multiworld item pool, requiring",
+        "you to find it, or should it be part of your starting inventory and always be available? ",
+        "",
+        "It can be disabled outright, such that quick traveling is never in logic, so long as all the enabled",
+        "DLCs are connected to each other (otherwise, this will be set to in_starting_inventory)."
+      ],
+      "type": "choice",
+      "values": {
+        "in_starting_inventory": 0,
+        "in_item_pool": 1
+      },
+      "default": "in_starting_inventory",
+      "group": "Item Requirements"
+    },
+    "checks_country_chance_percent": {
+      "display_name": "% of Countries containing Checks",
+      "description": [
+        "What percent of countries should contain locations? Note that other countries will still have Keys,",
+        "and you must obtain those Keys before driving in those countries.",
+        "",
+        "The options in this category are applied in the following order: checks_country_chance_percent,",
+        "checks_country_count_max, checks_chance_percent, checks_within_country_max, checks_max_count."
+      ],
+      "type": "range",
+      "range_start": 1,
+      "range_end": 100,
+      "default": 100,
+      "group": "Check Reduction"
+    },
+    "checks_country_count_max": {
+      "display_name": "# of Countries Containing Checks",
+      "description": [
+        "How many countries should contain locations? Note that other accessible countries will still have",
+        "Keys , and you must obtain those Keys before driving in those countries.",
+        "",
+        "Setting this higher than the number of countries that exist has no effect besides future-proofing",
+        "your yaml. The default value is the number of countries that exist so far."
+      ],
+      "type": "range",
+      "range_start": 1,
+      "range_end": 100,
+      "default": 36,
+      "group": "Check Reduction"
+    },
+    "checks_chance_percent": {
+      "display_name": "% Chance of Each Check",
+      "description": [
+        "What should the chance be of each location appearing in the AP?"
+      ],
+      "type": "range",
+      "range_start": 1,
+      "range_end": 100,
+      "default": 100,
+      "group": "Check Reduction"
+    },
+    "checks_within_country_max": {
+      "display_name": "# of Checks Per State",
+      "description": [
+        "What is the maximum number of checks that should appear in each country? Companies are considered",
+        "countryless and are not affected by this option.",
+        "",
+        "Setting this higher than the number of checks per country that exist has no effect besides",
+        "future-proofing your yaml. The default value is the highest max number per country."
+      ],
+      "type": "range",
+      "range_start": 1,
+      "range_end": 1000,
+      "default": 96,
+      "group": "Check Reduction"
+    },
+    "checks_max_count": {
+      "display_name": "# of Checks",
+      "description": [
+        "What is the maximum number of checks that should be present in the multiworld?",
+        "",
+        "Setting this higher than the number of checks that exists has no effect besides future-proofing your",
+        "yaml. The default value is the highest existing number so far."
+      ],
+      "type": "range",
+      "range_start": 1,
+      "range_end": 10000,
+      "default": 918,
+      "group": "Check Reduction"
+    }
+  }
+}

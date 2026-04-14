@@ -1,0 +1,370 @@
+[
+  {
+    "name": "Austria/Base Game Reachable",
+    "category": [
+      "Austria",
+      "Base Game"
+    ],
+    "region": "Austria/Base Game"
+  },
+  {
+    "name": "Belgium/Base Game Reachable",
+    "category": [
+      "Belgium",
+      "Base Game"
+    ],
+    "region": "Belgium/Base Game"
+  },
+  {
+    "name": "Czech Republic/Base Game Reachable",
+    "category": [
+      "Czech Republic",
+      "Base Game"
+    ],
+    "region": "Czech Republic/Base Game"
+  },
+  {
+    "name": "France/Base Game Reachable",
+    "category": [
+      "France",
+      "Base Game"
+    ],
+    "region": "France/Base Game"
+  },
+  {
+    "name": "Germany/Base Game Reachable",
+    "category": [
+      "Germany",
+      "Base Game"
+    ],
+    "region": "Germany/Base Game"
+  },
+  {
+    "name": "Germany/Krone Trailer Pack Reachable",
+    "category": [
+      "Germany",
+      "Krone Trailer Pack"
+    ],
+    "region": "Germany/Krone Trailer Pack"
+  },
+  {
+    "name": "Germany/Feldbinder Trailer Pack Reachable",
+    "category": [
+      "Germany",
+      "Feldbinder Trailer Pack"
+    ],
+    "region": "Germany/Feldbinder Trailer Pack"
+  },
+  {
+    "name": "Italy/Base Game Reachable",
+    "category": [
+      "Italy",
+      "Base Game"
+    ],
+    "region": "Italy/Base Game"
+  },
+  {
+    "name": "Luxembourg/Base Game Reachable",
+    "category": [
+      "Luxembourg",
+      "Base Game"
+    ],
+    "region": "Luxembourg/Base Game"
+  },
+  {
+    "name": "Netherlands/Base Game Reachable",
+    "category": [
+      "Netherlands",
+      "Base Game"
+    ],
+    "region": "Netherlands/Base Game"
+  },
+  {
+    "name": "Poland/Base Game Reachable",
+    "category": [
+      "Poland",
+      "Base Game"
+    ],
+    "region": "Poland/Base Game"
+  },
+  {
+    "name": "Slovakia/Base Game Reachable",
+    "category": [
+      "Slovakia",
+      "Base Game"
+    ],
+    "region": "Slovakia/Base Game"
+  },
+  {
+    "name": "Switzerland/Base Game Reachable",
+    "category": [
+      "Switzerland",
+      "Base Game"
+    ],
+    "region": "Switzerland/Base Game"
+  },
+  {
+    "name": "United Kingdom/Base Game Reachable",
+    "category": [
+      "United Kingdom",
+      "Base Game"
+    ],
+    "region": "United Kingdom/Base Game"
+  },
+  {
+    "name": "Czech Republic/Going East! Reachable",
+    "category": [
+      "Czech Republic",
+      "Going East!"
+    ],
+    "region": "Czech Republic/Going East!"
+  },
+  {
+    "name": "Hungary/Going East! Reachable",
+    "category": [
+      "Hungary",
+      "Going East!"
+    ],
+    "region": "Hungary/Going East!"
+  },
+  {
+    "name": "Slovakia/Going East! Reachable",
+    "category": [
+      "Slovakia",
+      "Going East!"
+    ],
+    "region": "Slovakia/Going East!"
+  },
+  {
+    "name": "Poland/Going East! Reachable",
+    "category": [
+      "Poland",
+      "Going East!"
+    ],
+    "region": "Poland/Going East!"
+  },
+  {
+    "name": "Denmark/Scandinavia Reachable",
+    "category": [
+      "Denmark",
+      "Scandinavia"
+    ],
+    "region": "Denmark/Scandinavia"
+  },
+  {
+    "name": "Norway/Scandinavia Reachable",
+    "category": [
+      "Norway",
+      "Scandinavia"
+    ],
+    "region": "Norway/Scandinavia"
+  },
+  {
+    "name": "Sweden/Scandinavia Reachable",
+    "category": [
+      "Sweden",
+      "Scandinavia"
+    ],
+    "region": "Sweden/Scandinavia"
+  },
+  {
+    "name": "France/Vive la France ! Reachable",
+    "category": [
+      "France",
+      "Vive la France !"
+    ],
+    "region": "France/Vive la France !"
+  },
+  {
+    "name": "Italy/Italia Reachable",
+    "category": [
+      "Italy",
+      "Italia"
+    ],
+    "region": "Italy/Italia"
+  },
+  {
+    "name": "Estonia/Beyond the Baltic Sea Reachable",
+    "category": [
+      "Estonia",
+      "Beyond the Baltic Sea"
+    ],
+    "region": "Estonia/Beyond the Baltic Sea"
+  },
+  {
+    "name": "Finland/Beyond the Baltic Sea Reachable",
+    "category": [
+      "Finland",
+      "Beyond the Baltic Sea"
+    ],
+    "region": "Finland/Beyond the Baltic Sea"
+  },
+  {
+    "name": "Latvia/Beyond the Baltic Sea Reachable",
+    "category": [
+      "Latvia",
+      "Beyond the Baltic Sea"
+    ],
+    "region": "Latvia/Beyond the Baltic Sea"
+  },
+  {
+    "name": "Lithuania/Beyond the Baltic Sea Reachable",
+    "category": [
+      "Lithuania",
+      "Beyond the Baltic Sea"
+    ],
+    "region": "Lithuania/Beyond the Baltic Sea"
+  },
+  {
+    "name": "Kaliningrad/Beyond the Baltic Sea Reachable",
+    "category": [
+      "Kaliningrad",
+      "Beyond the Baltic Sea"
+    ],
+    "region": "Kaliningrad/Beyond the Baltic Sea"
+  },
+  {
+    "name": "Russia/Beyond the Baltic Sea Reachable",
+    "category": [
+      "Russia",
+      "Beyond the Baltic Sea"
+    ],
+    "region": "Russia/Beyond the Baltic Sea"
+  },
+  {
+    "name": "Bulgaria/Road to the Black Sea Reachable",
+    "category": [
+      "Bulgaria",
+      "Road to the Black Sea"
+    ],
+    "region": "Bulgaria/Road to the Black Sea"
+  },
+  {
+    "name": "Romania/Road to the Black Sea Reachable",
+    "category": [
+      "Romania",
+      "Road to the Black Sea"
+    ],
+    "region": "Romania/Road to the Black Sea"
+  },
+  {
+    "name": "Turkiye/Road to the Black Sea Reachable",
+    "category": [
+      "Turkiye",
+      "Road to the Black Sea"
+    ],
+    "region": "Turkiye/Road to the Black Sea"
+  },
+  {
+    "name": "Portugal/Iberia Reachable",
+    "category": [
+      "Portugal",
+      "Iberia"
+    ],
+    "region": "Portugal/Iberia"
+  },
+  {
+    "name": "Spain/Iberia Reachable",
+    "category": [
+      "Spain",
+      "Iberia"
+    ],
+    "region": "Spain/Iberia"
+  },
+  {
+    "name": "Albania/West Balkans Reachable",
+    "category": [
+      "Albania",
+      "West Balkans"
+    ],
+    "region": "Albania/West Balkans"
+  },
+  {
+    "name": "Bosnia and Herzegovina/West Balkans Reachable",
+    "category": [
+      "Bosnia and Herzegovina",
+      "West Balkans"
+    ],
+    "region": "Bosnia and Herzegovina/West Balkans"
+  },
+  {
+    "name": "Croatia/West Balkans Reachable",
+    "category": [
+      "Croatia",
+      "West Balkans"
+    ],
+    "region": "Croatia/West Balkans"
+  },
+  {
+    "name": "Kosovo/West Balkans Reachable",
+    "category": [
+      "Kosovo",
+      "West Balkans"
+    ],
+    "region": "Kosovo/West Balkans"
+  },
+  {
+    "name": "Montenegro/West Balkans Reachable",
+    "category": [
+      "Montenegro",
+      "West Balkans"
+    ],
+    "region": "Montenegro/West Balkans"
+  },
+  {
+    "name": "North Macedonia/West Balkans Reachable",
+    "category": [
+      "North Macedonia",
+      "West Balkans"
+    ],
+    "region": "North Macedonia/West Balkans"
+  },
+  {
+    "name": "Serbia/West Balkans Reachable",
+    "category": [
+      "Serbia",
+      "West Balkans"
+    ],
+    "region": "Serbia/West Balkans"
+  },
+  {
+    "name": "Slovenia/West Balkans Reachable",
+    "category": [
+      "Slovenia",
+      "West Balkans"
+    ],
+    "region": "Slovenia/West Balkans"
+  },
+  {
+    "name": "Greece/Greece Reachable",
+    "category": [
+      "Greece",
+      "Greece"
+    ],
+    "region": "Greece/Greece"
+  },
+  {
+    "name": "Finland/Nordic Horizons Reachable",
+    "category": [
+      "Finland",
+      "Nordic Horizons"
+    ],
+    "region": "Finland/Nordic Horizons"
+  },
+  {
+    "name": "Norway/Nordic Horizons Reachable",
+    "category": [
+      "Norway",
+      "Nordic Horizons"
+    ],
+    "region": "Norway/Nordic Horizons"
+  },
+  {
+    "name": "Sweden/Nordic Horizons Reachable",
+    "category": [
+      "Sweden",
+      "Nordic Horizons"
+    ],
+    "region": "Sweden/Nordic Horizons"
+  }
+]

@@ -1,0 +1,573 @@
+{
+  "Start": {
+    "starting": true,
+    "exit_requires": {
+      "Austria/Base Game": "|Austria Starter Key|",
+      "Belgium/Base Game": "|Belgium Starter Key|",
+      "Czech Republic/Base Game": "|Czech Republic Starter Key|",
+      "France/Base Game": "|France Starter Key|",
+      "Germany/Base Game": "|Germany Starter Key| or |Quick Travel Ticket|",
+      "Germany/Krone Trailer Pack": "|Germany Starter Key|",
+      "Germany/Feldbinder Trailer Pack": "|Germany Starter Key|",
+      "Italy/Base Game": "|Italy Starter Key|",
+      "Luxembourg/Base Game": "|Luxembourg Starter Key|",
+      "Netherlands/Base Game": "|Netherlands Starter Key|",
+      "Poland/Base Game": "|Poland Starter Key|",
+      "Slovakia/Base Game": "|Slovakia Starter Key|",
+      "Switzerland/Base Game": "|Switzerland Starter Key|",
+      "United Kingdom/Base Game": "|United Kingdom Starter Key|",
+      "Czech Republic/Going East!": "|Czech Republic Starter Key|",
+      "Hungary/Going East!": "|Hungary Starter Key|",
+      "Slovakia/Going East!": "|Slovakia Starter Key|",
+      "Poland/Going East!": "|Poland Starter Key| or |Quick Travel Ticket|",
+      "Denmark/Scandinavia": "|Denmark Starter Key|",
+      "Norway/Scandinavia": "|Norway Starter Key| or |Quick Travel Ticket|",
+      "Sweden/Scandinavia": "|Sweden Starter Key|",
+      "France/Vive la France !": "|France Starter Key| or |Quick Travel Ticket|",
+      "Italy/Italia": "|Italy Starter Key| or |Quick Travel Ticket|",
+      "Estonia/Beyond the Baltic Sea": "|Estonia Starter Key|",
+      "Finland/Beyond the Baltic Sea": "|Finland Starter Key| or |Quick Travel Ticket|",
+      "Latvia/Beyond the Baltic Sea": "|Latvia Starter Key|",
+      "Lithuania/Beyond the Baltic Sea": "|Lithuania Starter Key|",
+      "Kaliningrad/Beyond the Baltic Sea": "|Kaliningrad Starter Key|",
+      "Russia/Beyond the Baltic Sea": "|Russia Starter Key|",
+      "Bulgaria/Road to the Black Sea": "|Bulgaria Starter Key|",
+      "Romania/Road to the Black Sea": "|Romania Starter Key| or |Quick Travel Ticket|",
+      "Turkiye/Road to the Black Sea": "|Turkiye Starter Key|",
+      "Portugal/Iberia": "|Portugal Starter Key|",
+      "Spain/Iberia": "|Spain Starter Key| or |Quick Travel Ticket|",
+      "Albania/West Balkans": "|Albania Starter Key|",
+      "Bosnia and Herzegovina/West Balkans": "|Bosnia and Herzegovina Starter Key|",
+      "Croatia/West Balkans": "|Croatia Starter Key|",
+      "Kosovo/West Balkans": "|Kosovo Starter Key|",
+      "Montenegro/West Balkans": "|Montenegro Starter Key|",
+      "North Macedonia/West Balkans": "|North Macedonia Starter Key|",
+      "Serbia/West Balkans": "|Serbia Starter Key| or |Quick Travel Ticket|",
+      "Slovenia/West Balkans": "|Slovenia Starter Key|",
+      "Greece/Greece": "|Greece Starter Key| or |Quick Travel Ticket|",
+      "Finland/Nordic Horizons": "|Finland Starter Key| or |Quick Travel Ticket|",
+      "Norway/Nordic Horizons": "|Norway Starter Key|",
+      "Sweden/Nordic Horizons": "|Sweden Starter Key|"
+    }
+  },
+  "Austria/Base Game": {
+    "requires": "|Austria Key| or |Austria Starter Key|",
+    "connects_to": [
+      "Start through Austria",
+      "Germany/Base Game",
+      "Czech Republic/Base Game",
+      "Slovakia/Base Game",
+      "Hungary/Going East!",
+      "Slovenia/West Balkans",
+      "Italy/Base Game",
+      "Switzerland/Base Game"
+    ]
+  },
+  "Belgium/Base Game": {
+    "requires": "|Belgium Key| or |Belgium Starter Key|",
+    "connects_to": [
+      "Start through Belgium",
+      "Netherlands/Base Game",
+      "Germany/Base Game",
+      "France/Base Game",
+      "Luxembourg/Base Game"
+    ]
+  },
+  "Czech Republic/Base Game": {
+    "requires": "|Czech Republic Key| or |Czech Republic Starter Key|",
+    "connects_to": [
+      "Start through Czech Republic",
+      "Austria/Base Game",
+      "Czech Republic/Going East!",
+      "Germany/Base Game",
+      "Poland/Base Game",
+      "Slovakia/Base Game"
+    ]
+  },
+  "France/Base Game": {
+    "requires": "|France Key| or |France Starter Key|",
+    "connects_to": [
+      "Start through France",
+      "Belgium/Base Game",
+      "France/Vive la France !",
+      "Germany/Base Game",
+      "Luxembourg/Base Game",
+      "Switzerland/Base Game",
+      "Italy/Base Game",
+      "United Kingdom/Base Game"
+    ]
+  },
+  "Germany/Base Game": {
+    "requires": "|Germany Key| or |Germany Starter Key|",
+    "connects_to": [
+      "Start through Germany",
+      "Austria/Base Game",
+      "Belgium/Base Game",
+      "Czech Republic/Base Game",
+      "Denmark/Scandinavia",
+      "Finland/Beyond the Baltic Sea",
+      "France/Base Game",
+      "Germany/Krone Trailer Pack",
+      "Germany/Feldbinder Trailer Pack",
+      "Poland/Base Game",
+      "Switzerland/Base Game",
+      "Netherlands/Base Game",
+      "Sweden/Scandinavia",
+      "Latvia/Beyond the Baltic Sea"
+    ],
+    "exit_requires": {
+      "Finland/Beyond the Baltic Sea": "|Ferry Ticket|",
+      "Sweden/Scandinavia": "|Ferry Ticket|",
+      "Latvia/Beyond the Baltic Sea": "|Ferry Ticket|"
+    }
+  },
+  "Germany/Krone Trailer Pack": {
+    "requires": "|Germany Key| or |Germany Starter Key|",
+    "connects_to": [
+      "Start through Germany",
+      "Germany/Base Game"
+    ]
+  },
+  "Germany/Feldbinder Trailer Pack": {
+    "requires": "|Germany Key| or |Germany Starter Key|",
+    "connects_to": [
+      "Start through Germany",
+      "Germany/Base Game"
+    ]
+  },
+  "Italy/Base Game": {
+    "requires": "|Italy Key| or |Italy Starter Key|",
+    "connects_to": [
+      "Start through Italy",
+      "Austria/Base Game",
+      "France/Base Game",
+      "Italy/Italia",
+      "Switzerland/Base Game",
+      "Slovenia/West Balkans"
+    ]
+  },
+  "Luxembourg/Base Game": {
+    "requires": "|Luxembourg Key| or |Luxembourg Starter Key|",
+    "connects_to": [
+      "Start through Luxembourg",
+      "Belgium/Base Game",
+      "France/Base Game"
+    ]
+  },
+  "Netherlands/Base Game": {
+    "requires": "|Netherlands Key| or |Netherlands Starter Key|",
+    "connects_to": [
+      "Start through Netherlands",
+      "Belgium/Base Game",
+      "Germany/Base Game",
+      "United Kingdom/Base Game"
+    ],
+    "exit_requires": {
+      "United Kingdom/Base Game": "|Ferry Ticket|"
+    }
+  },
+  "Poland/Base Game": {
+    "requires": "|Poland Key| or |Poland Starter Key|",
+    "connects_to": [
+      "Start through Poland",
+      "Czech Republic/Base Game",
+      "Germany/Base Game",
+      "Poland/Going East!"
+    ]
+  },
+  "Slovakia/Base Game": {
+    "requires": "|Slovakia Key| or |Slovakia Starter Key|",
+    "connects_to": [
+      "Start through Slovakia",
+      "Austria/Base Game",
+      "Czech Republic/Base Game",
+      "Hungary/Going East!"
+    ]
+  },
+  "Switzerland/Base Game": {
+    "requires": "|Switzerland Key| or |Switzerland Starter Key|",
+    "connects_to": [
+      "Start through Switzerland",
+      "Austria/Base Game",
+      "France/Base Game",
+      "Germany/Base Game",
+      "Italy/Base Game"
+    ]
+  },
+  "United Kingdom/Base Game": {
+    "requires": "|United Kingdom Key| or |United Kingdom Starter Key|",
+    "connects_to": [
+      "Start through United Kingdom",
+      "Denmark/Scandinavia",
+      "France/Base Game",
+      "Netherlands/Base Game",
+      "Spain/Iberia"
+    ],
+    "exit_requires": {
+      "Denmark/Scandinavia": "|Ferry Ticket|",
+      "Netherlands/Base Game": "|Ferry Ticket|",
+      "Spain/Iberia": "|Ferry Ticket|"
+    }
+  },
+  "Czech Republic/Going East!": {
+    "requires": "|Czech Republic Key| or |Czech Republic Starter Key|",
+    "connects_to": [
+      "Start through Czech Republic",
+      "Czech Republic/Base Game"
+    ]
+  },
+  "Hungary/Going East!": {
+    "requires": "|Hungary Key| or |Hungary Starter Key|",
+    "connects_to": [
+      "Start through Hungary",
+      "Austria/Base Game",
+      "Croatia/West Balkans",
+      "Slovakia/Base Game",
+      "Slovenia/West Balkans",
+      "Serbia/West Balkans",
+      "Romania/Road to the Black Sea"
+    ]
+  },
+  "Slovakia/Going East!": {
+    "requires": "|Slovakia Key| or |Slovakia Starter Key|",
+    "connects_to": [
+      "Start through Slovakia",
+      "Poland/Going East!"
+    ]
+  },
+  "Poland/Going East!": {
+    "requires": "|Poland Key| or |Poland Starter Key|",
+    "connects_to": [
+      "Start through Poland",
+      "Kaliningrad/Beyond the Baltic Sea",
+      "Lithuania/Beyond the Baltic Sea",
+      "Poland/Base Game",
+      "Slovakia/Going East!",
+      "Sweden/Scandinavia"
+    ],
+    "exit_requires": {
+      "Sweden/Scandinavia": "|Ferry Ticket|"
+    }
+  },
+  "Denmark/Scandinavia": {
+    "requires": "|Denmark Key| or |Denmark Starter Key|",
+    "connects_to": [
+      "Start through Denmark",
+      "Germany/Base Game",
+      "Sweden/Scandinavia",
+      "United Kingdom/Base Game",
+      "Norway/Scandinavia"
+    ],
+    "exit_requires": {
+      "United Kingdom/Base Game": "|Ferry Ticket|",
+      "Norway/Scandinavia": "|Ferry Ticket|"
+    }
+  },
+  "Norway/Scandinavia": {
+    "requires": "|Norway Key| or |Norway Starter Key|",
+    "connects_to": [
+      "Start through Norway",
+      "Denmark/Scandinavia",
+      "Sweden/Scandinavia"
+    ],
+    "exit_requires": {
+      "Denmark/Scandinavia": "|Ferry Ticket|"
+    }
+  },
+  "Sweden/Scandinavia": {
+    "requires": "|Sweden Key| or |Sweden Starter Key|",
+    "connects_to": [
+      "Start through Sweden",
+      "Denmark/Scandinavia",
+      "Estonia/Beyond the Baltic Sea",
+      "Finland/Beyond the Baltic Sea",
+      "Germany/Base Game",
+      "Latvia/Beyond the Baltic Sea",
+      "Norway/Scandinavia",
+      "Poland/Going East!"
+    ],
+    "exit_requires": {
+      "Estonia/Beyond the Baltic Sea": "|Ferry Ticket|",
+      "Finland/Beyond the Baltic Sea": "|Ferry Ticket|",
+      "Germany/Base Game": "|Ferry Ticket|",
+      "Latvia/Beyond the Baltic Sea": "|Ferry Ticket|",
+      "Poland/Going East!": "|Ferry Ticket|"
+    }
+  },
+  "France/Vive la France !": {
+    "requires": "|France Key| or |France Starter Key|",
+    "connects_to": [
+      "Start through France",
+      "France/Base Game",
+      "Spain/Iberia"
+    ]
+  },
+  "Italy/Italia": {
+    "requires": "|Italy Key| or |Italy Starter Key|",
+    "connects_to": [
+      "Start through Italy",
+      "Albania/West Balkans",
+      "Croatia/West Balkans",
+      "Greece/Greece",
+      "Italy/Base Game",
+      "Spain/Iberia"
+    ],
+    "exit_requires": {
+      "Albania/West Balkans": "|Ferry Ticket|",
+      "Croatia/West Balkans": "|Ferry Ticket|",
+      "Greece/Greece": "|Ferry Ticket|",
+      "Spain/Iberia": "|Ferry Ticket|"
+    }
+  },
+  "Estonia/Beyond the Baltic Sea": {
+    "requires": "|Estonia Key| or |Estonia Starter Key|",
+    "connects_to": [
+      "Start through Estonia",
+      "Russia/Beyond the Baltic Sea",
+      "Latvia/Beyond the Baltic Sea",
+      "Finland/Beyond the Baltic Sea",
+      "Sweden/Scandinavia"
+    ],
+    "exit_requires": {
+      "Finland/Beyond the Baltic Sea": "|Ferry Ticket|",
+      "Sweden/Scandinavia": "|Ferry Ticket|"
+    }
+  },
+  "Finland/Beyond the Baltic Sea": {
+    "requires": "|Finland Key| or |Finland Starter Key|",
+    "connects_to": [
+      "Start through Finland",
+      "Estonia/Beyond the Baltic Sea",
+      "Finland/Nordic Horizons",
+      "Russia/Beyond the Baltic Sea",
+      "Sweden/Scandinavia",
+      "Germany/Base Game"
+    ],
+    "exit_requires": {
+      "Estonia/Beyond the Baltic Sea": "|Ferry Ticket|",
+      "Sweden/Scandinavia": "|Ferry Ticket|",
+      "Germany/Base Game": "|Ferry Ticket|"
+    }
+  },
+  "Latvia/Beyond the Baltic Sea": {
+    "requires": "|Latvia Key| or |Latvia Starter Key|",
+    "connects_to": [
+      "Start through Latvia",
+      "Estonia/Beyond the Baltic Sea",
+      "Germany/Base Game",
+      "Russia/Beyond the Baltic Sea",
+      "Lithuania/Beyond the Baltic Sea",
+      "Sweden/Scandinavia"
+    ],
+    "exit_requires": {
+      "Germany/Base Game": "|Ferry Ticket|",
+      "Sweden/Scandinavia": "|Ferry Ticket|"
+    }
+  },
+  "Lithuania/Beyond the Baltic Sea": {
+    "requires": "|Lithuania Key| or |Lithuania Starter Key|",
+    "connects_to": [
+      "Start through Lithuania",
+      "Kaliningrad/Beyond the Baltic Sea",
+      "Latvia/Beyond the Baltic Sea",
+      "Poland/Going East!"
+    ]
+  },
+  "Kaliningrad/Beyond the Baltic Sea": {
+    "requires": "|Kaliningrad Key| or |Kaliningrad Starter Key|",
+    "connects_to": [
+      "Start through Kaliningrad",
+      "Lithuania/Beyond the Baltic Sea",
+      "Poland/Going East!"
+    ]
+  },
+  "Russia/Beyond the Baltic Sea": {
+    "requires": "|Russia Key| or |Russia Starter Key|",
+    "connects_to": [
+      "Start through Russia",
+      "Estonia/Beyond the Baltic Sea",
+      "Finland/Beyond the Baltic Sea",
+      "Latvia/Beyond the Baltic Sea"
+    ]
+  },
+  "Bulgaria/Road to the Black Sea": {
+    "requires": "|Bulgaria Key| or |Bulgaria Starter Key|",
+    "connects_to": [
+      "Start through Bulgaria",
+      "Romania/Road to the Black Sea",
+      "Serbia/West Balkans",
+      "North Macedonia/West Balkans",
+      "Greece/Greece",
+      "Turkiye/Road to the Black Sea"
+    ]
+  },
+  "Romania/Road to the Black Sea": {
+    "requires": "|Romania Key| or |Romania Starter Key|",
+    "connects_to": [
+      "Start through Romania",
+      "Bulgaria/Road to the Black Sea",
+      "Hungary/Going East!",
+      "Serbia/West Balkans"
+    ]
+  },
+  "Turkiye/Road to the Black Sea": {
+    "requires": "|Turkiye Key| or |Turkiye Starter Key|",
+    "connects_to": [
+      "Start through Turkiye",
+      "Bulgaria/Road to the Black Sea",
+      "Greece/Greece"
+    ]
+  },
+  "Portugal/Iberia": {
+    "requires": "|Portugal Key| or |Portugal Starter Key|",
+    "connects_to": [
+      "Start through Portugal",
+      "Spain/Iberia"
+    ]
+  },
+  "Spain/Iberia": {
+    "requires": "|Spain Key| or |Spain Starter Key|",
+    "connects_to": [
+      "Start through Spain",
+      "France/Vive la France !",
+      "Italy/Italia",
+      "Portugal/Iberia",
+      "United Kingdom/Base Game"
+    ],
+    "exit_requires": {
+      "Italy/Italia": "|Ferry Ticket|",
+      "United Kingdom/Base Game": "|Ferry Ticket|"
+    }
+  },
+  "Albania/West Balkans": {
+    "requires": "|Albania Key| or |Albania Starter Key|",
+    "connects_to": [
+      "Start through Albania",
+      "Montenegro/West Balkans",
+      "Kosovo/West Balkans",
+      "North Macedonia/West Balkans",
+      "Greece/Greece",
+      "Italy/Italia"
+    ],
+    "exit_requires": {
+      "Italy/Italia": "|Ferry Ticket|"
+    }
+  },
+  "Bosnia and Herzegovina/West Balkans": {
+    "requires": "|Bosnia and Herzegovina Key| or |Bosnia and Herzegovina Starter Key|",
+    "connects_to": [
+      "Start through Bosnia and Herzegovina",
+      "Croatia/West Balkans",
+      "Serbia/West Balkans",
+      "Montenegro/West Balkans"
+    ]
+  },
+  "Croatia/West Balkans": {
+    "requires": "|Croatia Key| or |Croatia Starter Key|",
+    "connects_to": [
+      "Start through Croatia",
+      "Bosnia and Herzegovina/West Balkans",
+      "Slovenia/West Balkans",
+      "Hungary/Going East!",
+      "Serbia/West Balkans",
+      "Italy/Italia"
+    ],
+    "exit_requires": {
+      "Italy/Italia": "|Ferry Ticket|"
+    }
+  },
+  "Kosovo/West Balkans": {
+    "requires": "|Kosovo Key| or |Kosovo Starter Key|",
+    "connects_to": [
+      "Start through Kosovo",
+      "Albania/West Balkans",
+      "Serbia/West Balkans",
+      "North Macedonia/West Balkans",
+      "Montenegro/West Balkans"
+    ]
+  },
+  "Montenegro/West Balkans": {
+    "requires": "|Montenegro Key| or |Montenegro Starter Key|",
+    "connects_to": [
+      "Start through Montenegro",
+      "Albania/West Balkans",
+      "Bosnia and Herzegovina/West Balkans",
+      "Kosovo/West Balkans",
+      "Serbia/West Balkans"
+    ]
+  },
+  "North Macedonia/West Balkans": {
+    "requires": "|North Macedonia Key| or |North Macedonia Starter Key|",
+    "connects_to": [
+      "Start through North Macedonia",
+      "Albania/West Balkans",
+      "Bulgaria/Road to the Black Sea",
+      "Greece/Greece",
+      "Kosovo/West Balkans",
+      "Serbia/West Balkans"
+    ]
+  },
+  "Serbia/West Balkans": {
+    "requires": "|Serbia Key| or |Serbia Starter Key|",
+    "connects_to": [
+      "Start through Serbia",
+      "Bosnia and Herzegovina/West Balkans",
+      "Bulgaria/Road to the Black Sea",
+      "Croatia/West Balkans",
+      "Hungary/Going East!",
+      "Kosovo/West Balkans",
+      "Montenegro/West Balkans",
+      "North Macedonia/West Balkans",
+      "Romania/Road to the Black Sea"
+    ]
+  },
+  "Slovenia/West Balkans": {
+    "requires": "|Slovenia Key| or |Slovenia Starter Key|",
+    "connects_to": [
+      "Start through Slovenia",
+      "Austria/Base Game",
+      "Croatia/West Balkans",
+      "Hungary/Going East!",
+      "Italy/Base Game"
+    ]
+  },
+  "Greece/Greece": {
+    "requires": "|Greece Key| or |Greece Starter Key|",
+    "connects_to": [
+      "Start through Greece",
+      "Albania/West Balkans",
+      "Bulgaria/Road to the Black Sea",
+      "North Macedonia/West Balkans",
+      "Turkiye/Road to the Black Sea",
+      "Italy/Italia"
+    ],
+    "exit_requires": {
+      "Italy/Italia": "|Ferry Ticket|"
+    }
+  },
+  "Finland/Nordic Horizons": {
+    "requires": "|Finland Key| or |Finland Starter Key|",
+    "connects_to": [
+      "Start through Finland",
+      "Finland/Beyond the Baltic Sea",
+      "Sweden/Nordic Horizons",
+      "Norway/Nordic Horizons"
+    ]
+  },
+  "Norway/Nordic Horizons": {
+    "requires": "|Norway Key| or |Norway Starter Key|",
+    "connects_to": [
+      "Start through Norway",
+      "Finland/Nordic Horizons",
+      "Sweden/Nordic Horizons"
+    ]
+  },
+  "Sweden/Nordic Horizons": {
+    "requires": "|Sweden Key| or |Sweden Starter Key|",
+    "connects_to": [
+      "Start through Sweden",
+      "Finland/Nordic Horizons",
+      "Norway/Nordic Horizons"
+    ]
+  }
+}

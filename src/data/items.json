@@ -1,0 +1,970 @@
+[
+  {
+    "name": "Albania Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Austria Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Belgium Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Bosnia and Herzegovina Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Bulgaria Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "road_to_the_black_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Croatia Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Czech Republic Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Denmark Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "scandinavia"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Estonia Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "beyond_the_baltic_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Finland Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "beyond_the_baltic_sea",
+      "nordic_horizons"
+    ],
+    "progression": true
+  },
+  {
+    "name": "France Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Germany Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Greece Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "greece"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Hungary Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "going_east"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Italy Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Kaliningrad Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "beyond_the_baltic_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Kosovo Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Latvia Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "beyond_the_baltic_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Lithuania Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "beyond_the_baltic_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Luxembourg Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Montenegro Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Netherlands Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "North Macedonia Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Norway Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "scandinavia",
+      "nordic_horizons"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Poland Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Portugal Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "iberia"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Romania Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "road_to_the_black_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Russia Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "beyond_the_baltic_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Serbia Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Slovakia Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Slovenia Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Spain Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "iberia"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Sweden Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "scandinavia",
+      "nordic_horizons"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Switzerland Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Turkiye Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": [
+      "road_to_the_black_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "United Kingdom Key",
+    "category": [
+      "Country Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Albania Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Austria Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Belgium Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Bosnia and Herzegovina Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Bulgaria Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "road_to_the_black_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Croatia Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Czech Republic Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Denmark Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "scandinavia"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Estonia Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "beyond_the_baltic_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Finland Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "beyond_the_baltic_sea",
+      "nordic_horizons"
+    ],
+    "progression": true
+  },
+  {
+    "name": "France Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Germany Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Greece Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "greece"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Hungary Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "going_east"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Italy Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Kaliningrad Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "beyond_the_baltic_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Kosovo Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Latvia Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "beyond_the_baltic_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Lithuania Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "beyond_the_baltic_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Luxembourg Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Montenegro Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Netherlands Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "North Macedonia Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Norway Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "scandinavia",
+      "nordic_horizons"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Poland Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Portugal Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "iberia"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Romania Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "road_to_the_black_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Russia Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "beyond_the_baltic_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Serbia Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Slovakia Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Slovenia Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "west_balkans"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Spain Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "iberia"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Sweden Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "scandinavia",
+      "nordic_horizons"
+    ],
+    "progression": true
+  },
+  {
+    "name": "Switzerland Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "Turkiye Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": [
+      "road_to_the_black_sea"
+    ],
+    "progression": true
+  },
+  {
+    "name": "United Kingdom Starter Key",
+    "category": [
+      "Country Starter Key"
+    ],
+    "dlc_list": false,
+    "progression": true
+  },
+  {
+    "name": "DAF Trucks Purchase Contract",
+    "category": [
+      "Truck Purchase Contract"
+    ],
+    "useful": true
+  },
+  {
+    "name": "Iveco Trucks Purchase Contract",
+    "category": [
+      "Truck Purchase Contract"
+    ],
+    "useful": true
+  },
+  {
+    "name": "MAN Trucks Purchase Contract",
+    "category": [
+      "Truck Purchase Contract"
+    ],
+    "useful": true
+  },
+  {
+    "name": "Mercedes-Benz Trucks Purchase Contract",
+    "category": [
+      "Truck Purchase Contract"
+    ],
+    "useful": true
+  },
+  {
+    "name": "Renault Trucks Purchase Contract",
+    "category": [
+      "Truck Purchase Contract"
+    ],
+    "useful": true
+  },
+  {
+    "name": "Scania Trucks Purchase Contract",
+    "category": [
+      "Truck Purchase Contract"
+    ],
+    "useful": true
+  },
+  {
+    "name": "Volvo Trucks Purchase Contract",
+    "category": [
+      "Truck Purchase Contract"
+    ],
+    "useful": true
+  },
+  {
+    "name": "Piece of Secret Delivery #1 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 1
+  },
+  {
+    "name": "Piece of Secret Delivery #2 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 2
+  },
+  {
+    "name": "Piece of Secret Delivery #3 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 3
+  },
+  {
+    "name": "Piece of Secret Delivery #4 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 4
+  },
+  {
+    "name": "Piece of Secret Delivery #5 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 5
+  },
+  {
+    "name": "Piece of Secret Delivery #6 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 6
+  },
+  {
+    "name": "Piece of Secret Delivery #7 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 7
+  },
+  {
+    "name": "Piece of Secret Delivery #8 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 8
+  },
+  {
+    "name": "Piece of Secret Delivery #9 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 9
+  },
+  {
+    "name": "Piece of Secret Delivery #10 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 10
+  },
+  {
+    "name": "Piece of Secret Delivery #11 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 11
+  },
+  {
+    "name": "Piece of Secret Delivery #12 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 12
+  },
+  {
+    "name": "Piece of Secret Delivery #13 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 13
+  },
+  {
+    "name": "Piece of Secret Delivery #14 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 14
+  },
+  {
+    "name": "Piece of Secret Delivery #15 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 15
+  },
+  {
+    "name": "Piece of Secret Delivery #16 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 16
+  },
+  {
+    "name": "Piece of Secret Delivery #17 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 17
+  },
+  {
+    "name": "Piece of Secret Delivery #18 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 18
+  },
+  {
+    "name": "Piece of Secret Delivery #19 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 19
+  },
+  {
+    "name": "Piece of Secret Delivery #20 Instructions",
+    "category": [
+      "Secret Delivery Instructions"
+    ],
+    "progression": true,
+    "count": 5,
+    "secret_delivery_number": 20
+  },
+  {
+    "name": "Secret Delivery Completion",
+    "category": [
+      "Secret Delivery Completions"
+    ],
+    "progression": true,
+    "count": 20
+  },
+  {
+    "name": "Delivery Token",
+    "progression": true,
+    "count": 100
+  },
+  {
+    "name": "Ferry Ticket",
+    "progression": true,
+    "grant_if_option": {
+      "ferry_ticket_item": "in_starting_inventory"
+    }
+  },
+  {
+    "name": "Camera",
+    "category": [
+      "Photo Trophy"
+    ],
+    "progression": true,
+    "grant_if_option": {
+      "enable_photosanity": "start_with_camera"
+    }
+  },
+  {
+    "name": "TV",
+    "category": [
+      "Viewpoint"
+    ],
+    "progression": true,
+    "grant_if_option": {
+      "enable_viewpointsanity": "start_with_tv"
+    }
+  },
+  {
+    "name": "Bank Loan Approval",
+    "progression": true,
+    "grant_if_option": {
+      "bank_loan_approval_item": "in_starting_inventory"
+    }
+  },
+  {
+    "name": "Trailer Contract",
+    "useful": true,
+    "grant_if_option": {
+      "trailer_contract_item": "in_starting_inventory"
+    }
+  },
+  {
+    "name": "Quick Travel Ticket",
+    "progression": true,
+    "grant_if_option": {
+      "quick_travel_item": "in_starting_inventory"
+    }
+  }
+]

@@ -1,12 +1,11 @@
 #:package Nixill@0.15.0
-
-#pragma warning disable IL2026
-#pragma warning disable IL3050
+#:package Newtonsoft.Json@13.0.4
 
 namespace Nixill.Archipelago;
 
-using System.Text.Json.Nodes;
+// using System.Text.Json.Nodes;
 using Nixill.Collections;
+using Newtonsoft.Json.Linq;
 
 #region Type defs
 public readonly record struct Region(string StateName, string DLCName)
@@ -87,6 +86,11 @@ public static class Data
     CSVObjectDictionary.ParseObjectsFromFile(string.Format(CsvPath, DLCsFN),
       d => KeyValuePair.Create(d["DLC"] ?? Str.DLC.BaseGame, true));
 
+  public const string GameInfoFN = "game-info";
+  public static readonly CSVObjectDictionary<string, string> GameInfo =
+    CSVObjectDictionary.ParseObjectsFromFile(string.Format(CsvPath, GameInfoFN),
+      d => KeyValuePair.Create(d["Key"]!, d["Value"]!));
+
   public const string PhotoTrophiesFN = "photo-trophies";
   public static readonly CSVObjectCollection<Check> PhotoTrophies =
     CSVObjectCollection.ParseObjectsFromFile(string.Format(CsvPath, PhotoTrophiesFN), d => new Check(
@@ -115,6 +119,11 @@ public static class Data
   public const string StatesFN = "states";
   public static readonly CSVObjectDictionary<string, bool> States =
     CSVObjectDictionary.ParseObjectsFromFile(string.Format(CsvPath, StatesFN), d => KeyValuePair.Create(d["State"]!, true));
+
+  public const string TerminologyFN = "terminology";
+  public static readonly CSVObjectDictionary<string, string> Terminology =
+    CSVObjectDictionary.ParseObjectsFromFile(string.Format(CsvPath, TerminologyFN),
+      d => KeyValuePair.Create(d["Term"]!, d["Use"]!));
 
   public const string TrucksFN = "trucks";
   public static readonly CSVObjectCollection<Truck> Trucks =
@@ -180,10 +189,16 @@ public static class DataCounters
 // ensure I'm using consistent names by declaring them as consts or methods
 public static class Str
 {
+  public static string StateCountry => Data.Terminology["State"];
+  public static string StateCountryLC => Data.Terminology["state"];
+  public static string StatesCountries => Data.Terminology["States"];
+  public static string StatesCountriesLC => Data.Terminology["states"];
+
   public static class Category
   {
     public const string City = "City";
     public const string Company = "Company";
+    public static string DLC(string dlcName) => $"{dlcName} (DLC)";
     public const string Level = "Player Level";
     public const string PhotoTrophy = "Photo Trophy";
     public const string RecruitmentAgent = "Recruitment Agency Branch";
@@ -191,8 +206,9 @@ public static class Str
     public const string SecretDeliveryCompletions = "Secret Delivery Completions";
     public const string SecretDeliveryInstructions = "Secret Delivery Instructions";
     public const string SkillPoint = "Skill Point";
-    public const string StateKey = "State Key";
-    public const string StateStarterKey = "State Starter Key";
+    public static string State(string stateName) => $"{stateName} ({StateCountry})";
+    public static string StateKey => $"{StateCountry} Key";
+    public static string StateStarterKey => $"{StateCountry} Starter Key";
     public const string TruckContract = "Truck Purchase Contract";
     public const string TruckDealer = "Truck Dealer";
     public const string Viewpoint = "Viewpoint";
@@ -206,13 +222,6 @@ public static class Str
   public static class Event
   {
     public static string RegionReachable(string input) => new($"{input} Reachable");
-  }
-
-  public static class GameInfo
-  {
-    public const string Creator = "Nixill";
-    public const string Filler = "Spare Tire";
-    public const string Name = "ETS2";
   }
 
   public static class Item
@@ -245,9 +254,9 @@ public static class Str
   {
     public const string BankLoanItem = "bank_loan_approval_item";
     public const string ChecksMaxOverallCount = "checks_max_count";
-    public const string ChecksMaxStateCount = "checks_state_count_max";
-    public const string ChecksMaxWithinState = "checks_within_state_max";
-    public const string ChecksPercentStateCount = "checks_state_chance_percent";
+    public static string ChecksMaxStateCount => $"checks_{StateCountryLC}_count_max";
+    public static string ChecksMaxWithinState => $"checks_within_{StateCountryLC}_max";
+    public static string ChecksPercentStateCount => $"checks_{StateCountryLC}_chance_percent";
     public const string ChecksPercentWithinState = "checks_chance_percent";
     public const string Citysanity = "enable_citysanity";
     public const string Companysanity = "enable_companysanity";
@@ -396,25 +405,27 @@ public static class Str
 public static class JsonDefs
 {
   #region ├╴generic methods
-  static JsonObject WithIf(this JsonObject input, bool condition, string key, JsonNode? value)
+  static JObject WithIf(this JObject input, bool condition, string key, JToken value)
   {
     if (condition) input[key] = value;
     return input;
   }
 
-  static JsonArray AddIf(this JsonArray input, bool condition, JsonNode? value)
+  static JArray AddIf(this JArray input, bool condition, JToken value)
   {
     if (condition) input.Add(value);
     return input;
   }
 
-  static KeyValuePair<string, JsonNode?> KVP(string key, JsonNode? value) => new(key, value);
-  static KeyValuePair<string, JsonNode?> KVPO(string key, JsonObject obj) => new(key, obj);
-  static KeyValuePair<string, JsonNode?> KVPA(string key, JsonArray arr) => new(key, arr);
-  static JsonObject Obj(JsonObject obj) => obj;
-  static JsonArray Arr(JsonArray arr) => arr;
+  static JProperty KVP(string key, JToken value) => new(key, value);
+  static JProperty KVPO(string key, JObject obj) => new(key, obj);
+  static JProperty KVPA(string key, JArray arr) => new(key, arr);
+  static JProperty KVPO(string key, IEnumerable<JProperty> obj) => new(key, new JObject(obj));
+  static JObject Obj(JObject obj) => obj;
+  static JObject Obj(IEnumerable<JProperty> obj) => new(obj);
+  static JArray Arr(JArray arr) => arr;
 
-  static JsonArray Split(string input) => [.. Split1(input)];
+  static JArray Split(string input) => [.. Split1(input)];
 
   const int YamlWidth = 100;
 
@@ -458,27 +469,27 @@ public static class JsonDefs
   #endregion
 
   #region ├╴game.json
-  public static JsonObject GetGameJson() => new()
+  public static JObject GetGameJson() => new()
   {
-    [Str.Syntax.GameInfoGame] = Str.GameInfo.Name,
-    [Str.Syntax.GameInfoCreator] = Str.GameInfo.Creator,
-    [Str.Syntax.GameInfoFillerItem] = Str.GameInfo.Filler,
+    [Str.Syntax.GameInfoGame] = Data.GameInfo["game"],
+    [Str.Syntax.GameInfoCreator] = Data.GameInfo["creator"],
+    [Str.Syntax.GameInfoFillerItem] = Data.GameInfo["filler_item"],
     [Str.Syntax.GameInfoDeathLink] = true
   };
   #endregion
 
   #region ├╴regions.json
-  public static JsonObject GetRegionsJson() => [
+  public static JObject GetRegionsJson() => Obj([
     GetStartRegion(),
     .. GetRegionRegions()
-  ];
+  ]);
 
-  public static KeyValuePair<string, JsonNode?> GetStartRegion() => KVPO(Str.Region.Start, [
+  public static JProperty GetStartRegion() => KVPO(Str.Region.Start, [
     KVP(Str.Syntax.RegionStarting, true),
     KVPO(Str.Syntax.RegionExitRequires, [.. GetStarterExitRequirements()])
   ]);
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetStarterExitRequirements()
+  public static IEnumerable<JProperty> GetStarterExitRequirements()
   {
     foreach (var region in Data.Regions)
     {
@@ -488,7 +499,7 @@ public static class JsonDefs
     }
   }
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetRegionRegions()
+  public static IEnumerable<JProperty> GetRegionRegions()
   {
     // first let's form a couple lists of connections
     var allConnections = Data.Connections
@@ -506,18 +517,18 @@ public static class JsonDefs
     foreach (Region region in Data.Regions)
     {
       Region[] connections = allConnections[region];
-      Region[] ferries = ferryConnections[region];
+      Region[] ferries = ferryConnections.GetValueOrDefault(region, []);
 
-      JsonObject obj = [
+      JObject obj = Obj([
         KVP(Str.Syntax.Requires,
           $"|{Str.Item.StateKey(region.StateName)}| or |{Str.Item.StateStarterKey(region.StateName)}|"),
         KVPA(Str.Syntax.RegionConnectsTo, [Str.Region.StartRegion(region.StateName), .. connections.Select(r => $"{r}")])
-      ];
+      ]);
 
       if (ferries.Length > 0)
       {
         obj[Str.Syntax.RegionExitRequires]
-          = new JsonObject([.. ferries.Select(fc => KVP($"{fc}", $"|{Str.Item.FerryTicket}|"))]);
+          = Obj([.. ferries.Select(fc => KVP($"{fc}", $"|{Str.Item.FerryTicket}|"))]);
       }
 
       yield return KVP(region.ToString(), obj);
@@ -526,7 +537,7 @@ public static class JsonDefs
   #endregion
 
   #region ├╴locations.json
-  public static JsonArray GetLocationsJson() => [
+  public static JArray GetLocationsJson() => [
     .. GetCityLocations(),
     .. GetPhotoTrophyLocations(),
     .. GetViewpointLocations(),
@@ -537,7 +548,7 @@ public static class JsonDefs
     .. GetVictoryLocations()
   ];
 
-  public static IEnumerable<JsonNode?> GetCheckLocations(string name, IEnumerable<Check> checks,
+  public static IEnumerable<JToken> GetCheckLocations(string name, IEnumerable<Check> checks,
     string? globalRequire = null)
   {
     foreach (Check check in checks)
@@ -546,8 +557,8 @@ public static class JsonDefs
         KVP(Str.Syntax.Name, Str.Location.CheckConst(name, check.Name)),
         KVPA(Str.Syntax.Category, [
           name,
-          check.Region.StateName,
-          check.Region.DLCName
+          Str.Category.State(check.Region.StateName),
+          Str.Category.DLC(check.Region.DLCName)
         ]),
         KVP(Str.Syntax.Region, check.Region.ToString())
       ]).WithIf(globalRequire != null && check.FerryRequired, Str.Syntax.Requires,
@@ -557,13 +568,13 @@ public static class JsonDefs
     }
   }
 
-  public static IEnumerable<JsonNode?> GetCityLocations() => GetCheckLocations(Str.Category.City, Data.Cities.Values);
-  public static IEnumerable<JsonNode?> GetPhotoTrophyLocations()
+  public static IEnumerable<JToken> GetCityLocations() => GetCheckLocations(Str.Category.City, Data.Cities.Values);
+  public static IEnumerable<JToken> GetPhotoTrophyLocations()
     => GetCheckLocations(Str.Category.PhotoTrophy, Data.PhotoTrophies, $"|{Str.Item.Camera}|");
-  public static IEnumerable<JsonNode?> GetViewpointLocations()
+  public static IEnumerable<JToken> GetViewpointLocations()
     => GetCheckLocations(Str.Category.Viewpoint, Data.Viewpoints, $"|{Str.Item.Television}|");
 
-  public static IEnumerable<JsonNode?> GetCompanyLocations()
+  public static IEnumerable<JToken> GetCompanyLocations()
   {
     Dictionary<string, Region[]> locations = Data.CompanyLocations.GroupBy(c => c.Name)
       .Select(grp => KeyValuePair.Create(grp.Key, grp.Select(c => c.Region).ToArray()))
@@ -574,9 +585,9 @@ public static class JsonDefs
       var thisCoLoc = locations[company];
 
       var requires = string.Join(" or ", thisCoLoc.Select(r => $"|{Str.Event.RegionReachable(r.ToString())}|"));
-      JsonNode dlcList = thisCoLoc.Any(r => r.DLCName == Str.DLC.BaseGame)
+      JToken dlcList = thisCoLoc.Any(r => r.DLCName == Str.DLC.BaseGame)
         ? false
-        : (JsonArray)([.. thisCoLoc.Select(r => Str.SnakeCase(r.DLCName)).Distinct()]);
+        : (JArray)([.. thisCoLoc.Select(r => Str.SnakeCase(r.DLCName)).Distinct()]);
 
       yield return Obj([
         KVP(Str.Syntax.Name, Str.Location.CheckConst(Str.Category.Company, company)),
@@ -587,33 +598,32 @@ public static class JsonDefs
     }
   }
 
-  public static IEnumerable<JsonNode?> GetInternalLevelLocations()
-    => Enumerable.Range(1, 36).Select<int, JsonObject>(i => [
+  public static IEnumerable<JToken> GetInternalLevelLocations()
+    => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.InternalLevel(i)),
       KVPA(Str.Syntax.Category, [ Str.Category.Level ]),
       KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
       KVPA(Str.Syntax.LocationPlaceItem, [ Str.Item.LevelItem ])
-    ]);
+    ]));
 
-  public static IEnumerable<JsonNode?> GetExternalLevelLocations()
-    => Enumerable.Range(1, 36).Select<int, JsonObject>(i => [
+  public static IEnumerable<JToken> GetExternalLevelLocations()
+    => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.ExternalLevel(i)),
       KVPA(Str.Syntax.Category, [ Str.Category.Level ]),
-      KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
-      KVP(Str.Syntax.LocationPlaceItem, Str.Item.LevelItem)
-    ]);
+      KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|")
+    ]));
 
-  public static IEnumerable<JsonNode?> GetSkillLevelLocations()
-    => Enumerable.Range(1, 36).Select<int, JsonObject>(i => [
+  public static IEnumerable<JToken> GetSkillLevelLocations()
+    => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.SkillLevel(i)),
       KVPA(Str.Syntax.Category, [ Str.Category.Level ]),
       KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
       KVPA(Str.Syntax.LocationPlaceItemCategory, [ Str.Category.SkillPoint ]),
       KVP(Str.Syntax.RequireOption, Str.Option.SkillScatter),
       KVP(Str.Syntax.RequireOptionValue, Str.Option.SkillScatterCondensed)
-    ]);
+    ]));
 
-  public static IEnumerable<JsonNode?> GetSecretDeliveryLocations()
+  public static IEnumerable<JToken> GetSecretDeliveryLocations()
   {
     foreach (int i in Enumerable.Range(1, 20))
     {
@@ -628,7 +638,7 @@ public static class JsonDefs
     }
   }
 
-  public static IEnumerable<JsonNode?> GetVictoryLocations() => [
+  public static IEnumerable<JToken> GetVictoryLocations() => [
     Obj([
       KVP(Str.Syntax.Name, Str.Victory.SecretDeliveriesCompleted),
       KVP(Str.Syntax.Requires, Str.Syntax.OptionCount(Str.Item.SecretDeliveryCompletion,
@@ -650,7 +660,7 @@ public static class JsonDefs
   #endregion
 
   #region ├╴items.json
-  public static JsonArray GetItemsJson() => [
+  public static JArray GetItemsJson() => [
     .. GetStateKeyItems(),
     .. GetStarterKeyItems(),
     .. GetTruckContractItems(),
@@ -659,7 +669,7 @@ public static class JsonDefs
     .. GetSingleItems()
   ];
 
-  public static IEnumerable<JsonNode?> GetStateKeyItems()
+  public static IEnumerable<JToken> GetStateKeyItems()
   {
     Dictionary<string, string[]> regions = Data.Regions.GroupBy(c => c.StateName)
       .Select(grp => KeyValuePair.Create(grp.Key, grp.Select(c => c.DLCName).ToArray()))
@@ -667,9 +677,9 @@ public static class JsonDefs
 
     foreach (var state in Data.States.Keys)
     {
-      JsonNode dlcList = regions[state].Any(r => r == Str.DLC.BaseGame)
+      JToken dlcList = regions[state].Any(r => r == Str.DLC.BaseGame)
         ? false
-        : (JsonArray)([.. regions[state].Select(r => Str.SnakeCase(r)).Distinct()]);
+        : (JArray)([.. regions[state].Select(r => Str.SnakeCase(r)).Distinct()]);
 
       yield return Obj([
         KVP(Str.Syntax.Name, Str.Item.StateKey(state)),
@@ -680,7 +690,7 @@ public static class JsonDefs
     }
   }
 
-  public static IEnumerable<JsonNode?> GetStarterKeyItems()
+  public static IEnumerable<JToken> GetStarterKeyItems()
   {
     Dictionary<string, string[]> regions = Data.Regions.GroupBy(c => c.StateName)
       .Select(grp => KeyValuePair.Create(grp.Key, grp.Select(c => c.DLCName).ToArray()))
@@ -688,9 +698,9 @@ public static class JsonDefs
 
     foreach (var state in Data.States.Keys)
     {
-      JsonNode dlcList = regions[state].Any(r => r == Str.DLC.BaseGame)
+      JToken dlcList = regions[state].Any(r => r == Str.DLC.BaseGame)
         ? false
-        : (JsonArray)([.. regions[state].Select(r => Str.SnakeCase(r)).Distinct()]);
+        : (JArray)([.. regions[state].Select(r => Str.SnakeCase(r)).Distinct()]);
 
       yield return Obj([
         KVP(Str.Syntax.Name, Str.Item.StateStarterKey(state)),
@@ -701,14 +711,14 @@ public static class JsonDefs
     }
   }
 
-  public static IEnumerable<JsonNode?> GetTruckContractItems()
+  public static IEnumerable<JToken> GetTruckContractItems()
     => Data.TruckMakes.Keys.Select(truck => Obj([
         KVP(Str.Syntax.Name, Str.Item.TruckContract(truck)),
         KVPA(Str.Syntax.Category, [Str.Category.TruckContract]),
         KVP(Str.Syntax.ItemClassUseful, true)
       ]));
 
-  public static IEnumerable<JsonNode?> GetSecretDeliveryInstructionItems()
+  public static IEnumerable<JToken> GetSecretDeliveryInstructionItems()
     => Enumerable.Range(1, 20).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Item.SecretDeliveryInstruction(i)),
       KVPA(Str.Syntax.Category, [Str.Category.SecretDeliveryInstructions]),
@@ -717,7 +727,7 @@ public static class JsonDefs
       KVP(Str.Syntax.SecretDeliveryCounter, i)
     ]));
 
-  public static IEnumerable<JsonNode?> GetSecretDeliveryCompletionItems()
+  public static IEnumerable<JToken> GetSecretDeliveryCompletionItems()
     => [Obj([
       KVP(Str.Syntax.Name, Str.Item.SecretDeliveryCompletion),
       KVPA(Str.Syntax.Category, [Str.Category.SecretDeliveryCompletions]),
@@ -725,7 +735,7 @@ public static class JsonDefs
       KVP(Str.Syntax.ItemCount, 20)
     ])];
 
-  public static IEnumerable<JsonNode?> GetSingleItems() => [
+  public static IEnumerable<JToken> GetSingleItems() => [
     Obj([
       KVP(Str.Syntax.Name, Str.Item.DeliveryToken),
       KVP(Str.Syntax.ItemClassProgression, true),
@@ -785,25 +795,25 @@ public static class JsonDefs
   #endregion
 
   #region ├╴categories.json
-  public static JsonObject GetCategoriesJson() => [
+  public static JObject GetCategoriesJson() => Obj([
     .. GetStateCategories(),
     .. GetDLCCategories(),
     .. GetTypeCategories()
-  ];
+  ]);
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetStateCategories()
-    => Data.States.Keys.Select(s => KVP(s, new JsonObject()));
+  public static IEnumerable<JProperty> GetStateCategories()
+    => Data.States.Keys.Select(s => KVP(Str.Category.State(s), new JObject()));
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetDLCCategories()
+  public static IEnumerable<JProperty> GetDLCCategories()
     => Data.DLCs.Keys.Except([Str.DLC.BaseGame])
-      .Select(d => KVP(d, new JsonObject
+      .Select(d => KVP(Str.Category.DLC(d), new JObject
       {
         [Str.Syntax.CategoryHidden] = true,
-        [Str.Syntax.CategoryYamlOption] = new JsonArray([Str.Option.DLC(d)])
+        [Str.Syntax.CategoryYamlOption] = new JArray([Str.Option.DLC(d)])
       }));
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetTypeCategories() => [
-    GetTypeCategory(Str.Category.City),
+  public static IEnumerable<JProperty> GetTypeCategories() => [
+    GetTypeCategory(Str.Category.City, Str.Option.Citysanity),
     GetTypeCategory(Str.Category.Viewpoint, Str.Option.Viewpointsanity),
     GetTypeCategory(Str.Category.PhotoTrophy, Str.Option.Photosanity),
     GetTypeCategory(Str.Category.Company, Str.Option.Companysanity),
@@ -811,23 +821,25 @@ public static class JsonDefs
     GetTypeCategory(Str.Category.TruckDealer, Str.Option.Dealersanity)
   ];
 
-  public static KeyValuePair<string, JsonNode?> GetTypeCategory(string name, string? option = null)
-    => new(name, new JsonObject().WithIf(option != null, Str.Syntax.CategoryYamlOption, new JsonArray([option])));
+  public static JProperty GetTypeCategory(string name, string? option = null)
+    => new(name, Obj([
+        KVP(Str.Syntax.CategoryHidden, true)
+      ]).WithIf(option != null, Str.Syntax.CategoryYamlOption, new JArray([option])));
   #endregion
 
   #region ├╴events.json
-  public static JsonArray GetEventsJson() => [
+  public static JArray GetEventsJson() => [
     .. GetRegionEvents()
   ];
 
-  public static IEnumerable<JsonNode?> GetRegionEvents()
+  public static IEnumerable<JToken> GetRegionEvents()
   {
     foreach (Region region in Data.Regions)
     {
-      yield return new JsonObject
+      yield return new JObject
       {
         [Str.Syntax.Name] = Str.Event.RegionReachable(region.ToString()),
-        [Str.Syntax.Category] = new JsonArray
+        [Str.Syntax.Category] = new JArray
         {
           region.StateName,
           region.DLCName
@@ -839,34 +851,44 @@ public static class JsonDefs
   #endregion
 
   #region └╴options.json
-  public static JsonObject GetOptionsJson() => [
+  public static JObject GetOptionsJson() => Obj([
     KVP(Str.Syntax.OptionsCore, GetCoreOptions()),
     KVP(Str.Syntax.OptionsUser, GetUserOptions())
-  ];
+  ]);
 
-  public static JsonObject GetCoreOptions() => [
+  public static JObject GetCoreOptions() => Obj([
     KVP(Str.Syntax.CoreOptionDeathlink, Obj([
-      KVPA(Str.Syntax.OptionDescription, [
-        "Enable or disable death link support. If enabled:",
-        "* Upon receiving a death, the player must get towed or navigate to the nearest service station.",
-        "* Upon being towed to a service station or completing a delivery with over 5% damage, the player must send a death."
-      ])
+      KVPA(Str.Syntax.OptionDescription, Split($"""
+        Enable or disable death link support. If enabled:
+
+        Upon receiving a death, the player must get towed or navigate to
+        the nearest service station.
+
+        Upon being towed to a service station or completing a delivery
+        with over 5% cargo damage, the player must send a death.
+        """))
     ])),
     KVP(Str.Syntax.CoreOptionGoal, Obj([
-      KVPA(Str.Syntax.OptionDescription, [
-        "Goal condition:",
-        $"* {Str.Victory.DeliveryTokensCollected}: Collect a certain number of delivery tokens (see the",
-        "  \"Delivery Tokens\" group of the options), then activate the win button to win.",
-        $"* {Str.Victory.SecretDeliveriesCompleted}: Collect instructions for your secret deliveries (see the",
-        "  \"Secret Deliveries\" group of the options, and the patch file from the multiworld host), then follow",
-        "  those instructions to win.",
-        $"* {Str.Victory.PlayerLevelReached}: Reach a certain level in career progression (see the \"{Str.Option.LevelChecks}\"",
-        "  option), then activate the win button to win."
-      ])
-    ]))
-  ];
+      KVPA(Str.Syntax.OptionDescription, Split($"""
+        Goal condition:
 
-  public static JsonObject GetUserOptions() => [
+        {Str.Victory.DeliveryTokensCollected}: Collect a certain number of
+        Delivery Tokens (see the "{Str.OptionGroup.DeliveryTokens}" group
+        of the options), then activate the win button to win.
+
+        {Str.Victory.SecretDeliveriesCompleted}: Collect instructions for
+        secret deliveries (see the "{Str.OptionGroup.SecretDeliveries}"
+        group of the options, and the patch file from the multiworld
+        host), then follow those instructions to win.
+
+        {Str.Victory.PlayerLevelReached}: Reach a certain level in career
+        progression (see the "{Str.Option.LevelChecks}" option), then
+        activate the win button to win.
+        """))
+    ]))
+  ]);
+
+  public static JObject GetUserOptions() => Obj([
     .. GetDeliveryTokensOptions(),
     .. GetSecretDeliveryOptions(),
     .. GetDLCOptions(),
@@ -874,9 +896,9 @@ public static class JsonDefs
     .. GetLevelsOptions(),
     .. GetItemRequiresOptions(),
     .. GetChecksReductionOptions()
-  ];
+  ]);
 
-  static KeyValuePair<string, JsonNode?> ToggleOption(string name, string displayName, string description,
+  static JProperty ToggleOption(string name, string displayName, string description,
     bool defaultValue) => KVPO(name, [
       KVP(Str.Syntax.OptionDisplayName, displayName),
       KVPA(Str.Syntax.OptionDescription, Split(description)),
@@ -884,7 +906,7 @@ public static class JsonDefs
       KVP(Str.Syntax.OptionDefaultValue, defaultValue)
     ]);
 
-  static KeyValuePair<string, JsonNode?> RangeOption(string name, string displayName, string description,
+  static JProperty RangeOption(string name, string displayName, string description,
     int rangeStart, int rangeEnd, int defaultValue, params (string Name, int Value)[] values) => KVPO(name, Obj([
       KVP(Str.Syntax.OptionDisplayName, displayName),
       KVPA(Str.Syntax.OptionDescription, Split(description)),
@@ -894,7 +916,7 @@ public static class JsonDefs
       KVP(Str.Syntax.OptionDefaultValue, defaultValue)
     ]).WithIf(values.Length > 0, Str.Syntax.OptionValues, Obj([.. values.Select(t => KVP(t.Name, t.Value))])));
 
-  static KeyValuePair<string, JsonNode?> ChoiceOption(string name, string displayName, string description,
+  static JProperty ChoiceOption(string name, string displayName, string description,
     string defaultValue, params (string Name, int Value)[] values) => KVPO(name, [
       KVP(Str.Syntax.OptionDisplayName, displayName),
       KVPA(Str.Syntax.OptionDescription, Split(description)),
@@ -903,17 +925,17 @@ public static class JsonDefs
       KVP(Str.Syntax.OptionDefaultValue, defaultValue)
     ]);
 
-  static IEnumerable<KeyValuePair<string, JsonNode?>> OptionGroup(string group,
-    params IEnumerable<KeyValuePair<string, JsonNode?>> options)
+  static IEnumerable<JProperty> OptionGroup(string group,
+    params IEnumerable<JProperty> options)
   {
-    foreach ((string _, JsonNode? node) in options)
+    foreach (JProperty prop in options)
     {
-      if (node is JsonObject obj) obj[Str.Syntax.OptionGroup] = group;
+      if (prop.Value is JObject obj) obj[Str.Syntax.OptionGroup] = group;
     }
     return options;
   }
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetDeliveryTokensOptions() => OptionGroup(
+  public static IEnumerable<JProperty> GetDeliveryTokensOptions() => OptionGroup(
     Str.OptionGroup.DeliveryTokens,
 
     RangeOption(Str.Option.DeliveryTokensAvailable, "Available Delivery Tokens", $"""
@@ -935,7 +957,7 @@ public static class JsonDefs
       """, 1, 100, 25)
   );
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetSecretDeliveryOptions() => OptionGroup(
+  public static IEnumerable<JProperty> GetSecretDeliveryOptions() => OptionGroup(
     Str.OptionGroup.SecretDeliveries,
 
     RangeOption(Str.Option.SecretDeliveriesAvailable, "Secret Deliveries Available", $"""
@@ -970,7 +992,7 @@ public static class JsonDefs
       """, 1, 5, 2)
   );
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetDLCOptions() => OptionGroup(
+  public static IEnumerable<JProperty> GetDLCOptions() => OptionGroup(
     Str.OptionGroup.DLCs,
 
     Data.DLCs.Keys.Select(entry => ToggleOption(Str.Option.DLC(entry), $"Enable {entry} DLC", $"""
@@ -979,7 +1001,7 @@ public static class JsonDefs
       """, false))
   );
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetChecksOptions() => OptionGroup(
+  public static IEnumerable<JProperty> GetChecksOptions() => OptionGroup(
     Str.OptionGroup.CheckToggles,
 
     ToggleOption(Str.Option.Citysanity, "Enable Citysanity", $"""
@@ -1035,7 +1057,7 @@ public static class JsonDefs
       """, false) */
   );
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetLevelsOptions() => OptionGroup(
+  public static IEnumerable<JProperty> GetLevelsOptions() => OptionGroup(
     Str.OptionGroup.PlayerLevels,
 
     RangeOption(Str.Option.LevelChecks, "Player Level Checks", $"""
@@ -1070,7 +1092,7 @@ public static class JsonDefs
       [(Str.Option.Disabled, 0), (Str.Option.SkillScatterSpread, 1), (Str.Option.SkillScatterCondensed, 2)])
   );
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetItemRequiresOptions() => OptionGroup(
+  public static IEnumerable<JProperty> GetItemRequiresOptions() => OptionGroup(
     Str.OptionGroup.ItemRequirements,
 
     ChoiceOption(Str.Option.BankLoanItem, "Bank Loan Approval", $"""
@@ -1111,12 +1133,12 @@ public static class JsonDefs
       [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)])
   );
 
-  public static IEnumerable<KeyValuePair<string, JsonNode?>> GetChecksReductionOptions() => OptionGroup(
+  public static IEnumerable<JProperty> GetChecksReductionOptions() => OptionGroup(
     Str.OptionGroup.CheckReduction,
-    RangeOption(Str.Option.ChecksPercentStateCount, "% of States containing Checks", $"""
-      What percent of states (or countries) should contain locations? Note
-      that other states will still have Keys, and you must obtain those
-      Keys before driving in those states.
+    RangeOption(Str.Option.ChecksPercentStateCount, $"% of {Str.StatesCountries} containing Checks", $"""
+      What percent of {Str.StatesCountriesLC} should contain locations?
+      Note that other {Str.StatesCountriesLC} will still have Keys, and
+      you must obtain those Keys before driving in those {Str.StatesCountriesLC}.
 
       The options in this category are applied in the following order:
       {Str.Option.ChecksPercentStateCount}, {Str.Option.ChecksMaxStateCount},
@@ -1124,14 +1146,14 @@ public static class JsonDefs
       {Str.Option.ChecksMaxOverallCount}.
       """, 1, 100, 100),
 
-    RangeOption(Str.Option.ChecksMaxStateCount, "# of States Containing Checks", $"""
-      How many states (or countries) should contain locations? Note that
-      other accessible states will still have Keys , and you must obtain
-      those Keys before driving in those states.
+    RangeOption(Str.Option.ChecksMaxStateCount, $"# of {Str.StatesCountries} Containing Checks", $"""
+      How many {Str.StatesCountriesLC} should contain locations? Note that
+      other accessible {Str.StatesCountriesLC} will still have Keys , and
+      you must obtain those Keys before driving in those {Str.StatesCountriesLC}.
 
-      Setting this higher than the number of states that exists has no
-      effect besides future-proofing your yaml. The default value is the
-      number of states that exist so far.
+      Setting this higher than the number of {Str.StatesCountriesLC} that
+      exist has no effect besides future-proofing your yaml. The default
+      value is the number of {Str.StatesCountriesLC} that exist so far.
       """, 1, 100, DataCounters.TotalStates),
 
     RangeOption(Str.Option.ChecksPercentWithinState, "% Chance of Each Check", $"""
@@ -1140,12 +1162,12 @@ public static class JsonDefs
 
     RangeOption(Str.Option.ChecksMaxWithinState, "# of Checks Per State", $"""
       What is the maximum number of checks that should appear in each
-      state? Companies are considered stateless and are not affected by
-      this option.
+      {Str.StateCountryLC}? Companies are considered {Str.StateCountryLC}less
+      and are not affected by this option.
 
-      Setting this higher than the number of checks per state that exists
-      has no effect besides future-proofing your yaml. The default value
-      is the highest max number per state.
+      Setting this higher than the number of checks per {Str.StateCountryLC}
+      that exist has no effect besides future-proofing your yaml. The
+      default value is the highest max number per {Str.StateCountryLC}.
       """, 1, 1000, DataCounters.MaxChecksByState),
 
     RangeOption(Str.Option.ChecksMaxOverallCount, "# of Checks", $"""
@@ -1166,7 +1188,23 @@ public static class Program
 {
   static void Main(string[] args)
   {
+    (string FileName, JToken Contents)[] Values = [
+      ("game", JsonDefs.GetGameJson()),
+      ("regions", JsonDefs.GetRegionsJson()),
+      ("locations", JsonDefs.GetLocationsJson()),
+      ("items", JsonDefs.GetItemsJson()),
+      ("categories", JsonDefs.GetCategoriesJson()),
+      ("events", JsonDefs.GetEventsJson()),
+      ("options", JsonDefs.GetOptionsJson())
+    ];
 
+    foreach ((string file, JToken content) in Values)
+    {
+      File.WriteAllText($"src/data/{file}.json", content.ToString());
+      Console.WriteLine($"Wrote {file}.json");
+    }
+
+    Console.WriteLine("Done!");
   }
 }
 #endregion
