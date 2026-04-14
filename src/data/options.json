@@ -27,6 +27,57 @@
     }
   },
   "user": {
+    "starting_country": {
+      "display_name": "Starting Country",
+      "description": [
+        "Which country should the player start in?",
+        "",
+        "If that country doesn't exist because of disabled DLC, this option gets set to random. If the",
+        "selected country's checks are disabled, they are re-enabled."
+      ],
+      "type": "Choice",
+      "values": {
+        "random": 0,
+        "albania": 1,
+        "austria": 2,
+        "belgium": 3,
+        "bosnia_and_herzegovina": 4,
+        "bulgaria": 5,
+        "croatia": 6,
+        "czech_republic": 7,
+        "denmark": 8,
+        "estonia": 9,
+        "finland": 10,
+        "france": 11,
+        "germany": 12,
+        "greece": 13,
+        "hungary": 14,
+        "italy": 15,
+        "kaliningrad": 16,
+        "kosovo": 17,
+        "latvia": 18,
+        "lithuania": 19,
+        "luxembourg": 20,
+        "montenegro": 21,
+        "netherlands": 22,
+        "north_macedonia": 23,
+        "norway": 24,
+        "poland": 25,
+        "portugal": 26,
+        "romania": 27,
+        "russia": 28,
+        "serbia": 29,
+        "slovakia": 30,
+        "slovenia": 31,
+        "spain": 32,
+        "sweden": 33,
+        "switzerland": 34,
+        "turkiye": 35,
+        "united_kingdom": 36
+      },
+      "default": 0,
+      "group": "Starting Location"
+    },
     "delivery_tokens_available": {
       "display_name": "Available Delivery Tokens",
       "description": [
@@ -687,8 +738,9 @@
       "type": "Choice",
       "values": {
         "disabled": 0,
-        "find_camera": 1,
-        "start_with_camera": 2
+        "start_with_camera": 1,
+        "find_camera_early": 2,
+        "find_camera": 3
       },
       "default": 0,
       "group": "Check/Sanity Toggles"
@@ -705,8 +757,9 @@
       "type": "Choice",
       "values": {
         "disabled": 0,
-        "find_tv": 1,
-        "start_with_tv": 2
+        "start_with_tv": 1,
+        "find_tv_early": 2,
+        "find_tv": 3
       },
       "default": 0,
       "group": "Check/Sanity Toggles"
@@ -758,12 +811,15 @@
       "description": [
         "A Bank Loan Approval is required before you can take any loans from the bank. Should it be part of",
         "the multiworld item pool, requiring you to find it, or should it be part of your starting inventory",
-        "and always be available?"
+        "and always be available?",
+        "",
+        "If it is part of the multiworld item pool, it will be considered an \"early\" item."
       ],
       "type": "Choice",
       "values": {
         "in_starting_inventory": 0,
-        "in_item_pool": 1
+        "in_item_pool_early": 1,
+        "in_item_pool": 2
       },
       "default": 0,
       "group": "Item Requirements"
@@ -773,12 +829,43 @@
       "description": [
         "Truck Contracts are required before you can buy any trucks from truck dealers. Should they be part",
         "of the multiworld item pool, requiring you to find them, or should they be part of your starting",
-        "inventory and always be available?"
+        "inventory and always be available?",
+        "",
+        "The options have the following meaning:",
+        " - all_in_starting_inventory: All truck contracts are in the starting inventory, and do not need to",
+        "be found in the multiworld.",
+        " - all_in_item_pool_early: All truck contracts are in sphere 1.",
+        " - all_in_item_pool: All truck contracts can be anywhere in the multiworld.",
+        " - random_in_starting_inventory: A randomly selected truck contract is in the starting inventory.",
+        "The rest can be anywhere in the multiworld.",
+        " - random_in_item_pool_early: A randomly selected truck contract is in sphere 1. The rest can be",
+        "anywhere in the multiworld.",
+        " - (brand)_in_starting_inventory: The specified brand's truck contract is in the starting inventory.",
+        "The rest can be anywhere in the multiworld.",
+        " - (brand)_in_item_pool_early: The specified brand's truck contract is in sphere 1. The rest can be",
+        "anywhere in the multiworld."
       ],
       "type": "Choice",
       "values": {
-        "in_starting_inventory": 0,
-        "in_item_pool": 1
+        "all_in_starting_inventory": 0,
+        "all_in_item_pool_early": 1,
+        "all_in_item_pool": 2,
+        "random_in_starting_inventory": 3,
+        "random_in_item_pool_early": 4,
+        "daf_in_starting_inventory": 5,
+        "daf_in_item_pool_early": 6,
+        "iveco_in_starting_inventory": 7,
+        "iveco_in_item_pool_early": 8,
+        "man_in_starting_inventory": 9,
+        "man_in_item_pool_early": 10,
+        "mercedes_benz_in_starting_inventory": 11,
+        "mercedes_benz_in_item_pool_early": 12,
+        "renault_in_starting_inventory": 13,
+        "renault_in_item_pool_early": 14,
+        "scania_in_starting_inventory": 15,
+        "scania_in_item_pool_early": 16,
+        "volvo_in_starting_inventory": 17,
+        "volvo_in_item_pool_early": 18
       },
       "default": 0,
       "group": "Item Requirements"
@@ -788,12 +875,13 @@
       "description": [
         "A Trailer Contract is required before you can purchase any trailers. Should it be part of the",
         "multiworld item pool, requiring you to find it, or should it be part of your starting inventory and",
-        "always be avaialble?"
+        "always be available?"
       ],
       "type": "Choice",
       "values": {
         "in_starting_inventory": 0,
-        "in_item_pool": 1
+        "in_item_pool_early": 1,
+        "in_item_pool": 2
       },
       "default": 0,
       "group": "Item Requirements"
@@ -810,10 +898,12 @@
       ],
       "type": "Choice",
       "values": {
-        "in_starting_inventory": 0,
-        "in_item_pool": 1
+        "disabled": 0,
+        "in_starting_inventory": 1,
+        "in_item_pool_early": 2,
+        "in_item_pool": 3
       },
-      "default": 0,
+      "default": 1,
       "group": "Item Requirements"
     },
     "checks_country_chance_percent": {

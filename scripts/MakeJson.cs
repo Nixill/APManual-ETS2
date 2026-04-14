@@ -6,6 +6,7 @@ namespace Nixill.Archipelago;
 // using System.Text.Json.Nodes;
 using Nixill.Collections;
 using Newtonsoft.Json.Linq;
+using Nixill.Utils;
 
 #region Type defs
 public readonly record struct Region(string StateName, string DLCName)
@@ -266,14 +267,18 @@ public static class Str
     public const string DeliveryTokensRequired = "delivery_tokens_required";
     public const string Disabled = "disabled";
     public static string DLC(string dlc) => $"enable_dlc_{SnakeCase(dlc)}";
+    public const string EarlyTruckBrand = "early_truck_brand";
     public const string FerryTicketItem = "ferry_ticket_item";
     public const string ItemInPool = "in_item_pool";
+    public const string ItemInPoolEarly = "in_item_pool_early";
     public const string ItemInStartingInventory = "in_starting_inventory";
     public const string LevelChecks = "player_level_checks";
     public const string Photosanity = "enable_photosanity";
     public const string PhotosanityFindCamera = "find_camera";
+    public const string PhotosanityFindCameraEarly = "find_camera_early";
     public const string PhotosanityStartWithCamera = "start_with_camera";
     public const string QuickTravelTicketItem = "quick_travel_item";
+    public const string Random = "random";
     public const string Recruitmentsanity = "enable_recruitmentsanity";
     public const string SecretDeliveriesAvailable = "secret_deliveries_available";
     public const string SecretDeliveriesRequired = "secret_deliveries_required";
@@ -282,10 +287,19 @@ public static class Str
     public const string SkillScatterCondensed = "condensed";
     public const string SkillScatterSpread = "spread";
     public static string State(string state) => $"enable_state_{SnakeCase(state)}";
+    public static string StartingState => $"starting_{StateCountryLC}";
     public const string TruckContractItems = "truck_contract_items";
+    public const string TruckContractsAllEarly = "all_in_item_pool_early";
+    public const string TruckContractsAllRandom = "all_in_item_pool";
+    public const string TruckContractsAllStart = "all_in_starting_inventory";
+    public static string TruckContractsBrandEarly(string brand) => $"{SnakeCase(brand)}_in_item_pool_early";
+    public static string TruckContractsBrandStart(string brand) => $"{SnakeCase(brand)}_in_starting_inventory";
+    public const string TruckContractsRandomEarly = "random_in_item_pool_early";
+    public const string TruckContractsRandomStart = "random_in_starting_inventory";
     public const string TrailerContractItem = "trailer_contract_item";
     public const string Viewpointsanity = "enable_viewpointsanity";
     public const string ViewpointsanityFindTV = "find_tv";
+    public const string ViewpointsanityFindTVEarly = "find_tv_early";
     public const string ViewpointsanityStartWithTV = "start_with_tv";
   }
 
@@ -298,6 +312,7 @@ public static class Str
     public const string ItemRequirements = "Item Requirements";
     public const string PlayerLevels = "Player Levels";
     public const string SecretDeliveries = "Secret Deliveries";
+    public const string StartingLocation = "Starting Location";
     public static string States => $"{StateCountry} Toggles";
   }
 
@@ -322,6 +337,8 @@ public static class Str
     public const string Category = "category";
     public const string CategoryHidden = "hidden";
     public const string CategoryYamlOption = "yaml_option";
+    public const string CoreOptionDeathlink = "death_link";
+    public const string CoreOptionGoal = "goal";
     public const string GameInfoBuild = "build";
     public const string GameInfoCreator = "creator";
     public const string GameInfoDeathLink = "death_link";
@@ -355,8 +372,6 @@ public static class Str
     public const string OptionVisibilityTemplate = "template";
     public const string OptionsCore = "core";
     public const string OptionsUser = "user";
-    public const string CoreOptionDeathlink = "death_link";
-    public const string CoreOptionGoal = "goal";
     public const string Region = "region";
     public const string RegionConnectsTo = "connects_to";
     public const string RegionEntranceRequires = "entrance_requires";
@@ -907,6 +922,7 @@ public static class JsonDefs
   ]);
 
   public static JObject GetUserOptions() => Obj([
+    .. GetStartingLocationOption(),
     .. GetDeliveryTokensOptions(),
     .. GetSecretDeliveryOptions(),
     .. GetDLCOptions(),
@@ -953,6 +969,21 @@ public static class JsonDefs
     }
     return options;
   }
+
+  public static IEnumerable<JProperty> GetStartingLocationOption() => OptionGroup(
+    Str.OptionGroup.StartingLocation,
+
+    ChoiceOption(Str.Option.StartingState, $"Starting {Str.StateCountry}", $"""
+      Which {Str.StateCountryLC} should the player start in?
+
+      If that {Str.StateCountryLC} doesn't exist because of disabled DLC,
+      this option gets set to random. If the selected {Str.StateCountryLC}'s
+      checks are disabled, they are re-enabled.
+      """, 0, [.. Sequence.Of([
+        Str.Option.Random,
+        .. Data.States.Keys.Select(s => Str.SnakeCase(s))
+      ]).Select((s, i) => (s, i))])
+  );
 
   public static IEnumerable<JProperty> GetDeliveryTokensOptions() => OptionGroup(
     Str.OptionGroup.DeliveryTokens,
@@ -1061,8 +1092,12 @@ public static class JsonDefs
 
       The {Str.Item.Camera} item is required before you can take photos,
       but you can choose to start with it in your inventory.
-      """, 0,
-      [(Str.Option.Disabled, 0), (Str.Option.PhotosanityFindCamera, 1), (Str.Option.PhotosanityStartWithCamera, 2)]),
+      """, 0, [
+        (Str.Option.Disabled, 0),
+        (Str.Option.PhotosanityStartWithCamera, 1),
+        (Str.Option.PhotosanityFindCameraEarly, 2),
+        (Str.Option.PhotosanityFindCamera, 3)
+      ]),
 
     ChoiceOption(Str.Option.Viewpointsanity, "Enable Viewpointsanity", $"""
       Whether or not viewpoints should be checks. If so, the check is
@@ -1071,8 +1106,12 @@ public static class JsonDefs
 
       The {Str.Item.Television} item is required before you can watch
       viewpoints, but you can choose to start with it in your inventory.
-      """, 0,
-      [(Str.Option.Disabled, 0), (Str.Option.ViewpointsanityFindTV, 1), (Str.Option.ViewpointsanityStartWithTV, 2)])/* ,
+      """, 0, [
+        (Str.Option.Disabled, 0),
+        (Str.Option.ViewpointsanityStartWithTV, 1),
+        (Str.Option.ViewpointsanityFindTVEarly, 2),
+        (Str.Option.ViewpointsanityFindTV, 3)
+      ])/* ,
     
     ToggleOption(Str.Option.Dealersanity, "Enable Dealersanity", $"""
       Whether or not truck dealers should be checks. If so, the check is
@@ -1133,24 +1172,59 @@ public static class JsonDefs
       from the bank. Should it be part of the multiworld item pool,
       requiring you to find it, or should it be part of your starting
       inventory and always be available?
-      """, 0,
-      [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)]),
+
+      If it is part of the multiworld item pool, it will be considered an
+      "early" item.
+      """, 0, [
+        (Str.Option.ItemInStartingInventory, 0),
+        (Str.Option.ItemInPoolEarly, 1),
+        (Str.Option.ItemInPool, 2)
+      ]),
 
     ChoiceOption(Str.Option.TruckContractItems, "Truck Contracts", $"""
       Truck Contracts are required before you can buy any trucks from
       truck dealers. Should they be part of the multiworld item pool,
       requiring you to find them, or should they be part of your starting
       inventory and always be available?
-      """, 0,
-      [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)]),
+
+      The options have the following meaning:\n
+      - all_in_starting_inventory: All truck contracts are in the starting
+      inventory, and do not need to be found in the multiworld.\n
+      - all_in_item_pool_early: All truck contracts are in sphere 1.\n
+      - all_in_item_pool: All truck contracts can be anywhere in the
+      multiworld.\n
+      - random_in_starting_inventory: A randomly selected truck contract
+      is in the starting inventory. The rest can be anywhere in the
+      multiworld.\n
+      - random_in_item_pool_early: A randomly selected truck contract is
+      in sphere 1. The rest can be anywhere in the multiworld.\n
+      - (brand)_in_starting_inventory: The specified brand's truck
+      contract is in the starting inventory. The rest can be anywhere in
+      the multiworld.\n
+      - (brand)_in_item_pool_early: The specified brand's truck contract
+      is in sphere 1. The rest can be anywhere in the multiworld.
+      """, 0, [
+        (Str.Option.TruckContractsAllStart, 0),
+        (Str.Option.TruckContractsAllEarly, 1),
+        (Str.Option.TruckContractsAllRandom, 2),
+        (Str.Option.TruckContractsRandomStart, 3),
+        (Str.Option.TruckContractsRandomEarly, 4),
+        .. Data.TruckMakes.Keys.SelectMany((m, i) => Sequence.Of(
+          (Str.Option.TruckContractsBrandStart(m), 5 + 2 * i),
+          (Str.Option.TruckContractsBrandEarly(m), 6 + 2 * i)
+        ))
+      ]),
 
     ChoiceOption(Str.Option.TrailerContractItem, "Trailer Contract", $"""
       A {Str.Item.TrailerContract} is required before you can purchase any
       trailers. Should it be part of the multiworld item pool, requiring
       you to find it, or should it be part of your starting inventory and
-      always be avaialble?
-      """, 0,
-      [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)]),
+      always be available?
+      """, 0, [
+        (Str.Option.ItemInStartingInventory, 0),
+        (Str.Option.ItemInPoolEarly, 1),
+        (Str.Option.ItemInPool, 2)
+      ]),
 
     ChoiceOption(Str.Option.QuickTravelTicketItem, "Quick Travel Ticket", $"""
       A {Str.Item.QuickTravelTicket} is required before you can quick
@@ -1162,8 +1236,12 @@ public static class JsonDefs
       It can be disabled outright, such that quick traveling is never in
       logic, so long as all the enabled DLCs are connected to each other
       (otherwise, this will be set to {Str.Option.ItemInStartingInventory}).
-      """, 0,
-      [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)])
+      """, 1, [
+        (Str.Option.Disabled, 0),
+        (Str.Option.ItemInStartingInventory, 1),
+        (Str.Option.ItemInPoolEarly, 2),
+        (Str.Option.ItemInPool, 3)
+      ])
   );
 
   public static IEnumerable<JProperty> GetChecksReductionOptions() => OptionGroup(
