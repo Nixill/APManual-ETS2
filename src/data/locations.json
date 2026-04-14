@@ -9047,7 +9047,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #1 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 1
   },
   {
@@ -9056,7 +9058,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #2 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 2
   },
   {
@@ -9065,7 +9069,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #3 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 3
   },
   {
@@ -9074,7 +9080,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #4 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 4
   },
   {
@@ -9083,7 +9091,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #5 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 5
   },
   {
@@ -9092,7 +9102,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #6 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 6
   },
   {
@@ -9101,7 +9113,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #7 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 7
   },
   {
@@ -9110,7 +9124,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #8 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 8
   },
   {
@@ -9119,7 +9135,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #9 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 9
   },
   {
@@ -9128,7 +9146,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #10 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 10
   },
   {
@@ -9137,7 +9157,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #11 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 11
   },
   {
@@ -9146,7 +9168,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #12 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 12
   },
   {
@@ -9155,7 +9179,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #13 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 13
   },
   {
@@ -9164,7 +9190,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #14 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 14
   },
   {
@@ -9173,7 +9201,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #15 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 15
   },
   {
@@ -9182,7 +9212,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #16 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 16
   },
   {
@@ -9191,7 +9223,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #17 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 17
   },
   {
@@ -9200,7 +9234,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #18 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 18
   },
   {
@@ -9209,7 +9245,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #19 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 19
   },
   {
@@ -9218,7 +9256,9 @@
       "Secret Delivery"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #20 Instructions, secret_delivery_instruction_parts)}",
-    "place_item": "Secret Delivery Completion",
+    "place_item": [
+      "Secret Delivery Completion"
+    ],
     "secret_delivery_number": 20
   },
   {

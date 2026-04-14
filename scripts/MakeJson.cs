@@ -302,7 +302,6 @@ public static class Str
   {
     public const string QuickTravel = "Quick Travel";
     public const string Start = "Start";
-    public static string StartRegion(string name) => $"Start through {name}";
   }
 
   public static class Syntax
@@ -319,9 +318,10 @@ public static class Str
     public const string Category = "category";
     public const string CategoryHidden = "hidden";
     public const string CategoryYamlOption = "yaml_option";
+    public const string GameInfoBuild = "build";
     public const string GameInfoCreator = "creator";
     public const string GameInfoDeathLink = "death_link";
-    public const string GameInfoFillerItem = "filler_item";
+    public const string GameInfoFillerItem = "filler_item_name";
     public const string GameInfoGame = "game";
     public const string ItemClassProgression = "progression";
     public const string ItemClassUseful = "useful";
@@ -340,9 +340,9 @@ public static class Str
     public const string OptionRangeStart = "range_start";
     public const string OptionRangeEnd = "range_end";
     public const string OptionType = "type";
-    public const string OptionTypeChoice = "choice";
-    public const string OptionTypeRange = "range";
-    public const string OptionTypeToggle = "toggle";
+    public const string OptionTypeChoice = "Choice";
+    public const string OptionTypeRange = "Range";
+    public const string OptionTypeToggle = "Toggle";
     public const string OptionValues = "values";
     public const string OptionVisibility = "visibility";
     public const string OptionVisibilityComplexUI = "complex_ui";
@@ -474,7 +474,8 @@ public static class JsonDefs
     [Str.Syntax.GameInfoGame] = Data.GameInfo["game"],
     [Str.Syntax.GameInfoCreator] = Data.GameInfo["creator"],
     [Str.Syntax.GameInfoFillerItem] = Data.GameInfo["filler_item"],
-    [Str.Syntax.GameInfoDeathLink] = true
+    [Str.Syntax.GameInfoDeathLink] = true,
+    [Str.Syntax.GameInfoBuild] = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss")
   };
   #endregion
 
@@ -486,6 +487,7 @@ public static class JsonDefs
 
   public static JProperty GetStartRegion() => KVPO(Str.Region.Start, [
     KVP(Str.Syntax.RegionStarting, true),
+    KVPA(Str.Syntax.RegionConnectsTo, [.. Data.Regions.Select(r => r.ToString())]),
     KVPO(Str.Syntax.RegionExitRequires, [.. GetStarterExitRequirements()])
   ]);
 
@@ -522,7 +524,7 @@ public static class JsonDefs
       JObject obj = Obj([
         KVP(Str.Syntax.Requires,
           $"|{Str.Item.StateKey(region.StateName)}| or |{Str.Item.StateStarterKey(region.StateName)}|"),
-        KVPA(Str.Syntax.RegionConnectsTo, [Str.Region.StartRegion(region.StateName), .. connections.Select(r => $"{r}")])
+        KVPA(Str.Syntax.RegionConnectsTo, [.. connections.Select(r => $"{r}")])
       ]);
 
       if (ferries.Length > 0)
@@ -632,7 +634,7 @@ public static class JsonDefs
         KVPA(Str.Syntax.Category, [ Str.Category.SecretDeliveries ]),
         KVP(Str.Syntax.Requires, Str.Syntax.OptionCount(Str.Item.SecretDeliveryInstruction(i),
           Str.Option.SecretDeliveryInstructionParts)),
-        KVP(Str.Syntax.LocationPlaceItem, Str.Item.SecretDeliveryCompletion),
+        KVPA(Str.Syntax.LocationPlaceItem, [Str.Item.SecretDeliveryCompletion]),
         KVP(Str.Syntax.SecretDeliveryCounter, i)
       ]);
     }
@@ -841,8 +843,8 @@ public static class JsonDefs
         [Str.Syntax.Name] = Str.Event.RegionReachable(region.ToString()),
         [Str.Syntax.Category] = new JArray
         {
-          region.StateName,
-          region.DLCName
+          Str.Category.State(region.StateName),
+          Str.Category.DLC(region.DLCName)
         },
         [Str.Syntax.Region] = region.ToString()
       };
@@ -917,7 +919,7 @@ public static class JsonDefs
     ]).WithIf(values.Length > 0, Str.Syntax.OptionValues, Obj([.. values.Select(t => KVP(t.Name, t.Value))])));
 
   static JProperty ChoiceOption(string name, string displayName, string description,
-    string defaultValue, params (string Name, int Value)[] values) => KVPO(name, [
+    int defaultValue, params (string Name, int Value)[] values) => KVPO(name, [
       KVP(Str.Syntax.OptionDisplayName, displayName),
       KVPA(Str.Syntax.OptionDescription, Split(description)),
       KVP(Str.Syntax.OptionType, Str.Syntax.OptionTypeChoice),
@@ -1028,7 +1030,7 @@ public static class JsonDefs
 
       The {Str.Item.Camera} item is required before you can take photos,
       but you can choose to start with it in your inventory.
-      """, Str.Option.Disabled,
+      """, 0,
       [(Str.Option.Disabled, 0), (Str.Option.PhotosanityFindCamera, 1), (Str.Option.PhotosanityStartWithCamera, 2)]),
 
     ChoiceOption(Str.Option.Viewpointsanity, "Enable Viewpointsanity", $"""
@@ -1038,7 +1040,7 @@ public static class JsonDefs
 
       The {Str.Item.Television} item is required before you can watch
       viewpoints, but you can choose to start with it in your inventory.
-      """, Str.Option.Disabled,
+      """, 0,
       [(Str.Option.Disabled, 0), (Str.Option.ViewpointsanityFindTV, 1), (Str.Option.ViewpointsanityStartWithTV, 2)])/* ,
     
     ToggleOption(Str.Option.Dealersanity, "Enable Dealersanity", $"""
@@ -1088,7 +1090,7 @@ public static class JsonDefs
       last level-up check, you have free choice on how to spend your
       remaining skill points. If {Str.Option.LevelChecks} is 0, this has
       no effect.
-      """, Str.Option.Disabled,
+      """, 0,
       [(Str.Option.Disabled, 0), (Str.Option.SkillScatterSpread, 1), (Str.Option.SkillScatterCondensed, 2)])
   );
 
@@ -1100,7 +1102,7 @@ public static class JsonDefs
       from the bank. Should it be part of the multiworld item pool,
       requiring you to find it, or should it be part of your starting
       inventory and always be available?
-      """, Str.Option.ItemInStartingInventory,
+      """, 0,
       [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)]),
 
     ChoiceOption(Str.Option.TruckContractItems, "Truck Contracts", $"""
@@ -1108,7 +1110,7 @@ public static class JsonDefs
       truck dealers. Should they be part of the multiworld item pool,
       requiring you to find them, or should they be part of your starting
       inventory and always be available?
-      """, Str.Option.ItemInStartingInventory,
+      """, 0,
       [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)]),
 
     ChoiceOption(Str.Option.TrailerContractItem, "Trailer Contract", $"""
@@ -1116,7 +1118,7 @@ public static class JsonDefs
       trailers. Should it be part of the multiworld item pool, requiring
       you to find it, or should it be part of your starting inventory and
       always be avaialble?
-      """, Str.Option.ItemInStartingInventory,
+      """, 0,
       [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)]),
 
     ChoiceOption(Str.Option.QuickTravelTicketItem, "Quick Travel Ticket", $"""
@@ -1129,7 +1131,7 @@ public static class JsonDefs
       It can be disabled outright, such that quick traveling is never in
       logic, so long as all the enabled DLCs are connected to each other
       (otherwise, this will be set to {Str.Option.ItemInStartingInventory}).
-      """, Str.Option.ItemInStartingInventory,
+      """, 0,
       [(Str.Option.ItemInStartingInventory, 0), (Str.Option.ItemInPool, 1)])
   );
 

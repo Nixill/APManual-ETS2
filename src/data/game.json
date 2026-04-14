@@ -1,6 +1,7 @@
 {
   "game": "Euro Truck Simulator 2",
   "creator": "Nixill",
-  "filler_item": "Spare Tire",
-  "death_link": true
+  "filler_item_name": "Spare Tire",
+  "death_link": true,
+  "build": "2026-04-14 04:10:49"
 }

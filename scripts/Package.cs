@@ -14,6 +14,7 @@ JsonObject obj = (JsonObject)JsonNode.Parse(File.ReadAllText("src/data/game.json
 
 string gameName = (string)obj["game"]!;
 string creator = (string)obj["creator"]!;
+string timestamp = (string)obj["build"]!;
 
 string filename = $"Manual_{gameName}_{creator}";
 
@@ -29,3 +30,6 @@ foreach (string path in Directory.EnumerateFiles("src", "*", new EnumerationOpti
 }
 
 archive.Dispose();
+
+File.AppendAllText($"release/{filename}.build.log", $"ver {timestamp} packaged at {DateTime.UtcNow:yyyy-MM-dd HH:mm:ss}"
+  + $" with size of {new FileInfo($"release/{filename}.apworld").Length}\n");

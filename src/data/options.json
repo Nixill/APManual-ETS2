@@ -35,7 +35,7 @@
         "If the number of items exceeds the number of locations, this value may be reduced to accommodate. If",
         "so, the delivery_tokens_required option will be reduced proportionally."
       ],
-      "type": "range",
+      "type": "Range",
       "range_start": 1,
       "range_end": 100,
       "default": 25,
@@ -50,7 +50,7 @@
         "If the number of items exceeds the number of locations, delivery_tokens_available may be reduced to",
         "accommodate. If so, this option will be reduced proportionally."
       ],
-      "type": "range",
+      "type": "Range",
       "range_start": 1,
       "range_end": 100,
       "default": 25,
@@ -65,7 +65,7 @@
         "If so, secret_deliveries_required will be reduced proportionally. secret_delivery_instruction_parts",
         "will not be reduced."
       ],
-      "type": "range",
+      "type": "Range",
       "range_start": 1,
       "range_end": 20,
       "default": 10,
@@ -82,7 +82,7 @@
         "to accommodate. If so, this option will be reduced proportionally. secret_delivery_instruction_parts",
         "will not be reduced."
       ],
-      "type": "range",
+      "type": "Range",
       "range_start": 1,
       "range_end": 20,
       "default": 10,
@@ -98,7 +98,7 @@
         "",
         "This option will not be affected by location truncation."
       ],
-      "type": "range",
+      "type": "Range",
       "range_start": 1,
       "range_end": 5,
       "default": 2,
@@ -110,7 +110,7 @@
         "Whether or not the Base Game DLC, and all the checks within its bounds, should be enabled for this",
         "AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_dlc_going_east": {
@@ -119,7 +119,7 @@
         "Whether or not the Going East! DLC, and all the checks within its bounds, should be enabled for this",
         "AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_dlc_scandinavia": {
@@ -128,7 +128,7 @@
         "Whether or not the Scandinavia DLC, and all the checks within its bounds, should be enabled for this",
         "AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_dlc_vive_la_france": {
@@ -137,7 +137,7 @@
         "Whether or not the Vive la France ! DLC, and all the checks within its bounds, should be enabled for",
         "this AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_dlc_italia": {
@@ -145,7 +145,7 @@
       "description": [
         "Whether or not the Italia DLC, and all the checks within its bounds, should be enabled for this AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_dlc_beyond_the_baltic_sea": {
@@ -154,7 +154,7 @@
         "Whether or not the Beyond the Baltic Sea DLC, and all the checks within its bounds, should be",
         "enabled for this AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_dlc_road_to_the_black_sea": {
@@ -163,7 +163,7 @@
         "Whether or not the Road to the Black Sea DLC, and all the checks within its bounds, should be",
         "enabled for this AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_dlc_iberia": {
@@ -171,7 +171,7 @@
       "description": [
         "Whether or not the Iberia DLC, and all the checks within its bounds, should be enabled for this AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_dlc_west_balkans": {
@@ -180,7 +180,7 @@
         "Whether or not the West Balkans DLC, and all the checks within its bounds, should be enabled for",
         "this AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_dlc_greece": {
@@ -188,7 +188,7 @@
       "description": [
         "Whether or not the Greece DLC, and all the checks within its bounds, should be enabled for this AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_dlc_nordic_horizons": {
@@ -197,7 +197,7 @@
         "Whether or not the Nordic Horizons DLC, and all the checks within its bounds, should be enabled for",
         "this AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_dlc_krone_trailer_pack": {
@@ -206,7 +206,7 @@
         "Whether or not the Krone Trailer Pack DLC, and all the checks within its bounds, should be enabled",
         "for this AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_dlc_feldbinder_trailer_pack": {
@@ -215,7 +215,7 @@
         "Whether or not the Feldbinder Trailer Pack DLC, and all the checks within its bounds, should be",
         "enabled for this AP."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false
     },
     "enable_citysanity": {
@@ -224,7 +224,7 @@
         "Whether or not cities should be checks. If so, the check is performed by driving into the city; the",
         "check may be cleared when the \"(City Name) Discovered\" popup appears."
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": true,
       "group": "Check/Sanity Toggles"
     },
@@ -239,7 +239,7 @@
         " - A check is performed when performing a delivery to or for that company. (The checm kay be cleared",
         "when the results screen appears.)"
       ],
-      "type": "toggle",
+      "type": "Toggle",
       "default": false,
       "group": "Check/Sanity Toggles"
     },
@@ -252,13 +252,13 @@
         "The Camera item is required before you can take photos, but you can choose to start with it in your",
         "inventory."
       ],
-      "type": "choice",
+      "type": "Choice",
       "values": {
         "disabled": 0,
         "find_camera": 1,
         "start_with_camera": 2
       },
-      "default": "disabled",
+      "default": 0,
       "group": "Check/Sanity Toggles"
     },
     "enable_viewpointsanity": {
@@ -270,13 +270,13 @@
         "The TV item is required before you can watch viewpoints, but you can choose to start with it in your",
         "inventory."
       ],
-      "type": "choice",
+      "type": "Choice",
       "values": {
         "disabled": 0,
         "find_tv": 1,
         "start_with_tv": 2
       },
-      "default": "disabled",
+      "default": 0,
       "group": "Check/Sanity Toggles"
     },
     "player_level_checks": {
@@ -290,7 +290,7 @@
         "",
         "If the goal is set to Max Player Level Check Reached, this option must have a value of at least 1."
       ],
-      "type": "range",
+      "type": "Range",
       "range_start": 0,
       "range_end": 36,
       "default": 0,
@@ -312,13 +312,13 @@
         "you have free choice on how to spend your remaining skill points. If player_level_checks is 0, this",
         "has no effect."
       ],
-      "type": "choice",
+      "type": "Choice",
       "values": {
         "disabled": 0,
         "spread": 1,
         "condensed": 2
       },
-      "default": "disabled",
+      "default": 0,
       "group": "Player Levels"
     },
     "bank_loan_approval_item": {
@@ -328,12 +328,12 @@
         "the multiworld item pool, requiring you to find it, or should it be part of your starting inventory",
         "and always be available?"
       ],
-      "type": "choice",
+      "type": "Choice",
       "values": {
         "in_starting_inventory": 0,
         "in_item_pool": 1
       },
-      "default": "in_starting_inventory",
+      "default": 0,
       "group": "Item Requirements"
     },
     "truck_contract_items": {
@@ -343,12 +343,12 @@
         "of the multiworld item pool, requiring you to find them, or should they be part of your starting",
         "inventory and always be available?"
       ],
-      "type": "choice",
+      "type": "Choice",
       "values": {
         "in_starting_inventory": 0,
         "in_item_pool": 1
       },
-      "default": "in_starting_inventory",
+      "default": 0,
       "group": "Item Requirements"
     },
     "trailer_contract_item": {
@@ -358,12 +358,12 @@
         "multiworld item pool, requiring you to find it, or should it be part of your starting inventory and",
         "always be avaialble?"
       ],
-      "type": "choice",
+      "type": "Choice",
       "values": {
         "in_starting_inventory": 0,
         "in_item_pool": 1
       },
-      "default": "in_starting_inventory",
+      "default": 0,
       "group": "Item Requirements"
     },
     "quick_travel_item": {
@@ -376,12 +376,12 @@
         "It can be disabled outright, such that quick traveling is never in logic, so long as all the enabled",
         "DLCs are connected to each other (otherwise, this will be set to in_starting_inventory)."
       ],
-      "type": "choice",
+      "type": "Choice",
       "values": {
         "in_starting_inventory": 0,
         "in_item_pool": 1
       },
-      "default": "in_starting_inventory",
+      "default": 0,
       "group": "Item Requirements"
     },
     "checks_country_chance_percent": {
@@ -393,7 +393,7 @@
         "The options in this category are applied in the following order: checks_country_chance_percent,",
         "checks_country_count_max, checks_chance_percent, checks_within_country_max, checks_max_count."
       ],
-      "type": "range",
+      "type": "Range",
       "range_start": 1,
       "range_end": 100,
       "default": 100,
@@ -408,7 +408,7 @@
         "Setting this higher than the number of countries that exist has no effect besides future-proofing",
         "your yaml. The default value is the number of countries that exist so far."
       ],
-      "type": "range",
+      "type": "Range",
       "range_start": 1,
       "range_end": 100,
       "default": 36,
@@ -419,7 +419,7 @@
       "description": [
         "What should the chance be of each location appearing in the AP?"
       ],
-      "type": "range",
+      "type": "Range",
       "range_start": 1,
       "range_end": 100,
       "default": 100,
@@ -434,7 +434,7 @@
         "Setting this higher than the number of checks per country that exist has no effect besides",
         "future-proofing your yaml. The default value is the highest max number per country."
       ],
-      "type": "range",
+      "type": "Range",
       "range_start": 1,
       "range_end": 1000,
       "default": 96,
@@ -448,7 +448,7 @@
         "Setting this higher than the number of checks that exists has no effect besides future-proofing your",
         "yaml. The default value is the highest existing number so far."
       ],
-      "type": "range",
+      "type": "Range",
       "range_start": 1,
       "range_end": 10000,
       "default": 918,

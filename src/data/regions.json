@@ -1,6 +1,54 @@
 {
   "Start": {
     "starting": true,
+    "connects_to": [
+      "Austria/Base Game",
+      "Belgium/Base Game",
+      "Czech Republic/Base Game",
+      "France/Base Game",
+      "Germany/Base Game",
+      "Germany/Krone Trailer Pack",
+      "Germany/Feldbinder Trailer Pack",
+      "Italy/Base Game",
+      "Luxembourg/Base Game",
+      "Netherlands/Base Game",
+      "Poland/Base Game",
+      "Slovakia/Base Game",
+      "Switzerland/Base Game",
+      "United Kingdom/Base Game",
+      "Czech Republic/Going East!",
+      "Hungary/Going East!",
+      "Slovakia/Going East!",
+      "Poland/Going East!",
+      "Denmark/Scandinavia",
+      "Norway/Scandinavia",
+      "Sweden/Scandinavia",
+      "France/Vive la France !",
+      "Italy/Italia",
+      "Estonia/Beyond the Baltic Sea",
+      "Finland/Beyond the Baltic Sea",
+      "Latvia/Beyond the Baltic Sea",
+      "Lithuania/Beyond the Baltic Sea",
+      "Kaliningrad/Beyond the Baltic Sea",
+      "Russia/Beyond the Baltic Sea",
+      "Bulgaria/Road to the Black Sea",
+      "Romania/Road to the Black Sea",
+      "Turkiye/Road to the Black Sea",
+      "Portugal/Iberia",
+      "Spain/Iberia",
+      "Albania/West Balkans",
+      "Bosnia and Herzegovina/West Balkans",
+      "Croatia/West Balkans",
+      "Kosovo/West Balkans",
+      "Montenegro/West Balkans",
+      "North Macedonia/West Balkans",
+      "Serbia/West Balkans",
+      "Slovenia/West Balkans",
+      "Greece/Greece",
+      "Finland/Nordic Horizons",
+      "Norway/Nordic Horizons",
+      "Sweden/Nordic Horizons"
+    ],
     "exit_requires": {
       "Austria/Base Game": "|Austria Starter Key|",
       "Belgium/Base Game": "|Belgium Starter Key|",
@@ -53,7 +101,6 @@
   "Austria/Base Game": {
     "requires": "|Austria Key| or |Austria Starter Key|",
     "connects_to": [
-      "Start through Austria",
       "Germany/Base Game",
       "Czech Republic/Base Game",
       "Slovakia/Base Game",
@@ -66,7 +113,6 @@
   "Belgium/Base Game": {
     "requires": "|Belgium Key| or |Belgium Starter Key|",
     "connects_to": [
-      "Start through Belgium",
       "Netherlands/Base Game",
       "Germany/Base Game",
       "France/Base Game",
@@ -76,7 +122,6 @@
   "Czech Republic/Base Game": {
     "requires": "|Czech Republic Key| or |Czech Republic Starter Key|",
     "connects_to": [
-      "Start through Czech Republic",
       "Austria/Base Game",
       "Czech Republic/Going East!",
       "Germany/Base Game",
@@ -87,7 +132,6 @@
   "France/Base Game": {
     "requires": "|France Key| or |France Starter Key|",
     "connects_to": [
-      "Start through France",
       "Belgium/Base Game",
       "France/Vive la France !",
       "Germany/Base Game",
@@ -100,7 +144,6 @@
   "Germany/Base Game": {
     "requires": "|Germany Key| or |Germany Starter Key|",
     "connects_to": [
-      "Start through Germany",
       "Austria/Base Game",
       "Belgium/Base Game",
       "Czech Republic/Base Game",
@@ -124,21 +167,18 @@
   "Germany/Krone Trailer Pack": {
     "requires": "|Germany Key| or |Germany Starter Key|",
     "connects_to": [
-      "Start through Germany",
       "Germany/Base Game"
     ]
   },
   "Germany/Feldbinder Trailer Pack": {
     "requires": "|Germany Key| or |Germany Starter Key|",
     "connects_to": [
-      "Start through Germany",
       "Germany/Base Game"
     ]
   },
   "Italy/Base Game": {
     "requires": "|Italy Key| or |Italy Starter Key|",
     "connects_to": [
-      "Start through Italy",
       "Austria/Base Game",
       "France/Base Game",
       "Italy/Italia",
@@ -149,7 +189,6 @@
   "Luxembourg/Base Game": {
     "requires": "|Luxembourg Key| or |Luxembourg Starter Key|",
     "connects_to": [
-      "Start through Luxembourg",
       "Belgium/Base Game",
       "France/Base Game"
     ]
@@ -157,7 +196,6 @@
   "Netherlands/Base Game": {
     "requires": "|Netherlands Key| or |Netherlands Starter Key|",
     "connects_to": [
-      "Start through Netherlands",
       "Belgium/Base Game",
       "Germany/Base Game",
       "United Kingdom/Base Game"
@@ -169,7 +207,6 @@
   "Poland/Base Game": {
     "requires": "|Poland Key| or |Poland Starter Key|",
     "connects_to": [
-      "Start through Poland",
       "Czech Republic/Base Game",
       "Germany/Base Game",
       "Poland/Going East!"
@@ -178,7 +215,6 @@
   "Slovakia/Base Game": {
     "requires": "|Slovakia Key| or |Slovakia Starter Key|",
     "connects_to": [
-      "Start through Slovakia",
       "Austria/Base Game",
       "Czech Republic/Base Game",
       "Hungary/Going East!"
@@ -187,7 +223,6 @@
   "Switzerland/Base Game": {
     "requires": "|Switzerland Key| or |Switzerland Starter Key|",
     "connects_to": [
-      "Start through Switzerland",
       "Austria/Base Game",
       "France/Base Game",
       "Germany/Base Game",
@@ -197,7 +232,6 @@
   "United Kingdom/Base Game": {
     "requires": "|United Kingdom Key| or |United Kingdom Starter Key|",
     "connects_to": [
-      "Start through United Kingdom",
       "Denmark/Scandinavia",
       "France/Base Game",
       "Netherlands/Base Game",
@@ -212,14 +246,12 @@
   "Czech Republic/Going East!": {
     "requires": "|Czech Republic Key| or |Czech Republic Starter Key|",
     "connects_to": [
-      "Start through Czech Republic",
       "Czech Republic/Base Game"
     ]
   },
   "Hungary/Going East!": {
     "requires": "|Hungary Key| or |Hungary Starter Key|",
     "connects_to": [
-      "Start through Hungary",
       "Austria/Base Game",
       "Croatia/West Balkans",
       "Slovakia/Base Game",
@@ -231,14 +263,12 @@
   "Slovakia/Going East!": {
     "requires": "|Slovakia Key| or |Slovakia Starter Key|",
     "connects_to": [
-      "Start through Slovakia",
       "Poland/Going East!"
     ]
   },
   "Poland/Going East!": {
     "requires": "|Poland Key| or |Poland Starter Key|",
     "connects_to": [
-      "Start through Poland",
       "Kaliningrad/Beyond the Baltic Sea",
       "Lithuania/Beyond the Baltic Sea",
       "Poland/Base Game",
@@ -252,7 +282,6 @@
   "Denmark/Scandinavia": {
     "requires": "|Denmark Key| or |Denmark Starter Key|",
     "connects_to": [
-      "Start through Denmark",
       "Germany/Base Game",
       "Sweden/Scandinavia",
       "United Kingdom/Base Game",
@@ -266,7 +295,6 @@
   "Norway/Scandinavia": {
     "requires": "|Norway Key| or |Norway Starter Key|",
     "connects_to": [
-      "Start through Norway",
       "Denmark/Scandinavia",
       "Sweden/Scandinavia"
     ],
@@ -277,7 +305,6 @@
   "Sweden/Scandinavia": {
     "requires": "|Sweden Key| or |Sweden Starter Key|",
     "connects_to": [
-      "Start through Sweden",
       "Denmark/Scandinavia",
       "Estonia/Beyond the Baltic Sea",
       "Finland/Beyond the Baltic Sea",
@@ -297,7 +324,6 @@
   "France/Vive la France !": {
     "requires": "|France Key| or |France Starter Key|",
     "connects_to": [
-      "Start through France",
       "France/Base Game",
       "Spain/Iberia"
     ]
@@ -305,7 +331,6 @@
   "Italy/Italia": {
     "requires": "|Italy Key| or |Italy Starter Key|",
     "connects_to": [
-      "Start through Italy",
       "Albania/West Balkans",
       "Croatia/West Balkans",
       "Greece/Greece",
@@ -322,7 +347,6 @@
   "Estonia/Beyond the Baltic Sea": {
     "requires": "|Estonia Key| or |Estonia Starter Key|",
     "connects_to": [
-      "Start through Estonia",
       "Russia/Beyond the Baltic Sea",
       "Latvia/Beyond the Baltic Sea",
       "Finland/Beyond the Baltic Sea",
@@ -336,7 +360,6 @@
   "Finland/Beyond the Baltic Sea": {
     "requires": "|Finland Key| or |Finland Starter Key|",
     "connects_to": [
-      "Start through Finland",
       "Estonia/Beyond the Baltic Sea",
       "Finland/Nordic Horizons",
       "Russia/Beyond the Baltic Sea",
@@ -352,7 +375,6 @@
   "Latvia/Beyond the Baltic Sea": {
     "requires": "|Latvia Key| or |Latvia Starter Key|",
     "connects_to": [
-      "Start through Latvia",
       "Estonia/Beyond the Baltic Sea",
       "Germany/Base Game",
       "Russia/Beyond the Baltic Sea",
@@ -367,7 +389,6 @@
   "Lithuania/Beyond the Baltic Sea": {
     "requires": "|Lithuania Key| or |Lithuania Starter Key|",
     "connects_to": [
-      "Start through Lithuania",
       "Kaliningrad/Beyond the Baltic Sea",
       "Latvia/Beyond the Baltic Sea",
       "Poland/Going East!"
@@ -376,7 +397,6 @@
   "Kaliningrad/Beyond the Baltic Sea": {
     "requires": "|Kaliningrad Key| or |Kaliningrad Starter Key|",
     "connects_to": [
-      "Start through Kaliningrad",
       "Lithuania/Beyond the Baltic Sea",
       "Poland/Going East!"
     ]
@@ -384,7 +404,6 @@
   "Russia/Beyond the Baltic Sea": {
     "requires": "|Russia Key| or |Russia Starter Key|",
     "connects_to": [
-      "Start through Russia",
       "Estonia/Beyond the Baltic Sea",
       "Finland/Beyond the Baltic Sea",
       "Latvia/Beyond the Baltic Sea"
@@ -393,7 +412,6 @@
   "Bulgaria/Road to the Black Sea": {
     "requires": "|Bulgaria Key| or |Bulgaria Starter Key|",
     "connects_to": [
-      "Start through Bulgaria",
       "Romania/Road to the Black Sea",
       "Serbia/West Balkans",
       "North Macedonia/West Balkans",
@@ -404,7 +422,6 @@
   "Romania/Road to the Black Sea": {
     "requires": "|Romania Key| or |Romania Starter Key|",
     "connects_to": [
-      "Start through Romania",
       "Bulgaria/Road to the Black Sea",
       "Hungary/Going East!",
       "Serbia/West Balkans"
@@ -413,7 +430,6 @@
   "Turkiye/Road to the Black Sea": {
     "requires": "|Turkiye Key| or |Turkiye Starter Key|",
     "connects_to": [
-      "Start through Turkiye",
       "Bulgaria/Road to the Black Sea",
       "Greece/Greece"
     ]
@@ -421,14 +437,12 @@
   "Portugal/Iberia": {
     "requires": "|Portugal Key| or |Portugal Starter Key|",
     "connects_to": [
-      "Start through Portugal",
       "Spain/Iberia"
     ]
   },
   "Spain/Iberia": {
     "requires": "|Spain Key| or |Spain Starter Key|",
     "connects_to": [
-      "Start through Spain",
       "France/Vive la France !",
       "Italy/Italia",
       "Portugal/Iberia",
@@ -442,7 +456,6 @@
   "Albania/West Balkans": {
     "requires": "|Albania Key| or |Albania Starter Key|",
     "connects_to": [
-      "Start through Albania",
       "Montenegro/West Balkans",
       "Kosovo/West Balkans",
       "North Macedonia/West Balkans",
@@ -456,7 +469,6 @@
   "Bosnia and Herzegovina/West Balkans": {
     "requires": "|Bosnia and Herzegovina Key| or |Bosnia and Herzegovina Starter Key|",
     "connects_to": [
-      "Start through Bosnia and Herzegovina",
       "Croatia/West Balkans",
       "Serbia/West Balkans",
       "Montenegro/West Balkans"
@@ -465,7 +477,6 @@
   "Croatia/West Balkans": {
     "requires": "|Croatia Key| or |Croatia Starter Key|",
     "connects_to": [
-      "Start through Croatia",
       "Bosnia and Herzegovina/West Balkans",
       "Slovenia/West Balkans",
       "Hungary/Going East!",
@@ -479,7 +490,6 @@
   "Kosovo/West Balkans": {
     "requires": "|Kosovo Key| or |Kosovo Starter Key|",
     "connects_to": [
-      "Start through Kosovo",
       "Albania/West Balkans",
       "Serbia/West Balkans",
       "North Macedonia/West Balkans",
@@ -489,7 +499,6 @@
   "Montenegro/West Balkans": {
     "requires": "|Montenegro Key| or |Montenegro Starter Key|",
     "connects_to": [
-      "Start through Montenegro",
       "Albania/West Balkans",
       "Bosnia and Herzegovina/West Balkans",
       "Kosovo/West Balkans",
@@ -499,7 +508,6 @@
   "North Macedonia/West Balkans": {
     "requires": "|North Macedonia Key| or |North Macedonia Starter Key|",
     "connects_to": [
-      "Start through North Macedonia",
       "Albania/West Balkans",
       "Bulgaria/Road to the Black Sea",
       "Greece/Greece",
@@ -510,7 +518,6 @@
   "Serbia/West Balkans": {
     "requires": "|Serbia Key| or |Serbia Starter Key|",
     "connects_to": [
-      "Start through Serbia",
       "Bosnia and Herzegovina/West Balkans",
       "Bulgaria/Road to the Black Sea",
       "Croatia/West Balkans",
@@ -524,7 +531,6 @@
   "Slovenia/West Balkans": {
     "requires": "|Slovenia Key| or |Slovenia Starter Key|",
     "connects_to": [
-      "Start through Slovenia",
       "Austria/Base Game",
       "Croatia/West Balkans",
       "Hungary/Going East!",
@@ -534,7 +540,6 @@
   "Greece/Greece": {
     "requires": "|Greece Key| or |Greece Starter Key|",
     "connects_to": [
-      "Start through Greece",
       "Albania/West Balkans",
       "Bulgaria/Road to the Black Sea",
       "North Macedonia/West Balkans",
@@ -548,7 +553,6 @@
   "Finland/Nordic Horizons": {
     "requires": "|Finland Key| or |Finland Starter Key|",
     "connects_to": [
-      "Start through Finland",
       "Finland/Beyond the Baltic Sea",
       "Sweden/Nordic Horizons",
       "Norway/Nordic Horizons"
@@ -557,7 +561,6 @@
   "Norway/Nordic Horizons": {
     "requires": "|Norway Key| or |Norway Starter Key|",
     "connects_to": [
-      "Start through Norway",
       "Finland/Nordic Horizons",
       "Sweden/Nordic Horizons"
     ]
@@ -565,7 +568,6 @@
   "Sweden/Nordic Horizons": {
     "requires": "|Sweden Key| or |Sweden Starter Key|",
     "connects_to": [
-      "Start through Sweden",
       "Finland/Nordic Horizons",
       "Norway/Nordic Horizons"
     ]
