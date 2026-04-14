@@ -341,7 +341,8 @@
   {
     "name": "Albania Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Albania (Checks)"
     ],
     "dlc_list": [
       "west_balkans"
@@ -351,7 +352,8 @@
   {
     "name": "Austria Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Austria (Checks)"
     ],
     "dlc_list": false,
     "progression": true
@@ -359,7 +361,8 @@
   {
     "name": "Belgium Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Belgium (Checks)"
     ],
     "dlc_list": false,
     "progression": true
@@ -367,7 +370,8 @@
   {
     "name": "Bosnia and Herzegovina Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Bosnia and Herzegovina (Checks)"
     ],
     "dlc_list": [
       "west_balkans"
@@ -377,7 +381,8 @@
   {
     "name": "Bulgaria Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Bulgaria (Checks)"
     ],
     "dlc_list": [
       "road_to_the_black_sea"
@@ -387,7 +392,8 @@
   {
     "name": "Croatia Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Croatia (Checks)"
     ],
     "dlc_list": [
       "west_balkans"
@@ -397,7 +403,8 @@
   {
     "name": "Czech Republic Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Czech Republic (Checks)"
     ],
     "dlc_list": false,
     "progression": true
@@ -405,7 +412,8 @@
   {
     "name": "Denmark Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Denmark (Checks)"
     ],
     "dlc_list": [
       "scandinavia"
@@ -415,7 +423,8 @@
   {
     "name": "Estonia Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Estonia (Checks)"
     ],
     "dlc_list": [
       "beyond_the_baltic_sea"
@@ -425,7 +434,8 @@
   {
     "name": "Finland Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Finland (Checks)"
     ],
     "dlc_list": [
       "beyond_the_baltic_sea",
@@ -436,7 +446,8 @@
   {
     "name": "France Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "France (Checks)"
     ],
     "dlc_list": false,
     "progression": true
@@ -444,7 +455,8 @@
   {
     "name": "Germany Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Germany (Checks)"
     ],
     "dlc_list": false,
     "progression": true
@@ -452,7 +464,8 @@
   {
     "name": "Greece Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Greece (Checks)"
     ],
     "dlc_list": [
       "greece"
@@ -462,7 +475,8 @@
   {
     "name": "Hungary Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Hungary (Checks)"
     ],
     "dlc_list": [
       "going_east"
@@ -472,7 +486,8 @@
   {
     "name": "Italy Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Italy (Checks)"
     ],
     "dlc_list": false,
     "progression": true
@@ -480,7 +495,8 @@
   {
     "name": "Kaliningrad Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Kaliningrad (Checks)"
     ],
     "dlc_list": [
       "beyond_the_baltic_sea"
@@ -490,7 +506,8 @@
   {
     "name": "Kosovo Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Kosovo (Checks)"
     ],
     "dlc_list": [
       "west_balkans"
@@ -500,7 +517,8 @@
   {
     "name": "Latvia Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Latvia (Checks)"
     ],
     "dlc_list": [
       "beyond_the_baltic_sea"
@@ -510,7 +528,8 @@
   {
     "name": "Lithuania Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Lithuania (Checks)"
     ],
     "dlc_list": [
       "beyond_the_baltic_sea"
@@ -520,7 +539,8 @@
   {
     "name": "Luxembourg Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Luxembourg (Checks)"
     ],
     "dlc_list": false,
     "progression": true
@@ -528,7 +548,8 @@
   {
     "name": "Montenegro Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Montenegro (Checks)"
     ],
     "dlc_list": [
       "west_balkans"
@@ -538,7 +559,8 @@
   {
     "name": "Netherlands Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Netherlands (Checks)"
     ],
     "dlc_list": false,
     "progression": true
@@ -546,7 +568,8 @@
   {
     "name": "North Macedonia Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "North Macedonia (Checks)"
     ],
     "dlc_list": [
       "west_balkans"
@@ -556,7 +579,8 @@
   {
     "name": "Norway Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Norway (Checks)"
     ],
     "dlc_list": [
       "scandinavia",
@@ -567,7 +591,8 @@
   {
     "name": "Poland Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Poland (Checks)"
     ],
     "dlc_list": false,
     "progression": true
@@ -575,7 +600,8 @@
   {
     "name": "Portugal Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Portugal (Checks)"
     ],
     "dlc_list": [
       "iberia"
@@ -585,7 +611,8 @@
   {
     "name": "Romania Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Romania (Checks)"
     ],
     "dlc_list": [
       "road_to_the_black_sea"
@@ -595,7 +622,8 @@
   {
     "name": "Russia Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Russia (Checks)"
     ],
     "dlc_list": [
       "beyond_the_baltic_sea"
@@ -605,7 +633,8 @@
   {
     "name": "Serbia Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Serbia (Checks)"
     ],
     "dlc_list": [
       "west_balkans"
@@ -615,7 +644,8 @@
   {
     "name": "Slovakia Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Slovakia (Checks)"
     ],
     "dlc_list": false,
     "progression": true
@@ -623,7 +653,8 @@
   {
     "name": "Slovenia Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Slovenia (Checks)"
     ],
     "dlc_list": [
       "west_balkans"
@@ -633,7 +664,8 @@
   {
     "name": "Spain Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Spain (Checks)"
     ],
     "dlc_list": [
       "iberia"
@@ -643,7 +675,8 @@
   {
     "name": "Sweden Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Sweden (Checks)"
     ],
     "dlc_list": [
       "scandinavia",
@@ -654,7 +687,8 @@
   {
     "name": "Switzerland Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Switzerland (Checks)"
     ],
     "dlc_list": false,
     "progression": true
@@ -662,7 +696,8 @@
   {
     "name": "Turkiye Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "Turkiye (Checks)"
     ],
     "dlc_list": [
       "road_to_the_black_sea"
@@ -672,7 +707,8 @@
   {
     "name": "United Kingdom Starter Key",
     "category": [
-      "Country Starter Key"
+      "Country Starter Key",
+      "United Kingdom (Checks)"
     ],
     "dlc_list": false,
     "progression": true

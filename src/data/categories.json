@@ -35,6 +35,222 @@
   "Switzerland (Country)": {},
   "Turkiye (Country)": {},
   "United Kingdom (Country)": {},
+  "Albania (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_albania"
+    ]
+  },
+  "Austria (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_austria"
+    ]
+  },
+  "Belgium (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_belgium"
+    ]
+  },
+  "Bosnia and Herzegovina (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_bosnia_and_herzegovina"
+    ]
+  },
+  "Bulgaria (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_bulgaria"
+    ]
+  },
+  "Croatia (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_croatia"
+    ]
+  },
+  "Czech Republic (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_czech_republic"
+    ]
+  },
+  "Denmark (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_denmark"
+    ]
+  },
+  "Estonia (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_estonia"
+    ]
+  },
+  "Finland (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_finland"
+    ]
+  },
+  "France (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_france"
+    ]
+  },
+  "Germany (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_germany"
+    ]
+  },
+  "Greece (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_greece"
+    ]
+  },
+  "Hungary (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_hungary"
+    ]
+  },
+  "Italy (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_italy"
+    ]
+  },
+  "Kaliningrad (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_kaliningrad"
+    ]
+  },
+  "Kosovo (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_kosovo"
+    ]
+  },
+  "Latvia (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_latvia"
+    ]
+  },
+  "Lithuania (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_lithuania"
+    ]
+  },
+  "Luxembourg (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_luxembourg"
+    ]
+  },
+  "Montenegro (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_montenegro"
+    ]
+  },
+  "Netherlands (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_netherlands"
+    ]
+  },
+  "North Macedonia (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_north_macedonia"
+    ]
+  },
+  "Norway (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_norway"
+    ]
+  },
+  "Poland (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_poland"
+    ]
+  },
+  "Portugal (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_portugal"
+    ]
+  },
+  "Romania (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_romania"
+    ]
+  },
+  "Russia (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_russia"
+    ]
+  },
+  "Serbia (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_serbia"
+    ]
+  },
+  "Slovakia (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_slovakia"
+    ]
+  },
+  "Slovenia (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_slovenia"
+    ]
+  },
+  "Spain (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_spain"
+    ]
+  },
+  "Sweden (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_sweden"
+    ]
+  },
+  "Switzerland (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_switzerland"
+    ]
+  },
+  "Turkiye (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_turkiye"
+    ]
+  },
+  "United Kingdom (Checks)": {
+    "hidden": true,
+    "yaml_option": [
+      "enable_state_united_kingdom"
+    ]
+  },
   "Going East! (DLC)": {
     "hidden": true,
     "yaml_option": [

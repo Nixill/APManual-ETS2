@@ -207,6 +207,7 @@ public static class Str
     public const string SecretDeliveryInstructions = "Secret Delivery Instructions";
     public const string SkillPoint = "Skill Point";
     public static string State(string stateName) => $"{stateName} ({StateCountry})";
+    public static string StateCheck(string stateName) => $"{stateName} (Checks)";
     public static string StateKey => $"{StateCountry} Key";
     public static string StateStarterKey => $"{StateCountry} Starter Key";
     public const string TruckContract = "Truck Purchase Contract";
@@ -280,6 +281,7 @@ public static class Str
     public const string SkillScatter = "skill_scatter";
     public const string SkillScatterCondensed = "condensed";
     public const string SkillScatterSpread = "spread";
+    public static string State(string state) => $"enable_state_{SnakeCase(state)}";
     public const string TruckContractItems = "truck_contract_items";
     public const string TrailerContractItem = "trailer_contract_item";
     public const string Viewpointsanity = "enable_viewpointsanity";
@@ -291,11 +293,12 @@ public static class Str
   {
     public const string CheckReduction = "Check Reduction";
     public const string CheckToggles = "Check/Sanity Toggles";
-    public const string DLCs = "DLCs";
+    public const string DLCs = "DLC Toggles";
     public const string DeliveryTokens = "Delivery Tokens";
     public const string ItemRequirements = "Item Requirements";
     public const string PlayerLevels = "Player Levels";
     public const string SecretDeliveries = "Secret Deliveries";
+    public static string States => $"{StateCountry} Toggles";
   }
 
   public static class Region
@@ -313,6 +316,7 @@ public static class Str
     public const string RequireOptionValue = "require_option_value";
     public const string SecretDeliveryCounter = "secret_delivery_number";
     public const string SecretDeliveryPartCounter = "secret_delivery_part_number";
+    public const string StateList = "state_list";
 
     // Standard keys
     public const string Category = "category";
@@ -560,6 +564,7 @@ public static class JsonDefs
         KVPA(Str.Syntax.Category, [
           name,
           Str.Category.State(check.Region.StateName),
+          Str.Category.StateCheck(check.Region.StateName),
           Str.Category.DLC(check.Region.DLCName)
         ]),
         KVP(Str.Syntax.Region, check.Region.ToString())
@@ -595,7 +600,8 @@ public static class JsonDefs
         KVP(Str.Syntax.Name, Str.Location.CheckConst(Str.Category.Company, company)),
         KVPA(Str.Syntax.Category, [ Str.Category.Company ]),
         KVP(Str.Syntax.Requires, requires),
-        KVP(Str.Syntax.DLCList, dlcList)
+        KVP(Str.Syntax.DLCList, dlcList),
+        KVPA(Str.Syntax.StateList, [.. thisCoLoc.Select(r => r.StateName).Distinct()])
       ]);
     }
   }
@@ -706,7 +712,10 @@ public static class JsonDefs
 
       yield return Obj([
         KVP(Str.Syntax.Name, Str.Item.StateStarterKey(state)),
-        KVPA(Str.Syntax.Category, [Str.Category.StateStarterKey]),
+        KVPA(Str.Syntax.Category, [
+          Str.Category.StateStarterKey,
+          Str.Category.StateCheck(state)
+        ]),
         KVP(Str.Syntax.DLCList, dlcList),
         KVP(Str.Syntax.ItemClassProgression, true)
       ]);
@@ -799,20 +808,27 @@ public static class JsonDefs
   #region ├╴categories.json
   public static JObject GetCategoriesJson() => Obj([
     .. GetStateCategories(),
+    .. GetStateCheckCategories(),
     .. GetDLCCategories(),
     .. GetTypeCategories()
   ]);
 
   public static IEnumerable<JProperty> GetStateCategories()
-    => Data.States.Keys.Select(s => KVP(Str.Category.State(s), new JObject()));
+    => Data.States.Keys.Select(s => KVPO(Str.Category.State(s), new JObject()));
 
   public static IEnumerable<JProperty> GetDLCCategories()
     => Data.DLCs.Keys.Except([Str.DLC.BaseGame])
-      .Select(d => KVP(Str.Category.DLC(d), new JObject
-      {
-        [Str.Syntax.CategoryHidden] = true,
-        [Str.Syntax.CategoryYamlOption] = new JArray([Str.Option.DLC(d)])
-      }));
+      .Select(d => KVPO(Str.Category.DLC(d),
+      [
+        KVP(Str.Syntax.CategoryHidden, true),
+        KVPA(Str.Syntax.CategoryYamlOption, [Str.Option.DLC(d)])
+      ]));
+
+  public static IEnumerable<JProperty> GetStateCheckCategories()
+    => Data.States.Keys.Select(s => KVPO(Str.Category.StateCheck(s), [
+      KVP(Str.Syntax.CategoryHidden, true),
+      KVPA(Str.Syntax.CategoryYamlOption, [Str.Option.State(s)])
+    ]));
 
   public static IEnumerable<JProperty> GetTypeCategories() => [
     GetTypeCategory(Str.Category.City, Str.Option.Citysanity),
@@ -894,6 +910,7 @@ public static class JsonDefs
     .. GetDeliveryTokensOptions(),
     .. GetSecretDeliveryOptions(),
     .. GetDLCOptions(),
+    .. GetStateOptions(),
     .. GetChecksOptions(),
     .. GetLevelsOptions(),
     .. GetItemRequiresOptions(),
@@ -997,10 +1014,24 @@ public static class JsonDefs
   public static IEnumerable<JProperty> GetDLCOptions() => OptionGroup(
     Str.OptionGroup.DLCs,
 
-    Data.DLCs.Keys.Select(entry => ToggleOption(Str.Option.DLC(entry), $"Enable {entry} DLC", $"""
-      Whether or not the {entry} DLC, and all the checks within its
+    Data.DLCs.Keys.Select(dlc => ToggleOption(Str.Option.DLC(dlc), $"Enable {dlc} DLC", $"""
+      Whether or not the {dlc} DLC, and all the checks within its
       bounds, should be enabled for this AP.
       """, false))
+  );
+
+  public static IEnumerable<JProperty> GetStateOptions() => OptionGroup(
+    Str.OptionGroup.States,
+
+    Data.States.Keys.Select(state => ToggleOption(Str.Option.State(state), $"Enable the {Str.StateCountry} of {state}",
+      $"""
+      Whether or not the {Str.StateCountry} of {state}, and all checks
+      within its bounds, as well as its starter key, should be enabled for
+      this AP.
+
+      Regardless of the value below, the {Str.Item.StateKey(state)} will
+      still spawn, and be required before traveling within this {Str.StateCountryLC}.
+      """, true))
   );
 
   public static IEnumerable<JProperty> GetChecksOptions() => OptionGroup(

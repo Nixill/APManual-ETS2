@@ -218,6 +218,438 @@
       "type": "Toggle",
       "default": false
     },
+    "enable_state_albania": {
+      "display_name": "Enable the Country of Albania",
+      "description": [
+        "Whether or not the Country of Albania, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Albania Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_austria": {
+      "display_name": "Enable the Country of Austria",
+      "description": [
+        "Whether or not the Country of Austria, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Austria Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_belgium": {
+      "display_name": "Enable the Country of Belgium",
+      "description": [
+        "Whether or not the Country of Belgium, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Belgium Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_bosnia_and_herzegovina": {
+      "display_name": "Enable the Country of Bosnia and Herzegovina",
+      "description": [
+        "Whether or not the Country of Bosnia and Herzegovina, and all checks within its bounds, as well as",
+        "its starter key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Bosnia and Herzegovina Key will still spawn, and be required",
+        "before traveling within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_bulgaria": {
+      "display_name": "Enable the Country of Bulgaria",
+      "description": [
+        "Whether or not the Country of Bulgaria, and all checks within its bounds, as well as its starter",
+        "key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Bulgaria Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_croatia": {
+      "display_name": "Enable the Country of Croatia",
+      "description": [
+        "Whether or not the Country of Croatia, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Croatia Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_czech_republic": {
+      "display_name": "Enable the Country of Czech Republic",
+      "description": [
+        "Whether or not the Country of Czech Republic, and all checks within its bounds, as well as its",
+        "starter key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Czech Republic Key will still spawn, and be required before",
+        "traveling within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_denmark": {
+      "display_name": "Enable the Country of Denmark",
+      "description": [
+        "Whether or not the Country of Denmark, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Denmark Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_estonia": {
+      "display_name": "Enable the Country of Estonia",
+      "description": [
+        "Whether or not the Country of Estonia, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Estonia Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_finland": {
+      "display_name": "Enable the Country of Finland",
+      "description": [
+        "Whether or not the Country of Finland, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Finland Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_france": {
+      "display_name": "Enable the Country of France",
+      "description": [
+        "Whether or not the Country of France, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the France Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_germany": {
+      "display_name": "Enable the Country of Germany",
+      "description": [
+        "Whether or not the Country of Germany, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Germany Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_greece": {
+      "display_name": "Enable the Country of Greece",
+      "description": [
+        "Whether or not the Country of Greece, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Greece Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_hungary": {
+      "display_name": "Enable the Country of Hungary",
+      "description": [
+        "Whether or not the Country of Hungary, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Hungary Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_italy": {
+      "display_name": "Enable the Country of Italy",
+      "description": [
+        "Whether or not the Country of Italy, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Italy Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_kaliningrad": {
+      "display_name": "Enable the Country of Kaliningrad",
+      "description": [
+        "Whether or not the Country of Kaliningrad, and all checks within its bounds, as well as its starter",
+        "key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Kaliningrad Key will still spawn, and be required before",
+        "traveling within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_kosovo": {
+      "display_name": "Enable the Country of Kosovo",
+      "description": [
+        "Whether or not the Country of Kosovo, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Kosovo Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_latvia": {
+      "display_name": "Enable the Country of Latvia",
+      "description": [
+        "Whether or not the Country of Latvia, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Latvia Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_lithuania": {
+      "display_name": "Enable the Country of Lithuania",
+      "description": [
+        "Whether or not the Country of Lithuania, and all checks within its bounds, as well as its starter",
+        "key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Lithuania Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_luxembourg": {
+      "display_name": "Enable the Country of Luxembourg",
+      "description": [
+        "Whether or not the Country of Luxembourg, and all checks within its bounds, as well as its starter",
+        "key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Luxembourg Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_montenegro": {
+      "display_name": "Enable the Country of Montenegro",
+      "description": [
+        "Whether or not the Country of Montenegro, and all checks within its bounds, as well as its starter",
+        "key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Montenegro Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_netherlands": {
+      "display_name": "Enable the Country of Netherlands",
+      "description": [
+        "Whether or not the Country of Netherlands, and all checks within its bounds, as well as its starter",
+        "key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Netherlands Key will still spawn, and be required before",
+        "traveling within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_north_macedonia": {
+      "display_name": "Enable the Country of North Macedonia",
+      "description": [
+        "Whether or not the Country of North Macedonia, and all checks within its bounds, as well as its",
+        "starter key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the North Macedonia Key will still spawn, and be required before",
+        "traveling within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_norway": {
+      "display_name": "Enable the Country of Norway",
+      "description": [
+        "Whether or not the Country of Norway, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Norway Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_poland": {
+      "display_name": "Enable the Country of Poland",
+      "description": [
+        "Whether or not the Country of Poland, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Poland Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_portugal": {
+      "display_name": "Enable the Country of Portugal",
+      "description": [
+        "Whether or not the Country of Portugal, and all checks within its bounds, as well as its starter",
+        "key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Portugal Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_romania": {
+      "display_name": "Enable the Country of Romania",
+      "description": [
+        "Whether or not the Country of Romania, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Romania Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_russia": {
+      "display_name": "Enable the Country of Russia",
+      "description": [
+        "Whether or not the Country of Russia, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Russia Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_serbia": {
+      "display_name": "Enable the Country of Serbia",
+      "description": [
+        "Whether or not the Country of Serbia, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Serbia Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_slovakia": {
+      "display_name": "Enable the Country of Slovakia",
+      "description": [
+        "Whether or not the Country of Slovakia, and all checks within its bounds, as well as its starter",
+        "key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Slovakia Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_slovenia": {
+      "display_name": "Enable the Country of Slovenia",
+      "description": [
+        "Whether or not the Country of Slovenia, and all checks within its bounds, as well as its starter",
+        "key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Slovenia Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_spain": {
+      "display_name": "Enable the Country of Spain",
+      "description": [
+        "Whether or not the Country of Spain, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Spain Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_sweden": {
+      "display_name": "Enable the Country of Sweden",
+      "description": [
+        "Whether or not the Country of Sweden, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Sweden Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_switzerland": {
+      "display_name": "Enable the Country of Switzerland",
+      "description": [
+        "Whether or not the Country of Switzerland, and all checks within its bounds, as well as its starter",
+        "key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Switzerland Key will still spawn, and be required before",
+        "traveling within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_turkiye": {
+      "display_name": "Enable the Country of Turkiye",
+      "description": [
+        "Whether or not the Country of Turkiye, and all checks within its bounds, as well as its starter key,",
+        "should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the Turkiye Key will still spawn, and be required before traveling",
+        "within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
+    "enable_state_united_kingdom": {
+      "display_name": "Enable the Country of United Kingdom",
+      "description": [
+        "Whether or not the Country of United Kingdom, and all checks within its bounds, as well as its",
+        "starter key, should be enabled for this AP.",
+        "",
+        "Regardless of the value below, the United Kingdom Key will still spawn, and be required before",
+        "traveling within this country."
+      ],
+      "type": "Toggle",
+      "default": true
+    },
     "enable_citysanity": {
       "display_name": "Enable Citysanity",
       "description": [
