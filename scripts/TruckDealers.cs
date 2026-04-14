@@ -19,7 +19,7 @@ public readonly record struct Truck(string Make, string Model, string DLC);
 #region Data
 public static class Data
 {
-  public const string CsvPath = "csvdata/{0}.csv";
+  public const string CsvPath = "data/csv/{0}.csv";
 
   public const string CitiesFN = "cities";
   public static readonly CSVObjectDictionary<string, Check> Cities =

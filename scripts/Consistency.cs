@@ -25,7 +25,7 @@ public readonly record struct Truck(string Make, string Model, string DLC);
 #region Data
 public static class Data
 {
-  public const string CsvPath = "csvdata/{0}.csv";
+  public const string CsvPath = "data/csv/{0}.csv";
 
   public const string CitiesFN = "cities";
   public static readonly CSVObjectDictionary<string, Check> Cities =
@@ -89,6 +89,18 @@ public static class Data
     CSVObjectDictionary.ParseObjectsFromFile(string.Format(CsvPath, DLCsFN),
       d => KeyValuePair.Create(d["DLC"] ?? "Base Game", true));
 
+  public const string DLCConnectionsFN = "dlc-connections";
+  public static readonly CSVObjectCollection<(string Left, string Right)> DLCConnections =
+    CSVObjectCollection.ParseObjectsFromFile(string.Format(CsvPath, DLCConnectionsFN), d => (
+      d["DLC1"]! ?? "Base Game",
+      d["DLC2"]! ?? "Base Game"
+    ));
+
+  public const string GameInfoFN = "game-info";
+  public static readonly CSVObjectDictionary<string, string> GameInfo =
+    CSVObjectDictionary.ParseObjectsFromFile(string.Format(CsvPath, GameInfoFN),
+      d => KeyValuePair.Create(d["Key"]!, d["Value"]!));
+
   public const string PhotoTrophiesFN = "photo-trophies";
   public static readonly CSVObjectCollection<Check> PhotoTrophies =
     CSVObjectCollection.ParseObjectsFromFile(string.Format(CsvPath, PhotoTrophiesFN), d => new Check(
@@ -117,6 +129,11 @@ public static class Data
   public const string StatesFN = "states";
   public static readonly CSVObjectDictionary<string, bool> States =
     CSVObjectDictionary.ParseObjectsFromFile(string.Format(CsvPath, StatesFN), d => KeyValuePair.Create(d["State"]!, true));
+
+  public const string TerminologyFN = "terminology";
+  public static readonly CSVObjectDictionary<string, string> Terminology =
+    CSVObjectDictionary.ParseObjectsFromFile(string.Format(CsvPath, TerminologyFN),
+      d => KeyValuePair.Create(d["Term"]!, d["Use"]!));
 
   public const string TrucksFN = "trucks";
   public static readonly CSVObjectCollection<Truck> Trucks =
@@ -213,6 +230,15 @@ public static class Program
       (!Data.Regions.Contains(conn.Region2), $"Unrecognized Right Region: {conn.Region2}"),
       (conn.Region1 == conn.Region2, $"Region connects to itself: {conn.Region1}"),
       (conn.Region1.CompareTo(conn.Region2) > 0, $"Reversed connection: {conn.Region1} => {conn.Region2}")
+    ])];
+
+    // For the list of DLC Connections, make sure no unrecognized DLC
+    // exists, and that connections are alphabetical.
+    fileErrors[Data.DLCConnectionsFN] = [.. Data.DLCConnections.SelectLineErrors(conn => [
+      (!Data.DLCs.ContainsKey(conn.Left), $"Unrecognized Left DLC: {conn.Left}"),
+      (!Data.DLCs.ContainsKey(conn.Right), $"Unrecognized Right DLC: {conn.Right}"),
+      (conn.Left == conn.Right, $"DLC connects to itself: {conn.Left}"),
+      (conn.Left.CompareTo(conn.Right) > 0 && conn.Left != "Base Game", $"Reversed connection: {conn.Left} => {conn.Right}")
     ])];
 
     // For the list of cities, make sure no unrecognized region (country +

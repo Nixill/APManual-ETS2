@@ -19,6 +19,9 @@ No errors found.
 # connections.csv
 No errors found.
 
+# dlc-connections.csv
+No errors found.
+
 # cities.csv
 No errors found.
 

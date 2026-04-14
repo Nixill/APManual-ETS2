@@ -45,7 +45,7 @@ AddCountryData("Slovenia", "West Balkans");
 AddCountryData("Italy", null, "Italia");
 AddCountryData("Switzerland", null);
 
-using var stream = new FileStream("../csvdata/companies.csv", FileMode.Append, FileAccess.Write, FileShare.ReadWrite,
+using var stream = new FileStream("../data/csv/companies.csv", FileMode.Append, FileAccess.Write, FileShare.ReadWrite,
   4096, FileOptions.WriteThrough);
 using var writer = new StreamWriter(stream);
 writer.AutoFlush = true;

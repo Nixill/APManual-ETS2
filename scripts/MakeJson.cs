@@ -23,7 +23,7 @@ public readonly record struct Truck(string Make, string Model, string DLC);
 #region Data
 public static class Data
 {
-  public const string CsvPath = "csvdata/{0}.csv";
+  public const string CsvPath = "data/csv/{0}.csv";
 
   public const string CitiesFN = "cities";
   public static readonly CSVObjectDictionary<string, Check> Cities =
@@ -86,6 +86,13 @@ public static class Data
   public static readonly CSVObjectDictionary<string, bool> DLCs =
     CSVObjectDictionary.ParseObjectsFromFile(string.Format(CsvPath, DLCsFN),
       d => KeyValuePair.Create(d["DLC"] ?? Str.DLC.BaseGame, true));
+
+  public const string DLCConnectionsFN = "dlc-connections";
+  public static readonly CSVObjectCollection<(string Left, string Right)> DLCConnections =
+    CSVObjectCollection.ParseObjectsFromFile(string.Format(CsvPath, DLCConnectionsFN), d => (
+      d["DLC1"]! ?? Str.DLC.BaseGame,
+      d["DLC2"]! ?? Str.DLC.BaseGame
+    ));
 
   public const string GameInfoFN = "game-info";
   public static readonly CSVObjectDictionary<string, string> GameInfo =
@@ -207,7 +214,8 @@ public static class Str
     public const string SecretDeliveryCompletions = "Secret Delivery Completions";
     public const string SecretDeliveryInstructions = "Secret Delivery Instructions";
     public const string SkillPoint = "Skill Point";
-    public static string State(string stateName) => $"{stateName} ({StateCountry})";
+    public const string SkillPointCondensed = "Skill Point (Condensed)";
+    public static string State(string stateName) => stateName;
     public static string StateCheck(string stateName) => $"{stateName} (Checks)";
     public static string StateKey => $"{StateCountry} Key";
     public static string StateStarterKey => $"{StateCountry} Starter Key";
@@ -236,6 +244,7 @@ public static class Str
     public const string QuickTravelTicket = "Quick Travel Ticket";
     public const string SecretDeliveryCompletion = $"Secret Delivery Completion";
     public static string SecretDeliveryInstruction(int i) => $"Piece of Secret Delivery #{i} Instructions";
+    public static string SkillPoint(string name) => $"Skill Point - {name}";
     public static string StateKey(string name) => $"{name} Key";
     public static string StateStarterKey(string name) => $"{name} Starter Key";
     public static string TruckContract(string name) => $"{name} Trucks Purchase Contract";
@@ -326,7 +335,8 @@ public static class Str
   {
     // Non-standard keys
     public const string DLCList = "dlc_list";
-    public const string GrantIfOption = "grant_if_option";
+    public const string GrantingOption = "granting_option";
+    public const string PlayerLevel = "player_level";
     public const string RequireOption = "require_option";
     public const string RequireOptionValue = "require_option_value";
     public const string SecretDeliveryCounter = "secret_delivery_number";
@@ -346,6 +356,7 @@ public static class Str
     public const string GameInfoGame = "game";
     public const string ItemClassProgression = "progression";
     public const string ItemClassUseful = "useful";
+    public const string ItemClassificationCount = "classification_count";
     public const string ItemCount = "count";
     public const string ItemEarly = "early";
     public const string LocationPlaceItem = "place_item";
@@ -626,24 +637,25 @@ public static class JsonDefs
       KVP(Str.Syntax.Name, Str.Location.InternalLevel(i)),
       KVPA(Str.Syntax.Category, [ Str.Category.Level ]),
       KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
-      KVPA(Str.Syntax.LocationPlaceItem, [ Str.Item.LevelItem ])
+      KVPA(Str.Syntax.LocationPlaceItem, [ Str.Item.LevelItem ]),
+      KVP(Str.Syntax.PlayerLevel, i)
     ]));
 
   public static IEnumerable<JToken> GetExternalLevelLocations()
     => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.ExternalLevel(i)),
       KVPA(Str.Syntax.Category, [ Str.Category.Level ]),
-      KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|")
+      KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
+      KVP(Str.Syntax.PlayerLevel, i)
     ]));
 
   public static IEnumerable<JToken> GetSkillLevelLocations()
     => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.SkillLevel(i)),
-      KVPA(Str.Syntax.Category, [ Str.Category.Level ]),
+      KVPA(Str.Syntax.Category, [ Str.Category.Level, Str.Category.SkillPointCondensed ]),
       KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
       KVPA(Str.Syntax.LocationPlaceItemCategory, [ Str.Category.SkillPoint ]),
-      KVP(Str.Syntax.RequireOption, Str.Option.SkillScatter),
-      KVP(Str.Syntax.RequireOptionValue, Str.Option.SkillScatterCondensed)
+      KVP(Str.Syntax.PlayerLevel, i)
     ]));
 
   public static IEnumerable<JToken> GetSecretDeliveryLocations()
@@ -689,6 +701,7 @@ public static class JsonDefs
     .. GetTruckContractItems(),
     .. GetSecretDeliveryInstructionItems(),
     .. GetSecretDeliveryCompletionItems(),
+    .. GetSkillPointItems(),
     .. GetSingleItems()
   ];
 
@@ -761,6 +774,28 @@ public static class JsonDefs
       KVP(Str.Syntax.ItemCount, 20)
     ])];
 
+  public static IEnumerable<JToken> GetSkillPointItems()
+    => Sequence.Of<(string Name, int Progression, int Useful)>(
+      ("ADR Class 1 (Explosives)", 1, 0),
+      ("ADR Class 2 (Gases)", 1, 0),
+      ("ADR Class 3 (Flammable Liquids)", 1, 0),
+      ("ADR Class 4 (Flammable Solids)", 1, 0),
+      ("ADR Class 6 (Toxic/Infectious Substances)", 1, 0),
+      ("ADR Class 8 (Corrosive Substances)", 1, 0),
+      ("Long Distance", 6, 0),
+      ("High Value Cargo", 1, 5),
+      ("Fragile Cargo", 1, 5),
+      ("Just-In-Time Delivery", 2, 4),
+      ("Eco-Driving", 0, 6)
+    ).Select(t => Obj([
+      KVP(Str.Syntax.Name, Str.Item.SkillPoint(t.Name)),
+      KVPO(Str.Syntax.ItemClassificationCount, [
+        KVP(Str.Syntax.ItemClassProgression, t.Progression),
+        KVP(Str.Syntax.ItemClassUseful, t.Useful)
+      ]),
+      KVPA(Str.Syntax.Category, [Str.Category.SkillPoint])
+    ]));
+
   public static IEnumerable<JToken> GetSingleItems() => [
     Obj([
       KVP(Str.Syntax.Name, Str.Item.DeliveryToken),
@@ -771,51 +806,39 @@ public static class JsonDefs
     Obj([
       KVP(Str.Syntax.Name, Str.Item.FerryTicket),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVPO(Str.Syntax.GrantIfOption, [
-        KVP(Str.Option.FerryTicketItem, Str.Option.ItemInStartingInventory)
-      ])
+      KVP(Str.Syntax.GrantingOption, Str.Option.FerryTicketItem)
     ]),
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.Camera),
       KVPA(Str.Syntax.Category, [Str.Category.PhotoTrophy]),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVPO(Str.Syntax.GrantIfOption, [
-        KVP(Str.Option.Photosanity, Str.Option.PhotosanityStartWithCamera)
-      ])
+      KVP(Str.Syntax.GrantingOption, Str.Option.Photosanity)
     ]),
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.Television),
       KVPA(Str.Syntax.Category, [Str.Category.Viewpoint]),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVPO(Str.Syntax.GrantIfOption, [
-        KVP(Str.Option.Viewpointsanity, Str.Option.ViewpointsanityStartWithTV)
-      ])
+      KVP(Str.Syntax.GrantingOption, Str.Option.Viewpointsanity)
     ]),
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.BankLoan),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVPO(Str.Syntax.GrantIfOption, [
-        KVP(Str.Option.BankLoanItem, Str.Option.ItemInStartingInventory)
-      ])
+      KVP(Str.Syntax.GrantingOption, Str.Option.BankLoanItem)
     ]),
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.TrailerContract),
       KVP(Str.Syntax.ItemClassUseful, true),
-      KVPO(Str.Syntax.GrantIfOption, [
-        KVP(Str.Option.TrailerContractItem, Str.Option.ItemInStartingInventory)
-      ])
+      KVP(Str.Syntax.GrantingOption, Str.Option.TrailerContractItem)
     ]),
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.QuickTravelTicket),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVPO(Str.Syntax.GrantIfOption, [
-        KVP(Str.Option.QuickTravelTicketItem, Str.Option.ItemInStartingInventory)
-      ])
+      KVP(Str.Syntax.GrantingOption, Str.Option.QuickTravelTicketItem)
     ])
   ];
   #endregion
@@ -851,7 +874,8 @@ public static class JsonDefs
     GetTypeCategory(Str.Category.PhotoTrophy, Str.Option.Photosanity),
     GetTypeCategory(Str.Category.Company, Str.Option.Companysanity),
     GetTypeCategory(Str.Category.RecruitmentAgent, Str.Option.Recruitmentsanity),
-    GetTypeCategory(Str.Category.TruckDealer, Str.Option.Dealersanity)
+    GetTypeCategory(Str.Category.TruckDealer, Str.Option.Dealersanity),
+    GetTypeCategory(Str.Option.SkillScatterCondensed)
   ];
 
   public static JProperty GetTypeCategory(string name, string? option = null)
@@ -883,7 +907,7 @@ public static class JsonDefs
   }
   #endregion
 
-  #region └╴options.json
+  #region ├╴options.json
   public static JObject GetOptionsJson() => Obj([
     KVP(Str.Syntax.OptionsCore, GetCoreOptions()),
     KVP(Str.Syntax.OptionsUser, GetUserOptions())
@@ -1291,6 +1315,16 @@ public static class JsonDefs
       """, 1, 10000, DataCounters.TotalChecks)
   );
   #endregion
+
+  #region └╴dlc-connections.json
+  public static JObject GetDLCConnectionsJson() => Obj([
+    KVP("_comment", "This isn't a standard file. I'm just using it for much easier logic."),
+    .. Data.DLCs.Keys.Select(dlc => KVPA(Str.SnakeCase(dlc), [
+      .. Data.DLCConnections.Where(conn => conn.Left == dlc).Select(conn => Str.SnakeCase(conn.Right)),
+      .. Data.DLCConnections.Where(conn => conn.Right == dlc).Select(conn => Str.SnakeCase(conn.Left))
+    ]))
+  ]);
+  #endregion
 }
 #endregion
 
@@ -1306,7 +1340,8 @@ public static class Program
       ("items", JsonDefs.GetItemsJson()),
       ("categories", JsonDefs.GetCategoriesJson()),
       ("events", JsonDefs.GetEventsJson()),
-      ("options", JsonDefs.GetOptionsJson())
+      ("options", JsonDefs.GetOptionsJson()),
+      ("dlc-connections", JsonDefs.GetDLCConnectionsJson())
     ];
 
     foreach ((string file, JToken content) in Values)
