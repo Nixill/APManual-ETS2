@@ -3,7 +3,7 @@
     "name": "City: Graz",
     "category": [
       "City",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -13,7 +13,7 @@
     "name": "City: Innsbruck",
     "category": [
       "City",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -23,7 +23,7 @@
     "name": "City: Klagenfurt am Worthersee",
     "category": [
       "City",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -33,7 +33,7 @@
     "name": "City: Linz",
     "category": [
       "City",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -43,7 +43,7 @@
     "name": "City: Salzburg",
     "category": [
       "City",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -53,7 +53,7 @@
     "name": "City: Vienna",
     "category": [
       "City",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -63,7 +63,7 @@
     "name": "City: Brussels",
     "category": [
       "City",
-      "Belgium (Country)",
+      "Belgium",
       "Belgium (Checks)",
       "Base Game (DLC)"
     ],
@@ -73,7 +73,7 @@
     "name": "City: Liege",
     "category": [
       "City",
-      "Belgium (Country)",
+      "Belgium",
       "Belgium (Checks)",
       "Base Game (DLC)"
     ],
@@ -83,7 +83,7 @@
     "name": "City: Brno",
     "category": [
       "City",
-      "Czech Republic (Country)",
+      "Czech Republic",
       "Czech Republic (Checks)",
       "Base Game (DLC)"
     ],
@@ -93,7 +93,7 @@
     "name": "City: Prague",
     "category": [
       "City",
-      "Czech Republic (Country)",
+      "Czech Republic",
       "Czech Republic (Checks)",
       "Base Game (DLC)"
     ],
@@ -103,7 +103,7 @@
     "name": "City: Ostrava",
     "category": [
       "City",
-      "Czech Republic (Country)",
+      "Czech Republic",
       "Czech Republic (Checks)",
       "Going East! (DLC)"
     ],
@@ -113,7 +113,7 @@
     "name": "City: Calais",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Base Game (DLC)"
     ],
@@ -123,7 +123,7 @@
     "name": "City: Dijon",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Base Game (DLC)"
     ],
@@ -133,7 +133,7 @@
     "name": "City: Lille",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Base Game (DLC)"
     ],
@@ -143,7 +143,7 @@
     "name": "City: Lyon",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Base Game (DLC)"
     ],
@@ -153,7 +153,7 @@
     "name": "City: Metz",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Base Game (DLC)"
     ],
@@ -163,7 +163,7 @@
     "name": "City: Paris",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Base Game (DLC)"
     ],
@@ -173,7 +173,7 @@
     "name": "City: Reims",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Base Game (DLC)"
     ],
@@ -183,7 +183,7 @@
     "name": "City: Strasbourg",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Base Game (DLC)"
     ],
@@ -193,7 +193,7 @@
     "name": "City: Ajaccio",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -204,7 +204,7 @@
     "name": "City: Bastia",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -215,7 +215,7 @@
     "name": "City: Bayonne",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -225,7 +225,7 @@
     "name": "City: Bonifacio",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -236,7 +236,7 @@
     "name": "City: Bordeaux",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -246,7 +246,7 @@
     "name": "City: Bourges",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -256,7 +256,7 @@
     "name": "City: Brest",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -266,7 +266,7 @@
     "name": "City: Calvi",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -277,7 +277,7 @@
     "name": "City: Civaux",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -287,7 +287,7 @@
     "name": "City: Clermont-Ferrand",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -297,7 +297,7 @@
     "name": "City: Golfech",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -307,7 +307,7 @@
     "name": "City: La Rochelle",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -317,7 +317,7 @@
     "name": "City: Lacq",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -327,7 +327,7 @@
     "name": "City: Le Havre",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -337,7 +337,7 @@
     "name": "City: Le Mans",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -347,7 +347,7 @@
     "name": "City: L'Ile-Rousse",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -358,7 +358,7 @@
     "name": "City: Limoges",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -368,7 +368,7 @@
     "name": "City: Marseille",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -378,7 +378,7 @@
     "name": "City: Montpellier",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -388,7 +388,7 @@
     "name": "City: Nantes",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -398,7 +398,7 @@
     "name": "City: Nice",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -408,7 +408,7 @@
     "name": "City: Paluel",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -418,7 +418,7 @@
     "name": "City: Porto-Vecchio",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -429,7 +429,7 @@
     "name": "City: Rennes",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -439,7 +439,7 @@
     "name": "City: Roscoff",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -449,7 +449,7 @@
     "name": "City: Saint-Alban-du-Rhone",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -459,7 +459,7 @@
     "name": "City: Saint-Laurent",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -469,7 +469,7 @@
     "name": "City: Toulouse",
     "category": [
       "City",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -479,7 +479,7 @@
     "name": "City: Berlin",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -489,7 +489,7 @@
     "name": "City: Bremen",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -499,7 +499,7 @@
     "name": "City: Cologne",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -509,7 +509,7 @@
     "name": "City: Dortmund",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -519,7 +519,7 @@
     "name": "City: Dresden",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -529,7 +529,7 @@
     "name": "City: Duisburg",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -539,7 +539,7 @@
     "name": "City: Dusseldorf",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -549,7 +549,7 @@
     "name": "City: Erfurt",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -559,7 +559,7 @@
     "name": "City: Frankfurt am Main",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -569,7 +569,7 @@
     "name": "City: Hamburg",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -579,7 +579,7 @@
     "name": "City: Hanover",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -589,7 +589,7 @@
     "name": "City: Kassel",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -599,7 +599,7 @@
     "name": "City: Kiel",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -609,7 +609,7 @@
     "name": "City: Leipzig",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -619,7 +619,7 @@
     "name": "City: Magdeburg",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -629,7 +629,7 @@
     "name": "City: Mannheim",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -639,7 +639,7 @@
     "name": "City: Munich",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -649,7 +649,7 @@
     "name": "City: Nuremburg",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -659,7 +659,7 @@
     "name": "City: Osnabruck",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -669,7 +669,7 @@
     "name": "City: Rostock",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -679,7 +679,7 @@
     "name": "City: Stuttgart",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -689,7 +689,7 @@
     "name": "City: Travemunde",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -699,7 +699,7 @@
     "name": "City: Werlte",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Krone Trailer Pack (DLC)"
     ],
@@ -709,7 +709,7 @@
     "name": "City: Winsen",
     "category": [
       "City",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Feldbinder Trailer Pack (DLC)"
     ],
@@ -719,7 +719,7 @@
     "name": "City: Milan",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Base Game (DLC)"
     ],
@@ -729,7 +729,7 @@
     "name": "City: Turin",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Base Game (DLC)"
     ],
@@ -739,7 +739,7 @@
     "name": "City: Trieste",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Base Game (DLC)"
     ],
@@ -749,7 +749,7 @@
     "name": "City: Venice",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Base Game (DLC)"
     ],
@@ -759,7 +759,7 @@
     "name": "City: Verona",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Base Game (DLC)"
     ],
@@ -769,7 +769,7 @@
     "name": "City: Ancona",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -779,7 +779,7 @@
     "name": "City: Bari",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -789,7 +789,7 @@
     "name": "City: Bologna",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -799,7 +799,7 @@
     "name": "City: Cagliari",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -810,7 +810,7 @@
     "name": "City: Cassino",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -820,7 +820,7 @@
     "name": "City: Catania",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -831,7 +831,7 @@
     "name": "City: Catanzaro",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -841,7 +841,7 @@
     "name": "City: Florence",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -851,7 +851,7 @@
     "name": "City: Genoa",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -861,7 +861,7 @@
     "name": "City: Livorno",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -871,7 +871,7 @@
     "name": "City: Messina",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -882,7 +882,7 @@
     "name": "City: Naples",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -892,7 +892,7 @@
     "name": "City: Olbia",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -903,7 +903,7 @@
     "name": "City: Palermo",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -914,7 +914,7 @@
     "name": "City: Parma",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -924,7 +924,7 @@
     "name": "City: Pescara",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -934,7 +934,7 @@
     "name": "City: Rome",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -944,7 +944,7 @@
     "name": "City: Sassari",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -955,7 +955,7 @@
     "name": "City: Suzzara",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -965,7 +965,7 @@
     "name": "City: Taranto",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -975,7 +975,7 @@
     "name": "City: Terni",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -985,7 +985,7 @@
     "name": "City: Villa San Giovanni",
     "category": [
       "City",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -995,7 +995,7 @@
     "name": "City: Luxembourg",
     "category": [
       "City",
-      "Luxembourg (Country)",
+      "Luxembourg",
       "Luxembourg (Checks)",
       "Base Game (DLC)"
     ],
@@ -1005,7 +1005,7 @@
     "name": "City: Amsterdam",
     "category": [
       "City",
-      "Netherlands (Country)",
+      "Netherlands",
       "Netherlands (Checks)",
       "Base Game (DLC)"
     ],
@@ -1015,7 +1015,7 @@
     "name": "City: Groningen",
     "category": [
       "City",
-      "Netherlands (Country)",
+      "Netherlands",
       "Netherlands (Checks)",
       "Base Game (DLC)"
     ],
@@ -1025,7 +1025,7 @@
     "name": "City: Rotterdam",
     "category": [
       "City",
-      "Netherlands (Country)",
+      "Netherlands",
       "Netherlands (Checks)",
       "Base Game (DLC)"
     ],
@@ -1035,7 +1035,7 @@
     "name": "City: Poznan",
     "category": [
       "City",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Base Game (DLC)"
     ],
@@ -1045,7 +1045,7 @@
     "name": "City: Szczecin",
     "category": [
       "City",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Base Game (DLC)"
     ],
@@ -1055,7 +1055,7 @@
     "name": "City: Wroclaw",
     "category": [
       "City",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Base Game (DLC)"
     ],
@@ -1065,7 +1065,7 @@
     "name": "City: Bialystok",
     "category": [
       "City",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Going East! (DLC)"
     ],
@@ -1075,7 +1075,7 @@
     "name": "City: Gdansk",
     "category": [
       "City",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Going East! (DLC)"
     ],
@@ -1085,7 +1085,7 @@
     "name": "City: Katowice",
     "category": [
       "City",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Going East! (DLC)"
     ],
@@ -1095,7 +1095,7 @@
     "name": "City: Krakow",
     "category": [
       "City",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Going East! (DLC)"
     ],
@@ -1105,7 +1105,7 @@
     "name": "City: Lodz",
     "category": [
       "City",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Going East! (DLC)"
     ],
@@ -1115,7 +1115,7 @@
     "name": "City: Lublin",
     "category": [
       "City",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Going East! (DLC)"
     ],
@@ -1125,7 +1125,7 @@
     "name": "City: Olsztyn",
     "category": [
       "City",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Going East! (DLC)"
     ],
@@ -1135,7 +1135,7 @@
     "name": "City: Warsaw",
     "category": [
       "City",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Going East! (DLC)"
     ],
@@ -1145,7 +1145,7 @@
     "name": "City: Bratislava",
     "category": [
       "City",
-      "Slovakia (Country)",
+      "Slovakia",
       "Slovakia (Checks)",
       "Base Game (DLC)"
     ],
@@ -1155,7 +1155,7 @@
     "name": "City: Banska Bystrica",
     "category": [
       "City",
-      "Slovakia (Country)",
+      "Slovakia",
       "Slovakia (Checks)",
       "Going East! (DLC)"
     ],
@@ -1165,7 +1165,7 @@
     "name": "City: Kosice",
     "category": [
       "City",
-      "Slovakia (Country)",
+      "Slovakia",
       "Slovakia (Checks)",
       "Going East! (DLC)"
     ],
@@ -1175,7 +1175,7 @@
     "name": "City: Bern",
     "category": [
       "City",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -1185,7 +1185,7 @@
     "name": "City: Geneva",
     "category": [
       "City",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -1195,7 +1195,7 @@
     "name": "City: Zurich",
     "category": [
       "City",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -1205,7 +1205,7 @@
     "name": "City: Aberdeen",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1215,7 +1215,7 @@
     "name": "City: Birmingham",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1225,7 +1225,7 @@
     "name": "City: Cambridge",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1235,7 +1235,7 @@
     "name": "City: Cardiff",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1245,7 +1245,7 @@
     "name": "City: Carlisle",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1255,7 +1255,7 @@
     "name": "City: Dover",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1265,7 +1265,7 @@
     "name": "City: Edinburgh",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1275,7 +1275,7 @@
     "name": "City: Felixstowe",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1285,7 +1285,7 @@
     "name": "City: Glasgow",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1295,7 +1295,7 @@
     "name": "City: Grimsby",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1305,7 +1305,7 @@
     "name": "City: Liverpool",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1315,7 +1315,7 @@
     "name": "City: London",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1325,7 +1325,7 @@
     "name": "City: Manchester",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1335,7 +1335,7 @@
     "name": "City: Newcastle-upon-Tyne",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1345,7 +1345,7 @@
     "name": "City: Plymouth",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1355,7 +1355,7 @@
     "name": "City: Sheffield",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1365,7 +1365,7 @@
     "name": "City: Southampton",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1375,7 +1375,7 @@
     "name": "City: Swansea",
     "category": [
       "City",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -1385,7 +1385,7 @@
     "name": "City: Budapest",
     "category": [
       "City",
-      "Hungary (Country)",
+      "Hungary",
       "Hungary (Checks)",
       "Going East! (DLC)"
     ],
@@ -1395,7 +1395,7 @@
     "name": "City: Debrecen",
     "category": [
       "City",
-      "Hungary (Country)",
+      "Hungary",
       "Hungary (Checks)",
       "Going East! (DLC)"
     ],
@@ -1405,7 +1405,7 @@
     "name": "City: Pecs",
     "category": [
       "City",
-      "Hungary (Country)",
+      "Hungary",
       "Hungary (Checks)",
       "Going East! (DLC)"
     ],
@@ -1415,7 +1415,7 @@
     "name": "City: Szeged",
     "category": [
       "City",
-      "Hungary (Country)",
+      "Hungary",
       "Hungary (Checks)",
       "Going East! (DLC)"
     ],
@@ -1425,7 +1425,7 @@
     "name": "City: Aalborg",
     "category": [
       "City",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1435,7 +1435,7 @@
     "name": "City: Aarhus",
     "category": [
       "City",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1445,7 +1445,7 @@
     "name": "City: Esbjerg",
     "category": [
       "City",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1455,7 +1455,7 @@
     "name": "City: Frederikshavn",
     "category": [
       "City",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1465,7 +1465,7 @@
     "name": "City: Gedser",
     "category": [
       "City",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1475,7 +1475,7 @@
     "name": "City: Hirtshals",
     "category": [
       "City",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1485,7 +1485,7 @@
     "name": "City: Copenhagen",
     "category": [
       "City",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1495,7 +1495,7 @@
     "name": "City: Odense",
     "category": [
       "City",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1505,7 +1505,7 @@
     "name": "City: Bergen",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1515,7 +1515,7 @@
     "name": "City: Kristiansand",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1525,7 +1525,7 @@
     "name": "City: Oslo",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1535,7 +1535,7 @@
     "name": "City: Stavanger",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1545,7 +1545,7 @@
     "name": "City: Alesund",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1555,7 +1555,7 @@
     "name": "City: Alta",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1565,7 +1565,7 @@
     "name": "City: Andenes",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1575,7 +1575,7 @@
     "name": "City: Bodo",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1585,7 +1585,7 @@
     "name": "City: Dombas",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1595,7 +1595,7 @@
     "name": "City: Hamar",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1605,7 +1605,7 @@
     "name": "City: Honningsvag",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1615,7 +1615,7 @@
     "name": "City: Kristiansund",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1625,7 +1625,7 @@
     "name": "City: Lillehammer",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1635,7 +1635,7 @@
     "name": "City: Mo i Rana",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1645,7 +1645,7 @@
     "name": "City: Narvik",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1655,7 +1655,7 @@
     "name": "City: Steinkjer",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1665,7 +1665,7 @@
     "name": "City: Svolvaer",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1675,7 +1675,7 @@
     "name": "City: Tromso",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1685,7 +1685,7 @@
     "name": "City: Trondheim",
     "category": [
       "City",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1695,7 +1695,7 @@
     "name": "City: Gothenburg",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1705,7 +1705,7 @@
     "name": "City: Helsingborg",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1715,7 +1715,7 @@
     "name": "City: Jonkoping",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1725,7 +1725,7 @@
     "name": "City: Kalmar",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1735,7 +1735,7 @@
     "name": "City: Karlstad",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1745,7 +1745,7 @@
     "name": "City: Kappelskar",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1755,7 +1755,7 @@
     "name": "City: Karlskrona",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1765,7 +1765,7 @@
     "name": "City: Linkoping",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1775,7 +1775,7 @@
     "name": "City: Malmo",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1785,7 +1785,7 @@
     "name": "City: Nynashamn",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1795,7 +1795,7 @@
     "name": "City: Orebro",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1805,7 +1805,7 @@
     "name": "City: Sodertalje",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1815,7 +1815,7 @@
     "name": "City: Stockholm",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1825,7 +1825,7 @@
     "name": "City: Trelleborg",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1835,7 +1835,7 @@
     "name": "City: Uppsala",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1845,7 +1845,7 @@
     "name": "City: Vasteras",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1855,7 +1855,7 @@
     "name": "City: Vaxjo",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -1865,7 +1865,7 @@
     "name": "City: Arvidsjaur",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1875,7 +1875,7 @@
     "name": "City: Borlange",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1885,7 +1885,7 @@
     "name": "City: Falun",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1895,7 +1895,7 @@
     "name": "City: Gavle",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1905,7 +1905,7 @@
     "name": "City: Haparanda",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1915,7 +1915,7 @@
     "name": "City: Karesuando",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1925,7 +1925,7 @@
     "name": "City: Kiruna",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1935,7 +1935,7 @@
     "name": "City: Lulea",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1945,7 +1945,7 @@
     "name": "City: Ornskoldsvik",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1955,7 +1955,7 @@
     "name": "City: Ostersund",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1965,7 +1965,7 @@
     "name": "City: Skelleftea",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1975,7 +1975,7 @@
     "name": "City: Sundsvall",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1985,7 +1985,7 @@
     "name": "City: Umea",
     "category": [
       "City",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -1995,7 +1995,7 @@
     "name": "City: Kunda",
     "category": [
       "City",
-      "Estonia (Country)",
+      "Estonia",
       "Estonia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2005,7 +2005,7 @@
     "name": "City: Narva",
     "category": [
       "City",
-      "Estonia (Country)",
+      "Estonia",
       "Estonia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2015,7 +2015,7 @@
     "name": "City: Paldiski",
     "category": [
       "City",
-      "Estonia (Country)",
+      "Estonia",
       "Estonia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2025,7 +2025,7 @@
     "name": "City: Parnu",
     "category": [
       "City",
-      "Estonia (Country)",
+      "Estonia",
       "Estonia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2035,7 +2035,7 @@
     "name": "City: Tallinn",
     "category": [
       "City",
-      "Estonia (Country)",
+      "Estonia",
       "Estonia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2045,7 +2045,7 @@
     "name": "City: Tartu",
     "category": [
       "City",
-      "Estonia (Country)",
+      "Estonia",
       "Estonia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2055,7 +2055,7 @@
     "name": "City: Daugavpils",
     "category": [
       "City",
-      "Latvia (Country)",
+      "Latvia",
       "Latvia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2065,7 +2065,7 @@
     "name": "City: Liepaja",
     "category": [
       "City",
-      "Latvia (Country)",
+      "Latvia",
       "Latvia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2075,7 +2075,7 @@
     "name": "City: Rezekne",
     "category": [
       "City",
-      "Latvia (Country)",
+      "Latvia",
       "Latvia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2085,7 +2085,7 @@
     "name": "City: Riga",
     "category": [
       "City",
-      "Latvia (Country)",
+      "Latvia",
       "Latvia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2095,7 +2095,7 @@
     "name": "City: Valmiera",
     "category": [
       "City",
-      "Latvia (Country)",
+      "Latvia",
       "Latvia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2105,7 +2105,7 @@
     "name": "City: Ventspils",
     "category": [
       "City",
-      "Latvia (Country)",
+      "Latvia",
       "Latvia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2115,7 +2115,7 @@
     "name": "City: Kaunas",
     "category": [
       "City",
-      "Lithuania (Country)",
+      "Lithuania",
       "Lithuania (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2125,7 +2125,7 @@
     "name": "City: Klaipeda",
     "category": [
       "City",
-      "Lithuania (Country)",
+      "Lithuania",
       "Lithuania (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2135,7 +2135,7 @@
     "name": "City: Mazeikiai",
     "category": [
       "City",
-      "Lithuania (Country)",
+      "Lithuania",
       "Lithuania (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2145,7 +2145,7 @@
     "name": "City: Panevezys",
     "category": [
       "City",
-      "Lithuania (Country)",
+      "Lithuania",
       "Lithuania (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2155,7 +2155,7 @@
     "name": "City: Siauliai",
     "category": [
       "City",
-      "Lithuania (Country)",
+      "Lithuania",
       "Lithuania (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2165,7 +2165,7 @@
     "name": "City: Utena",
     "category": [
       "City",
-      "Lithuania (Country)",
+      "Lithuania",
       "Lithuania (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2175,7 +2175,7 @@
     "name": "City: Vilnius",
     "category": [
       "City",
-      "Lithuania (Country)",
+      "Lithuania",
       "Lithuania (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2185,7 +2185,7 @@
     "name": "City: Kaliningrad",
     "category": [
       "City",
-      "Kaliningrad (Country)",
+      "Kaliningrad",
       "Kaliningrad (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2195,7 +2195,7 @@
     "name": "City: Luga",
     "category": [
       "City",
-      "Russia (Country)",
+      "Russia",
       "Russia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2205,7 +2205,7 @@
     "name": "City: Pskov",
     "category": [
       "City",
-      "Russia (Country)",
+      "Russia",
       "Russia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2215,7 +2215,7 @@
     "name": "City: Saint Petersburg",
     "category": [
       "City",
-      "Russia (Country)",
+      "Russia",
       "Russia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2225,7 +2225,7 @@
     "name": "City: Sosnovy Bor",
     "category": [
       "City",
-      "Russia (Country)",
+      "Russia",
       "Russia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2235,7 +2235,7 @@
     "name": "City: Vyborg",
     "category": [
       "City",
-      "Russia (Country)",
+      "Russia",
       "Russia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2245,7 +2245,7 @@
     "name": "City: Helsinki",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2255,7 +2255,7 @@
     "name": "City: Kotka",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2265,7 +2265,7 @@
     "name": "City: Kouvola",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2275,7 +2275,7 @@
     "name": "City: Lahti",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2285,7 +2285,7 @@
     "name": "City: Loviisa",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2295,7 +2295,7 @@
     "name": "City: Naantali",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2305,7 +2305,7 @@
     "name": "City: Olkiluoto",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2315,7 +2315,7 @@
     "name": "City: Pori",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2325,7 +2325,7 @@
     "name": "City: Tampere",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2335,7 +2335,7 @@
     "name": "City: Turku",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -2345,7 +2345,7 @@
     "name": "City: Ivalo",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2355,7 +2355,7 @@
     "name": "City: Joensuu",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2365,7 +2365,7 @@
     "name": "City: Jyvaskyla",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2375,7 +2375,7 @@
     "name": "City: Kajaani",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2385,7 +2385,7 @@
     "name": "City: Kokkola",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2395,7 +2395,7 @@
     "name": "City: Kuopio",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2405,7 +2405,7 @@
     "name": "City: Kuusamo",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2415,7 +2415,7 @@
     "name": "City: Lappeenranta",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2425,7 +2425,7 @@
     "name": "City: Mikkeli",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2435,7 +2435,7 @@
     "name": "City: Oulu",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2445,7 +2445,7 @@
     "name": "City: Rovaniemi",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2455,7 +2455,7 @@
     "name": "City: Tornio",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2465,7 +2465,7 @@
     "name": "City: Vaasa",
     "category": [
       "City",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -2475,7 +2475,7 @@
     "name": "City: Burgas",
     "category": [
       "City",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2485,7 +2485,7 @@
     "name": "City: Karlovo",
     "category": [
       "City",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2495,7 +2495,7 @@
     "name": "City: Kozloduy",
     "category": [
       "City",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2505,7 +2505,7 @@
     "name": "City: Pernik",
     "category": [
       "City",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2515,7 +2515,7 @@
     "name": "City: Pirdop",
     "category": [
       "City",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2525,7 +2525,7 @@
     "name": "City: Pleven",
     "category": [
       "City",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2535,7 +2535,7 @@
     "name": "City: Plovdiv",
     "category": [
       "City",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2545,7 +2545,7 @@
     "name": "City: Ruse",
     "category": [
       "City",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2555,7 +2555,7 @@
     "name": "City: Sofia",
     "category": [
       "City",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2565,7 +2565,7 @@
     "name": "City: Varna",
     "category": [
       "City",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2575,7 +2575,7 @@
     "name": "City: Veliko Tarnovo",
     "category": [
       "City",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2585,7 +2585,7 @@
     "name": "City: Bacau",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2595,7 +2595,7 @@
     "name": "City: Brasov",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2605,7 +2605,7 @@
     "name": "City: Bucharest",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2615,7 +2615,7 @@
     "name": "City: Calarasi",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2625,7 +2625,7 @@
     "name": "City: Cernavoda",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2635,7 +2635,7 @@
     "name": "City: Cluj-Napoca",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2645,7 +2645,7 @@
     "name": "City: Constanta",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2655,7 +2655,7 @@
     "name": "City: Craiova",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2665,7 +2665,7 @@
     "name": "City: Galati",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2675,7 +2675,7 @@
     "name": "City: Hunedoara",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2685,7 +2685,7 @@
     "name": "City: Iasi",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2695,7 +2695,7 @@
     "name": "City: Mangalia",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2705,7 +2705,7 @@
     "name": "City: Pitesti",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2715,7 +2715,7 @@
     "name": "City: Resita",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2725,7 +2725,7 @@
     "name": "City: Targu Mures",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2735,7 +2735,7 @@
     "name": "City: Timisoara",
     "category": [
       "City",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2745,7 +2745,7 @@
     "name": "City: Edirne",
     "category": [
       "City",
-      "Turkiye (Country)",
+      "Turkiye",
       "Turkiye (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2755,7 +2755,7 @@
     "name": "City: Istanbul",
     "category": [
       "City",
-      "Turkiye (Country)",
+      "Turkiye",
       "Turkiye (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2765,7 +2765,7 @@
     "name": "City: Tekirdag",
     "category": [
       "City",
-      "Turkiye (Country)",
+      "Turkiye",
       "Turkiye (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -2775,7 +2775,7 @@
     "name": "City: Beja",
     "category": [
       "City",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -2785,7 +2785,7 @@
     "name": "City: Coimbra",
     "category": [
       "City",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -2795,7 +2795,7 @@
     "name": "City: Corticadas de Lavre",
     "category": [
       "City",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -2805,7 +2805,7 @@
     "name": "City: Evora",
     "category": [
       "City",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -2815,7 +2815,7 @@
     "name": "City: Faro",
     "category": [
       "City",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -2825,7 +2825,7 @@
     "name": "City: Guarda",
     "category": [
       "City",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -2835,7 +2835,7 @@
     "name": "City: Lisboa",
     "category": [
       "City",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -2845,7 +2845,7 @@
     "name": "City: Olhao",
     "category": [
       "City",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -2855,7 +2855,7 @@
     "name": "City: Ponte de Sor",
     "category": [
       "City",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -2865,7 +2865,7 @@
     "name": "City: Porto",
     "category": [
       "City",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -2875,7 +2875,7 @@
     "name": "City: Setubal",
     "category": [
       "City",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -2885,7 +2885,7 @@
     "name": "City: Sines",
     "category": [
       "City",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -2895,7 +2895,7 @@
     "name": "City: A Coruna",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -2905,7 +2905,7 @@
     "name": "City: Albacete",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -2915,7 +2915,7 @@
     "name": "City: Algeciras",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -2925,7 +2925,7 @@
     "name": "City: Almaraz",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -2935,7 +2935,7 @@
     "name": "City: Almeria",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -2945,7 +2945,7 @@
     "name": "City: Badajoz",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -2955,7 +2955,7 @@
     "name": "City: Bailen",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -2965,7 +2965,7 @@
     "name": "City: Barcelona",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -2975,7 +2975,7 @@
     "name": "City: Bilbao",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -2985,7 +2985,7 @@
     "name": "City: Burgos",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -2995,7 +2995,7 @@
     "name": "City: Ciudad Real",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3005,7 +3005,7 @@
     "name": "City: Cordoba",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3015,7 +3015,7 @@
     "name": "City: El Ejido",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3025,7 +3025,7 @@
     "name": "City: Gijon",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3035,7 +3035,7 @@
     "name": "City: Granada",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3045,7 +3045,7 @@
     "name": "City: Huelva",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3055,7 +3055,7 @@
     "name": "City: Leon",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3065,7 +3065,7 @@
     "name": "City: Lleida",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3075,7 +3075,7 @@
     "name": "City: Madrid",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3085,7 +3085,7 @@
     "name": "City: Malaga",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3095,7 +3095,7 @@
     "name": "City: Mengibar",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3105,7 +3105,7 @@
     "name": "City: Murcia",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3115,7 +3115,7 @@
     "name": "City: Navia",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3125,7 +3125,7 @@
     "name": "City: O Barco",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3135,7 +3135,7 @@
     "name": "City: Pamplona",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3145,7 +3145,7 @@
     "name": "City: Port de Sagunt",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3155,7 +3155,7 @@
     "name": "City: Puertollano",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3165,7 +3165,7 @@
     "name": "City: Salamanca",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3175,7 +3175,7 @@
     "name": "City: Santander",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3185,7 +3185,7 @@
     "name": "City: Seville",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3195,7 +3195,7 @@
     "name": "City: Soria",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3205,7 +3205,7 @@
     "name": "City: Tarragona",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3215,7 +3215,7 @@
     "name": "City: Teruel",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3225,7 +3225,7 @@
     "name": "City: Valencia",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3235,7 +3235,7 @@
     "name": "City: Valladolid",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3245,7 +3245,7 @@
     "name": "City: Vandellos",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3255,7 +3255,7 @@
     "name": "City: Vigo",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3265,7 +3265,7 @@
     "name": "City: Villarreal",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3275,7 +3275,7 @@
     "name": "City: Zaragoza",
     "category": [
       "City",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -3285,7 +3285,7 @@
     "name": "City: Durres",
     "category": [
       "City",
-      "Albania (Country)",
+      "Albania",
       "Albania (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3295,7 +3295,7 @@
     "name": "City: Fier",
     "category": [
       "City",
-      "Albania (Country)",
+      "Albania",
       "Albania (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3305,7 +3305,7 @@
     "name": "City: Tirana",
     "category": [
       "City",
-      "Albania (Country)",
+      "Albania",
       "Albania (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3315,7 +3315,7 @@
     "name": "City: Vlore",
     "category": [
       "City",
-      "Albania (Country)",
+      "Albania",
       "Albania (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3325,7 +3325,7 @@
     "name": "City: Banja Luka",
     "category": [
       "City",
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "Bosnia and Herzegovina (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3335,7 +3335,7 @@
     "name": "City: Bihac",
     "category": [
       "City",
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "Bosnia and Herzegovina (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3345,7 +3345,7 @@
     "name": "City: Karakaj",
     "category": [
       "City",
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "Bosnia and Herzegovina (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3355,7 +3355,7 @@
     "name": "City: Mostar",
     "category": [
       "City",
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "Bosnia and Herzegovina (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3365,7 +3365,7 @@
     "name": "City: Sarajevo",
     "category": [
       "City",
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "Bosnia and Herzegovina (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3375,7 +3375,7 @@
     "name": "City: Tuzla",
     "category": [
       "City",
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "Bosnia and Herzegovina (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3385,7 +3385,7 @@
     "name": "City: Zenica",
     "category": [
       "City",
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "Bosnia and Herzegovina (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3395,7 +3395,7 @@
     "name": "City: Osijek",
     "category": [
       "City",
-      "Croatia (Country)",
+      "Croatia",
       "Croatia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3405,7 +3405,7 @@
     "name": "City: Rijeka",
     "category": [
       "City",
-      "Croatia (Country)",
+      "Croatia",
       "Croatia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3415,7 +3415,7 @@
     "name": "City: Split",
     "category": [
       "City",
-      "Croatia (Country)",
+      "Croatia",
       "Croatia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3425,7 +3425,7 @@
     "name": "City: Zadar",
     "category": [
       "City",
-      "Croatia (Country)",
+      "Croatia",
       "Croatia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3435,7 +3435,7 @@
     "name": "City: Zagreb",
     "category": [
       "City",
-      "Croatia (Country)",
+      "Croatia",
       "Croatia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3445,7 +3445,7 @@
     "name": "City: Pristina",
     "category": [
       "City",
-      "Kosovo (Country)",
+      "Kosovo",
       "Kosovo (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3455,7 +3455,7 @@
     "name": "City: Bijelo Polje",
     "category": [
       "City",
-      "Montenegro (Country)",
+      "Montenegro",
       "Montenegro (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3465,7 +3465,7 @@
     "name": "City: Niksic",
     "category": [
       "City",
-      "Montenegro (Country)",
+      "Montenegro",
       "Montenegro (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3475,7 +3475,7 @@
     "name": "City: Podgorica",
     "category": [
       "City",
-      "Montenegro (Country)",
+      "Montenegro",
       "Montenegro (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3485,7 +3485,7 @@
     "name": "City: Bitola",
     "category": [
       "City",
-      "North Macedonia (Country)",
+      "North Macedonia",
       "North Macedonia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3495,7 +3495,7 @@
     "name": "City: Skopje",
     "category": [
       "City",
-      "North Macedonia (Country)",
+      "North Macedonia",
       "North Macedonia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3505,7 +3505,7 @@
     "name": "City: Belgrade",
     "category": [
       "City",
-      "Serbia (Country)",
+      "Serbia",
       "Serbia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3515,7 +3515,7 @@
     "name": "City: Kragujevac",
     "category": [
       "City",
-      "Serbia (Country)",
+      "Serbia",
       "Serbia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3525,7 +3525,7 @@
     "name": "City: Nis",
     "category": [
       "City",
-      "Serbia (Country)",
+      "Serbia",
       "Serbia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3535,7 +3535,7 @@
     "name": "City: Novi Sad",
     "category": [
       "City",
-      "Serbia (Country)",
+      "Serbia",
       "Serbia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3545,7 +3545,7 @@
     "name": "City: Koper",
     "category": [
       "City",
-      "Slovenia (Country)",
+      "Slovenia",
       "Slovenia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3555,7 +3555,7 @@
     "name": "City: Ljubljana",
     "category": [
       "City",
-      "Slovenia (Country)",
+      "Slovenia",
       "Slovenia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3565,7 +3565,7 @@
     "name": "City: Maribor",
     "category": [
       "City",
-      "Slovenia (Country)",
+      "Slovenia",
       "Slovenia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3575,7 +3575,7 @@
     "name": "City: Novo Mesto",
     "category": [
       "City",
-      "Slovenia (Country)",
+      "Slovenia",
       "Slovenia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3585,7 +3585,7 @@
     "name": "City: Argostoli",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3596,7 +3596,7 @@
     "name": "City: Athens",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3606,7 +3606,7 @@
     "name": "City: Chania",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3617,7 +3617,7 @@
     "name": "City: Chios",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3628,7 +3628,7 @@
     "name": "City: Ioannina",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3638,7 +3638,7 @@
     "name": "City: Heraklion",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3649,7 +3649,7 @@
     "name": "City: Kalamata",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3659,7 +3659,7 @@
     "name": "City: Kavala",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3669,7 +3669,7 @@
     "name": "City: Lamia",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3679,7 +3679,7 @@
     "name": "City: Larissa",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3689,7 +3689,7 @@
     "name": "City: Mytilene",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3700,7 +3700,7 @@
     "name": "City: Patras",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3710,7 +3710,7 @@
     "name": "City: Rhodes",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3721,7 +3721,7 @@
     "name": "City: Thessaloniki",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3731,7 +3731,7 @@
     "name": "City: Trikala",
     "category": [
       "City",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -3741,7 +3741,7 @@
     "name": "Photo Trophy: Tirana Skyline",
     "category": [
       "Photo Trophy",
-      "Albania (Country)",
+      "Albania",
       "Albania (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3752,7 +3752,7 @@
     "name": "Photo Trophy: Durres Ferry Terminal",
     "category": [
       "Photo Trophy",
-      "Albania (Country)",
+      "Albania",
       "Albania (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3763,7 +3763,7 @@
     "name": "Photo Trophy: Schonbrunn Palace",
     "category": [
       "Photo Trophy",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -3774,7 +3774,7 @@
     "name": "Photo Trophy: Fusher Torl Lookout",
     "category": [
       "Photo Trophy",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -3785,7 +3785,7 @@
     "name": "Photo Trophy: Burgruine Klamm Castle",
     "category": [
       "Photo Trophy",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -3796,7 +3796,7 @@
     "name": "Photo Trophy: Melk Monastery",
     "category": [
       "Photo Trophy",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -3807,7 +3807,7 @@
     "name": "Photo Trophy: Welzenegg Palace",
     "category": [
       "Photo Trophy",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -3818,7 +3818,7 @@
     "name": "Photo Trophy: Basilica of the Sacred Heart (Belgium)",
     "category": [
       "Photo Trophy",
-      "Belgium (Country)",
+      "Belgium",
       "Belgium (Checks)",
       "Base Game (DLC)"
     ],
@@ -3829,7 +3829,7 @@
     "name": "Photo Trophy: Sarajevo City Hall",
     "category": [
       "Photo Trophy",
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "Bosnia and Herzegovina (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3840,7 +3840,7 @@
     "name": "Photo Trophy: Captain's Tower",
     "category": [
       "Photo Trophy",
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "Bosnia and Herzegovina (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3851,7 +3851,7 @@
     "name": "Photo Trophy: Old Bridge in Mostar",
     "category": [
       "Photo Trophy",
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "Bosnia and Herzegovina (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3862,7 +3862,7 @@
     "name": "Photo Trophy: Apartment Buildings Varna",
     "category": [
       "Photo Trophy",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -3873,7 +3873,7 @@
     "name": "Photo Trophy: Ruse Central Train Station",
     "category": [
       "Photo Trophy",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -3884,7 +3884,7 @@
     "name": "Photo Trophy: Veliko Tarnovo",
     "category": [
       "Photo Trophy",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -3895,7 +3895,7 @@
     "name": "Photo Trophy: New Europe Bridge",
     "category": [
       "Photo Trophy",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -3906,7 +3906,7 @@
     "name": "Photo Trophy: Diocletian's Palace",
     "category": [
       "Photo Trophy",
-      "Croatia (Country)",
+      "Croatia",
       "Croatia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3917,7 +3917,7 @@
     "name": "Photo Trophy: Trsat Castle",
     "category": [
       "Photo Trophy",
-      "Croatia (Country)",
+      "Croatia",
       "Croatia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3928,7 +3928,7 @@
     "name": "Photo Trophy: Dr. Franjo Tudman Bridge",
     "category": [
       "Photo Trophy",
-      "Croatia (Country)",
+      "Croatia",
       "Croatia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3939,7 +3939,7 @@
     "name": "Photo Trophy: Peljesac Bridge",
     "category": [
       "Photo Trophy",
-      "Croatia (Country)",
+      "Croatia",
       "Croatia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -3950,7 +3950,7 @@
     "name": "Photo Trophy: Zizkov Television Tower",
     "category": [
       "Photo Trophy",
-      "Czech Republic (Country)",
+      "Czech Republic",
       "Czech Republic (Checks)",
       "Base Game (DLC)"
     ],
@@ -3961,7 +3961,7 @@
     "name": "Photo Trophy: Cathedral of St. Peter and Paul",
     "category": [
       "Photo Trophy",
-      "Czech Republic (Country)",
+      "Czech Republic",
       "Czech Republic (Checks)",
       "Base Game (DLC)"
     ],
@@ -3972,7 +3972,7 @@
     "name": "Photo Trophy: New Little Belt Bridge",
     "category": [
       "Photo Trophy",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -3983,7 +3983,7 @@
     "name": "Photo Trophy: Great Belt Bridge",
     "category": [
       "Photo Trophy",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -3994,7 +3994,7 @@
     "name": "Photo Trophy: Dokk1",
     "category": [
       "Photo Trophy",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4005,7 +4005,7 @@
     "name": "Photo Trophy: Copenhagen Ski Slope",
     "category": [
       "Photo Trophy",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4016,7 +4016,7 @@
     "name": "Photo Trophy: Museum of Copenhagen",
     "category": [
       "Photo Trophy",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4027,7 +4027,7 @@
     "name": "Photo Trophy: Tallinn Airport",
     "category": [
       "Photo Trophy",
-      "Estonia (Country)",
+      "Estonia",
       "Estonia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -4038,7 +4038,7 @@
     "name": "Photo Trophy: Hermann Castle",
     "category": [
       "Photo Trophy",
-      "Estonia (Country)",
+      "Estonia",
       "Estonia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -4049,7 +4049,7 @@
     "name": "Photo Trophy: Endla Theatre",
     "category": [
       "Photo Trophy",
-      "Estonia (Country)",
+      "Estonia",
       "Estonia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -4060,7 +4060,7 @@
     "name": "Photo Trophy: St. Peter's Church in Tartu",
     "category": [
       "Photo Trophy",
-      "Estonia (Country)",
+      "Estonia",
       "Estonia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -4071,7 +4071,7 @@
     "name": "Photo Trophy: Helsinki Ruoholahti Quarter",
     "category": [
       "Photo Trophy",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -4082,7 +4082,7 @@
     "name": "Photo Trophy: Ivalo Church",
     "category": [
       "Photo Trophy",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4093,7 +4093,7 @@
     "name": "Photo Trophy: Turtolan Church",
     "category": [
       "Photo Trophy",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4104,7 +4104,7 @@
     "name": "Photo Trophy: Kalajoki Church",
     "category": [
       "Photo Trophy",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4115,7 +4115,7 @@
     "name": "Photo Trophy: Vaasa Church",
     "category": [
       "Photo Trophy",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4126,7 +4126,7 @@
     "name": "Photo Trophy: Siilinjarvi Monument",
     "category": [
       "Photo Trophy",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4137,7 +4137,7 @@
     "name": "Photo Trophy: Joensuu Train Stations",
     "category": [
       "Photo Trophy",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4148,7 +4148,7 @@
     "name": "Photo Trophy: Big Compass of Jyvaskyla",
     "category": [
       "Photo Trophy",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4159,7 +4159,7 @@
     "name": "Photo Trophy: Bratislava Castle",
     "category": [
       "Photo Trophy",
-      "Slovakia (Country)",
+      "Slovakia",
       "Slovakia (Checks)",
       "Base Game (DLC)"
     ],
@@ -4170,7 +4170,7 @@
     "name": "Photo Trophy: Banska Bystrica Old Town",
     "category": [
       "Photo Trophy",
-      "Slovakia (Country)",
+      "Slovakia",
       "Slovakia (Checks)",
       "Going East! (DLC)"
     ],
@@ -4181,7 +4181,7 @@
     "name": "Photo Trophy: Palace of Culture and Science",
     "category": [
       "Photo Trophy",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Going East! (DLC)"
     ],
@@ -4192,7 +4192,7 @@
     "name": "Photo Trophy: Krakow Panorama",
     "category": [
       "Photo Trophy",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Going East! (DLC)"
     ],
@@ -4203,7 +4203,7 @@
     "name": "Photo Trophy: Gdansk Old Town",
     "category": [
       "Photo Trophy",
-      "Poland (Country)",
+      "Poland",
       "Poland (Checks)",
       "Going East! (DLC)"
     ],
@@ -4214,7 +4214,7 @@
     "name": "Photo Trophy: Hungarian Parliament Building",
     "category": [
       "Photo Trophy",
-      "Hungary (Country)",
+      "Hungary",
       "Hungary (Checks)",
       "Going East! (DLC)"
     ],
@@ -4225,7 +4225,7 @@
     "name": "Photo Trophy: Berlin Television Tower",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4236,7 +4236,7 @@
     "name": "Photo Trophy: Kohlbrand Bridge",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4247,7 +4247,7 @@
     "name": "Photo Trophy: Football Arena Munich",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4258,7 +4258,7 @@
     "name": "Photo Trophy: Stuttgart Trade Fair Parking Garage",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4269,7 +4269,7 @@
     "name": "Photo Trophy: Hanover Trade Fair",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4280,7 +4280,7 @@
     "name": "Photo Trophy: Ettal Abbey",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4291,7 +4291,7 @@
     "name": "Photo Trophy: Stuttgart State Theatre",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4302,7 +4302,7 @@
     "name": "Photo Trophy: Nuremburg Opera House",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4313,7 +4313,7 @@
     "name": "Photo Trophy: Frankfurt Airport Long-distance Station",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4324,7 +4324,7 @@
     "name": "Photo Trophy: Kiel Central Railway Station",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4335,7 +4335,7 @@
     "name": "Photo Trophy: St. Peter's Church in Rostock",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4346,7 +4346,7 @@
     "name": "Photo Trophy: Koln Messe/Deutz Station",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4357,7 +4357,7 @@
     "name": "Photo Trophy: Dusseldorf Dome",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4368,7 +4368,7 @@
     "name": "Photo Trophy: Florian Tower",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4379,7 +4379,7 @@
     "name": "Photo Trophy: Modern Art Museum Bremen",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4390,7 +4390,7 @@
     "name": "Photo Trophy: Pernickelmuhle Osnabruck",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4401,7 +4401,7 @@
     "name": "Photo Trophy: Natural History Museum Kassel",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4412,7 +4412,7 @@
     "name": "Photo Trophy: ICC Berlin",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4423,7 +4423,7 @@
     "name": "Photo Trophy: Speyer Bridge",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4434,7 +4434,7 @@
     "name": "Photo Trophy: Munich Administrative Building",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4445,7 +4445,7 @@
     "name": "Photo Trophy: Leipzig Hauptbahnhof",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4456,7 +4456,7 @@
     "name": "Photo Trophy: Begerburg",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4467,7 +4467,7 @@
     "name": "Photo Trophy: Dresden Mill",
     "category": [
       "Photo Trophy",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -4478,7 +4478,7 @@
     "name": "Photo Trophy: Mesocco Castle",
     "category": [
       "Photo Trophy",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -4489,7 +4489,7 @@
     "name": "Photo Trophy: Chillon Castle",
     "category": [
       "Photo Trophy",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -4500,7 +4500,7 @@
     "name": "Photo Trophy: Col des Roches",
     "category": [
       "Photo Trophy",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -4511,7 +4511,7 @@
     "name": "Photo Trophy: Zentrum Paul Klee",
     "category": [
       "Photo Trophy",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -4522,7 +4522,7 @@
     "name": "Photo Trophy: Globe of Science and Innovation",
     "category": [
       "Photo Trophy",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -4533,7 +4533,7 @@
     "name": "Photo Trophy: Bastia International Airport",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -4544,7 +4544,7 @@
     "name": "Photo Trophy: Bonifacio Citadel",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -4555,7 +4555,7 @@
     "name": "Photo Trophy: Marseille Office Towers",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -4566,7 +4566,7 @@
     "name": "Photo Trophy: Nice Football Stadium",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -4577,7 +4577,7 @@
     "name": "Photo Trophy: Museum of Confluences",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Base Game (DLC)"
     ],
@@ -4588,7 +4588,7 @@
     "name": "Photo Trophy: Carcassonne Castle",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -4599,7 +4599,7 @@
     "name": "Photo Trophy: Louise Weiss Building - European Parliament",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Base Game (DLC)"
     ],
@@ -4610,7 +4610,7 @@
     "name": "Photo Trophy: Paris Office Towers",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Base Game (DLC)"
     ],
@@ -4621,7 +4621,7 @@
     "name": "Photo Trophy: Museum of the Resistance in Peyrat-le-Chateau",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -4632,7 +4632,7 @@
     "name": "Photo Trophy: Toupin Viaduct",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -4643,7 +4643,7 @@
     "name": "Photo Trophy: Clermont-Ferrand Art Museum",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -4654,7 +4654,7 @@
     "name": "Photo Trophy: Iroise Bridge",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -4665,7 +4665,7 @@
     "name": "Photo Trophy: Basilica of the Sacred Heart (France)",
     "category": [
       "Photo Trophy",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Base Game (DLC)"
     ],
@@ -4676,7 +4676,7 @@
     "name": "Photo Trophy: State Bank and Savings Fund",
     "category": [
       "Photo Trophy",
-      "Luxembourg (Country)",
+      "Luxembourg",
       "Luxembourg (Checks)",
       "Base Game (DLC)"
     ],
@@ -4687,7 +4687,7 @@
     "name": "Photo Trophy: Amsterdam Panorama",
     "category": [
       "Photo Trophy",
-      "Netherlands (Country)",
+      "Netherlands",
       "Netherlands (Checks)",
       "Base Game (DLC)"
     ],
@@ -4698,7 +4698,7 @@
     "name": "Photo Trophy: City of London",
     "category": [
       "Photo Trophy",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -4709,7 +4709,7 @@
     "name": "Photo Trophy: King's College Chapel",
     "category": [
       "Photo Trophy",
-      "United Kingdom (Country)",
+      "United Kingdom",
       "United Kingdom (Checks)",
       "Base Game (DLC)"
     ],
@@ -4720,7 +4720,7 @@
     "name": "Photo Trophy: Uppsala Cathedral",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4731,7 +4731,7 @@
     "name": "Photo Trophy: Indoor Arena in Stockholm",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4742,7 +4742,7 @@
     "name": "Photo Trophy: Stockholm Tower",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4753,7 +4753,7 @@
     "name": "Photo Trophy: Igelsta Bridge",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4764,7 +4764,7 @@
     "name": "Photo Trophy: Kalmar Castle",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4775,7 +4775,7 @@
     "name": "Photo Trophy: Turning Torso",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4786,7 +4786,7 @@
     "name": "Photo Trophy: Brahehus Castle Ruins",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4797,7 +4797,7 @@
     "name": "Photo Trophy: Uddevalla Bridge",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4808,7 +4808,7 @@
     "name": "Photo Trophy: Skyscrapers in Garda",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4819,7 +4819,7 @@
     "name": "Photo Trophy: Kiruna City Hall Tower Clock",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4830,7 +4830,7 @@
     "name": "Photo Trophy: Karlstad Railway Station",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4841,7 +4841,7 @@
     "name": "Photo Trophy: Arvidsjaurs Church",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4852,7 +4852,7 @@
     "name": "Photo Trophy: Ostersund Town Hall",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4863,7 +4863,7 @@
     "name": "Photo Trophy: Giant Wooden Bear of Sveg",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4874,7 +4874,7 @@
     "name": "Photo Trophy: Umea City Church",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4885,7 +4885,7 @@
     "name": "Photo Trophy: High Coast Bridge",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4896,7 +4896,7 @@
     "name": "Photo Trophy: Gavle Theater",
     "category": [
       "Photo Trophy",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4907,7 +4907,7 @@
     "name": "Photo Trophy: Oslo Opera House",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4918,7 +4918,7 @@
     "name": "Photo Trophy: Erfjord Bridge",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4929,7 +4929,7 @@
     "name": "Photo Trophy: Feda Fjord Bridge",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4940,7 +4940,7 @@
     "name": "Photo Trophy: Hardanger Bridge",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -4951,7 +4951,7 @@
     "name": "Photo Trophy: Cathedral of the Northern Lights",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4962,7 +4962,7 @@
     "name": "Photo Trophy: Arctic Cathedral",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4973,7 +4973,7 @@
     "name": "Photo Trophy: Halogaland Bridge",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4984,7 +4984,7 @@
     "name": "Photo Trophy: Stortinden and Eidtinden",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -4995,7 +4995,7 @@
     "name": "Photo Trophy: The Arctic Circle Center",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -5006,7 +5006,7 @@
     "name": "Photo Trophy: Kirkelandet Church",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -5017,7 +5017,7 @@
     "name": "Photo Trophy: Storseisundet Bridge",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -5028,7 +5028,7 @@
     "name": "Photo Trophy: The Art Nouveau Centre & The Art Museum Kube",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -5039,7 +5039,7 @@
     "name": "Photo Trophy: Dombas Church",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -5050,7 +5050,7 @@
     "name": "Photo Trophy: Sami Parliament of Norway",
     "category": [
       "Photo Trophy",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -5061,7 +5061,7 @@
     "name": "Photo Trophy: Felice Gate",
     "category": [
       "Photo Trophy",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -5072,7 +5072,7 @@
     "name": "Photo Trophy: Mediopadana Railway Station",
     "category": [
       "Photo Trophy",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -5083,7 +5083,7 @@
     "name": "Photo Trophy: Favazzina 2012 Bridge",
     "category": [
       "Photo Trophy",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -5094,7 +5094,7 @@
     "name": "Photo Trophy: Mount Etna",
     "category": [
       "Photo Trophy",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -5105,7 +5105,7 @@
     "name": "Photo Trophy: Branacaccio Castle",
     "category": [
       "Photo Trophy",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -5116,7 +5116,7 @@
     "name": "Photo Trophy: Mount Vesuvius",
     "category": [
       "Photo Trophy",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -5127,7 +5127,7 @@
     "name": "Photo Trophy: Old Fortress in Livorno",
     "category": [
       "Photo Trophy",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -5138,7 +5138,7 @@
     "name": "Photo Trophy: Artena",
     "category": [
       "Photo Trophy",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -5149,7 +5149,7 @@
     "name": "Photo Trophy: Church of St. Mary of Bethlehem",
     "category": [
       "Photo Trophy",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -5160,7 +5160,7 @@
     "name": "Photo Trophy: Mole Antonelliana",
     "category": [
       "Photo Trophy",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Base Game (DLC)"
     ],
@@ -5171,7 +5171,7 @@
     "name": "Photo Trophy: Sarre Royal Castle",
     "category": [
       "Photo Trophy",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Base Game (DLC)"
     ],
@@ -5182,7 +5182,7 @@
     "name": "Photo Trophy: Mont Blanc",
     "category": [
       "Photo Trophy",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Base Game (DLC)"
     ],
@@ -5193,7 +5193,7 @@
     "name": "Photo Trophy: Taxation Office Building in Barcelona",
     "category": [
       "Photo Trophy",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -5204,7 +5204,7 @@
     "name": "Photo Trophy: Rande Bridge",
     "category": [
       "Photo Trophy",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -5215,7 +5215,7 @@
     "name": "Photo Trophy: Botin Centre",
     "category": [
       "Photo Trophy",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -5226,7 +5226,7 @@
     "name": "Photo Trophy: Madrid Football Stadium",
     "category": [
       "Photo Trophy",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -5237,7 +5237,7 @@
     "name": "Photo Trophy: River Guadiana Dam",
     "category": [
       "Photo Trophy",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -5248,7 +5248,7 @@
     "name": "Photo Trophy: Maqueda Castle",
     "category": [
       "Photo Trophy",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -5259,7 +5259,7 @@
     "name": "Photo Trophy: Monument to the Discovery Faith",
     "category": [
       "Photo Trophy",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -5270,7 +5270,7 @@
     "name": "Photo Trophy: Benidorm Panorama",
     "category": [
       "Photo Trophy",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -5281,7 +5281,7 @@
     "name": "Photo Trophy: Guadiana International Bridge",
     "category": [
       "Photo Trophy",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -5292,7 +5292,7 @@
     "name": "Photo Trophy: Dragon Stadium in Porto",
     "category": [
       "Photo Trophy",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -5303,7 +5303,7 @@
     "name": "Photo Trophy: Lisbon 25 Abril Bridge",
     "category": [
       "Photo Trophy",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -5314,7 +5314,7 @@
     "name": "Photo Trophy: Douro River View",
     "category": [
       "Photo Trophy",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -5325,7 +5325,7 @@
     "name": "Photo Trophy: Klaipeda Marina",
     "category": [
       "Photo Trophy",
-      "Lithuania (Country)",
+      "Lithuania",
       "Lithuania (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -5336,7 +5336,7 @@
     "name": "Photo Trophy: Kaunas Railway Station",
     "category": [
       "Photo Trophy",
-      "Lithuania (Country)",
+      "Lithuania",
       "Lithuania (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -5347,7 +5347,7 @@
     "name": "Photo Trophy: Vilnius Television Tower",
     "category": [
       "Photo Trophy",
-      "Lithuania (Country)",
+      "Lithuania",
       "Lithuania (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -5358,7 +5358,7 @@
     "name": "Photo Trophy: Culture Palace in Riga",
     "category": [
       "Photo Trophy",
-      "Latvia (Country)",
+      "Latvia",
       "Latvia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -5369,7 +5369,7 @@
     "name": "Photo Trophy: Riga Radio and TV Tower",
     "category": [
       "Photo Trophy",
-      "Latvia (Country)",
+      "Latvia",
       "Latvia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -5380,7 +5380,7 @@
     "name": "Photo Trophy: Saint Petersburg Panorama",
     "category": [
       "Photo Trophy",
-      "Russia (Country)",
+      "Russia",
       "Russia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -5391,7 +5391,7 @@
     "name": "Photo Trophy: Bran Castle",
     "category": [
       "Photo Trophy",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -5402,7 +5402,7 @@
     "name": "Photo Trophy: Piatra Teiului",
     "category": [
       "Photo Trophy",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -5413,7 +5413,7 @@
     "name": "Photo Trophy: Bacau City Centre",
     "category": [
       "Photo Trophy",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -5424,7 +5424,7 @@
     "name": "Photo Trophy: Rovinari Power Station",
     "category": [
       "Photo Trophy",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -5435,7 +5435,7 @@
     "name": "Photo Trophy: Assumption Cathedral in Resita",
     "category": [
       "Photo Trophy",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -5446,7 +5446,7 @@
     "name": "Photo Trophy: Saschiz Fortified Church",
     "category": [
       "Photo Trophy",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -5457,7 +5457,7 @@
     "name": "Photo Trophy: Mangalia Marine Museum",
     "category": [
       "Photo Trophy",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -5468,7 +5468,7 @@
     "name": "Photo Trophy: Istanbul Mall",
     "category": [
       "Photo Trophy",
-      "Turkiye (Country)",
+      "Turkiye",
       "Turkiye (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -5479,7 +5479,7 @@
     "name": "Photo Trophy: Kapikule Mosque",
     "category": [
       "Photo Trophy",
-      "Turkiye (Country)",
+      "Turkiye",
       "Turkiye (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -5490,7 +5490,7 @@
     "name": "Photo Trophy: Durdevica Tara Bridge",
     "category": [
       "Photo Trophy",
-      "Montenegro (Country)",
+      "Montenegro",
       "Montenegro (Checks)",
       "West Balkans (DLC)"
     ],
@@ -5501,7 +5501,7 @@
     "name": "Photo Trophy: Moracica Bridge",
     "category": [
       "Photo Trophy",
-      "Montenegro (Country)",
+      "Montenegro",
       "Montenegro (Checks)",
       "West Balkans (DLC)"
     ],
@@ -5512,7 +5512,7 @@
     "name": "Photo Trophy: Uzice Football Stadium",
     "category": [
       "Photo Trophy",
-      "Serbia (Country)",
+      "Serbia",
       "Serbia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -5523,7 +5523,7 @@
     "name": "Photo Trophy: Belgrade Residential Tower",
     "category": [
       "Photo Trophy",
-      "Serbia (Country)",
+      "Serbia",
       "Serbia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -5534,7 +5534,7 @@
     "name": "Photo Trophy: Mediana Archaeological Site",
     "category": [
       "Photo Trophy",
-      "Serbia (Country)",
+      "Serbia",
       "Serbia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -5545,7 +5545,7 @@
     "name": "Photo Trophy: St. George's Cross",
     "category": [
       "Photo Trophy",
-      "Serbia (Country)",
+      "Serbia",
       "Serbia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -5556,7 +5556,7 @@
     "name": "Photo Trophy: National Library of Kosovo",
     "category": [
       "Photo Trophy",
-      "Kosovo (Country)",
+      "Kosovo",
       "Kosovo (Checks)",
       "West Balkans (DLC)"
     ],
@@ -5567,7 +5567,7 @@
     "name": "Photo Trophy: Skopje Shopping Mall",
     "category": [
       "Photo Trophy",
-      "North Macedonia (Country)",
+      "North Macedonia",
       "North Macedonia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -5578,7 +5578,7 @@
     "name": "Photo Trophy: Church of Holy Sunday in Bitola",
     "category": [
       "Photo Trophy",
-      "North Macedonia (Country)",
+      "North Macedonia",
       "North Macedonia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -5589,7 +5589,7 @@
     "name": "Photo Trophy: Eastern Panorama of Ljubljana",
     "category": [
       "Photo Trophy",
-      "Slovenia (Country)",
+      "Slovenia",
       "Slovenia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -5600,7 +5600,7 @@
     "name": "Photo Trophy: Karawanks Tunnel",
     "category": [
       "Photo Trophy",
-      "Slovenia (Country)",
+      "Slovenia",
       "Slovenia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -5611,7 +5611,7 @@
     "name": "Photo Trophy: Meteora",
     "category": [
       "Photo Trophy",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -5622,7 +5622,7 @@
     "name": "Photo Trophy: Kavala Fortress",
     "category": [
       "Photo Trophy",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -5633,7 +5633,7 @@
     "name": "Photo Trophy: Statue of Liberty in Kalamata",
     "category": [
       "Photo Trophy",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -5644,7 +5644,7 @@
     "name": "Photo Trophy: Thessaloniki Intercity Bus Station",
     "category": [
       "Photo Trophy",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -5655,7 +5655,7 @@
     "name": "Photo Trophy: Ministry of Shipping & Island Policy",
     "category": [
       "Photo Trophy",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -5666,7 +5666,7 @@
     "name": "Photo Trophy: Kallithea Springs",
     "category": [
       "Photo Trophy",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -5677,7 +5677,7 @@
     "name": "Photo Trophy: Rio-Antirrio Bridge",
     "category": [
       "Photo Trophy",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -5688,7 +5688,7 @@
     "name": "Photo Trophy: Castle of Mytilene",
     "category": [
       "Photo Trophy",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -5699,7 +5699,7 @@
     "name": "Photo Trophy: Church of Virgin Mary in Heraklion",
     "category": [
       "Photo Trophy",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -5710,7 +5710,7 @@
     "name": "Photo Trophy: Church of Virgin Mary in Argostoli",
     "category": [
       "Photo Trophy",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -5721,7 +5721,7 @@
     "name": "Photo Trophy: Church of Saint Tryphon in Lamia",
     "category": [
       "Photo Trophy",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -5732,7 +5732,7 @@
     "name": "Viewpoint: Ettal Abbey",
     "category": [
       "Viewpoint",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -5743,7 +5743,7 @@
     "name": "Viewpoint: Hanover Cement Factory",
     "category": [
       "Viewpoint",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -5754,7 +5754,7 @@
     "name": "Viewpoint: Stuttgart City Centre",
     "category": [
       "Viewpoint",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -5765,7 +5765,7 @@
     "name": "Viewpoint: Nuremberg City Centre",
     "category": [
       "Viewpoint",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -5776,7 +5776,7 @@
     "name": "Viewpoint: Frankfurt Skyline",
     "category": [
       "Viewpoint",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -5787,7 +5787,7 @@
     "name": "Viewpoint: Rostock City Centre",
     "category": [
       "Viewpoint",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -5798,7 +5798,7 @@
     "name": "Viewpoint: Duisburg City Centre",
     "category": [
       "Viewpoint",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -5809,7 +5809,7 @@
     "name": "Viewpoint: Kassel City Centre",
     "category": [
       "Viewpoint",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -5820,7 +5820,7 @@
     "name": "Viewpoint: Berline City Centre",
     "category": [
       "Viewpoint",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -5831,7 +5831,7 @@
     "name": "Viewpoint: Dresden City Centre",
     "category": [
       "Viewpoint",
-      "Germany (Country)",
+      "Germany",
       "Germany (Checks)",
       "Base Game (DLC)"
     ],
@@ -5842,7 +5842,7 @@
     "name": "Viewpoint: Brenner Pass",
     "category": [
       "Viewpoint",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -5853,7 +5853,7 @@
     "name": "Viewpoint: Grossglockner",
     "category": [
       "Viewpoint",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -5864,7 +5864,7 @@
     "name": "Viewpoint: Lavant Viaduct",
     "category": [
       "Viewpoint",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -5875,7 +5875,7 @@
     "name": "Viewpoint: Schonbrunn",
     "category": [
       "Viewpoint",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -5886,7 +5886,7 @@
     "name": "Viewpoint: Worthersee",
     "category": [
       "Viewpoint",
-      "Austria (Country)",
+      "Austria",
       "Austria (Checks)",
       "Base Game (DLC)"
     ],
@@ -5897,7 +5897,7 @@
     "name": "Viewpoint: Geneva",
     "category": [
       "Viewpoint",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -5908,7 +5908,7 @@
     "name": "Viewpoint: Zurich West",
     "category": [
       "Viewpoint",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -5919,7 +5919,7 @@
     "name": "Viewpoint: Bern Old Town",
     "category": [
       "Viewpoint",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -5930,7 +5930,7 @@
     "name": "Viewpoint: Furka Pass",
     "category": [
       "Viewpoint",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -5941,7 +5941,7 @@
     "name": "Viewpoint: Viamala",
     "category": [
       "Viewpoint",
-      "Switzerland (Country)",
+      "Switzerland",
       "Switzerland (Checks)",
       "Base Game (DLC)"
     ],
@@ -5952,7 +5952,7 @@
     "name": "Viewpoint: Marina of Brest",
     "category": [
       "Viewpoint",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -5963,7 +5963,7 @@
     "name": "Viewpoint: Civaux Nuclear Power Plant",
     "category": [
       "Viewpoint",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -5974,7 +5974,7 @@
     "name": "Viewpoint: Industrial Area of Lacq",
     "category": [
       "Viewpoint",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -5985,7 +5985,7 @@
     "name": "Viewpoint: Port of Marseille",
     "category": [
       "Viewpoint",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -5996,7 +5996,7 @@
     "name": "Viewpoint: Peyrat-le-Chateau",
     "category": [
       "Viewpoint",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -6007,7 +6007,7 @@
     "name": "Viewpoint: L'Ile-Rousse",
     "category": [
       "Viewpoint",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -6018,7 +6018,7 @@
     "name": "Viewpoint: Lake Serre-Poncon",
     "category": [
       "Viewpoint",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -6029,7 +6029,7 @@
     "name": "Viewpoint: Castle Usee",
     "category": [
       "Viewpoint",
-      "France (Country)",
+      "France",
       "France (Checks)",
       "Vive la France ! (DLC)"
     ],
@@ -6040,7 +6040,7 @@
     "name": "Viewpoint: Oresund Bridge",
     "category": [
       "Viewpoint",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -6051,7 +6051,7 @@
     "name": "Viewpoint: Copenhagen",
     "category": [
       "Viewpoint",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -6062,7 +6062,7 @@
     "name": "Viewpoint: Aarhus",
     "category": [
       "Viewpoint",
-      "Denmark (Country)",
+      "Denmark",
       "Denmark (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -6073,7 +6073,7 @@
     "name": "Viewpoint: Stockholm",
     "category": [
       "Viewpoint",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -6084,7 +6084,7 @@
     "name": "Viewpoint: Kalmar",
     "category": [
       "Viewpoint",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -6095,7 +6095,7 @@
     "name": "Viewpoint: Umea",
     "category": [
       "Viewpoint",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6106,7 +6106,7 @@
     "name": "Viewpoint: Kiruna Mine",
     "category": [
       "Viewpoint",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6117,7 +6117,7 @@
     "name": "Viewpoint: Gavle",
     "category": [
       "Viewpoint",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6128,7 +6128,7 @@
     "name": "Viewpoint: Lulea",
     "category": [
       "Viewpoint",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6139,7 +6139,7 @@
     "name": "Viewpoint: Bjornfjell Customs",
     "category": [
       "Viewpoint",
-      "Sweden (Country)",
+      "Sweden",
       "Sweden (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6150,7 +6150,7 @@
     "name": "Viewpoint: Mabodalen Valley",
     "category": [
       "Viewpoint",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Scandinavia (DLC)"
     ],
@@ -6161,7 +6161,7 @@
     "name": "Viewpoint: Alesund",
     "category": [
       "Viewpoint",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6172,7 +6172,7 @@
     "name": "Viewpoint: Bodo",
     "category": [
       "Viewpoint",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6183,7 +6183,7 @@
     "name": "Viewpoint: Nordkapp",
     "category": [
       "Viewpoint",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6194,7 +6194,7 @@
     "name": "Viewpoint: Fjord Porsanger",
     "category": [
       "Viewpoint",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6205,7 +6205,7 @@
     "name": "Viewpoint: Heia Rest Area",
     "category": [
       "Viewpoint",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6216,7 +6216,7 @@
     "name": "Viewpoint: Svolvaer",
     "category": [
       "Viewpoint",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6227,7 +6227,7 @@
     "name": "Viewpoint: Trondheim",
     "category": [
       "Viewpoint",
-      "Norway (Country)",
+      "Norway",
       "Norway (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6238,7 +6238,7 @@
     "name": "Viewpoint: West Harbour of Helsinki",
     "category": [
       "Viewpoint",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -6249,7 +6249,7 @@
     "name": "Viewpoint: Santa Claus Village",
     "category": [
       "Viewpoint",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6260,7 +6260,7 @@
     "name": "Viewpoint: Muotkatakka",
     "category": [
       "Viewpoint",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6271,7 +6271,7 @@
     "name": "Viewpoint: Farm near Tohmajavri",
     "category": [
       "Viewpoint",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6282,7 +6282,7 @@
     "name": "Viewpoint: Viitasaari",
     "category": [
       "Viewpoint",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6293,7 +6293,7 @@
     "name": "Viewpoint: Lalby",
     "category": [
       "Viewpoint",
-      "Finland (Country)",
+      "Finland",
       "Finland (Checks)",
       "Nordic Horizons (DLC)"
     ],
@@ -6304,7 +6304,7 @@
     "name": "Viewpoint: Port of Bari",
     "category": [
       "Viewpoint",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -6315,7 +6315,7 @@
     "name": "Viewpoint: Carrara Marble Quarry",
     "category": [
       "Viewpoint",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -6326,7 +6326,7 @@
     "name": "Viewpoint: Mount Etna",
     "category": [
       "Viewpoint",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -6337,7 +6337,7 @@
     "name": "Viewpoint: Port of Naples",
     "category": [
       "Viewpoint",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -6348,7 +6348,7 @@
     "name": "Viewpoint: Sassari - Church of Saint Mary of Bethlehem",
     "category": [
       "Viewpoint",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -6359,7 +6359,7 @@
     "name": "Viewpoint: City of Taranto",
     "category": [
       "Viewpoint",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -6370,7 +6370,7 @@
     "name": "Viewpoint: Villa San Giovanni",
     "category": [
       "Viewpoint",
-      "Italy (Country)",
+      "Italy",
       "Italy (Checks)",
       "Italia (DLC)"
     ],
@@ -6381,7 +6381,7 @@
     "name": "Viewpoint: The Parabolic Power Plant of Andalusia",
     "category": [
       "Viewpoint",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -6392,7 +6392,7 @@
     "name": "Viewpoint: The City of Barcelona",
     "category": [
       "Viewpoint",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -6403,7 +6403,7 @@
     "name": "Viewpoint: Greenhouses of El Ejido",
     "category": [
       "Viewpoint",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -6414,7 +6414,7 @@
     "name": "Viewpoint: The Solar Power Tower of Andalusia",
     "category": [
       "Viewpoint",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -6425,7 +6425,7 @@
     "name": "Viewpoint: The Refinery of Puertollano",
     "category": [
       "Viewpoint",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -6436,7 +6436,7 @@
     "name": "Viewpoint: Los Tres Cunados Quarry",
     "category": [
       "Viewpoint",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -6447,7 +6447,7 @@
     "name": "Viewpoint: Reservoir of Barrios de Luna",
     "category": [
       "Viewpoint",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -6458,7 +6458,7 @@
     "name": "Viewpoint: The Ferry Port of Santander",
     "category": [
       "Viewpoint",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -6469,7 +6469,7 @@
     "name": "Viewpoint: The Port of Valencia",
     "category": [
       "Viewpoint",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -6480,7 +6480,7 @@
     "name": "Viewpoint: The Shopping Centre of Zaragoza",
     "category": [
       "Viewpoint",
-      "Spain (Country)",
+      "Spain",
       "Spain (Checks)",
       "Iberia (DLC)"
     ],
@@ -6491,7 +6491,7 @@
     "name": "Viewpoint: The City of Olhao",
     "category": [
       "Viewpoint",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -6502,7 +6502,7 @@
     "name": "Viewpoint: 25 de Abril Bridge",
     "category": [
       "Viewpoint",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -6513,7 +6513,7 @@
     "name": "Viewpoint: Guadiana International Bridge",
     "category": [
       "Viewpoint",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -6524,7 +6524,7 @@
     "name": "Viewpoint: The Port of Sines",
     "category": [
       "Viewpoint",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -6535,7 +6535,7 @@
     "name": "Viewpoint: The Harbour of Porto",
     "category": [
       "Viewpoint",
-      "Portugal (Country)",
+      "Portugal",
       "Portugal (Checks)",
       "Iberia (DLC)"
     ],
@@ -6546,7 +6546,7 @@
     "name": "Viewpoint: City of Klaipeda",
     "category": [
       "Viewpoint",
-      "Lithuania (Country)",
+      "Lithuania",
       "Lithuania (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -6557,7 +6557,7 @@
     "name": "Viewpoint: Valmiera Olympic Centre",
     "category": [
       "Viewpoint",
-      "Latvia (Country)",
+      "Latvia",
       "Latvia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -6568,7 +6568,7 @@
     "name": "Viewpoint: City of Daugavpils",
     "category": [
       "Viewpoint",
-      "Latvia (Country)",
+      "Latvia",
       "Latvia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -6579,7 +6579,7 @@
     "name": "Viewpoint: Riga Hydroelectric Power Plant",
     "category": [
       "Viewpoint",
-      "Latvia (Country)",
+      "Latvia",
       "Latvia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -6590,7 +6590,7 @@
     "name": "Viewpoint: Port of Ventspils",
     "category": [
       "Viewpoint",
-      "Latvia (Country)",
+      "Latvia",
       "Latvia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -6601,7 +6601,7 @@
     "name": "Viewpoint: Ivangorod Fortress and Hermann Castle",
     "category": [
       "Viewpoint",
-      "Estonia (Country)",
+      "Estonia",
       "Estonia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -6612,7 +6612,7 @@
     "name": "Viewpoint: Port of Tallinn",
     "category": [
       "Viewpoint",
-      "Estonia (Country)",
+      "Estonia",
       "Estonia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -6623,7 +6623,7 @@
     "name": "Viewpoint: Yelizarov Convent",
     "category": [
       "Viewpoint",
-      "Russia (Country)",
+      "Russia",
       "Russia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -6634,7 +6634,7 @@
     "name": "Viewpoint: The Queen Louise Bridge",
     "category": [
       "Viewpoint",
-      "Russia (Country)",
+      "Russia",
       "Russia (Checks)",
       "Beyond the Baltic Sea (DLC)"
     ],
@@ -6645,7 +6645,7 @@
     "name": "Viewpoint: Cernavoda Bridge",
     "category": [
       "Viewpoint",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -6656,7 +6656,7 @@
     "name": "Viewpoint: City of Orsova",
     "category": [
       "Viewpoint",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -6667,7 +6667,7 @@
     "name": "Viewpoint: Viaduct Poiana Teiului",
     "category": [
       "Viewpoint",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -6678,7 +6678,7 @@
     "name": "Viewpoint: Piatra Craiului Mountains",
     "category": [
       "Viewpoint",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -6689,7 +6689,7 @@
     "name": "Viewpoint: Rovinari Power Station",
     "category": [
       "Viewpoint",
-      "Romania (Country)",
+      "Romania",
       "Romania (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -6700,7 +6700,7 @@
     "name": "Viewpoint: Port of Burgas",
     "category": [
       "Viewpoint",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -6711,7 +6711,7 @@
     "name": "Viewpoint: Steelworks of Pernik",
     "category": [
       "Viewpoint",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -6722,7 +6722,7 @@
     "name": "Viewpoint: Giurgiu-Ruse Bridge",
     "category": [
       "Viewpoint",
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Bulgaria (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -6733,7 +6733,7 @@
     "name": "Viewpoint: City of Edirne",
     "category": [
       "Viewpoint",
-      "Turkiye (Country)",
+      "Turkiye",
       "Turkiye (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -6744,7 +6744,7 @@
     "name": "Viewpoint: City of Istanbul",
     "category": [
       "Viewpoint",
-      "Turkiye (Country)",
+      "Turkiye",
       "Turkiye (Checks)",
       "Road to the Black Sea (DLC)"
     ],
@@ -6755,7 +6755,7 @@
     "name": "Viewpoint: Durdevica Tara Bridge",
     "category": [
       "Viewpoint",
-      "Montenegro (Country)",
+      "Montenegro",
       "Montenegro (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6766,7 +6766,7 @@
     "name": "Viewpoint: Dubrovnik",
     "category": [
       "Viewpoint",
-      "Croatia (Country)",
+      "Croatia",
       "Croatia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6777,7 +6777,7 @@
     "name": "Viewpoint: Split",
     "category": [
       "Viewpoint",
-      "Croatia (Country)",
+      "Croatia",
       "Croatia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6788,7 +6788,7 @@
     "name": "Viewpoint: Rijeka Port",
     "category": [
       "Viewpoint",
-      "Croatia (Country)",
+      "Croatia",
       "Croatia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6799,7 +6799,7 @@
     "name": "Viewpoint: Fier Oil Fields",
     "category": [
       "Viewpoint",
-      "Albania (Country)",
+      "Albania",
       "Albania (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6810,7 +6810,7 @@
     "name": "Viewpoint: Durres Marina",
     "category": [
       "Viewpoint",
-      "Albania (Country)",
+      "Albania",
       "Albania (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6821,7 +6821,7 @@
     "name": "Viewpoint: Tirana",
     "category": [
       "Viewpoint",
-      "Albania (Country)",
+      "Albania",
       "Albania (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6832,7 +6832,7 @@
     "name": "Viewpoint: Kovacica Wind Park",
     "category": [
       "Viewpoint",
-      "Serbia (Country)",
+      "Serbia",
       "Serbia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6843,7 +6843,7 @@
     "name": "Viewpoint: Prokuplje",
     "category": [
       "Viewpoint",
-      "Serbia (Country)",
+      "Serbia",
       "Serbia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6854,7 +6854,7 @@
     "name": "Viewpoint: Center of Pristina",
     "category": [
       "Viewpoint",
-      "Kosovo (Country)",
+      "Kosovo",
       "Kosovo (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6865,7 +6865,7 @@
     "name": "Viewpoint: Quarry near Gostivar",
     "category": [
       "Viewpoint",
-      "North Macedonia (Country)",
+      "North Macedonia",
       "North Macedonia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6876,7 +6876,7 @@
     "name": "Viewpoint: Bihac",
     "category": [
       "Viewpoint",
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "Bosnia and Herzegovina (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6887,7 +6887,7 @@
     "name": "Viewpoint: Old Town of Sarajevo",
     "category": [
       "Viewpoint",
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "Bosnia and Herzegovina (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6898,7 +6898,7 @@
     "name": "Viewpoint: Koper",
     "category": [
       "Viewpoint",
-      "Slovenia (Country)",
+      "Slovenia",
       "Slovenia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6909,7 +6909,7 @@
     "name": "Viewpoint: Ljubljana",
     "category": [
       "Viewpoint",
-      "Slovenia (Country)",
+      "Slovenia",
       "Slovenia (Checks)",
       "West Balkans (DLC)"
     ],
@@ -6920,7 +6920,7 @@
     "name": "Viewpoint: Piraeus Port of Athens",
     "category": [
       "Viewpoint",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -6931,7 +6931,7 @@
     "name": "Viewpoint: Kavala Marina",
     "category": [
       "Viewpoint",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -6942,7 +6942,7 @@
     "name": "Viewpoint: Kalabaka and Meteora",
     "category": [
       "Viewpoint",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -6953,7 +6953,7 @@
     "name": "Viewpoint: Monastery of Agios Nectarios",
     "category": [
       "Viewpoint",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -6964,7 +6964,7 @@
     "name": "Viewpoint: Faliraki Beach",
     "category": [
       "Viewpoint",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -6975,7 +6975,7 @@
     "name": "Viewpoint: Lixouri",
     "category": [
       "Viewpoint",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -6986,7 +6986,7 @@
     "name": "Viewpoint: Corinth Canal",
     "category": [
       "Viewpoint",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -6997,7 +6997,7 @@
     "name": "Viewpoint: Port of Souda",
     "category": [
       "Viewpoint",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -7008,7 +7008,7 @@
     "name": "Viewpoint: Lesbos Hotel Resort",
     "category": [
       "Viewpoint",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -7019,7 +7019,7 @@
     "name": "Viewpoint: Lake Polyfytos Bridge",
     "category": [
       "Viewpoint",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -7030,7 +7030,7 @@
     "name": "Viewpoint: Thessaloniki Cement Plant",
     "category": [
       "Viewpoint",
-      "Greece (Country)",
+      "Greece",
       "Greece (Checks)",
       "Greece (DLC)"
     ],
@@ -10258,7 +10258,8 @@
     "requires": "|Player Level:0|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 1
   },
   {
     "name": "Player Level 2 (Internal)",
@@ -10268,7 +10269,8 @@
     "requires": "|Player Level:1|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 2
   },
   {
     "name": "Player Level 3 (Internal)",
@@ -10278,7 +10280,8 @@
     "requires": "|Player Level:2|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 3
   },
   {
     "name": "Player Level 4 (Internal)",
@@ -10288,7 +10291,8 @@
     "requires": "|Player Level:3|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 4
   },
   {
     "name": "Player Level 5 (Internal)",
@@ -10298,7 +10302,8 @@
     "requires": "|Player Level:4|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 5
   },
   {
     "name": "Player Level 6 (Internal)",
@@ -10308,7 +10313,8 @@
     "requires": "|Player Level:5|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 6
   },
   {
     "name": "Player Level 7 (Internal)",
@@ -10318,7 +10324,8 @@
     "requires": "|Player Level:6|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 7
   },
   {
     "name": "Player Level 8 (Internal)",
@@ -10328,7 +10335,8 @@
     "requires": "|Player Level:7|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 8
   },
   {
     "name": "Player Level 9 (Internal)",
@@ -10338,7 +10346,8 @@
     "requires": "|Player Level:8|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 9
   },
   {
     "name": "Player Level 10 (Internal)",
@@ -10348,7 +10357,8 @@
     "requires": "|Player Level:9|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 10
   },
   {
     "name": "Player Level 11 (Internal)",
@@ -10358,7 +10368,8 @@
     "requires": "|Player Level:10|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 11
   },
   {
     "name": "Player Level 12 (Internal)",
@@ -10368,7 +10379,8 @@
     "requires": "|Player Level:11|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 12
   },
   {
     "name": "Player Level 13 (Internal)",
@@ -10378,7 +10390,8 @@
     "requires": "|Player Level:12|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 13
   },
   {
     "name": "Player Level 14 (Internal)",
@@ -10388,7 +10401,8 @@
     "requires": "|Player Level:13|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 14
   },
   {
     "name": "Player Level 15 (Internal)",
@@ -10398,7 +10412,8 @@
     "requires": "|Player Level:14|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 15
   },
   {
     "name": "Player Level 16 (Internal)",
@@ -10408,7 +10423,8 @@
     "requires": "|Player Level:15|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 16
   },
   {
     "name": "Player Level 17 (Internal)",
@@ -10418,7 +10434,8 @@
     "requires": "|Player Level:16|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 17
   },
   {
     "name": "Player Level 18 (Internal)",
@@ -10428,7 +10445,8 @@
     "requires": "|Player Level:17|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 18
   },
   {
     "name": "Player Level 19 (Internal)",
@@ -10438,7 +10456,8 @@
     "requires": "|Player Level:18|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 19
   },
   {
     "name": "Player Level 20 (Internal)",
@@ -10448,7 +10467,8 @@
     "requires": "|Player Level:19|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 20
   },
   {
     "name": "Player Level 21 (Internal)",
@@ -10458,7 +10478,8 @@
     "requires": "|Player Level:20|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 21
   },
   {
     "name": "Player Level 22 (Internal)",
@@ -10468,7 +10489,8 @@
     "requires": "|Player Level:21|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 22
   },
   {
     "name": "Player Level 23 (Internal)",
@@ -10478,7 +10500,8 @@
     "requires": "|Player Level:22|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 23
   },
   {
     "name": "Player Level 24 (Internal)",
@@ -10488,7 +10511,8 @@
     "requires": "|Player Level:23|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 24
   },
   {
     "name": "Player Level 25 (Internal)",
@@ -10498,7 +10522,8 @@
     "requires": "|Player Level:24|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 25
   },
   {
     "name": "Player Level 26 (Internal)",
@@ -10508,7 +10533,8 @@
     "requires": "|Player Level:25|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 26
   },
   {
     "name": "Player Level 27 (Internal)",
@@ -10518,7 +10544,8 @@
     "requires": "|Player Level:26|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 27
   },
   {
     "name": "Player Level 28 (Internal)",
@@ -10528,7 +10555,8 @@
     "requires": "|Player Level:27|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 28
   },
   {
     "name": "Player Level 29 (Internal)",
@@ -10538,7 +10566,8 @@
     "requires": "|Player Level:28|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 29
   },
   {
     "name": "Player Level 30 (Internal)",
@@ -10548,7 +10577,8 @@
     "requires": "|Player Level:29|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 30
   },
   {
     "name": "Player Level 31 (Internal)",
@@ -10558,7 +10588,8 @@
     "requires": "|Player Level:30|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 31
   },
   {
     "name": "Player Level 32 (Internal)",
@@ -10568,7 +10599,8 @@
     "requires": "|Player Level:31|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 32
   },
   {
     "name": "Player Level 33 (Internal)",
@@ -10578,7 +10610,8 @@
     "requires": "|Player Level:32|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 33
   },
   {
     "name": "Player Level 34 (Internal)",
@@ -10588,7 +10621,8 @@
     "requires": "|Player Level:33|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 34
   },
   {
     "name": "Player Level 35 (Internal)",
@@ -10598,7 +10632,8 @@
     "requires": "|Player Level:34|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 35
   },
   {
     "name": "Player Level 36 (Internal)",
@@ -10608,259 +10643,296 @@
     "requires": "|Player Level:35|",
     "place_item": [
       "Player Level"
-    ]
+    ],
+    "player_level": 36
   },
   {
     "name": "Player Level 1 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:0|"
+    "requires": "|Player Level:0|",
+    "player_level": 1
   },
   {
     "name": "Player Level 2 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:1|"
+    "requires": "|Player Level:1|",
+    "player_level": 2
   },
   {
     "name": "Player Level 3 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:2|"
+    "requires": "|Player Level:2|",
+    "player_level": 3
   },
   {
     "name": "Player Level 4 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:3|"
+    "requires": "|Player Level:3|",
+    "player_level": 4
   },
   {
     "name": "Player Level 5 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:4|"
+    "requires": "|Player Level:4|",
+    "player_level": 5
   },
   {
     "name": "Player Level 6 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:5|"
+    "requires": "|Player Level:5|",
+    "player_level": 6
   },
   {
     "name": "Player Level 7 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:6|"
+    "requires": "|Player Level:6|",
+    "player_level": 7
   },
   {
     "name": "Player Level 8 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:7|"
+    "requires": "|Player Level:7|",
+    "player_level": 8
   },
   {
     "name": "Player Level 9 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:8|"
+    "requires": "|Player Level:8|",
+    "player_level": 9
   },
   {
     "name": "Player Level 10 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:9|"
+    "requires": "|Player Level:9|",
+    "player_level": 10
   },
   {
     "name": "Player Level 11 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:10|"
+    "requires": "|Player Level:10|",
+    "player_level": 11
   },
   {
     "name": "Player Level 12 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:11|"
+    "requires": "|Player Level:11|",
+    "player_level": 12
   },
   {
     "name": "Player Level 13 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:12|"
+    "requires": "|Player Level:12|",
+    "player_level": 13
   },
   {
     "name": "Player Level 14 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:13|"
+    "requires": "|Player Level:13|",
+    "player_level": 14
   },
   {
     "name": "Player Level 15 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:14|"
+    "requires": "|Player Level:14|",
+    "player_level": 15
   },
   {
     "name": "Player Level 16 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:15|"
+    "requires": "|Player Level:15|",
+    "player_level": 16
   },
   {
     "name": "Player Level 17 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:16|"
+    "requires": "|Player Level:16|",
+    "player_level": 17
   },
   {
     "name": "Player Level 18 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:17|"
+    "requires": "|Player Level:17|",
+    "player_level": 18
   },
   {
     "name": "Player Level 19 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:18|"
+    "requires": "|Player Level:18|",
+    "player_level": 19
   },
   {
     "name": "Player Level 20 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:19|"
+    "requires": "|Player Level:19|",
+    "player_level": 20
   },
   {
     "name": "Player Level 21 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:20|"
+    "requires": "|Player Level:20|",
+    "player_level": 21
   },
   {
     "name": "Player Level 22 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:21|"
+    "requires": "|Player Level:21|",
+    "player_level": 22
   },
   {
     "name": "Player Level 23 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:22|"
+    "requires": "|Player Level:22|",
+    "player_level": 23
   },
   {
     "name": "Player Level 24 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:23|"
+    "requires": "|Player Level:23|",
+    "player_level": 24
   },
   {
     "name": "Player Level 25 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:24|"
+    "requires": "|Player Level:24|",
+    "player_level": 25
   },
   {
     "name": "Player Level 26 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:25|"
+    "requires": "|Player Level:25|",
+    "player_level": 26
   },
   {
     "name": "Player Level 27 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:26|"
+    "requires": "|Player Level:26|",
+    "player_level": 27
   },
   {
     "name": "Player Level 28 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:27|"
+    "requires": "|Player Level:27|",
+    "player_level": 28
   },
   {
     "name": "Player Level 29 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:28|"
+    "requires": "|Player Level:28|",
+    "player_level": 29
   },
   {
     "name": "Player Level 30 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:29|"
+    "requires": "|Player Level:29|",
+    "player_level": 30
   },
   {
     "name": "Player Level 31 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:30|"
+    "requires": "|Player Level:30|",
+    "player_level": 31
   },
   {
     "name": "Player Level 32 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:31|"
+    "requires": "|Player Level:31|",
+    "player_level": 32
   },
   {
     "name": "Player Level 33 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:32|"
+    "requires": "|Player Level:32|",
+    "player_level": 33
   },
   {
     "name": "Player Level 34 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:33|"
+    "requires": "|Player Level:33|",
+    "player_level": 34
   },
   {
     "name": "Player Level 35 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:34|"
+    "requires": "|Player Level:34|",
+    "player_level": 35
   },
   {
     "name": "Player Level 36 (External)",
     "category": [
       "Player Level"
     ],
-    "requires": "|Player Level:35|"
+    "requires": "|Player Level:35|",
+    "player_level": 36
   },
   {
     "name": "Secret Delivery #1 Completed",

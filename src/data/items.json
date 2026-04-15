@@ -951,6 +951,116 @@
     "count": 20
   },
   {
+    "name": "Skill Point - ADR Class 1 (Explosives)",
+    "classification_count": {
+      "progression": 1,
+      "useful": 0
+    },
+    "category": [
+      "Skill Point"
+    ]
+  },
+  {
+    "name": "Skill Point - ADR Class 2 (Gases)",
+    "classification_count": {
+      "progression": 1,
+      "useful": 0
+    },
+    "category": [
+      "Skill Point"
+    ]
+  },
+  {
+    "name": "Skill Point - ADR Class 3 (Flammable Liquids)",
+    "classification_count": {
+      "progression": 1,
+      "useful": 0
+    },
+    "category": [
+      "Skill Point"
+    ]
+  },
+  {
+    "name": "Skill Point - ADR Class 4 (Flammable Solids)",
+    "classification_count": {
+      "progression": 1,
+      "useful": 0
+    },
+    "category": [
+      "Skill Point"
+    ]
+  },
+  {
+    "name": "Skill Point - ADR Class 6 (Toxic/Infectious Substances)",
+    "classification_count": {
+      "progression": 1,
+      "useful": 0
+    },
+    "category": [
+      "Skill Point"
+    ]
+  },
+  {
+    "name": "Skill Point - ADR Class 8 (Corrosive Substances)",
+    "classification_count": {
+      "progression": 1,
+      "useful": 0
+    },
+    "category": [
+      "Skill Point"
+    ]
+  },
+  {
+    "name": "Skill Point - Long Distance",
+    "classification_count": {
+      "progression": 6,
+      "useful": 0
+    },
+    "category": [
+      "Skill Point"
+    ]
+  },
+  {
+    "name": "Skill Point - High Value Cargo",
+    "classification_count": {
+      "progression": 1,
+      "useful": 5
+    },
+    "category": [
+      "Skill Point"
+    ]
+  },
+  {
+    "name": "Skill Point - Fragile Cargo",
+    "classification_count": {
+      "progression": 1,
+      "useful": 5
+    },
+    "category": [
+      "Skill Point"
+    ]
+  },
+  {
+    "name": "Skill Point - Just-In-Time Delivery",
+    "classification_count": {
+      "progression": 2,
+      "useful": 4
+    },
+    "category": [
+      "Skill Point"
+    ]
+  },
+  {
+    "name": "Skill Point - Eco-Driving",
+    "classification_count": {
+      "progression": 0,
+      "useful": 6
+    },
+    "category": [
+      "Skill Point"
+    ]
+  },
+  {
     "name": "Delivery Token",
     "progression": true,
     "count": 100
@@ -958,9 +1068,7 @@
   {
     "name": "Ferry Ticket",
     "progression": true,
-    "grant_if_option": {
-      "ferry_ticket_item": "in_starting_inventory"
-    }
+    "granting_option": "ferry_ticket_item"
   },
   {
     "name": "Camera",
@@ -968,9 +1076,7 @@
       "Photo Trophy"
     ],
     "progression": true,
-    "grant_if_option": {
-      "enable_photosanity": "start_with_camera"
-    }
+    "granting_option": "enable_photosanity"
   },
   {
     "name": "TV",
@@ -978,29 +1084,21 @@
       "Viewpoint"
     ],
     "progression": true,
-    "grant_if_option": {
-      "enable_viewpointsanity": "start_with_tv"
-    }
+    "granting_option": "enable_viewpointsanity"
   },
   {
     "name": "Bank Loan Approval",
     "progression": true,
-    "grant_if_option": {
-      "bank_loan_approval_item": "in_starting_inventory"
-    }
+    "granting_option": "bank_loan_approval_item"
   },
   {
     "name": "Trailer Contract",
     "useful": true,
-    "grant_if_option": {
-      "trailer_contract_item": "in_starting_inventory"
-    }
+    "granting_option": "trailer_contract_item"
   },
   {
     "name": "Quick Travel Ticket",
     "progression": true,
-    "grant_if_option": {
-      "quick_travel_item": "in_starting_inventory"
-    }
+    "granting_option": "quick_travel_item"
   }
 ]

@@ -2,7 +2,7 @@
   {
     "name": "Austria/Base Game Reachable",
     "category": [
-      "Austria (Country)",
+      "Austria",
       "Base Game (DLC)"
     ],
     "region": "Austria/Base Game"
@@ -10,7 +10,7 @@
   {
     "name": "Belgium/Base Game Reachable",
     "category": [
-      "Belgium (Country)",
+      "Belgium",
       "Base Game (DLC)"
     ],
     "region": "Belgium/Base Game"
@@ -18,7 +18,7 @@
   {
     "name": "Czech Republic/Base Game Reachable",
     "category": [
-      "Czech Republic (Country)",
+      "Czech Republic",
       "Base Game (DLC)"
     ],
     "region": "Czech Republic/Base Game"
@@ -26,7 +26,7 @@
   {
     "name": "France/Base Game Reachable",
     "category": [
-      "France (Country)",
+      "France",
       "Base Game (DLC)"
     ],
     "region": "France/Base Game"
@@ -34,7 +34,7 @@
   {
     "name": "Germany/Base Game Reachable",
     "category": [
-      "Germany (Country)",
+      "Germany",
       "Base Game (DLC)"
     ],
     "region": "Germany/Base Game"
@@ -42,7 +42,7 @@
   {
     "name": "Germany/Krone Trailer Pack Reachable",
     "category": [
-      "Germany (Country)",
+      "Germany",
       "Krone Trailer Pack (DLC)"
     ],
     "region": "Germany/Krone Trailer Pack"
@@ -50,7 +50,7 @@
   {
     "name": "Germany/Feldbinder Trailer Pack Reachable",
     "category": [
-      "Germany (Country)",
+      "Germany",
       "Feldbinder Trailer Pack (DLC)"
     ],
     "region": "Germany/Feldbinder Trailer Pack"
@@ -58,7 +58,7 @@
   {
     "name": "Italy/Base Game Reachable",
     "category": [
-      "Italy (Country)",
+      "Italy",
       "Base Game (DLC)"
     ],
     "region": "Italy/Base Game"
@@ -66,7 +66,7 @@
   {
     "name": "Luxembourg/Base Game Reachable",
     "category": [
-      "Luxembourg (Country)",
+      "Luxembourg",
       "Base Game (DLC)"
     ],
     "region": "Luxembourg/Base Game"
@@ -74,7 +74,7 @@
   {
     "name": "Netherlands/Base Game Reachable",
     "category": [
-      "Netherlands (Country)",
+      "Netherlands",
       "Base Game (DLC)"
     ],
     "region": "Netherlands/Base Game"
@@ -82,7 +82,7 @@
   {
     "name": "Poland/Base Game Reachable",
     "category": [
-      "Poland (Country)",
+      "Poland",
       "Base Game (DLC)"
     ],
     "region": "Poland/Base Game"
@@ -90,7 +90,7 @@
   {
     "name": "Slovakia/Base Game Reachable",
     "category": [
-      "Slovakia (Country)",
+      "Slovakia",
       "Base Game (DLC)"
     ],
     "region": "Slovakia/Base Game"
@@ -98,7 +98,7 @@
   {
     "name": "Switzerland/Base Game Reachable",
     "category": [
-      "Switzerland (Country)",
+      "Switzerland",
       "Base Game (DLC)"
     ],
     "region": "Switzerland/Base Game"
@@ -106,7 +106,7 @@
   {
     "name": "United Kingdom/Base Game Reachable",
     "category": [
-      "United Kingdom (Country)",
+      "United Kingdom",
       "Base Game (DLC)"
     ],
     "region": "United Kingdom/Base Game"
@@ -114,7 +114,7 @@
   {
     "name": "Czech Republic/Going East! Reachable",
     "category": [
-      "Czech Republic (Country)",
+      "Czech Republic",
       "Going East! (DLC)"
     ],
     "region": "Czech Republic/Going East!"
@@ -122,7 +122,7 @@
   {
     "name": "Hungary/Going East! Reachable",
     "category": [
-      "Hungary (Country)",
+      "Hungary",
       "Going East! (DLC)"
     ],
     "region": "Hungary/Going East!"
@@ -130,7 +130,7 @@
   {
     "name": "Slovakia/Going East! Reachable",
     "category": [
-      "Slovakia (Country)",
+      "Slovakia",
       "Going East! (DLC)"
     ],
     "region": "Slovakia/Going East!"
@@ -138,7 +138,7 @@
   {
     "name": "Poland/Going East! Reachable",
     "category": [
-      "Poland (Country)",
+      "Poland",
       "Going East! (DLC)"
     ],
     "region": "Poland/Going East!"
@@ -146,7 +146,7 @@
   {
     "name": "Denmark/Scandinavia Reachable",
     "category": [
-      "Denmark (Country)",
+      "Denmark",
       "Scandinavia (DLC)"
     ],
     "region": "Denmark/Scandinavia"
@@ -154,7 +154,7 @@
   {
     "name": "Norway/Scandinavia Reachable",
     "category": [
-      "Norway (Country)",
+      "Norway",
       "Scandinavia (DLC)"
     ],
     "region": "Norway/Scandinavia"
@@ -162,7 +162,7 @@
   {
     "name": "Sweden/Scandinavia Reachable",
     "category": [
-      "Sweden (Country)",
+      "Sweden",
       "Scandinavia (DLC)"
     ],
     "region": "Sweden/Scandinavia"
@@ -170,7 +170,7 @@
   {
     "name": "France/Vive la France ! Reachable",
     "category": [
-      "France (Country)",
+      "France",
       "Vive la France ! (DLC)"
     ],
     "region": "France/Vive la France !"
@@ -178,7 +178,7 @@
   {
     "name": "Italy/Italia Reachable",
     "category": [
-      "Italy (Country)",
+      "Italy",
       "Italia (DLC)"
     ],
     "region": "Italy/Italia"
@@ -186,7 +186,7 @@
   {
     "name": "Estonia/Beyond the Baltic Sea Reachable",
     "category": [
-      "Estonia (Country)",
+      "Estonia",
       "Beyond the Baltic Sea (DLC)"
     ],
     "region": "Estonia/Beyond the Baltic Sea"
@@ -194,7 +194,7 @@
   {
     "name": "Finland/Beyond the Baltic Sea Reachable",
     "category": [
-      "Finland (Country)",
+      "Finland",
       "Beyond the Baltic Sea (DLC)"
     ],
     "region": "Finland/Beyond the Baltic Sea"
@@ -202,7 +202,7 @@
   {
     "name": "Latvia/Beyond the Baltic Sea Reachable",
     "category": [
-      "Latvia (Country)",
+      "Latvia",
       "Beyond the Baltic Sea (DLC)"
     ],
     "region": "Latvia/Beyond the Baltic Sea"
@@ -210,7 +210,7 @@
   {
     "name": "Lithuania/Beyond the Baltic Sea Reachable",
     "category": [
-      "Lithuania (Country)",
+      "Lithuania",
       "Beyond the Baltic Sea (DLC)"
     ],
     "region": "Lithuania/Beyond the Baltic Sea"
@@ -218,7 +218,7 @@
   {
     "name": "Kaliningrad/Beyond the Baltic Sea Reachable",
     "category": [
-      "Kaliningrad (Country)",
+      "Kaliningrad",
       "Beyond the Baltic Sea (DLC)"
     ],
     "region": "Kaliningrad/Beyond the Baltic Sea"
@@ -226,7 +226,7 @@
   {
     "name": "Russia/Beyond the Baltic Sea Reachable",
     "category": [
-      "Russia (Country)",
+      "Russia",
       "Beyond the Baltic Sea (DLC)"
     ],
     "region": "Russia/Beyond the Baltic Sea"
@@ -234,7 +234,7 @@
   {
     "name": "Bulgaria/Road to the Black Sea Reachable",
     "category": [
-      "Bulgaria (Country)",
+      "Bulgaria",
       "Road to the Black Sea (DLC)"
     ],
     "region": "Bulgaria/Road to the Black Sea"
@@ -242,7 +242,7 @@
   {
     "name": "Romania/Road to the Black Sea Reachable",
     "category": [
-      "Romania (Country)",
+      "Romania",
       "Road to the Black Sea (DLC)"
     ],
     "region": "Romania/Road to the Black Sea"
@@ -250,7 +250,7 @@
   {
     "name": "Turkiye/Road to the Black Sea Reachable",
     "category": [
-      "Turkiye (Country)",
+      "Turkiye",
       "Road to the Black Sea (DLC)"
     ],
     "region": "Turkiye/Road to the Black Sea"
@@ -258,7 +258,7 @@
   {
     "name": "Portugal/Iberia Reachable",
     "category": [
-      "Portugal (Country)",
+      "Portugal",
       "Iberia (DLC)"
     ],
     "region": "Portugal/Iberia"
@@ -266,7 +266,7 @@
   {
     "name": "Spain/Iberia Reachable",
     "category": [
-      "Spain (Country)",
+      "Spain",
       "Iberia (DLC)"
     ],
     "region": "Spain/Iberia"
@@ -274,7 +274,7 @@
   {
     "name": "Albania/West Balkans Reachable",
     "category": [
-      "Albania (Country)",
+      "Albania",
       "West Balkans (DLC)"
     ],
     "region": "Albania/West Balkans"
@@ -282,7 +282,7 @@
   {
     "name": "Bosnia and Herzegovina/West Balkans Reachable",
     "category": [
-      "Bosnia and Herzegovina (Country)",
+      "Bosnia and Herzegovina",
       "West Balkans (DLC)"
     ],
     "region": "Bosnia and Herzegovina/West Balkans"
@@ -290,7 +290,7 @@
   {
     "name": "Croatia/West Balkans Reachable",
     "category": [
-      "Croatia (Country)",
+      "Croatia",
       "West Balkans (DLC)"
     ],
     "region": "Croatia/West Balkans"
@@ -298,7 +298,7 @@
   {
     "name": "Kosovo/West Balkans Reachable",
     "category": [
-      "Kosovo (Country)",
+      "Kosovo",
       "West Balkans (DLC)"
     ],
     "region": "Kosovo/West Balkans"
@@ -306,7 +306,7 @@
   {
     "name": "Montenegro/West Balkans Reachable",
     "category": [
-      "Montenegro (Country)",
+      "Montenegro",
       "West Balkans (DLC)"
     ],
     "region": "Montenegro/West Balkans"
@@ -314,7 +314,7 @@
   {
     "name": "North Macedonia/West Balkans Reachable",
     "category": [
-      "North Macedonia (Country)",
+      "North Macedonia",
       "West Balkans (DLC)"
     ],
     "region": "North Macedonia/West Balkans"
@@ -322,7 +322,7 @@
   {
     "name": "Serbia/West Balkans Reachable",
     "category": [
-      "Serbia (Country)",
+      "Serbia",
       "West Balkans (DLC)"
     ],
     "region": "Serbia/West Balkans"
@@ -330,7 +330,7 @@
   {
     "name": "Slovenia/West Balkans Reachable",
     "category": [
-      "Slovenia (Country)",
+      "Slovenia",
       "West Balkans (DLC)"
     ],
     "region": "Slovenia/West Balkans"
@@ -338,7 +338,7 @@
   {
     "name": "Greece/Greece Reachable",
     "category": [
-      "Greece (Country)",
+      "Greece",
       "Greece (DLC)"
     ],
     "region": "Greece/Greece"
@@ -346,7 +346,7 @@
   {
     "name": "Finland/Nordic Horizons Reachable",
     "category": [
-      "Finland (Country)",
+      "Finland",
       "Nordic Horizons (DLC)"
     ],
     "region": "Finland/Nordic Horizons"
@@ -354,7 +354,7 @@
   {
     "name": "Norway/Nordic Horizons Reachable",
     "category": [
-      "Norway (Country)",
+      "Norway",
       "Nordic Horizons (DLC)"
     ],
     "region": "Norway/Nordic Horizons"
@@ -362,7 +362,7 @@
   {
     "name": "Sweden/Nordic Horizons Reachable",
     "category": [
-      "Sweden (Country)",
+      "Sweden",
       "Nordic Horizons (DLC)"
     ],
     "region": "Sweden/Nordic Horizons"

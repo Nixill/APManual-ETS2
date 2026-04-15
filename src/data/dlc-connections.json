@@ -1,0 +1,79 @@
+{
+  "_comment": "This isn't a standard file. I'm just using it for much easier logic.",
+  "base_game": [
+    "beyond_the_baltic_sea",
+    "feldbinder_trailer_pack",
+    "going_east",
+    "greece",
+    "iberia",
+    "italia",
+    "krone_trailer_pack",
+    "scandinavia",
+    "vive_la_france",
+    "west_balkans"
+  ],
+  "going_east": [
+    "road_to_the_black_sea",
+    "scandinavia",
+    "west_balkans",
+    "base_game",
+    "beyond_the_baltic_sea"
+  ],
+  "scandinavia": [
+    "base_game",
+    "beyond_the_baltic_sea",
+    "going_east",
+    "nordic_horizons"
+  ],
+  "vive_la_france": [
+    "base_game",
+    "iberia",
+    "italia"
+  ],
+  "italia": [
+    "vive_la_france",
+    "west_balkans",
+    "base_game",
+    "greece",
+    "iberia"
+  ],
+  "beyond_the_baltic_sea": [
+    "going_east",
+    "nordic_horizons",
+    "scandinavia",
+    "base_game"
+  ],
+  "road_to_the_black_sea": [
+    "west_balkans",
+    "going_east",
+    "greece"
+  ],
+  "iberia": [
+    "italia",
+    "vive_la_france",
+    "base_game"
+  ],
+  "west_balkans": [
+    "base_game",
+    "going_east",
+    "greece",
+    "italia",
+    "road_to_the_black_sea"
+  ],
+  "greece": [
+    "italia",
+    "road_to_the_black_sea",
+    "west_balkans",
+    "base_game"
+  ],
+  "nordic_horizons": [
+    "scandinavia",
+    "beyond_the_baltic_sea"
+  ],
+  "krone_trailer_pack": [
+    "base_game"
+  ],
+  "feldbinder_trailer_pack": [
+    "base_game"
+  ]
+}
