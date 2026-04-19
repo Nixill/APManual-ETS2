@@ -3,7 +3,7 @@ from typing import Any
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
-from .Data import dlc_connections
+from .CsvData import dlc_connections
 from ..Helpers import is_option_enabled, get_option_value
 
 def validate_options_early(world: World):
