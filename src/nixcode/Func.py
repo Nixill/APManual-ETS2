@@ -3,12 +3,6 @@ from unicodedata import normalize
 
 T = TypeVar('T')
 
-def index_and(input: Iterable[T]) -> Iterable[tuple[int, T]]:
-    index = 0
-    for item in input:
-        yield (index, item)
-        index += 1
-
 def _snake_case_i(input: str) -> Iterable[str]:
     output = False
     space = False

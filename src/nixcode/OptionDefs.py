@@ -2,7 +2,7 @@
 from typing import Any, Type
 from worlds.AutoWorld import World
 from Options import Option, FreeText, NumericOption, Toggle, DefaultOnToggle, Choice, TextChoice, Range, NamedRange, OptionGroup, PerGameCommonOptions, OptionSet
-from .Func import index_and, snake_case
+from .Func import snake_case
 from .CsvData import state_list, dlc_list, truck_makes_list, company_list, photo_trophies_dict, viewpoints_dict, city_dict, dlc_aliases_dict
 
 class StartingLocation(Choice):
@@ -16,7 +16,7 @@ class StartingLocation(Choice):
     display_name = 'Difficulty'
     rich_text_doc = True
 
-for i, s in index_and(state_list):
+for i, s in enumerate(state_list):
     setattr(StartingLocation, f'option_{snake_case(s)}', i)
 
 StartingLocation.default = StartingLocation.option_germany
@@ -237,8 +237,8 @@ class TruckContractItemBrand(Choice):
     option_none = 0
     default = option_all = 1
 
-for i, m in index_and(truck_makes_list):
-    setattr(TruckContractItemBrand, f'option_{snake_case(m)}', i + 2)
+for i, m in enumerate(truck_makes_list, 2):
+    setattr(TruckContractItemBrand, f'option_{snake_case(m)}', i)
 
 class TruckContractBrandItemLocation(_KeyItemChoice):
     """
