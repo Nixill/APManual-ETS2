@@ -1,9 +1,11 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from typing import Any
+from src.nixcode.Func import snake_case
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
-from .CsvData import dlc_connections
+from .CsvData import dlc_connections, dlc_aliases_dict, dlc_states_dict
+from .OptionDefs import QuickTravelTicketItem
 from ..Helpers import is_option_enabled, get_option_value
 
 def validate_options_early(world: World):
@@ -12,24 +14,34 @@ def validate_options_early(world: World):
 
     - If enabled DLCs are not all connected and the Quick Travel Ticket is disabled, enable it.
     - Ensure required counts don't exceed available counts.
+    - Validates the starting state, re-choosing if necessary.
     """
     options = world.options
 
-    if not options.quick_travel_item and not are_dlcs_connected(options.as_dict(toggles_as_bools=True)):
-        options.quick_travel_item.value = 'in_starting_inventory'
+    options.dlcs_available.value = chosen_dlcs = get_enabled_dlcs(options.dlcs_available.value)
+    available_states = get_available_states(chosen_dlcs)
 
+    # If enabled DLCs are not all connected and the Quick Travel Ticket is disabled, enable it.
+    if not options.quick_travel_ticket_item and not are_dlcs_connected(chosen_dlcs):
+        options.quick_travel_ticket_item.value = QuickTravelTicketItem
+
+    # Ensure required counts don't exceed available counts.
     if options.delivery_tokens_required > options.delivery_tokens_available:
         options.delivery_tokens_required.value = options.delivery_tokens_available.value
 
     if options.secret_deliveries_required > options.secret_deliveries_available:
         options.secret_deliveries_required.value = options.secret_deliveries_available.value
 
-def are_dlcs_connected(options: dict[str, Any]) -> bool:
+    # Validates the starting state, re-choosing if necessary.
+    if options.starting_location.current_key not in [snake_case(state) for state in available_states]:
+        new_starting_location = world.random.choice(available_states)
+
+def are_dlcs_connected(dlcs: set[str]) -> bool:
     """
     Checks whether all enabled DLCs are connected to each other and to the base game.
     """
-    unconnected: set[str] = get_enabled_dlcs(options)
-    unprocessed: set[str] = {'base_game'}
+    unconnected: set[str] = dlcs
+    unprocessed: set[str] = {'Base Game'}
     # If I change base game to optional:
     # unprocessed: set[str] = {unconnected.pop}
     processed: set[str] = set()
@@ -43,9 +55,21 @@ def are_dlcs_connected(options: dict[str, Any]) -> bool:
 
     return not unconnected
 
-def get_enabled_dlcs(options: dict[str, Any]) -> set[str]:
+def get_enabled_dlcs(dlcs_in: set[str]) -> set[str]:
     """
-    Returns the set of all enabled DLCs.
+    Returns the set of all enabled DLCs, with aliases parsed.
     """
-    prefix = 'enable_dlc_'
-    return {k.remove_prefix(prefix) for k,v in options.as_dict.items() if k.startswith(prefix) and v}
+    dlcs_out = set[str]()
+    for dlc_in in dlcs_in:
+        dlc_in = dlc_in.lower()
+        dlc_out = dlc_aliases_dict[dlc_in]
+        dlcs_out.add(dlc_out)
+    return dlcs_out
+
+def get_available_states(dlcs: set[str]) -> set[str]:
+    states_out = set[str]()
+    for dlc, states in dlc_states_dict.items():
+        if dlc in dlcs:
+            states_out = states_out.union(states)
+
+    return states_out

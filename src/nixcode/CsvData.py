@@ -90,14 +90,19 @@ land_connections_dict = {key: {k for k, v in value.items() if not v} for key, va
 ferry_connections_dict = {key: {k for k, v in value.items() if v} for key, value in connections_dict.items()}
 #endregion
 
+#region DLC Aliases
+dlc_aliases_dict: dict[str, str] = {dlc.lower(): dlc for dlc in dlc_list} \
+    + {line['Alias']: dlc_of(line) for line in load_data_csv('csv', 'dlc-aliases.csv')}
+#endregion
+
 #region DLC Connections
 dlc_connections: defaultdict[str, list[str]] = defaultdict(list)
 
 _dlc_connections_csv: list[dict[str, str]] = load_data_csv('csv', 'dlc-connections.csv')
 
 for line in _dlc_connections_csv:
-    left_dlc = snake_case(line['DLC1'])
-    right_dlc = snake_case(line['DLC2'])
+    left_dlc = dlc_of(line, 'DLC1')
+    right_dlc = dlc_of(line, 'DLC2')
 
     dlc_connections[left_dlc].append(right_dlc)
     dlc_connections[right_dlc].append(left_dlc)

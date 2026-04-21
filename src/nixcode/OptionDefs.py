@@ -1,9 +1,9 @@
 # Option definitions
-from typing import Any
+from typing import Any, Type
 from worlds.AutoWorld import World
 from Options import Option, FreeText, NumericOption, Toggle, DefaultOnToggle, Choice, TextChoice, Range, NamedRange, OptionGroup, PerGameCommonOptions, OptionSet
-from .Func import snake_case
-from .CsvData import state_list, dlc_list
+from .Func import index_and, snake_case
+from .CsvData import state_list, dlc_list, truck_makes_list, company_list, photo_trophies_dict, viewpoints_dict, city_dict, dlc_aliases_dict
 
 class StartingLocation(Choice):
     """
@@ -16,8 +16,8 @@ class StartingLocation(Choice):
     display_name = 'Difficulty'
     rich_text_doc = True
 
-for i, s in zip(range(len(state_list)), state_list):
-    setattr(StartingLocation, f'option_{snake_case(s)}', )
+for i, s in index_and(state_list):
+    setattr(StartingLocation, f'option_{snake_case(s)}', i)
 
 StartingLocation.default = StartingLocation.option_germany
 
@@ -102,7 +102,7 @@ class DLCsAvailableOption(OptionSet):
     """
     display_name = 'Available DLCs'
     rich_text_doc = True
-    valid_keys = dlc_list + ['All'] - ['Base Game']
+    valid_keys = dlc_aliases_dict + ['all'] - ['base game', 'base']
     valid_keys_casefold = True
     default = set()
 
@@ -155,11 +155,11 @@ class _KeyItemChoice(Choice):
     option_find_item_early = 2
     default = option_start_with_item = 3
 
-class _ItemRequiringSanity(_KeyItemChoice):
+class _KeyItemChoiceWithDisable(_KeyItemChoice):
     rich_text_doc = True
     default = option_disabled = 0
 
-class EnablePhotosanity(_ItemRequiringSanity):
+class EnablePhotosanity(_KeyItemChoiceWithDisable):
     """
     Whether or not photo trophies are checks. If so, the check is performed when the picture of the
     named monument is taken. The Camera item is required before you can take photos; it can be part
@@ -167,7 +167,7 @@ class EnablePhotosanity(_ItemRequiringSanity):
     """
     display_name = 'Enable Photosanity'
 
-class EnableViewpointsanity(_ItemRequiringSanity):
+class EnableViewpointsanity(_KeyItemChoiceWithDisable):
     """
     Whether or not viewpoints are checks. If so, the check is performed when you've begun watching
     the viewpoint cutscene. The Television item is required before you can watch viewpoints; it can
@@ -237,3 +237,177 @@ class TruckContractItemBrand(Choice):
     option_none = 0
     default = option_all = 1
 
+for i, m in index_and(truck_makes_list):
+    setattr(TruckContractItemBrand, f'option_{snake_case(m)}', i + 2)
+
+class TruckContractBrandItemLocation(_KeyItemChoice):
+    """
+    Whether the Truck Contract for the make selected in truck_contract_item_brand should start in
+    the player's inventory or the multiworld item pool.
+    """
+    display_name = 'Truck Contract On-Brand Location'
+
+class TruckContractOffBrandItemLocation(_KeyItemChoice):
+    """
+    Whether all other Truck Contracts, besides the make selected in truck_contract_item_brand,
+    should start in the player's inventory or the multiworld item pool.
+
+    It is not recommended that this setting be set more leniently than truck_contract_brand_item_location.
+    Nonetheless, it is allowed.
+    """
+    display_name = 'Truck Contract Off-Brand Location'
+
+class TrailerContractItem(_KeyItemChoice):
+    """
+    A Trailer Contract is required before buying any trailers. Should it be part of the player's
+    starting inventory or the multiworld item pool?
+    """
+    display_name = 'Trailer Contract Item'
+
+class QuickTravelTicketItem(_KeyItemChoiceWithDisable):
+    """
+    A Quick Travel Ticket is required before quick traveling to any undiscovered city (through its
+    DLC opening or through Convoy). Should it be part of the player's starting inventory or
+    multiworld item pool?
+
+    It can also be disabled outright, such that quick traveling is never in logic, so long as all
+    the enabled DLCs are connected to each other and to the base game. Otherwise, this will be set
+    to in_starting_inventory.
+    """
+    display_name = 'Quick Travel Ticket Item'
+
+class _PercentOption(Range):
+    range_start = 1
+    range_end = 100
+    default = 100
+
+class ChecksPercentOfStateCount(_PercentOption):
+    """
+    What percentage of available countries should contain checks? Note that the other countries
+    will still have keys, which must be obtained before driving in those countries.
+    """
+    display_name = 'Percentage of Countries with Checks'
+
+class ChecksMaxStateCount(Range):
+    """
+    What is the maximum number of countries that should contain checks? Note that the other
+    countries will still have keys, which must be obtained before driving in those countries.
+
+    The default for this option is the number of countries that currently exist (with all DLC).
+    Increasing this value has no effect besides future-proofing your yaml.
+    """
+    display_name = 'Maximum Number of Countries with Checks'
+    range_start = 1
+    range_end = 100
+    default = len(state_list)
+
+class ChecksPercent(_PercentOption):
+    """
+    What percentage of all checks should be enabled?
+    """
+    display_name = 'Percentage of Checks'
+
+class ChecksMaxPerStateCount(Range):
+    """
+    What is the maximum number of checks that should appear per country? Companies are considered
+    country-less and are not affected by this option.
+    """
+    display_name = 'Maximum Checks per Country'
+    range_start = 1
+    range_end = 1000
+    default = 1000
+
+class CompanyChecksCount(Range):
+    """
+    What is the number of companies that should appear as checks?
+
+    The default for this option is the number of companies that currently exist (with all DLC).
+    Increasing this value has no effect besides future-proofing your yaml.
+    """
+    display_name = 'Maximum Company Checks'
+    range_start = 1
+    range_end = 1000
+    default = len(company_list)
+
+class MaxChecksCount(Range):
+    """
+    What is the maximum number of checks that should be included across all categories?
+
+    The default for this option is the number of checks that currently exist (with all DLC and all
+    types enabled). Increasing this value has no effect besides future-proofing your yaml.
+    """
+    display_name = 'Maximum Checks Count'
+    range_start = 1
+    range_end = 10000
+    default = len(company_list) + len(city_dict) + len(photo_trophies_dict) + len(viewpoints_dict) + 36
+
+def define_options(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Option[Any]]]:
+    options["starting_location"] = StartingLocation
+    options["delivery_tokens_available"] = DeliveryTokensAvailable
+    options["delivery_tokens_required"] = DeliveryTokensRequired
+    options["secret_deliveries_available"] = SecretDeliveriesAvailable
+    options["secret_deliveries_required"] = SecretDeliveriesRequired
+    options["secret_delivery_instruction_parts"] = SecretDeliveryInstructionParts
+    options["dlcs_available"] = DLCsAvailableOption
+    options["states_available"] = StatesAvailableOption
+    options["enable_city_checks"] = EnableCityChecks
+    options["enable_company_checks"] = EnableCompanyChecks
+    options["enable_photosanity"] = EnablePhotosanity
+    options["enable_viewpointsanity"] = EnableViewpointsanity
+    options["player_level_checks"] = PlayerLevelChecks
+    options["skill_check_scattering"] = SkillCheckScattering
+    options["bank_loan_approval_item"] = BankLoanApprovalItem
+    options["truck_contract_item_brand"] = TruckContractItemBrand
+    options["truck_contract_brand_item_location"] = TruckContractBrandItemLocation
+    options["truck_contract_off_brand_item_location"] = TruckContractOffBrandItemLocation
+    options["trailer_contract_item"] = TrailerContractItem
+    options["quick_travel_ticket_item"] = QuickTravelTicketItem
+    options["checks_percent_of_state_count"] = ChecksPercentOfStateCount
+    options["checks_max_state_count"] = ChecksMaxStateCount
+    options["checks_percent"] = ChecksPercent
+    options["checks_max_per_state_count"] = ChecksMaxPerStateCount
+    options["company_checks_count"] = CompanyChecksCount
+    options["max_checks_count"] = MaxChecksCount
+    return options
+
+def group_options(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[Type[Option[Any]]]]:
+    groups['Delivery Tokens'] = [
+        DeliveryTokensAvailable,
+        DeliveryTokensRequired
+    ]
+
+    groups['Secret Deliveries'] = [
+        SecretDeliveriesAvailable,
+        SecretDeliveriesRequired,
+        SecretDeliveryInstructionParts
+    ]
+
+    groups['Check Types Available'] = [
+        EnableCityChecks,
+        EnableCompanyChecks,
+        EnablePhotosanity,
+        EnableViewpointsanity
+    ]
+
+    groups['Level and Skill Checks'] = [
+        PlayerLevelChecks,
+        SkillCheckScattering
+    ]
+
+    groups['Items Available'] = [
+        BankLoanApprovalItem,
+        TruckContractItemBrand,
+        TruckContractBrandItemLocation,
+        TruckContractOffBrandItemLocation,
+        TrailerContractItem,
+        QuickTravelTicketItem
+    ]
+
+    groups['Checks Reduction'] = [
+        ChecksPercentOfStateCount,
+        ChecksMaxStateCount,
+        ChecksPercent,
+        ChecksMaxPerStateCount,
+        CompanyChecksCount,
+        MaxChecksCount
+    ]
