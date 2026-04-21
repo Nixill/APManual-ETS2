@@ -5,7 +5,7 @@ from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
 from .CsvData import dlc_connections, dlc_aliases_dict, dlc_states_dict
-from .OptionDefs import QuickTravelTicketItem
+from .OptionDefs import QuickTravelTicketItem, StartingLocation
 from ..Helpers import is_option_enabled, get_option_value
 
 def validate_options_early(world: World):
@@ -15,6 +15,9 @@ def validate_options_early(world: World):
     - If enabled DLCs are not all connected and the Quick Travel Ticket is disabled, enable it.
     - Ensure required counts don't exceed available counts.
     - Validates the starting state, re-choosing if necessary.
+    - Ensures that the starting state has checks that exist.
+    - Ensures that at least one player level is enabled if the goal is player level checks.
+    - Ensures that at least one check type is enabled.
     """
     options = world.options
 
@@ -33,8 +36,23 @@ def validate_options_early(world: World):
         options.secret_deliveries_required.value = options.secret_deliveries_available.value
 
     # Validates the starting state, re-choosing if necessary.
+    start_array = [state for state in available_states if snake_case(state) == starting_location.removeprefix('option_')]
+    if start_array:
+        starting_location = start_array.pop()
     if options.starting_location.current_key not in [snake_case(state) for state in available_states]:
-        new_starting_location = world.random.choice(available_states)
+        starting_location = world.random.choice(available_states)
+        options.starting_location.value = getattr(StartingLocation, f'option_{snake_case(new_starting_location)}')
+
+    # Ensures that the starting state has checks that exist.
+    options.states_available.value.add(starting_location)
+
+    # Ensures that at least one check type is enabled
+    if not options.enable_city_checks and \
+        not options.enable_company_checks and \
+        not options.enable_photosanity and \
+        not options.enable_viewpointsanity and \
+        not options.player_level_checks:
+            options.enable_city_checks.value = 1
 
 def are_dlcs_connected(dlcs: set[str]) -> bool:
     """
