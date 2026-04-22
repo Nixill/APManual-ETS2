@@ -1,365 +1,775 @@
 {
-  "Albania": {},
-  "Austria": {},
-  "Belgium": {},
-  "Bosnia and Herzegovina": {},
-  "Bulgaria": {},
-  "Croatia": {},
-  "Czech Republic": {},
-  "Denmark": {},
-  "Estonia": {},
-  "Finland": {},
-  "France": {},
-  "Germany": {},
-  "Greece": {},
-  "Hungary": {},
-  "Italy": {},
-  "Kaliningrad": {},
-  "Kosovo": {},
-  "Latvia": {},
-  "Lithuania": {},
-  "Luxembourg": {},
-  "Montenegro": {},
-  "Netherlands": {},
-  "North Macedonia": {},
-  "Norway": {},
-  "Poland": {},
-  "Portugal": {},
-  "Romania": {},
-  "Russia": {},
-  "Serbia": {},
-  "Slovakia": {},
-  "Slovenia": {},
-  "Spain": {},
-  "Sweden": {},
-  "Switzerland": {},
-  "Turkiye": {},
-  "United Kingdom": {},
+  "Albania": {
+    "extra_data": {
+      "type": "state",
+      "which": "Albania",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
+  },
+  "Austria": {
+    "extra_data": {
+      "type": "state",
+      "which": "Austria",
+      "dlc_list": false
+    }
+  },
+  "Belgium": {
+    "extra_data": {
+      "type": "state",
+      "which": "Belgium",
+      "dlc_list": false
+    }
+  },
+  "Bosnia and Herzegovina": {
+    "extra_data": {
+      "type": "state",
+      "which": "Bosnia and Herzegovina",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
+  },
+  "Bulgaria": {
+    "extra_data": {
+      "type": "state",
+      "which": "Bulgaria",
+      "dlc_list": [
+        "Road to the Black Sea"
+      ]
+    }
+  },
+  "Croatia": {
+    "extra_data": {
+      "type": "state",
+      "which": "Croatia",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
+  },
+  "Czech Republic": {
+    "extra_data": {
+      "type": "state",
+      "which": "Czech Republic",
+      "dlc_list": false
+    }
+  },
+  "Denmark": {
+    "extra_data": {
+      "type": "state",
+      "which": "Denmark",
+      "dlc_list": [
+        "Scandinavia"
+      ]
+    }
+  },
+  "Estonia": {
+    "extra_data": {
+      "type": "state",
+      "which": "Estonia",
+      "dlc_list": [
+        "Beyond the Baltic Sea"
+      ]
+    }
+  },
+  "Finland": {
+    "extra_data": {
+      "type": "state",
+      "which": "Finland",
+      "dlc_list": [
+        "Beyond the Baltic Sea",
+        "Nordic Horizons"
+      ]
+    }
+  },
+  "France": {
+    "extra_data": {
+      "type": "state",
+      "which": "France",
+      "dlc_list": false
+    }
+  },
+  "Germany": {
+    "extra_data": {
+      "type": "state",
+      "which": "Germany",
+      "dlc_list": false
+    }
+  },
+  "Greece": {
+    "extra_data": {
+      "type": "state",
+      "which": "Greece",
+      "dlc_list": [
+        "Greece"
+      ]
+    }
+  },
+  "Hungary": {
+    "extra_data": {
+      "type": "state",
+      "which": "Hungary",
+      "dlc_list": [
+        "Going East!"
+      ]
+    }
+  },
+  "Italy": {
+    "extra_data": {
+      "type": "state",
+      "which": "Italy",
+      "dlc_list": false
+    }
+  },
+  "Kaliningrad": {
+    "extra_data": {
+      "type": "state",
+      "which": "Kaliningrad",
+      "dlc_list": [
+        "Beyond the Baltic Sea"
+      ]
+    }
+  },
+  "Kosovo": {
+    "extra_data": {
+      "type": "state",
+      "which": "Kosovo",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
+  },
+  "Latvia": {
+    "extra_data": {
+      "type": "state",
+      "which": "Latvia",
+      "dlc_list": [
+        "Beyond the Baltic Sea"
+      ]
+    }
+  },
+  "Lithuania": {
+    "extra_data": {
+      "type": "state",
+      "which": "Lithuania",
+      "dlc_list": [
+        "Beyond the Baltic Sea"
+      ]
+    }
+  },
+  "Luxembourg": {
+    "extra_data": {
+      "type": "state",
+      "which": "Luxembourg",
+      "dlc_list": false
+    }
+  },
+  "Montenegro": {
+    "extra_data": {
+      "type": "state",
+      "which": "Montenegro",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
+  },
+  "Netherlands": {
+    "extra_data": {
+      "type": "state",
+      "which": "Netherlands",
+      "dlc_list": false
+    }
+  },
+  "North Macedonia": {
+    "extra_data": {
+      "type": "state",
+      "which": "North Macedonia",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
+  },
+  "Norway": {
+    "extra_data": {
+      "type": "state",
+      "which": "Norway",
+      "dlc_list": [
+        "Scandinavia",
+        "Nordic Horizons"
+      ]
+    }
+  },
+  "Poland": {
+    "extra_data": {
+      "type": "state",
+      "which": "Poland",
+      "dlc_list": false
+    }
+  },
+  "Portugal": {
+    "extra_data": {
+      "type": "state",
+      "which": "Portugal",
+      "dlc_list": [
+        "Iberia"
+      ]
+    }
+  },
+  "Romania": {
+    "extra_data": {
+      "type": "state",
+      "which": "Romania",
+      "dlc_list": [
+        "Road to the Black Sea"
+      ]
+    }
+  },
+  "Russia": {
+    "extra_data": {
+      "type": "state",
+      "which": "Russia",
+      "dlc_list": [
+        "Beyond the Baltic Sea"
+      ]
+    }
+  },
+  "Serbia": {
+    "extra_data": {
+      "type": "state",
+      "which": "Serbia",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
+  },
+  "Slovakia": {
+    "extra_data": {
+      "type": "state",
+      "which": "Slovakia",
+      "dlc_list": false
+    }
+  },
+  "Slovenia": {
+    "extra_data": {
+      "type": "state",
+      "which": "Slovenia",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
+  },
+  "Spain": {
+    "extra_data": {
+      "type": "state",
+      "which": "Spain",
+      "dlc_list": [
+        "Iberia"
+      ]
+    }
+  },
+  "Sweden": {
+    "extra_data": {
+      "type": "state",
+      "which": "Sweden",
+      "dlc_list": [
+        "Scandinavia",
+        "Nordic Horizons"
+      ]
+    }
+  },
+  "Switzerland": {
+    "extra_data": {
+      "type": "state",
+      "which": "Switzerland",
+      "dlc_list": false
+    }
+  },
+  "Turkiye": {
+    "extra_data": {
+      "type": "state",
+      "which": "Turkiye",
+      "dlc_list": [
+        "Road to the Black Sea"
+      ]
+    }
+  },
+  "United Kingdom": {
+    "extra_data": {
+      "type": "state",
+      "which": "United Kingdom",
+      "dlc_list": false
+    }
+  },
   "Albania (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_albania"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Albania",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
   },
   "Austria (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_austria"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Austria",
+      "dlc_list": false
+    }
   },
   "Belgium (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_belgium"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Belgium",
+      "dlc_list": false
+    }
   },
   "Bosnia and Herzegovina (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_bosnia_and_herzegovina"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Bosnia and Herzegovina",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
   },
   "Bulgaria (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_bulgaria"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Bulgaria",
+      "dlc_list": [
+        "Road to the Black Sea"
+      ]
+    }
   },
   "Croatia (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_croatia"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Croatia",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
   },
   "Czech Republic (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_czech_republic"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Czech Republic",
+      "dlc_list": false
+    }
   },
   "Denmark (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_denmark"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Denmark",
+      "dlc_list": [
+        "Scandinavia"
+      ]
+    }
   },
   "Estonia (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_estonia"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Estonia",
+      "dlc_list": [
+        "Beyond the Baltic Sea"
+      ]
+    }
   },
   "Finland (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_finland"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Finland",
+      "dlc_list": [
+        "Beyond the Baltic Sea",
+        "Nordic Horizons"
+      ]
+    }
   },
   "France (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_france"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "France",
+      "dlc_list": false
+    }
   },
   "Germany (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_germany"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Germany",
+      "dlc_list": false
+    }
   },
   "Greece (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_greece"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Greece",
+      "dlc_list": [
+        "Greece"
+      ]
+    }
   },
   "Hungary (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_hungary"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Hungary",
+      "dlc_list": [
+        "Going East!"
+      ]
+    }
   },
   "Italy (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_italy"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Italy",
+      "dlc_list": false
+    }
   },
   "Kaliningrad (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_kaliningrad"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Kaliningrad",
+      "dlc_list": [
+        "Beyond the Baltic Sea"
+      ]
+    }
   },
   "Kosovo (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_kosovo"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Kosovo",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
   },
   "Latvia (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_latvia"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Latvia",
+      "dlc_list": [
+        "Beyond the Baltic Sea"
+      ]
+    }
   },
   "Lithuania (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_lithuania"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Lithuania",
+      "dlc_list": [
+        "Beyond the Baltic Sea"
+      ]
+    }
   },
   "Luxembourg (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_luxembourg"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Luxembourg",
+      "dlc_list": false
+    }
   },
   "Montenegro (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_montenegro"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Montenegro",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
   },
   "Netherlands (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_netherlands"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Netherlands",
+      "dlc_list": false
+    }
   },
   "North Macedonia (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_north_macedonia"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "North Macedonia",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
   },
   "Norway (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_norway"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Norway",
+      "dlc_list": [
+        "Scandinavia",
+        "Nordic Horizons"
+      ]
+    }
   },
   "Poland (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_poland"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Poland",
+      "dlc_list": false
+    }
   },
   "Portugal (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_portugal"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Portugal",
+      "dlc_list": [
+        "Iberia"
+      ]
+    }
   },
   "Romania (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_romania"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Romania",
+      "dlc_list": [
+        "Road to the Black Sea"
+      ]
+    }
   },
   "Russia (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_russia"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Russia",
+      "dlc_list": [
+        "Beyond the Baltic Sea"
+      ]
+    }
   },
   "Serbia (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_serbia"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Serbia",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
   },
   "Slovakia (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_slovakia"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Slovakia",
+      "dlc_list": false
+    }
   },
   "Slovenia (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_slovenia"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Slovenia",
+      "dlc_list": [
+        "West Balkans"
+      ]
+    }
   },
   "Spain (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_spain"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Spain",
+      "dlc_list": [
+        "Iberia"
+      ]
+    }
   },
   "Sweden (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_sweden"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Sweden",
+      "dlc_list": [
+        "Scandinavia",
+        "Nordic Horizons"
+      ]
+    }
   },
   "Switzerland (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_switzerland"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Switzerland",
+      "dlc_list": false
+    }
   },
   "Turkiye (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_turkiye"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "Turkiye",
+      "dlc_list": [
+        "Road to the Black Sea"
+      ]
+    }
   },
   "United Kingdom (Checks)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_state_united_kingdom"
-    ]
+    "extra_data": {
+      "type": "state_checks",
+      "which": "United Kingdom",
+      "dlc_list": false
+    }
   },
   "Going East! (DLC)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_dlc_going_east"
-    ]
+    "extra_data": {
+      "type": "dlc",
+      "which": "Going East!"
+    }
   },
   "Scandinavia (DLC)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_dlc_scandinavia"
-    ]
+    "extra_data": {
+      "type": "dlc",
+      "which": "Scandinavia"
+    }
   },
   "Vive la France ! (DLC)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_dlc_vive_la_france"
-    ]
+    "extra_data": {
+      "type": "dlc",
+      "which": "Vive la France !"
+    }
   },
   "Italia (DLC)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_dlc_italia"
-    ]
+    "extra_data": {
+      "type": "dlc",
+      "which": "Italia"
+    }
   },
   "Beyond the Baltic Sea (DLC)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_dlc_beyond_the_baltic_sea"
-    ]
+    "extra_data": {
+      "type": "dlc",
+      "which": "Beyond the Baltic Sea"
+    }
   },
   "Road to the Black Sea (DLC)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_dlc_road_to_the_black_sea"
-    ]
+    "extra_data": {
+      "type": "dlc",
+      "which": "Road to the Black Sea"
+    }
   },
   "Iberia (DLC)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_dlc_iberia"
-    ]
+    "extra_data": {
+      "type": "dlc",
+      "which": "Iberia"
+    }
   },
   "West Balkans (DLC)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_dlc_west_balkans"
-    ]
+    "extra_data": {
+      "type": "dlc",
+      "which": "West Balkans"
+    }
   },
   "Greece (DLC)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_dlc_greece"
-    ]
+    "extra_data": {
+      "type": "dlc",
+      "which": "Greece"
+    }
   },
   "Nordic Horizons (DLC)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_dlc_nordic_horizons"
-    ]
+    "extra_data": {
+      "type": "dlc",
+      "which": "Nordic Horizons"
+    }
   },
   "Krone Trailer Pack (DLC)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_dlc_krone_trailer_pack"
-    ]
+    "extra_data": {
+      "type": "dlc",
+      "which": "Krone Trailer Pack"
+    }
   },
   "Feldbinder Trailer Pack (DLC)": {
     "hidden": true,
-    "yaml_option": [
-      "enable_dlc_feldbinder_trailer_pack"
-    ]
+    "extra_data": {
+      "type": "dlc",
+      "which": "Feldbinder Trailer Pack"
+    }
   },
   "City": {
     "hidden": true,
+    "extra_data": {
+      "type": "type_categories",
+      "which": "city"
+    },
     "yaml_option": [
       "enable_citysanity"
     ]
   },
   "Viewpoint": {
     "hidden": true,
+    "extra_data": {
+      "type": "type_categories",
+      "which": "viewpoint"
+    },
     "yaml_option": [
       "enable_viewpointsanity"
     ]
   },
   "Photo Trophy": {
     "hidden": true,
+    "extra_data": {
+      "type": "type_categories",
+      "which": "photo_trophy"
+    },
     "yaml_option": [
       "enable_photosanity"
     ]
   },
   "Company": {
     "hidden": true,
+    "extra_data": {
+      "type": "type_categories",
+      "which": "company"
+    },
     "yaml_option": [
       "enable_companysanity"
     ]
   },
-  "Recruitment Agency Branch": {
+  "Skill": {
     "hidden": true,
-    "yaml_option": [
-      "enable_recruitmentsanity"
-    ]
-  },
-  "Truck Dealer": {
-    "hidden": true,
-    "yaml_option": [
-      "enable_dealersanity"
-    ]
-  },
-  "condensed": {
-    "hidden": true
+    "extra_data": {
+      "type": "type_categories",
+      "which": "skill"
+    }
   }
 }

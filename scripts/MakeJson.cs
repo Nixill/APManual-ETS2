@@ -23,7 +23,7 @@ public readonly record struct Truck(string Make, string Model, string DLC);
 #region Data
 public static class Data
 {
-  public const string CsvPath = "data/csv/{0}.csv";
+  public const string CsvPath = "src/data/csv/{0}.csv";
 
   public const string CitiesFN = "cities";
   public static readonly CSVObjectDictionary<string, Check> Cities =
@@ -207,20 +207,18 @@ public static class Str
     public const string City = "City";
     public const string Company = "Company";
     public static string DLC(string dlcName) => $"{dlcName} (DLC)";
-    public const string Level = "Player Level";
     public const string PhotoTrophy = "Photo Trophy";
-    public const string RecruitmentAgent = "Recruitment Agency Branch";
+    public const string PlayerSkill = "Skill";
+    // public const string RecruitmentAgent = "Recruitment Agency Branch";
     public const string SecretDeliveries = "Secret Delivery";
     public const string SecretDeliveryCompletions = "Secret Delivery Completions";
     public const string SecretDeliveryInstructions = "Secret Delivery Instructions";
-    public const string SkillPoint = "Skill Point";
-    public const string SkillPointCondensed = "Skill Point (Condensed)";
     public static string State(string stateName) => stateName;
     public static string StateCheck(string stateName) => $"{stateName} (Checks)";
     public static string StateKey => $"{StateCountry} Key";
     public static string StateStarterKey => $"{StateCountry} Starter Key";
     public const string TruckContract = "Truck Purchase Contract";
-    public const string TruckDealer = "Truck Dealer";
+    // public const string TruckDealer = "Truck Dealer";
     public const string Viewpoint = "Viewpoint";
   }
 
@@ -232,6 +230,38 @@ public static class Str
   public static class Event
   {
     public static string RegionReachable(string input) => new($"{input} Reachable");
+  }
+
+  public static class ExtraData
+  {
+    public static class Key
+    {
+      public const string DLC = "dlc";
+      public const string DLCList = "dlc_list";
+      public const string GrantingOption = "granting_option";
+      public const string PlayerLevel = "player_level";
+      public const string RequireOption = "require_option";
+      public const string RequireOptionValue = "require_option_value";
+      public const string SecretDeliveryCounter = "secret_delivery_number";
+      public const string SecretDeliveryPartCounter = "secret_delivery_part_number";
+      public const string State = "state";
+      public const string StateList = "state_list";
+      public const string Type = "type";
+      public const string Which = "which";
+    }
+
+    public static class Value
+    {
+      public const string DLC = "dlc";
+      public const string PlayerLevelExternal = "player_level_external";
+      public const string PlayerLevelInternal = "player_level_internal";
+      public const string PlayerLevelSkill = "player_level_skill";
+      public const string RegionReachable = "region_reachable";
+      public const string SecretDeliveryLocation = "secret_delivery_location";
+      public const string State = "state";
+      public const string StateChecks = "state_checks";
+      public const string TypeCategories = "type_categories";
+    }
   }
 
   public static class Item
@@ -334,14 +364,7 @@ public static class Str
   public static class Syntax
   {
     // Non-standard keys
-    public const string DLCList = "dlc_list";
-    public const string GrantingOption = "granting_option";
-    public const string PlayerLevel = "player_level";
-    public const string RequireOption = "require_option";
-    public const string RequireOptionValue = "require_option_value";
-    public const string SecretDeliveryCounter = "secret_delivery_number";
-    public const string SecretDeliveryPartCounter = "secret_delivery_part_number";
-    public const string StateList = "state_list";
+    public const string ExtraData = "extra_data";
 
     // Standard keys
     public const string Category = "category";
@@ -576,6 +599,7 @@ public static class JsonDefs
     .. GetCompanyLocations(),
     .. GetInternalLevelLocations(),
     .. GetExternalLevelLocations(),
+    .. GetSkillLevelLocations(),
     .. GetSecretDeliveryLocations(),
     .. GetVictoryLocations()
   ];
@@ -592,6 +616,10 @@ public static class JsonDefs
           Str.Category.State(check.Region.StateName),
           Str.Category.StateCheck(check.Region.StateName),
           Str.Category.DLC(check.Region.DLCName)
+        ]),
+        KVPO(Str.Syntax.ExtraData, [
+          KVP(Str.ExtraData.Key.Type, Str.SnakeCase(name)),
+          KVP(Str.ExtraData.Key.Which, check.Name)
         ]),
         KVP(Str.Syntax.Region, check.Region.ToString())
       ]).WithIf(globalRequire != null && check.FerryRequired, Str.Syntax.Requires,
@@ -626,8 +654,12 @@ public static class JsonDefs
         KVP(Str.Syntax.Name, Str.Location.CheckConst(Str.Category.Company, company)),
         KVPA(Str.Syntax.Category, [ Str.Category.Company ]),
         KVP(Str.Syntax.Requires, requires),
-        KVP(Str.Syntax.DLCList, dlcList),
-        KVPA(Str.Syntax.StateList, [.. thisCoLoc.Select(r => r.StateName).Distinct()])
+        KVPO(Str.Syntax.ExtraData, [
+          KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.Company)),
+          KVP(Str.ExtraData.Key.Which, company),
+          KVP(Str.ExtraData.Key.DLCList, dlcList),
+          KVPA(Str.ExtraData.Key.StateList, [.. thisCoLoc.Select(r => r.StateName).Distinct()])
+        ])
       ]);
     }
   }
@@ -635,27 +667,33 @@ public static class JsonDefs
   public static IEnumerable<JToken> GetInternalLevelLocations()
     => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.InternalLevel(i)),
-      KVPA(Str.Syntax.Category, [ Str.Category.Level ]),
       KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
       KVPA(Str.Syntax.LocationPlaceItem, [ Str.Item.LevelItem ]),
-      KVP(Str.Syntax.PlayerLevel, i)
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.PlayerLevelInternal),
+        KVP(Str.ExtraData.Key.PlayerLevel, i)
+      ])
     ]));
 
   public static IEnumerable<JToken> GetExternalLevelLocations()
     => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.ExternalLevel(i)),
-      KVPA(Str.Syntax.Category, [ Str.Category.Level ]),
       KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
-      KVP(Str.Syntax.PlayerLevel, i)
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.PlayerLevelExternal),
+        KVP(Str.ExtraData.Key.PlayerLevel, i)
+      ])
     ]));
 
   public static IEnumerable<JToken> GetSkillLevelLocations()
     => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.SkillLevel(i)),
-      KVPA(Str.Syntax.Category, [ Str.Category.Level, Str.Category.SkillPointCondensed ]),
       KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
-      KVPA(Str.Syntax.LocationPlaceItemCategory, [ Str.Category.SkillPoint ]),
-      KVP(Str.Syntax.PlayerLevel, i)
+      KVPA(Str.Syntax.LocationPlaceItemCategory, [ Str.Category.PlayerSkill ]),
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.PlayerLevelSkill),
+        KVP(Str.ExtraData.Key.PlayerLevel, i)
+      ])
     ]));
 
   public static IEnumerable<JToken> GetSecretDeliveryLocations()
@@ -668,7 +706,10 @@ public static class JsonDefs
         KVP(Str.Syntax.Requires, Str.Syntax.OptionCount(Str.Item.SecretDeliveryInstruction(i),
           Str.Option.SecretDeliveryInstructionParts)),
         KVPA(Str.Syntax.LocationPlaceItem, [Str.Item.SecretDeliveryCompletion]),
-        KVP(Str.Syntax.SecretDeliveryCounter, i)
+        KVPO(Str.Syntax.ExtraData, [
+          KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.SecretDeliveryLocation),
+          KVP(Str.ExtraData.Key.SecretDeliveryCounter, i)
+        ])
       ]);
     }
   }
@@ -689,7 +730,8 @@ public static class JsonDefs
 
     Obj([
       KVP(Str.Syntax.Name, Str.Victory.PlayerLevelReached),
-      KVP(Str.Syntax.Requires, Str.Syntax.OptionCount(Str.Item.LevelItem, Str.Option.LevelChecks))
+      KVP(Str.Syntax.Requires, Str.Syntax.OptionCount(Str.Item.LevelItem, Str.Option.LevelChecks)),
+      KVP(Str.Syntax.LocationVictory, true)
     ])
   ];
   #endregion
@@ -701,7 +743,7 @@ public static class JsonDefs
     .. GetTruckContractItems(),
     .. GetSecretDeliveryInstructionItems(),
     .. GetSecretDeliveryCompletionItems(),
-    .. GetSkillPointItems(),
+    .. GetPlayerSkillItems(),
     .. GetSingleItems()
   ];
 
@@ -720,7 +762,11 @@ public static class JsonDefs
       yield return Obj([
         KVP(Str.Syntax.Name, Str.Item.StateKey(state)),
         KVPA(Str.Syntax.Category, [Str.Category.StateKey]),
-        KVP(Str.Syntax.DLCList, dlcList),
+        KVPO(Str.Syntax.ExtraData, [
+          KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.StateKey)),
+          KVP(Str.ExtraData.Key.Which, state),
+          KVP(Str.ExtraData.Key.DLCList, dlcList)
+        ]),
         KVP(Str.Syntax.ItemClassProgression, true)
       ]);
     }
@@ -744,7 +790,11 @@ public static class JsonDefs
           Str.Category.StateStarterKey,
           Str.Category.StateCheck(state)
         ]),
-        KVP(Str.Syntax.DLCList, dlcList),
+        KVPO(Str.Syntax.ExtraData, [
+          KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.StateStarterKey)),
+          KVP(Str.ExtraData.Key.Which, state),
+          KVP(Str.ExtraData.Key.DLCList, dlcList)
+        ]),
         KVP(Str.Syntax.ItemClassProgression, true)
       ]);
     }
@@ -754,6 +804,10 @@ public static class JsonDefs
     => Data.TruckMakes.Keys.Select(truck => Obj([
         KVP(Str.Syntax.Name, Str.Item.TruckContract(truck)),
         KVPA(Str.Syntax.Category, [Str.Category.TruckContract]),
+        KVPO(Str.Syntax.ExtraData, [
+          KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.TruckContract)),
+          KVP(Str.ExtraData.Key.Which, truck)
+        ]),
         KVP(Str.Syntax.ItemClassUseful, true)
       ]));
 
@@ -761,9 +815,12 @@ public static class JsonDefs
     => Enumerable.Range(1, 20).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Item.SecretDeliveryInstruction(i)),
       KVPA(Str.Syntax.Category, [Str.Category.SecretDeliveryInstructions]),
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.SecretDeliveryInstructions)),
+        KVP(Str.ExtraData.Key.SecretDeliveryCounter, i)
+      ]),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVP(Str.Syntax.ItemCount, 5),
-      KVP(Str.Syntax.SecretDeliveryCounter, i)
+      KVP(Str.Syntax.ItemCount, 5)
     ]));
 
   public static IEnumerable<JToken> GetSecretDeliveryCompletionItems()
@@ -771,74 +828,102 @@ public static class JsonDefs
       KVP(Str.Syntax.Name, Str.Item.SecretDeliveryCompletion),
       KVPA(Str.Syntax.Category, [Str.Category.SecretDeliveryCompletions]),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVP(Str.Syntax.ItemCount, 20)
+      KVP(Str.Syntax.ItemCount, 20),
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.SecretDeliveryCompletions))
+      ])
     ])];
 
-  public static IEnumerable<JToken> GetSkillPointItems()
-    => Sequence.Of<(string Name, int Progression, int Useful)>(
-      ("ADR Class 1 (Explosives)", 1, 0),
-      ("ADR Class 2 (Gases)", 1, 0),
-      ("ADR Class 3 (Flammable Liquids)", 1, 0),
-      ("ADR Class 4 (Flammable Solids)", 1, 0),
-      ("ADR Class 6 (Toxic/Infectious Substances)", 1, 0),
-      ("ADR Class 8 (Corrosive Substances)", 1, 0),
-      ("Long Distance", 6, 0),
-      ("High Value Cargo", 1, 5),
-      ("Fragile Cargo", 1, 5),
-      ("Just-In-Time Delivery", 2, 4),
-      ("Eco-Driving", 0, 6)
+  public static IEnumerable<JToken> GetPlayerSkillItems()
+    => Sequence.Of<(string Name, int Progression, int Useful, string Type)>(
+      ("ADR Class 1 (Explosives)", 1, 0, "adr"),
+      ("ADR Class 2 (Gases)", 1, 0, "adr"),
+      ("ADR Class 3 (Flammable Liquids)", 1, 0, "adr"),
+      ("ADR Class 4 (Flammable Solids)", 1, 0, "adr"),
+      ("ADR Class 6 (Toxic/Infectious Substances)", 1, 0, "adr"),
+      ("ADR Class 8 (Corrosive Substances)", 1, 0, "adr"),
+      ("Long Distance", 6, 0, "long_distance"),
+      ("High Value Cargo", 1, 5, "high_value"),
+      ("Fragile Cargo", 1, 5, "fragile"),
+      ("Just-In-Time Delivery", 2, 4, "just_in_time"),
+      ("Eco-Driving", 0, 6, "eco_driving")
     ).Select(t => Obj([
       KVP(Str.Syntax.Name, Str.Item.SkillPoint(t.Name)),
       KVPO(Str.Syntax.ItemClassificationCount, [
         KVP(Str.Syntax.ItemClassProgression, t.Progression),
         KVP(Str.Syntax.ItemClassUseful, t.Useful)
       ]),
-      KVPA(Str.Syntax.Category, [Str.Category.SkillPoint])
+      KVPA(Str.Syntax.Category, [Str.Category.PlayerSkill]),
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.PlayerSkill)),
+        KVP(Str.ExtraData.Key.Which, t.Type)
+      ])
     ]));
 
   public static IEnumerable<JToken> GetSingleItems() => [
     Obj([
       KVP(Str.Syntax.Name, Str.Item.DeliveryToken),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVP(Str.Syntax.ItemCount, 100)
+      KVP(Str.Syntax.ItemCount, 100),
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Item.DeliveryToken))
+      ])
     ]),
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.FerryTicket),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVP(Str.Syntax.GrantingOption, Str.Option.FerryTicketItem)
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Item.FerryTicket)),
+        KVP(Str.ExtraData.Key.GrantingOption, Str.Option.FerryTicketItem)
+      ])
     ]),
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.Camera),
       KVPA(Str.Syntax.Category, [Str.Category.PhotoTrophy]),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVP(Str.Syntax.GrantingOption, Str.Option.Photosanity)
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.PhotoTrophy)),
+        KVP(Str.ExtraData.Key.GrantingOption, Str.Option.Photosanity)
+      ])
     ]),
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.Television),
       KVPA(Str.Syntax.Category, [Str.Category.Viewpoint]),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVP(Str.Syntax.GrantingOption, Str.Option.Viewpointsanity)
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.Viewpoint)),
+        KVP(Str.ExtraData.Key.GrantingOption, Str.Option.Viewpointsanity)
+      ])
     ]),
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.BankLoan),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVP(Str.Syntax.GrantingOption, Str.Option.BankLoanItem)
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Item.BankLoan)),
+        KVP(Str.ExtraData.Key.GrantingOption, Str.Option.BankLoanItem)
+      ])
     ]),
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.TrailerContract),
       KVP(Str.Syntax.ItemClassUseful, true),
-      KVP(Str.Syntax.GrantingOption, Str.Option.TrailerContractItem)
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Item.TrailerContract)),
+        KVP(Str.ExtraData.Key.GrantingOption, Str.Option.TrailerContractItem)
+      ])
     ]),
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.QuickTravelTicket),
       KVP(Str.Syntax.ItemClassProgression, true),
-      KVP(Str.Syntax.GrantingOption, Str.Option.QuickTravelTicketItem)
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Item.QuickTravelTicket)),
+        KVP(Str.ExtraData.Key.GrantingOption, Str.Option.QuickTravelTicketItem)
+      ])
     ])
   ];
   #endregion
@@ -852,35 +937,53 @@ public static class JsonDefs
   ]);
 
   public static IEnumerable<JProperty> GetStateCategories()
-    => Data.States.Keys.Select(s => KVPO(Str.Category.State(s), new JObject()));
+    => Data.States.Keys.Select(s => KVPO(Str.Category.State(s), [
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.State),
+        KVP(Str.ExtraData.Key.Which, s),
+        KVP(Str.ExtraData.Key.DLCList, Data.Regions.Any(r => r.StateName == s && r.DLCName == Str.DLC.BaseGame)
+          ? false : Arr([.. Data.Regions.Where(r => r.StateName == s).Select(r => r.DLCName)]))
+      ])
+    ]));
 
   public static IEnumerable<JProperty> GetDLCCategories()
     => Data.DLCs.Keys.Except([Str.DLC.BaseGame])
-      .Select(d => KVPO(Str.Category.DLC(d),
-      [
+      .Select(d => KVPO(Str.Category.DLC(d), [
         KVP(Str.Syntax.CategoryHidden, true),
-        KVPA(Str.Syntax.CategoryYamlOption, [Str.Option.DLC(d)])
+        KVPO(Str.Syntax.ExtraData, [
+          KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.DLC),
+          KVP(Str.ExtraData.Key.Which, d)
+        ])
       ]));
 
   public static IEnumerable<JProperty> GetStateCheckCategories()
     => Data.States.Keys.Select(s => KVPO(Str.Category.StateCheck(s), [
       KVP(Str.Syntax.CategoryHidden, true),
-      KVPA(Str.Syntax.CategoryYamlOption, [Str.Option.State(s)])
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.StateChecks),
+        KVP(Str.ExtraData.Key.Which, s),
+        KVP(Str.ExtraData.Key.DLCList, Data.Regions.Any(r => r.StateName == s && r.DLCName == Str.DLC.BaseGame)
+          ? false : Arr([.. Data.Regions.Where(r => r.StateName == s).Select(r => r.DLCName)]))
+      ])
     ]));
 
   public static IEnumerable<JProperty> GetTypeCategories() => [
     GetTypeCategory(Str.Category.City, Str.Option.Citysanity),
     GetTypeCategory(Str.Category.Viewpoint, Str.Option.Viewpointsanity),
     GetTypeCategory(Str.Category.PhotoTrophy, Str.Option.Photosanity),
-    GetTypeCategory(Str.Category.Company, Str.Option.Companysanity),
-    GetTypeCategory(Str.Category.RecruitmentAgent, Str.Option.Recruitmentsanity),
-    GetTypeCategory(Str.Category.TruckDealer, Str.Option.Dealersanity),
-    GetTypeCategory(Str.Option.SkillScatterCondensed)
+    GetTypeCategory(Str.Category.Company, Str.Option.Companysanity)/* ,
+    // GetTypeCategory(Str.Category.RecruitmentAgent, Str.Option.Recruitmentsanity),
+    // GetTypeCategory(Str.Category.TruckDealer, Str.Option.Dealersanity) */,
+    GetTypeCategory(Str.Category.PlayerSkill)
   ];
 
   public static JProperty GetTypeCategory(string name, string? option = null)
     => new(name, Obj([
-        KVP(Str.Syntax.CategoryHidden, true)
+        KVP(Str.Syntax.CategoryHidden, true),
+        KVPO(Str.Syntax.ExtraData, [
+          KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.TypeCategories),
+          KVP(Str.ExtraData.Key.Which, Str.SnakeCase(name))
+        ])
       ]).WithIf(option != null, Str.Syntax.CategoryYamlOption, new JArray([option])));
   #endregion
 
@@ -890,24 +993,22 @@ public static class JsonDefs
   ];
 
   public static IEnumerable<JToken> GetRegionEvents()
-  {
-    foreach (Region region in Data.Regions)
-    {
-      yield return new JObject
-      {
-        [Str.Syntax.Name] = Str.Event.RegionReachable(region.ToString()),
-        [Str.Syntax.Category] = new JArray
-        {
-          Str.Category.State(region.StateName),
-          Str.Category.DLC(region.DLCName)
-        },
-        [Str.Syntax.Region] = region.ToString()
-      };
-    }
-  }
+    => Data.Regions.Select(r => Obj([
+      KVP(Str.Syntax.Name, Str.Event.RegionReachable(r.ToString())),
+      KVPA(Str.Syntax.Category, [
+        Str.Category.State(r.StateName),
+        Str.Category.DLC(r.DLCName)
+      ]),
+      KVP(Str.Syntax.Region, r.ToString()),
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.RegionReachable),
+        KVP(Str.ExtraData.Key.State, r.StateName),
+        KVP(Str.ExtraData.Key.DLC, r.DLCName)
+      ])
+    ]));
   #endregion
 
-  #region ├╴options.json
+  #region └╴options.json
   // public static JObject GetOptionsJson() => Obj([
   //   KVP(Str.Syntax.OptionsCore, GetCoreOptions()),
   //   KVP(Str.Syntax.OptionsUser, GetUserOptions())
@@ -1315,16 +1416,6 @@ public static class JsonDefs
   //     """, 1, 10000, DataCounters.TotalChecks)
   // );
   #endregion
-
-  #region └╴dlc-connections.json
-  public static JObject GetDLCConnectionsJson() => Obj([
-    KVP("_comment", "This isn't a standard file. I'm just using it for much easier logic."),
-    .. Data.DLCs.Keys.Select(dlc => KVPA(Str.SnakeCase(dlc), [
-      .. Data.DLCConnections.Where(conn => conn.Left == dlc).Select(conn => Str.SnakeCase(conn.Right)),
-      .. Data.DLCConnections.Where(conn => conn.Right == dlc).Select(conn => Str.SnakeCase(conn.Left))
-    ]))
-  ]);
-  #endregion
 }
 #endregion
 
@@ -1339,9 +1430,8 @@ public static class Program
       ("locations", JsonDefs.GetLocationsJson()),
       ("items", JsonDefs.GetItemsJson()),
       ("categories", JsonDefs.GetCategoriesJson()),
-      ("events", JsonDefs.GetEventsJson()),
-      // ("options", JsonDefs.GetOptionsJson()),
-      ("dlc-connections", JsonDefs.GetDLCConnectionsJson())
+      ("events", JsonDefs.GetEventsJson())/* ,
+      ("options", JsonDefs.GetOptionsJson()) */
     ];
 
     foreach ((string file, JToken content) in Values)
