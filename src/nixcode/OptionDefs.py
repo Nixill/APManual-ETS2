@@ -5,7 +5,15 @@ from Options import Option, FreeText, NumericOption, Toggle, DefaultOnToggle, Ch
 from .Func import snake_case
 from .CsvData import state_list, dlc_list, truck_makes_list, company_list, photo_trophies_dict, viewpoints_dict, city_dict, dlc_aliases_dict
 
-class StartingLocation(Choice):
+start_args = {f'option_{snake_case(s)}': i for i, s in enumerate(state_list)} | {
+        'display_name': 'Starting Location',
+        'rich_text_doc': True
+    }
+
+StartingLocation = type('StartingLocation', (Choice,), start_args)
+
+StartingLocation.default = StartingLocation.option_germany
+StartingLocation.__doc__ = \
     """
     Which country should the player start in?
 
@@ -13,13 +21,6 @@ class StartingLocation(Choice):
 
     If the country selected has its checks disabled, those will be re-enabled.
     """
-    display_name = 'Starting Location'
-    rich_text_doc = True
-
-for i, s in enumerate(state_list):
-    setattr(StartingLocation, f'option_{snake_case(s)}', i)
-
-StartingLocation.default = StartingLocation.option_germany
 
 class _DeliveryTokenOption(Range):
     rich_text_doc = True
@@ -230,7 +231,17 @@ class BankLoanApprovalItem(KeyItemChoice):
     """
     display_name = 'Bank Loan Approval'
 
-class TruckContractItemBrand(Choice):
+start_args = {f'option_{snake_case(m)}': i for i, m in enumerate(truck_makes_list, 2)} | {
+      'display_name': 'Truck Contract Brand',
+      'rich_text_doc': True,
+      'option_none': 0,
+      'option_all': 1,
+      'default': 1
+  }
+
+TruckContractItemBrand = type('TruckContractItemBrand', (Choice,), start_args)
+
+TruckContractItemBrand.__doc__ = \
     """
     A Truck Contract is required before buying any trucks. There is an individual Contract per
     truck brand.
@@ -239,12 +250,6 @@ class TruckContractItemBrand(Choice):
     option is selected for truck_contract_brand_item_location). All others will be part of the
     multiworld item pool (unless a different option is selected for truck_contract_off_brand_item_location).
     """
-    display_name = 'Truck Contract Brand'
-    option_none = 0
-    default = option_all = 1
-
-for i, m in enumerate(truck_makes_list, 2):
-    setattr(TruckContractItemBrand, f'option_{snake_case(m)}', i)
 
 class TruckContractBrandItemLocation(KeyItemChoice):
     """
@@ -360,8 +365,8 @@ def define_options(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Opti
     options["secret_delivery_instruction_parts"] = SecretDeliveryInstructionParts
     options["dlcs_available"] = DLCsAvailableOption
     options["states_available"] = StatesAvailableOption
-    options["enable_city_checks"] = EnableCityChecks
-    options["enable_company_checks"] = EnableCompanyChecks
+    options["enable_citysanity"] = EnableCityChecks
+    options["enable_companysanity"] = EnableCompanyChecks
     options["enable_photosanity"] = EnablePhotosanity
     options["enable_viewpointsanity"] = EnableViewpointsanity
     options["player_level_checks"] = PlayerLevelChecks
@@ -423,3 +428,7 @@ def group_options(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[
         CompanyChecksCount,
         MaxChecksCount
     ]
+
+    print(groups)
+
+    return groups

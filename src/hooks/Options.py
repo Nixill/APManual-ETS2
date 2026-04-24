@@ -46,6 +46,7 @@ def after_options_defined(options: Type[PerGameCommonOptions]):
     pass
 
 # Use this Hook if you want to add your Option to an Option group (existing or not)
+# ... this method doesn't seem to actually exist
 def before_option_groups_created(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[Type[Option[Any]]]]:
     # Uses the format groups['GroupName'] = [TotalCharactersToWinWith]
     return group_options(groups)

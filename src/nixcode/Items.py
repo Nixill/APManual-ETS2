@@ -146,11 +146,11 @@ def implement_checks_reduction(world: World):
     all_checks_list: list[CheckInfo] = []
 
     # Build the list of checks
-    if options.enable_city_checks:
+    if options.enable_citysanity:
         for city in city_dict.values():
             all_checks_list.append(CheckInfo(city.check_name, 'City', city.region))
 
-    if options.enable_company_checks:
+    if options.enable_companysanity:
         for company in company_list:
             all_checks_list.append(CheckInfo(company, 'Company', None))
 

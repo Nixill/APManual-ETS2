@@ -54,12 +54,12 @@ def validate_options_early(world: World):
         options.player_level_checks.value = 5
 
     # Ensures that at least one check type is enabled
-    if not options.enable_city_checks and \
-        not options.enable_company_checks and \
+    if not options.enable_citysanity and \
+        not options.enable_companysanity and \
         not options.enable_photosanity and \
         not options.enable_viewpointsanity and \
         not options.player_level_checks:
-            options.enable_city_checks.value = 1
+            options.enable_citysanity.value = 1
 
 def are_dlcs_connected(dlcs: set[str]) -> bool:
     """
