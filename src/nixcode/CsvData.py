@@ -1,8 +1,11 @@
+import csv, pkgutil
+
 from dataclasses import dataclass
 from collections import defaultdict
-from warnings import deprecated
 
+from .DataClasses import CheckLocation, GameInfo, Region, TruckModel
 from .Func import snake_case
+
 from ..Helpers import load_data_csv
 
 #region DLCs
@@ -16,37 +19,23 @@ dlc_list: list[str] = [dlc_of(line) for line in load_data_csv('csv', 'dlcs.csv')
 #endregion
 
 #region Regions
-@dataclass(frozen=True)
-class Region:
-    state: str
-    dlc: str
-
 def region_of(line: dict[str, str], state_key: str = 'State', dlc_key: str = 'DLC'):
     return Region(line[state_key], line[dlc_key])
 
 _region_list_csv: list[dict[str, str]] = load_data_csv('csv', 'regions.csv')
 
 region_list: list[Region] = [Region(line['State'], dlc_of(line)) for line in _region_list_csv]
-state_dlcs_dict: dict[str, list[str]] = {}
-dlc_states_dict: dict[str, list[str]] = {}
+state_dlcs_dict: defaultdict[str, list[str]] = defaultdict(list)
+dlc_states_dict: defaultdict[str, list[str]] = defaultdict(list)
 
 for r in region_list:
     state_dlcs_dict[r.state].append(r.dlc)
     dlc_states_dict[r.dlc].append(r.state)
 #endregion
 
-@dataclass(frozen=True)
-class CheckLocation:
-    check_name: str
-    region: Region
-    ferry_required: bool
-
-    def rename(self, new_name: str):
-        return CheckLocation(new_name, self.region, self.ferry_required)
-
 #region Cities
 city_dict: dict[str, CheckLocation] = {
-    line['Name']: CheckLocation(line['Name'],
+    line['City']: CheckLocation(line['City'],
                                 region_of(line),
                                 bool(line['FerryRequired']))
     for line in load_data_csv('csv', 'cities.csv')}
@@ -82,7 +71,7 @@ connections_dict: defaultdict[Region, dict[Region, bool]] = defaultdict(dict)
 for line in load_data_csv('csv', 'connections.csv'):
     left_region = region_of(line, 'Left', 'LeftDLC')
     right_region = region_of(line, 'Right', 'RightDLC')
-    ferry_required = bool(line['FerryRequired'])
+    ferry_required = bool(line['IsFerry'])
     connections_dict[left_region][right_region] = ferry_required
     connections_dict[right_region][left_region] = ferry_required
 
@@ -92,7 +81,7 @@ ferry_connections_dict = {key: {k for k, v in value.items() if v} for key, value
 
 #region DLC Aliases
 dlc_aliases_dict: dict[str, str] = {dlc.lower(): dlc for dlc in dlc_list} \
-    + {line['Alias']: dlc_of(line) for line in load_data_csv('csv', 'dlc-aliases.csv')}
+    | {line['Alias']: dlc_of(line) for line in load_data_csv('csv', 'dlc-aliases.csv')}
 #endregion
 
 #region DLC Connections
@@ -111,10 +100,7 @@ for line in _dlc_connections_csv:
 #region Game Info
 game_info_dict: dict[str, str] = {line['Key']: line['Value'] for line in load_data_csv('csv', 'game-info.csv')}
 
-class GameInfo:
-    name: str = game_info_dict['game']
-    creator: str = game_info_dict['creator']
-    filler_item_name: str = game_info_dict['filler_item']
+game_info = GameInfo(game_info_dict['game'], game_info_dict['creator'], game_info_dict['filler_item'])
 #endregion
 
 #region Photo Trophies
@@ -126,7 +112,7 @@ photo_trophies_dict: dict[str, CheckLocation] = {
 #endregion
 
 #region Quick Travel
-quick_travel_list: list[Region] = [Region(line['State'], dlc_of(line))]
+quick_travel_list: list[Region] = [Region(line['State'], dlc_of(line)) for line in load_data_csv('csv', 'quick-travel.csv')]
 #endregion
 
 #region States
@@ -161,12 +147,6 @@ truck_makes_list: list[str] = [line['Make'] for line in load_data_csv('csv', 'tr
 #endregion
 
 #region Trucks
-@dataclass(frozen=True)
-class TruckModel:
-    make: str
-    model: str
-    required_dlc: str
-
 truck_models_list: list[TruckModel] = [TruckModel(line['Make'], line['Model'], dlc_of(line)) for line in load_data_csv('csv', 'trucks.csv')]
 #endregion
 

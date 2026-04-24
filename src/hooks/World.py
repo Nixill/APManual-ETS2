@@ -19,9 +19,8 @@ from ..Helpers import is_option_enabled, get_option_value, format_state_prog_ite
 import logging
 
 # Organizing my methods into my own files to make things easier and more readable
-from ..nixcode.ChecksReduction import implement_checks_reduction
 from ..nixcode.Options import validate_options_early, starting_state
-from ..nixcode.Items import perform_final_grants, adjust_item_counts
+from ..nixcode.Items import perform_final_grants, adjust_item_counts, implement_checks_reduction
 
 ########################################################################################
 ## Order of method calls when the world generates:

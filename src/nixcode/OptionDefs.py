@@ -102,7 +102,7 @@ class DLCsAvailableOption(OptionSet):
     """
     display_name = 'Available DLCs'
     rich_text_doc = True
-    valid_keys = dlc_aliases_dict + ['all'] - ['base game', 'base']
+    valid_keys = {*dlc_aliases_dict.values(), 'all'} - {'base game', 'base'}
     valid_keys_casefold = True
     default = set()
 

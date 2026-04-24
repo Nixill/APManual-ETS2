@@ -1,6 +1,6 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from typing import Any
-from src.nixcode.Func import snake_case
+from .Func import snake_case
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 

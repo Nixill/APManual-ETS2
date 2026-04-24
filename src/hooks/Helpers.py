@@ -1,7 +1,14 @@
-from typing import Optional, Any
+from typing import Optional, Any, Union
 from BaseClasses import MultiWorld
-from src.nixcode.CsvData import Region
-from ..Helpers import get_option_value
+from ..nixcode.DataClasses import Region
+
+# Copied from ..Helpers to avoid circuler import
+def get_option_value(multiworld: MultiWorld, player: int, name: str) -> Union[int, dict]:
+    option = getattr(multiworld.worlds[player].options, name, None)
+    if option is None:
+        return 0
+
+    return option.value
 
 def is_dlc_enabled(dlc_list: list[str], multiworld: MultiWorld, player: int) -> bool:
     if 'Base Game' in dlc_list: return True
