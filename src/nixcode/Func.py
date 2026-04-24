@@ -1,7 +1,11 @@
-from typing import Iterable, Any, TypeVar
+from typing import Iterable, Any, Sequence, TypeVar
 from unicodedata import normalize
 
 T = TypeVar('T')
+
+def pop_iter(input: Sequence[T]) -> Iterable[T]:
+    while input:
+        yield input.pop()
 
 def _snake_case_i(input: str) -> Iterable[str]:
     output = False

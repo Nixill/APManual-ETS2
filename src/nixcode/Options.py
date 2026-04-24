@@ -8,6 +8,8 @@ from .CsvData import dlc_connections, dlc_aliases_dict, dlc_states_dict
 from .OptionDefs import QuickTravelTicketItem, StartingLocation
 from ..Helpers import is_option_enabled, get_option_value
 
+starting_state = ''
+
 def validate_options_early(world: World):
     """
     Verifies integrity of game options, applying the following fixes if necessary:
@@ -36,15 +38,20 @@ def validate_options_early(world: World):
         options.secret_deliveries_required.value = options.secret_deliveries_available.value
 
     # Validates the starting state, re-choosing if necessary.
+    starting_location = options.starting_location.current_key
     start_array = [state for state in available_states if snake_case(state) == starting_location.removeprefix('option_')]
     if start_array:
-        starting_location = start_array.pop()
+        starting_region = start_array.pop()
     if options.starting_location.current_key not in [snake_case(state) for state in available_states]:
-        starting_location = world.random.choice(available_states)
-        options.starting_location.value = getattr(StartingLocation, f'option_{snake_case(new_starting_location)}')
+        starting_region = world.random.choice(available_states)
+        options.starting_location.value = getattr(StartingLocation, f'option_{snake_case(starting_region)}')
 
     # Ensures that the starting state has checks that exist.
-    options.states_available.value.add(starting_location)
+    options.states_available.value.add(starting_region)
+
+    # Ensures that at least one level is enabled if the goal is player level checks.
+    if options.goal.value == options.goal.Max_Player_Level_Check_Reached and options.player_level_checks.value < 5:
+        options.player_level_checks.value = 5
 
     # Ensures that at least one check type is enabled
     if not options.enable_city_checks and \

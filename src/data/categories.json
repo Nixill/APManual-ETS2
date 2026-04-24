@@ -1,4 +1,30 @@
 {
+  "Delivery Tokens": {
+    "extra_data": {
+      "type": "victory",
+      "which": "delivery_tokens"
+    }
+  },
+  "Secret Delivery": {
+    "extra_data": {
+      "type": "victory",
+      "which": "secret_delivery"
+    }
+  },
+  "Secret Delivery Completions": {
+    "hidden": true,
+    "extra_data": {
+      "type": "victory",
+      "which": "secret_delivery"
+    }
+  },
+  "Secret Delivery Instructions": {
+    "hidden": true,
+    "extra_data": {
+      "type": "victory",
+      "which": "secret_delivery"
+    }
+  },
   "Albania": {
     "extra_data": {
       "type": "state",
@@ -765,11 +791,39 @@
       "enable_companysanity"
     ]
   },
+  "Player Level": {
+    "hidden": true,
+    "extra_data": {
+      "type": "type_categories",
+      "which": "player_level"
+    }
+  },
   "Skill": {
     "hidden": true,
     "extra_data": {
       "type": "type_categories",
       "which": "skill"
+    }
+  },
+  "Country Key": {
+    "hidden": true,
+    "extra_data": {
+      "type": "type_categories",
+      "which": "country_key"
+    }
+  },
+  "Country Starter Key": {
+    "hidden": true,
+    "extra_data": {
+      "type": "type_categories",
+      "which": "country_starter_key"
+    }
+  },
+  "Truck Purchase Contract": {
+    "hidden": true,
+    "extra_data": {
+      "type": "type_categories",
+      "which": "truck_purchase_contract"
     }
   }
 }

@@ -4,7 +4,7 @@ from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
 # Object classes from Manual -- extending AP core -- representing items and locations that are used in generation
-from ..Items import ManualItem
+from ..Items import ManualItem, item_name_to_item
 from ..Locations import ManualLocation
 
 # Raw JSON data from the Manual apworld, respectively:
@@ -19,7 +19,9 @@ from ..Helpers import is_option_enabled, get_option_value, format_state_prog_ite
 import logging
 
 # Organizing my methods into my own files to make things easier and more readable
-from ..nixcode.Options import validate_options_early
+from ..nixcode.ChecksReduction import implement_checks_reduction
+from ..nixcode.Options import validate_options_early, starting_state
+from ..nixcode.Items import perform_final_grants, adjust_item_counts
 
 ########################################################################################
 ## Order of method calls when the world generates:
@@ -54,7 +56,7 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
 def after_create_regions(world: World, multiworld: MultiWorld, player: int):
     # Use this hook to remove locations from the world
-    locationNamesToRemove: list[str] = [] # List of location names
+    locationNamesToRemove: list[str] = implement_checks_reduction(world) # List of location names
 
     # Add your code here to calculate which locations to remove
 
@@ -73,6 +75,7 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
 #       will create 5 items that are the "useful trap" class
 # {"Item Name": {ItemClassification.useful: 5}} <- You can also use the classification directly
 def before_create_items_all(item_config: dict[str, int|dict], world: World, multiworld: MultiWorld, player: int) -> dict[str, int|dict]:
+    adjust_item_counts(item_config, world)
     return item_config
 
 # The item pool before starting items are processed, in case you want to see the raw item pool at that stage
@@ -82,7 +85,7 @@ def before_create_items_starting(item_pool: list, world: World, multiworld: Mult
 # The item pool after starting items are processed but before filler is added, in case you want to see the raw item pool at that stage
 def before_create_items_filler(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
     # Use this hook to remove items from the item pool
-    itemNamesToRemove: list[str] = [] # List of item names
+    itemNamesToRemove: list[str] = perform_final_grants(item_pool, world) # List of item names
 
     # Add your code here to calculate which items to remove.
     #

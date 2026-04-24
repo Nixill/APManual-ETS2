@@ -206,7 +206,9 @@ public static class Str
   {
     public const string City = "City";
     public const string Company = "Company";
+    public const string DeliveryTokens = "Delivery Tokens";
     public static string DLC(string dlcName) => $"{dlcName} (DLC)";
+    public const string Level = "Player Level";
     public const string PhotoTrophy = "Photo Trophy";
     public const string PlayerSkill = "Skill";
     // public const string RecruitmentAgent = "Recruitment Agency Branch";
@@ -216,7 +218,9 @@ public static class Str
     public static string State(string stateName) => stateName;
     public static string StateCheck(string stateName) => $"{stateName} (Checks)";
     public static string StateKey => $"{StateCountry} Key";
+    public const string StateKeyConst = "State Key";
     public static string StateStarterKey => $"{StateCountry} Starter Key";
+    public const string StateStarterKeyConst = "State Starter Key";
     public const string TruckContract = "Truck Purchase Contract";
     // public const string TruckDealer = "Truck Dealer";
     public const string Viewpoint = "Viewpoint";
@@ -240,6 +244,7 @@ public static class Str
       public const string DLCList = "dlc_list";
       public const string GrantingOption = "granting_option";
       public const string PlayerLevel = "player_level";
+      public const string RegionList = "region_list";
       public const string RequireOption = "require_option";
       public const string RequireOptionValue = "require_option_value";
       public const string SecretDeliveryCounter = "secret_delivery_number";
@@ -261,6 +266,7 @@ public static class Str
       public const string State = "state";
       public const string StateChecks = "state_checks";
       public const string TypeCategories = "type_categories";
+      public const string Victory = "victory";
     }
   }
 
@@ -284,11 +290,11 @@ public static class Str
 
   public static class Location
   {
-    public static string CheckConst(string checkType, string checkName) => $"{checkType}: {checkName}";
-    public static string ExternalLevel(int i) => $"Player Level {i} (External)";
-    public static string InternalLevel(int i) => $"Player Level {i} (Internal)";
-    public static string SecretDeliveryCompleted(int i) => $"Secret Delivery #{i} Completed";
-    public static string SkillLevel(int i) => $"Player Level {i} (Skill)";
+    public static string CheckConst(string checkType, string checkName) => $"{checkType} - {checkName}";
+    public static string ExternalLevel(int i) => $"Player Level {i} - External";
+    public static string InternalLevel(int i) => $"Player Level {i} - Internal";
+    public static string SecretDeliveryCompleted(int i) => $"Secret Delivery {i} Completed";
+    public static string SkillLevel(int i) => $"Player Level {i} - Skill";
   }
 
   public static class Option
@@ -357,7 +363,6 @@ public static class Str
 
   public static class Region
   {
-    public const string QuickTravel = "Quick Travel";
     public const string Start = "Start";
   }
 
@@ -658,7 +663,11 @@ public static class JsonDefs
           KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.Company)),
           KVP(Str.ExtraData.Key.Which, company),
           KVP(Str.ExtraData.Key.DLCList, dlcList),
-          KVPA(Str.ExtraData.Key.StateList, [.. thisCoLoc.Select(r => r.StateName).Distinct()])
+          KVPA(Str.ExtraData.Key.StateList, [.. thisCoLoc.Select(r => r.StateName).Distinct()]),
+          KVPA(Str.ExtraData.Key.RegionList, [.. thisCoLoc.Select(r => Obj([
+            KVP(Str.ExtraData.Key.DLC, r.DLCName),
+            KVP(Str.ExtraData.Key.State, r.StateName)
+          ]))])
         ])
       ]);
     }
@@ -763,7 +772,7 @@ public static class JsonDefs
         KVP(Str.Syntax.Name, Str.Item.StateKey(state)),
         KVPA(Str.Syntax.Category, [Str.Category.StateKey]),
         KVPO(Str.Syntax.ExtraData, [
-          KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.StateKey)),
+          KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.StateKeyConst)),
           KVP(Str.ExtraData.Key.Which, state),
           KVP(Str.ExtraData.Key.DLCList, dlcList)
         ]),
@@ -791,7 +800,7 @@ public static class JsonDefs
           Str.Category.StateCheck(state)
         ]),
         KVPO(Str.Syntax.ExtraData, [
-          KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.StateStarterKey)),
+          KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.StateStarterKeyConst)),
           KVP(Str.ExtraData.Key.Which, state),
           KVP(Str.ExtraData.Key.DLCList, dlcList)
         ]),
@@ -814,7 +823,10 @@ public static class JsonDefs
   public static IEnumerable<JToken> GetSecretDeliveryInstructionItems()
     => Enumerable.Range(1, 20).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Item.SecretDeliveryInstruction(i)),
-      KVPA(Str.Syntax.Category, [Str.Category.SecretDeliveryInstructions]),
+      KVPA(Str.Syntax.Category, [
+        Str.Category.SecretDeliveries,
+        Str.Category.SecretDeliveryInstructions
+      ]),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.SecretDeliveryInstructions)),
         KVP(Str.ExtraData.Key.SecretDeliveryCounter, i)
@@ -826,7 +838,10 @@ public static class JsonDefs
   public static IEnumerable<JToken> GetSecretDeliveryCompletionItems()
     => [Obj([
       KVP(Str.Syntax.Name, Str.Item.SecretDeliveryCompletion),
-      KVPA(Str.Syntax.Category, [Str.Category.SecretDeliveryCompletions]),
+      KVPA(Str.Syntax.Category, [
+        Str.Category.SecretDeliveries,
+        Str.Category.SecretDeliveryCompletions
+      ]),
       KVP(Str.Syntax.ItemClassProgression, true),
       KVP(Str.Syntax.ItemCount, 20),
       KVPO(Str.Syntax.ExtraData, [
@@ -863,10 +878,21 @@ public static class JsonDefs
   public static IEnumerable<JToken> GetSingleItems() => [
     Obj([
       KVP(Str.Syntax.Name, Str.Item.DeliveryToken),
+      KVPA(Str.Syntax.Category, [Str.Category.DeliveryTokens]),
       KVP(Str.Syntax.ItemClassProgression, true),
       KVP(Str.Syntax.ItemCount, 100),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Item.DeliveryToken))
+      ])
+    ]),
+
+    Obj([
+      KVP(Str.Syntax.Name, Str.Item.LevelItem),
+      KVPA(Str.Syntax.Category, [Str.Category.Level]),
+      KVP(Str.Syntax.ItemClassProgression, true),
+      KVP(Str.Syntax.ItemCount, 36),
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Item.LevelItem))
       ])
     ]),
 
@@ -930,11 +956,44 @@ public static class JsonDefs
 
   #region ├╴categories.json
   public static JObject GetCategoriesJson() => Obj([
+    .. GetVictoryCategories(),
     .. GetStateCategories(),
     .. GetStateCheckCategories(),
     .. GetDLCCategories(),
     .. GetTypeCategories()
   ]);
+
+  public static IEnumerable<JProperty> GetVictoryCategories() => [
+    KVPO(Str.Category.DeliveryTokens, [
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.Victory),
+        KVP(Str.ExtraData.Key.Which, Str.SnakeCase(Str.Category.DeliveryTokens))
+      ])
+    ]),
+
+    KVPO(Str.Category.SecretDeliveries, [
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.Victory),
+        KVP(Str.ExtraData.Key.Which, Str.SnakeCase(Str.Category.SecretDeliveries))
+      ])
+    ]),
+
+    KVPO(Str.Category.SecretDeliveryCompletions, [
+      KVP(Str.Syntax.CategoryHidden, true),
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.Victory),
+        KVP(Str.ExtraData.Key.Which, Str.SnakeCase(Str.Category.SecretDeliveries))
+      ])
+    ]),
+
+    KVPO(Str.Category.SecretDeliveryInstructions, [
+      KVP(Str.Syntax.CategoryHidden, true),
+      KVPO(Str.Syntax.ExtraData, [
+        KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.Victory),
+        KVP(Str.ExtraData.Key.Which, Str.SnakeCase(Str.Category.SecretDeliveries))
+      ])
+    ]),
+  ];
 
   public static IEnumerable<JProperty> GetStateCategories()
     => Data.States.Keys.Select(s => KVPO(Str.Category.State(s), [
@@ -974,7 +1033,11 @@ public static class JsonDefs
     GetTypeCategory(Str.Category.Company, Str.Option.Companysanity)/* ,
     // GetTypeCategory(Str.Category.RecruitmentAgent, Str.Option.Recruitmentsanity),
     // GetTypeCategory(Str.Category.TruckDealer, Str.Option.Dealersanity) */,
-    GetTypeCategory(Str.Category.PlayerSkill)
+    GetTypeCategory(Str.Category.Level),
+    GetTypeCategory(Str.Category.PlayerSkill),
+    GetTypeCategory(Str.Category.StateKey),
+    GetTypeCategory(Str.Category.StateStarterKey),
+    GetTypeCategory(Str.Category.TruckContract)
   ];
 
   public static JProperty GetTypeCategory(string name, string? option = null)

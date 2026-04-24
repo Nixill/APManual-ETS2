@@ -13,7 +13,7 @@ class StartingLocation(Choice):
 
     If the country selected has its checks disabled, those will be re-enabled.
     """
-    display_name = 'Difficulty'
+    display_name = 'Starting Location'
     rich_text_doc = True
 
 for i, s in enumerate(state_list):
@@ -149,13 +149,13 @@ class EnableCompanyChecks(Toggle):
     display_name = 'Enable Company Checks'
     rich_text_doc = True
 
-class _KeyItemChoice(Choice):
+class KeyItemChoice(Choice):
     rich_text_doc = True
     option_find_item = 1
     option_find_item_early = 2
     default = option_start_with_item = 3
 
-class _KeyItemChoiceWithDisable(_KeyItemChoice):
+class _KeyItemChoiceWithDisable(KeyItemChoice):
     rich_text_doc = True
     default = option_disabled = 0
 
@@ -193,31 +193,37 @@ class PlayerLevelChecks(NamedRange):
         'all': 36
     }
 
-class SkillCheckScattering(Choice):
+class SkillItemsOnLevels(Toggle):
     """
-    How should player skill points be handled?
-    - **`disabled`**: Do not scatter skill categories. When the player levels up, they have free
-      rein to decide where to spend their skill points.
-    - **`condensed_limited`**: Add an extra location to every level-up check, which contains a
-      random skill category. The player must spend the skill point of that level on that category.
-      Once player level checks run out, the player has free rein to decide where to spend remaining
-      skill points. (If `player_level_checks` = 0, this functions identically to `disabled`.)
-    - **`condensed_spread`**: Add an extra location to every level-up check, which contains a
-      random skill category. The remaining skill categories are spread throughout the multiworld.
-      Upon leveling up, the player must choose an available skill category, if any, to spend their
-      skill point on. If none are available, the player must wait to receive one before spending
-      it. (If `player_level_checks` = 0, this functions identically to `spread`.)
-    - **`spread`**: Scatter skill points throughout the multiworld. Upon leveling up, the player
-      must choose an available skill category, if any, to spend their skill point on. If none are
-      available, the player must wait to receive one before spending it.
-    """
-    rich_text_doc = True
-    default = option_disabled = 0
-    option_condensed_limited = 1
-    option_condensed_spread = 2
-    option_spread = 3
+    Should player skills be placed on level-up checks?
 
-class BankLoanApprovalItem(_KeyItemChoice):
+    If this option is enabled, the skills to which player skill points may be assigned are
+    converted to items and placed on locations created to receive them.
+
+    If this option is enabled AND skill_items_scattered is disabled, these locations are created
+    for all 36 levels, regardless of the value of player_level_checks (even if it's 0/disabled).
+    What the player does with them after the final player_level_check is up to the player, with the
+    following possibilities:
+    - Ignore remaining skills and skill points. They cannot be spent in any fashion.
+    - Reveal remaining skills when attaining the respective levels.
+    - Ignore remaining skill level locations, allow free assignment after player_level_checks
+      levels.
+    """
+    display_name = 'Skills on Levels'
+
+class SkillItemsScattered(Toggle):
+    """
+    Should player skill points be scattered in the multiworld item pool?
+
+    If this option is enabled, the skills to which player skill points may be assigned are
+    converted to items and spread throughout the multiworld item pool.
+
+    If this option AND skill_items_on_levels are enabled, skill items are placed on level up
+    checks first, and then the remainder are spread throughout the multiworld item pool.
+    """
+    display_name = ''
+
+class BankLoanApprovalItem(KeyItemChoice):
     """
     A Bank Loan Approval is required before obtaining any loans from the bank. Should it be part
     of the player's starting inventory or the multiworld item pool?
@@ -240,14 +246,14 @@ class TruckContractItemBrand(Choice):
 for i, m in enumerate(truck_makes_list, 2):
     setattr(TruckContractItemBrand, f'option_{snake_case(m)}', i)
 
-class TruckContractBrandItemLocation(_KeyItemChoice):
+class TruckContractBrandItemLocation(KeyItemChoice):
     """
     Whether the Truck Contract for the make selected in truck_contract_item_brand should start in
     the player's inventory or the multiworld item pool.
     """
     display_name = 'Truck Contract On-Brand Location'
 
-class TruckContractOffBrandItemLocation(_KeyItemChoice):
+class TruckContractOffBrandItemLocation(KeyItemChoice):
     """
     Whether all other Truck Contracts, besides the make selected in truck_contract_item_brand,
     should start in the player's inventory or the multiworld item pool.
@@ -257,7 +263,7 @@ class TruckContractOffBrandItemLocation(_KeyItemChoice):
     """
     display_name = 'Truck Contract Off-Brand Location'
 
-class TrailerContractItem(_KeyItemChoice):
+class TrailerContractItem(KeyItemChoice):
     """
     A Trailer Contract is required before buying any trailers. Should it be part of the player's
     starting inventory or the multiworld item pool?
@@ -288,7 +294,7 @@ class ChecksPercentOfStateCount(_PercentOption):
     """
     display_name = 'Percentage of Countries with Checks'
 
-class ChecksMaxStateCount(Range):
+class ChecksMaxStateCount(NamedRange):
     """
     What is the maximum number of countries that should contain checks? Note that the other
     countries will still have keys, which must be obtained before driving in those countries.
@@ -299,6 +305,7 @@ class ChecksMaxStateCount(Range):
     display_name = 'Maximum Number of Countries with Checks'
     range_start = 1
     range_end = 100
+    special_range_names = {'unlimited': 0}
     default = len(state_list)
 
 class ChecksPercent(_PercentOption):
@@ -307,7 +314,7 @@ class ChecksPercent(_PercentOption):
     """
     display_name = 'Percentage of Checks'
 
-class ChecksMaxPerStateCount(Range):
+class ChecksMaxPerStateCount(NamedRange):
     """
     What is the maximum number of checks that should appear per country? Companies are considered
     country-less and are not affected by this option.
@@ -315,9 +322,10 @@ class ChecksMaxPerStateCount(Range):
     display_name = 'Maximum Checks per Country'
     range_start = 1
     range_end = 1000
+    special_range_names = {'unlimited': 0}
     default = 1000
 
-class CompanyChecksCount(Range):
+class CompanyChecksCount(NamedRange):
     """
     What is the number of companies that should appear as checks?
 
@@ -327,9 +335,10 @@ class CompanyChecksCount(Range):
     display_name = 'Maximum Company Checks'
     range_start = 1
     range_end = 1000
+    special_range_names = {'unlimited': 0}
     default = len(company_list)
 
-class MaxChecksCount(Range):
+class MaxChecksCount(NamedRange):
     """
     What is the maximum number of checks that should be included across all categories?
 
@@ -339,6 +348,7 @@ class MaxChecksCount(Range):
     display_name = 'Maximum Checks Count'
     range_start = 1
     range_end = 10000
+    special_range_names = {'unlimited': 0}
     default = len(company_list) + len(city_dict) + len(photo_trophies_dict) + len(viewpoints_dict) + 36
 
 def define_options(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Option[Any]]]:
@@ -355,7 +365,8 @@ def define_options(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Opti
     options["enable_photosanity"] = EnablePhotosanity
     options["enable_viewpointsanity"] = EnableViewpointsanity
     options["player_level_checks"] = PlayerLevelChecks
-    options["skill_check_scattering"] = SkillCheckScattering
+    options["skill_items_on_levels"] = SkillItemsOnLevels
+    options["skill_items_scattered"] = SkillItemsScattered
     options["bank_loan_approval_item"] = BankLoanApprovalItem
     options["truck_contract_item_brand"] = TruckContractItemBrand
     options["truck_contract_brand_item_location"] = TruckContractBrandItemLocation
@@ -391,7 +402,8 @@ def group_options(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[
 
     groups['Level and Skill Checks'] = [
         PlayerLevelChecks,
-        SkillCheckScattering
+        SkillItemsOnLevels,
+        SkillItemsScattered
     ]
 
     groups['Items Available'] = [
