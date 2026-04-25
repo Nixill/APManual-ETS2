@@ -294,6 +294,15 @@ class QuickTravelTicketItem(_KeyItemChoiceWithDisable):
     """
     display_name = 'Quick Travel Ticket Item'
 
+class ChecksReductionSeed(FreeText):
+    """
+    What seed should be used for Checks Reduction? This affects *only* the Checks Reduction
+    procedures and is not used by the rest of the Archipelago randomizer. If empty, a random seed
+    is used.
+    """
+    display_name = 'Checks Reduction Randomization Seed'
+    default = ''
+
 class _PercentOption(Range):
     range_start = 1
     range_end = 100
@@ -383,6 +392,7 @@ def define_options(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Opti
     options["truck_contract_off_brand_item_location"] = TruckContractOffBrandItemLocation
     options["trailer_contract_item"] = TrailerContractItem
     options["quick_travel_item"] = QuickTravelTicketItem
+    options["checks_reduction_seed"] = ChecksReductionSeed
     options["checks_percent_of_state_count"] = ChecksPercentOfStateCount
     options["checks_max_state_count"] = ChecksMaxStateCount
     options["checks_percent"] = ChecksPercent
@@ -426,6 +436,7 @@ def group_options(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[
     ]
 
     groups['Checks Reduction'] = [
+        ChecksReductionSeed,
         ChecksPercentOfStateCount,
         ChecksMaxStateCount,
         ChecksPercent,

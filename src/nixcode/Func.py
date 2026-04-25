@@ -1,3 +1,4 @@
+from random import Random
 from typing import Iterable, Any, Optional, Sequence, TypeVar
 from unicodedata import normalize
 
@@ -70,6 +71,18 @@ def ensure_removed(input: list[T], match: T) -> None:
 def pop_iter(input: Sequence[T]) -> Iterable[T]:
     while input:
         yield input.pop()
+
+CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-'
+def random_string(random: Random) -> str:
+    bytes = random.randbytes(15)
+    out = ''
+    for i in range(0, 15, 3):
+        char1 = bytes[i] % 64
+        char2 = bytes[i] // 64 + (bytes[i+1] % 16 * 4)
+        char3 = bytes[i+1] // 16 + (bytes[i+2] % 4 * 16)
+        char4 = bytes[i+2] // 4
+        out += f'{CHARS[char1]}{CHARS[char2]}{CHARS[char3]}{CHARS[char4]}'
+    return out
 
 def _snake_case_i(input: str) -> Iterable[str]:
     output = False

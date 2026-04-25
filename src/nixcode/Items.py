@@ -17,6 +17,7 @@ from .OptionDefs import KeyItemChoice
 early_item_count: int = 0
 total_checks: Counter[str] = Counter()
 early_checks: Counter[str] = Counter()
+randomizer: Random = None
 
 @dataclass(frozen=True)
 class CheckInfo:
@@ -84,8 +85,11 @@ def implement_checks_reduction(world: World):
     global total_checks
     global early_checks
     global early_item_count
+    global randomizer
+
     options = world.options
-    randomizer: Random = world.random
+    if not randomizer:
+        randomizer = Random(options.checks_reduction_seed.value)
 
     chance_of_state: float = options.checks_percent_of_state_count.value / 100
     max_state_count: int = options.checks_max_state_count.value
@@ -94,7 +98,6 @@ def implement_checks_reduction(world: World):
     max_count_companies: int = options.company_checks_count.value
     max_check_count: int = options.max_checks_count.value
 
-    # shortcut
     # nixprint(f'chance_of_state: {chance_of_state}')
     # nixprint(f'chance_of_check: {chance_of_check}')
     # nixprint(f'max_check_count: {max_check_count}')
@@ -102,9 +105,10 @@ def implement_checks_reduction(world: World):
     # nixprint(f'max_count_companies: {max_count_companies}')
     # nixprint(f'max_check_count: {max_check_count}')
     # temporarily skipping this shortcut for debugging this method
-    # if chance_of_state == 1 and chance_of_check == 1 and max_check_count == 0 \
-    #     and max_count_per_state == 0 and max_count_companies == 0 and max_check_count == 0:
-    #         return []
+    # shortcut
+    if chance_of_state == 1 and chance_of_check == 1 and max_check_count == 0 \
+        and max_count_per_state == 0 and max_count_companies == 0 and max_check_count == 0:
+            return []
 
     all_states = list[str](options.states_available.value)
     # nixprint(f'all_states: {all_states}')
@@ -261,6 +265,7 @@ def get_additional_state_keys(item_pool: list, world: World) -> None:
 
     states_in_starting_logic = {get_starting_state()}
     connected_states = get_land_connected_states(get_starting_state(), dlcs)
+    # This uses the existing world.random because it grants state keys rather than altering world state directly
     randomizer: Random = world.random
 
     nixprint(f'States in starting logic: {states_in_starting_logic}', 2)
