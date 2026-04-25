@@ -102,16 +102,27 @@ def perform_final_grants(item_pool: list, world: World) -> list[str]:
 
         # Truck contract handling
         if tp == 'truck_purchase_contract':
+            nixprint(f'Truck Contract: {k}')
             if truck_on_brand in [snake_case(which), 'all']:
+                nixprint(f'On brand:')
                 if options.truck_contract_brand_item_location == KeyItemChoice.option_start_with_item:
+                    nixprint(f'Start with contract.')
                     start_with_item(k, item_pool, world)
                 elif options.truck_contract_brand_item_location == KeyItemChoice.option_find_item_early:
+                    nixprint(f'Find contract early.')
                     early_item(k, world)
+                else:
+                    nixprint(f'Find contract anywhere.')
             else:
+                nixprint(f'Off brand:')
                 if options.truck_contract_off_brand_item_location == KeyItemChoice.option_start_with_item:
+                    nixprint(f'Start with contract.')
                     start_with_item(k, item_pool, world)
                 elif options.truck_contract_off_brand_item_location == KeyItemChoice.option_find_item_early:
+                    nixprint(f'Find contract early.')
                     early_item(k, world)
+                else:
+                    nixprint(f'Find contract anywhere.')
 
         # For grantable items, check the option to find out what's done about it
         if opt := data.get('granting_option'):
@@ -140,20 +151,20 @@ def implement_checks_reduction(world: World):
     max_check_count: int = options.max_checks_count.value
 
     # shortcut
-    nixprint(f'chance_of_state: {chance_of_state}')
-    nixprint(f'chance_of_check: {chance_of_check}')
-    nixprint(f'max_check_count: {max_check_count}')
-    nixprint(f'max_count_per_state: {max_count_per_state}')
-    nixprint(f'max_count_companies: {max_count_companies}')
-    nixprint(f'max_check_count: {max_check_count}')
+    # nixprint(f'chance_of_state: {chance_of_state}')
+    # nixprint(f'chance_of_check: {chance_of_check}')
+    # nixprint(f'max_check_count: {max_check_count}')
+    # nixprint(f'max_count_per_state: {max_count_per_state}')
+    # nixprint(f'max_count_companies: {max_count_companies}')
+    # nixprint(f'max_check_count: {max_check_count}')
     # temporarily skipping this shortcut for debugging this method
     # if chance_of_state == 1 and chance_of_check == 1 and max_check_count == 0 \
     #     and max_count_per_state == 0 and max_count_companies == 0 and max_check_count == 0:
     #         return []
 
     all_states = list[str](options.states_available.value)
-    nixprint(f'all_states: {all_states}')
-    nixprint(f'starting_state: {get_starting_state()}')
+    # nixprint(f'all_states: {all_states}')
+    # nixprint(f'starting_state: {get_starting_state()}')
     all_states.remove(get_starting_state())
     accepted_states = {get_starting_state()}
 
@@ -167,7 +178,7 @@ def implement_checks_reduction(world: World):
                 if max_state_count and len(accepted_states) >= max_state_count:
                     break
 
-    nixprint(f'Accepted states: {accepted_states}')
+    # nixprint(f'Accepted states: {accepted_states}')
 
     all_checks_list: list[CheckInfo] = []
 
@@ -207,10 +218,10 @@ def implement_checks_reduction(world: World):
             reject = True
 
         if reject:
-            nixprint(f'Removing check: {check.check_type} - {check.name}')
+            # nixprint(f'Removing check: {check.check_type} - {check.name}')
             checks_to_remove.append(f'{check.check_type} - {check.name}')
         else:
-            nixprint(f'Keeping check: {check.check_type} - {check.name}')
+            # nixprint(f'Keeping check: {check.check_type} - {check.name}')
             sum_checks += 1
             total_checks[state] += 1
             if max_check_count and sum_checks >= max_check_count: break

@@ -19,12 +19,12 @@ def check_for_category(multiworld: MultiWorld, player: int, category_name: str) 
     tp = extra_data['type']
 
     if tp == 'state':
-        nixprint(f'Checking for State eligibility for category {category_name}:')
+        # nixprint(f'Checking for State eligibility for category {category_name}:')
         if extra_data['which'] not in get_available_states(get_option_value(multiworld, player, 'dlcs_available')):
-            nixprint('State not available, returning false.')
+            # nixprint('State not available, returning false.')
             return False
-        else:
-            nixprint('State available, returning true.')
+        # else:
+        #     nixprint('State available, returning true.')
 
     elif tp == 'state_checks':
         if extra_data['which'] not in get_option_value(multiworld, player, 'states_available'): return False
@@ -39,18 +39,18 @@ def check_for_category(multiworld: MultiWorld, player: int, category_name: str) 
         goal_option = multiworld.worlds[player].options.goal
         victory_condition = goal_option.value
         if extra_data['which'] == 'delivery_tokens':
-            nixprint(f'Delivery tokens (category {category_name}):')
+            # nixprint(f'Delivery tokens (category {category_name}):')
             if victory_condition != getattr(goal_option, 'option_All Delivery Tokens Collected'):
-                nixprint('Removing, not goal.')
+                # nixprint('Removing, not goal.')
                 return False
-            else:
-                nixprint('Keeping, goal.')
+            # else:
+            #     nixprint('Keeping, goal.')
         if extra_data['which'] == 'secret_delivery':
-            nixprint(f'Secret deliveries (category {category_name}):')
+            # nixprint(f'Secret deliveries (category {category_name}):')
             if victory_condition != getattr(goal_option, 'option_All Secret Deliveries Completed'):
-                nixprint('Removing, not goal.')
+                # nixprint('Removing, not goal.')
                 return False
-            else:
-                nixprint('Keeping, goal.')
+            # else:
+            #     nixprint('Keeping, goal.')
 
     return None

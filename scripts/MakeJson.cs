@@ -224,6 +224,10 @@ public static class Str
     public const string TruckContract = "Truck Purchase Contract";
     // public const string TruckDealer = "Truck Dealer";
     public const string Viewpoint = "Viewpoint";
+    public static string VisibleStateKeys => $"(1) {StateCountry} Keys";
+    public const string VisibleSecretDeliveryInstructions = "(2) Secret Delivery Instructions";
+    public const string VisiblePlayerSkills = "(3) Player Skills";
+    public const string VisibleMiscItems = "(4) Misc Items";
   }
 
   public static class DLC
@@ -476,6 +480,7 @@ public static class JsonDefs
   }
 
   static JProperty KVP(string key, JToken value) => new(key, value);
+  static JProperty KVPO(string key) => KVPO(key, new JObject());
   static JProperty KVPO(string key, JObject obj) => new(key, obj);
   static JProperty KVPA(string key, JArray arr) => new(key, arr);
   static JProperty KVPO(string key, IEnumerable<JProperty> obj) => new(key, new JObject(obj));
@@ -772,7 +777,8 @@ public static class JsonDefs
         KVP(Str.Syntax.Name, Str.Item.StateKey(state)),
         KVPA(Str.Syntax.Category, [
           Str.Category.StateKey,
-          Str.Category.State(state)
+          Str.Category.State(state),
+          Str.Category.VisibleStateKeys
         ]),
         KVPO(Str.Syntax.ExtraData, [
           KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.StateKeyConst)),
@@ -815,7 +821,10 @@ public static class JsonDefs
   public static IEnumerable<JToken> GetTruckContractItems()
     => Data.TruckMakes.Keys.Select(truck => Obj([
         KVP(Str.Syntax.Name, Str.Item.TruckContract(truck)),
-        KVPA(Str.Syntax.Category, [Str.Category.TruckContract]),
+        KVPA(Str.Syntax.Category, [
+          Str.Category.TruckContract,
+          Str.Category.VisibleMiscItems
+        ]),
         KVPO(Str.Syntax.ExtraData, [
           KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.TruckContract)),
           KVP(Str.ExtraData.Key.Which, truck)
@@ -828,7 +837,8 @@ public static class JsonDefs
       KVP(Str.Syntax.Name, Str.Item.SecretDeliveryInstruction(i)),
       KVPA(Str.Syntax.Category, [
         Str.Category.SecretDeliveries,
-        Str.Category.SecretDeliveryInstructions
+        Str.Category.SecretDeliveryInstructions,
+        Str.Category.VisibleSecretDeliveryInstructions
       ]),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.SecretDeliveryInstructions)),
@@ -871,7 +881,10 @@ public static class JsonDefs
         KVP(Str.Syntax.ItemClassProgression, t.Progression),
         KVP(Str.Syntax.ItemClassUseful, t.Useful)
       ]),
-      KVPA(Str.Syntax.Category, [Str.Category.PlayerSkill]),
+      KVPA(Str.Syntax.Category, [
+        Str.Category.PlayerSkill,
+        Str.Category.VisiblePlayerSkills
+      ]),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.PlayerSkill)),
         KVP(Str.ExtraData.Key.Which, t.Type)
@@ -881,7 +894,10 @@ public static class JsonDefs
   public static IEnumerable<JToken> GetSingleItems() => [
     Obj([
       KVP(Str.Syntax.Name, Str.Item.DeliveryToken),
-      KVPA(Str.Syntax.Category, [Str.Category.DeliveryTokens]),
+      KVPA(Str.Syntax.Category, [
+        Str.Category.DeliveryTokens,
+        Str.Category.VisibleMiscItems
+      ]),
       KVP(Str.Syntax.ItemClassProgression, true),
       KVP(Str.Syntax.ItemCount, 100),
       KVPO(Str.Syntax.ExtraData, [
@@ -901,6 +917,7 @@ public static class JsonDefs
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.FerryTicket),
+      KVPA(Str.Syntax.Category, [Str.Category.VisibleMiscItems]),
       KVP(Str.Syntax.ItemClassProgression, true),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Item.FerryTicket)),
@@ -910,7 +927,10 @@ public static class JsonDefs
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.Camera),
-      KVPA(Str.Syntax.Category, [Str.Category.PhotoTrophy]),
+      KVPA(Str.Syntax.Category, [
+        Str.Category.PhotoTrophy,
+        Str.Category.VisibleMiscItems
+      ]),
       KVP(Str.Syntax.ItemClassProgression, true),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.PhotoTrophy)),
@@ -920,7 +940,10 @@ public static class JsonDefs
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.Television),
-      KVPA(Str.Syntax.Category, [Str.Category.Viewpoint]),
+      KVPA(Str.Syntax.Category, [
+        Str.Category.Viewpoint,
+        Str.Category.VisibleMiscItems
+      ]),
       KVP(Str.Syntax.ItemClassProgression, true),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.Viewpoint)),
@@ -930,6 +953,7 @@ public static class JsonDefs
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.BankLoan),
+      KVPA(Str.Syntax.Category, [Str.Category.VisibleMiscItems]),
       KVP(Str.Syntax.ItemClassProgression, true),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Item.BankLoan)),
@@ -939,6 +963,7 @@ public static class JsonDefs
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.TrailerContract),
+      KVPA(Str.Syntax.Category, [Str.Category.VisibleMiscItems]),
       KVP(Str.Syntax.ItemClassUseful, true),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Item.TrailerContract)),
@@ -948,6 +973,7 @@ public static class JsonDefs
 
     Obj([
       KVP(Str.Syntax.Name, Str.Item.QuickTravelTicket),
+      KVPA(Str.Syntax.Category, [Str.Category.VisibleMiscItems]),
       KVP(Str.Syntax.ItemClassProgression, true),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Item.QuickTravelTicket)),
@@ -963,7 +989,8 @@ public static class JsonDefs
     .. GetStateCategories(),
     .. GetStateCheckCategories(),
     .. GetDLCCategories(),
-    .. GetTypeCategories()
+    .. GetTypeCategories(),
+    .. GetVisibleItemCategories()
   ]);
 
   public static IEnumerable<JProperty> GetVictoryCategories() => [
@@ -1043,14 +1070,21 @@ public static class JsonDefs
     GetTypeCategory(Str.Category.TruckContract)
   ];
 
-  public static JProperty GetTypeCategory(string name, string? option = null)
+  public static JProperty GetTypeCategory(string name, string? option = null, bool hidden = true)
     => new(name, Obj([
-        KVP(Str.Syntax.CategoryHidden, true),
+        KVP(Str.Syntax.CategoryHidden, hidden),
         KVPO(Str.Syntax.ExtraData, [
           KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.TypeCategories),
           KVP(Str.ExtraData.Key.Which, Str.SnakeCase(name))
         ])
       ]).WithIf(option != null, Str.Syntax.CategoryYamlOption, new JArray([option])));
+
+  public static IEnumerable<JProperty> GetVisibleItemCategories() => [
+    KVPO(Str.Category.VisibleStateKeys),
+    KVPO(Str.Category.VisibleSecretDeliveryInstructions),
+    KVPO(Str.Category.VisiblePlayerSkills),
+    KVPO(Str.Category.VisibleMiscItems)
+  ];
   #endregion
 
   #region ├╴events.json

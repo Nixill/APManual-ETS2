@@ -434,6 +434,6 @@ def group_options(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[
         MaxChecksCount
     ]
 
-    nixprint(groups)
+    # nixprint(groups)
 
     return groups

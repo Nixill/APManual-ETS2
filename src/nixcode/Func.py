@@ -11,10 +11,8 @@ def nixprint(msg: Optional[str] = None) -> None:
     """
     if ENABLE_NIXPRINT:
         if msg:
-            # pass
             print(msg)
         else:
-            # pass
             print()
 
 def get_case_key(input: dict[str, T], match: str) -> T:

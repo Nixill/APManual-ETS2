@@ -87,7 +87,7 @@ def are_dlcs_connected(dlcs: set[str]) -> bool:
 
 def get_enabled_dlcs_and_base_game(dlcs_in: set[str]) -> set[str]:
     result = {"Base Game", *get_enabled_dlcs(dlcs_in)}
-    nixprint(f'Enabled DLCs: {result}')
+    # nixprint(f'Enabled DLCs: {result}')
     return result
 
 def get_enabled_dlcs(dlcs_in: set[str]) -> set[str]:
@@ -106,7 +106,7 @@ def get_available_states(dlcs: set[str]) -> set[str]:
         if dlc in dlcs or dlc == 'Base Game':
             states_out = states_out.union(states)
 
-    nixprint(f'Available states: {states_out}')
+    # nixprint(f'Available states: {states_out}')
     return states_out
 
 def get_enabled_states(states: set[str], dlcs: set[str]) -> set[str]:
@@ -116,7 +116,7 @@ def get_enabled_states(states: set[str], dlcs: set[str]) -> set[str]:
     """
     available_states = get_available_states(dlcs)
     if not states or in_case(states, 'all'):
-        nixprint('No states specified in option. Returning all available, which was just printed above.')
+        # nixprint('No states specified in option. Returning all available, which was just printed above.')
         return available_states
 
     states_output = set[str]()
@@ -128,5 +128,5 @@ def get_enabled_states(states: set[str], dlcs: set[str]) -> set[str]:
             states_output.update(states_by_dlc)
 
     result = states_output.intersection(available_states)
-    nixprint(f'Enabled states: {result}')
+    # nixprint(f'Enabled states: {result}')
     return result

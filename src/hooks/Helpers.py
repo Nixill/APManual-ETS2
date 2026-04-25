@@ -12,7 +12,7 @@ def get_option_value(multiworld: MultiWorld, player: int, name: str) -> Union[in
 
 def is_dlc_enabled(dlc_list: list[str], multiworld: MultiWorld, player: int) -> bool:
     if dlc_list is False or 'Base Game' in dlc_list: return True
-    return bool(get_option_value(multiworld, player, 'dlcs_available').intersection(dlc_list))
+    return bool(set(get_option_value(multiworld, player, 'dlcs_available')).intersection(dlc_list))
 
 def is_region_enabled(region_list: list[Region], multiworld: MultiWorld, player: int) -> bool:
     states: set[str] = get_option_value(multiworld, player, 'states_available')

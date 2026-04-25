@@ -832,5 +832,9 @@
       "type": "type_categories",
       "which": "truck_purchase_contract"
     }
-  }
+  },
+  "(1) Country Keys": {},
+  "(2) Secret Delivery Instructions": {},
+  "(3) Player Skills": {},
+  "(4) Misc Items": {}
 }

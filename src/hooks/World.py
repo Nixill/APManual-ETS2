@@ -1,6 +1,5 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from typing import Any
-from ..nixcode.Func import nixprint
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
@@ -60,15 +59,15 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
 
     # Add your code here to calculate which locations to remove
 
-    nixprint('== LOCATION POOL ==')
+    # nixprint('== LOCATION POOL ==')
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
                 if location.name in locationNamesToRemove:
-                    nixprint(f'~~{location}~~ REMOVED')
+                    # nixprint(f'~~{location}~~ REMOVED')
                     region.locations.remove(location)
-                else:
-                    nixprint(location)
+                # else:
+                #     nixprint(location)
 
 # This hook allows you to access the item names & counts before the items are created. Use this to increase/decrease the amount of a specific item in the pool
 # Valid item_config key/values:
@@ -115,9 +114,9 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
 
 # The complete item pool prior to being set for generation is provided here, in case you want to make changes to it
 def after_create_items(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
-    nixprint('== ITEM POOL ==')
-    for item in item_pool: nixprint(item)
-    nixprint()
+    # nixprint('== ITEM POOL ==')
+    # for item in item_pool: nixprint(item)
+    # nixprint()
     return item_pool
 
 # Called before rules for accessing regions and locations are created. Not clear why you'd want this, but it's here.
