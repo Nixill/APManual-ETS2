@@ -2,7 +2,7 @@
 from typing import Any, Type
 from worlds.AutoWorld import World
 from Options import Option, FreeText, NumericOption, Toggle, DefaultOnToggle, Choice, TextChoice, Range, NamedRange, OptionGroup, PerGameCommonOptions, OptionSet
-from .Func import snake_case
+from .Func import nixprint, snake_case
 from .CsvData import state_list, dlc_list, truck_makes_list, company_list, photo_trophies_dict, viewpoints_dict, city_dict, dlc_aliases_dict
 
 start_args = {f'option_{snake_case(s)}': i for i, s in enumerate(state_list)} | {
@@ -224,6 +224,13 @@ class SkillItemsScattered(Toggle):
     """
     display_name = ''
 
+class FerryTicketItem(KeyItemChoice):
+    """
+    A Ferry Ticket is required before riding any ferries. Should it be part of the player's
+    starting inventory or the multiworld item pool?
+    """
+    display_name = 'Ferry Ticket'
+
 class BankLoanApprovalItem(KeyItemChoice):
     """
     A Bank Loan Approval is required before obtaining any loans from the bank. Should it be part
@@ -303,15 +310,12 @@ class ChecksMaxStateCount(NamedRange):
     """
     What is the maximum number of countries that should contain checks? Note that the other
     countries will still have keys, which must be obtained before driving in those countries.
-
-    The default for this option is the number of countries that currently exist (with all DLC).
-    Increasing this value has no effect besides future-proofing your yaml.
     """
     display_name = 'Maximum Number of Countries with Checks'
     range_start = 1
     range_end = 100
     special_range_names = {'unlimited': 0}
-    default = len(state_list)
+    default = 0
 
 class ChecksPercent(_PercentOption):
     """
@@ -322,30 +326,30 @@ class ChecksPercent(_PercentOption):
 class ChecksMaxPerStateCount(NamedRange):
     """
     What is the maximum number of checks that should appear per country? Companies are considered
-    country-less and are not affected by this option.
+    country-less and are not affected by this option. Player levels are not affected by checks
+    reduction at all.
     """
     display_name = 'Maximum Checks per Country'
     range_start = 1
     range_end = 1000
     special_range_names = {'unlimited': 0}
-    default = 1000
+    default = 0
 
 class CompanyChecksCount(NamedRange):
     """
     What is the number of companies that should appear as checks?
-
-    The default for this option is the number of companies that currently exist (with all DLC).
-    Increasing this value has no effect besides future-proofing your yaml.
     """
     display_name = 'Maximum Company Checks'
     range_start = 1
     range_end = 1000
     special_range_names = {'unlimited': 0}
-    default = len(company_list)
+    default = 0
 
 class MaxChecksCount(NamedRange):
     """
     What is the maximum number of checks that should be included across all categories?
+
+    Player levels are not considered part of this count.
 
     The default for this option is the number of checks that currently exist (with all DLC and all
     types enabled). Increasing this value has no effect besides future-proofing your yaml.
@@ -354,7 +358,7 @@ class MaxChecksCount(NamedRange):
     range_start = 1
     range_end = 10000
     special_range_names = {'unlimited': 0}
-    default = len(company_list) + len(city_dict) + len(photo_trophies_dict) + len(viewpoints_dict) + 36
+    default = 0
 
 def define_options(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Option[Any]]]:
     options["starting_location"] = StartingLocation
@@ -372,12 +376,13 @@ def define_options(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Opti
     options["player_level_checks"] = PlayerLevelChecks
     options["skill_items_on_levels"] = SkillItemsOnLevels
     options["skill_items_scattered"] = SkillItemsScattered
+    options["ferry_ticket_item"] = FerryTicketItem
     options["bank_loan_approval_item"] = BankLoanApprovalItem
     options["truck_contract_item_brand"] = TruckContractItemBrand
     options["truck_contract_brand_item_location"] = TruckContractBrandItemLocation
     options["truck_contract_off_brand_item_location"] = TruckContractOffBrandItemLocation
     options["trailer_contract_item"] = TrailerContractItem
-    options["quick_travel_ticket_item"] = QuickTravelTicketItem
+    options["quick_travel_item"] = QuickTravelTicketItem
     options["checks_percent_of_state_count"] = ChecksPercentOfStateCount
     options["checks_max_state_count"] = ChecksMaxStateCount
     options["checks_percent"] = ChecksPercent
@@ -429,6 +434,6 @@ def group_options(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[
         MaxChecksCount
     ]
 
-    print(groups)
+    nixprint(groups)
 
     return groups

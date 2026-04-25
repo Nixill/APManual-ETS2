@@ -770,7 +770,10 @@ public static class JsonDefs
 
       yield return Obj([
         KVP(Str.Syntax.Name, Str.Item.StateKey(state)),
-        KVPA(Str.Syntax.Category, [Str.Category.StateKey]),
+        KVPA(Str.Syntax.Category, [
+          Str.Category.StateKey,
+          Str.Category.State(state)
+        ]),
         KVPO(Str.Syntax.ExtraData, [
           KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.StateKeyConst)),
           KVP(Str.ExtraData.Key.Which, state),
@@ -1006,7 +1009,7 @@ public static class JsonDefs
     ]));
 
   public static IEnumerable<JProperty> GetDLCCategories()
-    => Data.DLCs.Keys.Except([Str.DLC.BaseGame])
+    => Data.DLCs.Keys
       .Select(d => KVPO(Str.Category.DLC(d), [
         KVP(Str.Syntax.CategoryHidden, true),
         KVPO(Str.Syntax.ExtraData, [

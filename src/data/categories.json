@@ -667,6 +667,13 @@
       "dlc_list": false
     }
   },
+  "Base Game (DLC)": {
+    "hidden": true,
+    "extra_data": {
+      "type": "dlc",
+      "which": "Base Game"
+    }
+  },
   "Going East! (DLC)": {
     "hidden": true,
     "extra_data": {

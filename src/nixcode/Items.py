@@ -4,13 +4,14 @@ from random import Random
 from typing import Any, Optional
 
 from worlds.AutoWorld import World
+from BaseClasses import MultiWorld
 
-from ..Helpers import remove_specific_item
+from ..Helpers import get_option_value, remove_specific_item
 from ..Items import ManualItem, item_name_to_item
 
 from .CsvData import Region, city_dict, company_list, photo_trophies_dict, viewpoints_dict, land_connections_dict
-from .Func import snake_case, pop_iter
-from .Options import starting_state
+from .Func import nixprint, snake_case, pop_iter
+from .Options import get_starting_state
 from .OptionDefs import KeyItemChoice
 
 early_item_count: int = 0
@@ -22,22 +23,33 @@ class CheckInfo:
     check_type: str
     region: Optional[Region] # Companies do not have a singular region
 
-def adjust_item_counts(item_config: list, world: World) -> None:
+def check_for_item(multiworld: MultiWorld, player: int, item:  dict[str, Any]) -> Optional[bool]:
+    if not 'extra_data' in item: return None
+    extra_data: dict[str, Any] = item["extra_data"]
+    tp = extra_data['type']
+
+    if tp == 'secret_delivery_instructions':
+        if get_option_value(multiworld, player, 'secret_deliveries_available') < extra_data['secret_delivery_number']: return False
+
+    return None
+
+
+def adjust_item_counts(item_config: dict[str, int|dict], world: World) -> None:
     # For countable item types, set the count based on the player options.
     # The countable item types are:
 
     # Piece of Secret Delivery #(i) Instructions
     for i in range(1, 21):
         piece = f'Piece of Secret Delivery #{i} Instructions'
-        if piece in item_config:
+        if piece in item_config and item_config[piece] != 0:
             item_config[piece] = world.options.secret_delivery_instruction_parts.value
 
     # Secret Delivery Completion
-    if 'Secret Delivery Completion' in item_config:
+    if 'Secret Delivery Completion' in item_config and item_config['Secret Delivery Completion'] != 0:
         item_config['Secret Delivery Completion'] = world.options.secret_deliveries_available.value
 
     # Delivery Token
-    if 'Delivery Token' in item_config:
+    if 'Delivery Token' in item_config and item_config['Delivery Token'] != 0:
         item_config['Delivery Token'] = world.options.delivery_tokens_available.value
 
     # and Player Level
@@ -58,6 +70,7 @@ def start_with_item(item_name: str, item_pool: list, world: World) -> None:
     remove_specific_item(item_pool, item)
 
 def early_item(item_name: str, world: World) -> None:
+    global early_item_count
     opt = world.multiworld.local_early_items[world.player]
     if item_name in opt:
         opt[item_name] += 1
@@ -69,8 +82,8 @@ def perform_final_grants(item_pool: list, world: World) -> list[str]:
     options = world.options
 
     # Assign the selected Starter Key and Key.
-    start_with_item(f'{starting_state} Starter Key', item_pool, world)
-    start_with_item(f'{starting_state} Key', item_pool, world)
+    start_with_item(f'{get_starting_state()} Starter Key', item_pool, world)
+    start_with_item(f'{get_starting_state()} Key', item_pool, world)
 
     # For truck contracts, first we should check which option was selected...
     truck_on_brand = options.truck_contract_item_brand.current_key.removeprefix('option_')
@@ -102,7 +115,7 @@ def perform_final_grants(item_pool: list, world: World) -> list[str]:
 
         # For grantable items, check the option to find out what's done about it
         if opt := data.get('granting_option'):
-            val = options.getattr(opt).value
+            val = getattr(options, opt).value
             if val == KeyItemChoice.option_start_with_item:
                 start_with_item(k, item_pool, world)
             elif val == KeyItemChoice.option_find_item_early:
@@ -114,6 +127,8 @@ def perform_final_grants(item_pool: list, world: World) -> list[str]:
     return item_names_to_remove
 
 def implement_checks_reduction(world: World):
+    global total_checks
+    global early_item_count
     options = world.options
     randomizer: Random = world.random
 
@@ -125,13 +140,22 @@ def implement_checks_reduction(world: World):
     max_check_count: int = options.max_checks_count.value
 
     # shortcut
-    if chance_of_state == 1 and chance_of_check == 1 and max_check_count == 0 \
-        and max_count_per_state == 0 and max_count_companies == 0 and max_check_count == 1:
-            return []
+    nixprint(f'chance_of_state: {chance_of_state}')
+    nixprint(f'chance_of_check: {chance_of_check}')
+    nixprint(f'max_check_count: {max_check_count}')
+    nixprint(f'max_count_per_state: {max_count_per_state}')
+    nixprint(f'max_count_companies: {max_count_companies}')
+    nixprint(f'max_check_count: {max_check_count}')
+    # temporarily skipping this shortcut for debugging this method
+    # if chance_of_state == 1 and chance_of_check == 1 and max_check_count == 0 \
+    #     and max_count_per_state == 0 and max_count_companies == 0 and max_check_count == 0:
+    #         return []
 
     all_states = list[str](options.states_available.value)
-    all_states.remove(starting_state)
-    accepted_states = set[str](starting_state)
+    nixprint(f'all_states: {all_states}')
+    nixprint(f'starting_state: {get_starting_state()}')
+    all_states.remove(get_starting_state())
+    accepted_states = {get_starting_state()}
 
     randomizer.shuffle(all_states)
 
@@ -142,6 +166,8 @@ def implement_checks_reduction(world: World):
                 accepted_states.add(state)
                 if max_state_count and len(accepted_states) >= max_state_count:
                     break
+
+    nixprint(f'Accepted states: {accepted_states}')
 
     all_checks_list: list[CheckInfo] = []
 
@@ -173,19 +199,21 @@ def implement_checks_reduction(world: World):
 
         state = check.region.state if check.region else None
         if state:
-            if total_checks[state] >= max_count_per_state: reject = True
+            if max_count_per_state and total_checks[state] >= max_count_per_state: reject = True
         else:
-            if total_checks[None] >= max_count_companies: reject = True
+            if max_count_companies and total_checks[None] >= max_count_companies: reject = True
 
         if chance_of_check < 1 and randomizer.random() > chance_of_check:
             reject = True
 
         if reject:
+            nixprint(f'Removing check: {check.check_type} - {check.name}')
             checks_to_remove.append(f'{check.check_type} - {check.name}')
         else:
+            nixprint(f'Keeping check: {check.check_type} - {check.name}')
             sum_checks += 1
             total_checks[state] += 1
-            if sum_checks >= max_check_count: break
+            if max_check_count and sum_checks >= max_check_count: break
 
     for check in all_checks_list:
         checks_to_remove.append(f'{check.check_type} - {check.name}')
@@ -196,15 +224,17 @@ def get_additional_state_keys(item_pool: list, world: World) -> None:
     """
     Gets additional keys to put enough early checks in logic in sphere 1.
     """
+    global total_checks
+    global early_item_count
 
     dlcs = world.options.dlcs_available.value
-    total_checks_in_starting_logic = total_checks[starting_state]
+    total_checks_in_starting_logic = total_checks[get_starting_state()]
     checks_needed = early_item_count + 1
 
     if total_checks_in_starting_logic >= checks_needed: return
 
-    states_in_starting_logic = {starting_state}
-    connected_states = get_land_connected_states(starting_state, world)
+    states_in_starting_logic = {get_starting_state()}
+    connected_states = get_land_connected_states(get_starting_state(), dlcs)
     randomizer: Random = world.random
 
     while total_checks_in_starting_logic < checks_needed and connected_states:
@@ -213,9 +243,9 @@ def get_additional_state_keys(item_pool: list, world: World) -> None:
         states_in_starting_logic.add(next_state)
         start_with_item(f'{next_state} Key', item_pool, world)
         total_checks_in_starting_logic += total_checks[next_state]
-        connected_states |= get_land_connected_states(next_state, world) - states_in_starting_logic
+        connected_states |= get_land_connected_states(next_state, dlcs) - states_in_starting_logic
 
-def get_land_connected_states(state: str, dlc_list: set[str], world: World) -> set[str]:
+def get_land_connected_states(state: str, dlc_list: set[str]) -> set[str]:
     out = set[str]()
 
     for r1, r2_list in land_connections_dict.items():

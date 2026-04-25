@@ -1,5 +1,6 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from typing import Any
+from ..nixcode.Func import nixprint
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
@@ -19,7 +20,7 @@ from ..Helpers import is_option_enabled, get_option_value, format_state_prog_ite
 import logging
 
 # Organizing my methods into my own files to make things easier and more readable
-from ..nixcode.Options import validate_options_early, starting_state
+from ..nixcode.Options import validate_options_early
 from ..nixcode.Items import perform_final_grants, adjust_item_counts, implement_checks_reduction
 
 ########################################################################################
@@ -59,11 +60,15 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
 
     # Add your code here to calculate which locations to remove
 
+    nixprint('== LOCATION POOL ==')
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
                 if location.name in locationNamesToRemove:
+                    nixprint(f'~~{location}~~ REMOVED')
                     region.locations.remove(location)
+                else:
+                    nixprint(location)
 
 # This hook allows you to access the item names & counts before the items are created. Use this to increase/decrease the amount of a specific item in the pool
 # Valid item_config key/values:
@@ -92,8 +97,11 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     # to the list multiple times if you want to remove multiple copies of it.
 
     for itemName in itemNamesToRemove:
-        item = next(i for i in item_pool if i.name == itemName)
-        remove_specific_item(item_pool, item)
+        try:
+            item = next(i for i in item_pool if i.name == itemName)
+            remove_specific_item(item_pool, item)
+        except StopIteration:
+            pass
 
     return item_pool
 
@@ -107,6 +115,9 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
 
 # The complete item pool prior to being set for generation is provided here, in case you want to make changes to it
 def after_create_items(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
+    nixprint('== ITEM POOL ==')
+    for item in item_pool: nixprint(item)
+    nixprint()
     return item_pool
 
 # Called before rules for accessing regions and locations are created. Not clear why you'd want this, but it's here.
