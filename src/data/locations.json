@@ -9728,7 +9728,8 @@
   {
     "name": "Company - AA - Auto di Alonso",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -9751,7 +9752,8 @@
   {
     "name": "Company - ACC",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -9785,7 +9787,8 @@
   {
     "name": "Company - ACI SRL",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Base Game Reachable|",
     "extra_data": {
@@ -9806,7 +9809,8 @@
   {
     "name": "Company - Adrica",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Croatia/West Balkans Reachable|",
     "extra_data": {
@@ -9829,7 +9833,8 @@
   {
     "name": "Company - AeroBaltica",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -9867,7 +9872,8 @@
   {
     "name": "Company - Agregados",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -9895,7 +9901,8 @@
   {
     "name": "Company - Agrominta UAB",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Lithuania/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -9918,7 +9925,8 @@
   {
     "name": "Company - AgroNord",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Denmark/Scandinavia Reachable|",
     "extra_data": {
@@ -9960,7 +9968,8 @@
   {
     "name": "Company - AI Automotive",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Germany/Base Game Reachable| or |Slovenia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |North Macedonia/West Balkans Reachable|",
     "extra_data": {
@@ -10001,7 +10010,8 @@
   {
     "name": "Company - Alumcore",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Sweden/Nordic Horizons Reachable|",
     "extra_data": {
@@ -10024,7 +10034,8 @@
   {
     "name": "Company - Aluxion",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Bosnia and Herzegovina/West Balkans Reachable| or |Montenegro/West Balkans Reachable|",
     "extra_data": {
@@ -10052,7 +10063,8 @@
   {
     "name": "Company - APP",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -10080,7 +10092,8 @@
   {
     "name": "Company - Associated Nordic Ports",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -10113,7 +10126,8 @@
   {
     "name": "Company - Ateria",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Nordic Horizons Reachable| or |Finland/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -10141,7 +10155,8 @@
   {
     "name": "Company - Balkan Loco",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Slovenia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |North Macedonia/West Balkans Reachable| or |Romania/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Turkiye/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -10190,7 +10205,8 @@
   {
     "name": "Company - Balteus Yachts",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -10228,7 +10244,8 @@
   {
     "name": "Company - Baltic Metallurgy",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -10266,7 +10283,8 @@
   {
     "name": "Company - Baltomorsk",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -10299,7 +10317,8 @@
   {
     "name": "Company - Baltrak Lojistik",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Turkiye/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -10322,7 +10341,8 @@
   {
     "name": "Company - Batisse",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable|",
     "extra_data": {
@@ -10345,7 +10365,8 @@
   {
     "name": "Company - BCP",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Germany/Base Game Reachable| or |Italy/Base Game Reachable| or |Slovakia/Base Game Reachable| or |Poland/Going East! Reachable| or |Hungary/Going East! Reachable| or |United Kingdom/Base Game Reachable|",
     "extra_data": {
@@ -10391,7 +10412,8 @@
   {
     "name": "Company - Betunija",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Croatia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Kosovo/West Balkans Reachable| or |Albania/West Balkans Reachable|",
     "extra_data": {
@@ -10434,7 +10456,8 @@
   {
     "name": "Company - BHB - La Raffinerie",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable|",
     "extra_data": {
@@ -10457,7 +10480,8 @@
   {
     "name": "Company - BHV",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Base Game Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable| or |Denmark/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Norway/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Turkiye/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -10545,7 +10569,8 @@
   {
     "name": "Company - Bjork",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable|",
     "extra_data": {
@@ -10578,7 +10603,8 @@
   {
     "name": "Company - BLT",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Estonia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -10611,7 +10637,8 @@
   {
     "name": "Company - BOISSERIE J-P",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable|",
     "extra_data": {
@@ -10634,7 +10661,8 @@
   {
     "name": "Company - Borealis Shipyard",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -10662,7 +10690,8 @@
   {
     "name": "Company - Bosfir Komerc",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Bosnia and Herzegovina/West Balkans Reachable|",
     "extra_data": {
@@ -10685,7 +10714,8 @@
   {
     "name": "Company - Brawen Transport",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Slovenia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |North Macedonia/West Balkans Reachable| or |Romania/Road to the Black Sea Reachable| or |Greece/Greece Reachable|",
     "extra_data": {
@@ -10735,7 +10765,8 @@
   {
     "name": "Company - Byggpro",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -10768,7 +10799,8 @@
   {
     "name": "Company - Cantera Iberica",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -10796,7 +10828,8 @@
   {
     "name": "Company - Canteras del Sur",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable|",
     "extra_data": {
@@ -10819,7 +10852,8 @@
   {
     "name": "Company - Cantiere Navale",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -10842,7 +10876,8 @@
   {
     "name": "Company - Cargotras",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Base Game Reachable|",
     "extra_data": {
@@ -10863,7 +10898,8 @@
   {
     "name": "Company - Casa Olivera",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable|",
     "extra_data": {
@@ -10886,7 +10922,8 @@
   {
     "name": "Company - Celler",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Croatia/West Balkans Reachable| or |Kosovo/West Balkans Reachable| or |Albania/West Balkans Reachable| or |Greece/Greece Reachable|",
     "extra_data": {
@@ -10925,7 +10962,8 @@
   {
     "name": "Company - Cemeltex",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Bulgaria/Road to the Black Sea Reachable| or |Kaliningrad/Beyond the Baltic Sea Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Turkiye/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -10979,7 +11017,8 @@
   {
     "name": "Company - Cesare Supermarcato",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Base Game Reachable|",
     "extra_data": {
@@ -11000,7 +11039,8 @@
   {
     "name": "Company - Cesta, S.L.",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable|",
     "extra_data": {
@@ -11023,7 +11063,8 @@
   {
     "name": "Company - CGLA",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable| or |Serbia/West Balkans Reachable| or |Romania/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -11063,7 +11104,8 @@
   {
     "name": "Company - Charmey",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Switzerland/Base Game Reachable|",
     "extra_data": {
@@ -11084,7 +11126,8 @@
   {
     "name": "Company - Chimi",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable|",
     "extra_data": {
@@ -11107,7 +11150,8 @@
   {
     "name": "Company - Christopoulos Oikodomika",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable|",
     "extra_data": {
@@ -11130,7 +11174,8 @@
   {
     "name": "Company - CNP",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Germany/Base Game Reachable| or |Austria/Base Game Reachable| or |Croatia/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Italy/Italia Reachable| or |Albania/West Balkans Reachable| or |Greece/Greece Reachable|",
     "extra_data": {
@@ -11181,7 +11226,8 @@
   {
     "name": "Company - Comoto",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable|",
     "extra_data": {
@@ -11204,7 +11250,8 @@
   {
     "name": "Company - Construcciones Elcano, S.L.",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable|",
     "extra_data": {
@@ -11227,7 +11274,8 @@
   {
     "name": "Company - Container port",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Germany/Base Game Reachable| or |Denmark/Scandinavia Reachable| or |Slovenia/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Albania/West Balkans Reachable| or |Greece/Greece Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -11321,7 +11369,8 @@
   {
     "name": "Company - Cortica Prima",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Portugal/Iberia Reachable|",
     "extra_data": {
@@ -11344,7 +11393,8 @@
   {
     "name": "Company - Construzione di Edifici",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -11367,7 +11417,8 @@
   {
     "name": "Company - Crno Drvo",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Montenegro/West Balkans Reachable|",
     "extra_data": {
@@ -11390,7 +11441,8 @@
   {
     "name": "Company - Dans le Jardin",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable|",
     "extra_data": {
@@ -11413,7 +11465,8 @@
   {
     "name": "Company - Deutsche Frachthafen",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Germany/Base Game Reachable|",
     "extra_data": {
@@ -11434,7 +11487,8 @@
   {
     "name": "Company - Dimitriou S.A.",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable|",
     "extra_data": {
@@ -11457,7 +11511,8 @@
   {
     "name": "Company - Dobra Ferma",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Bulgaria/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -11480,7 +11535,8 @@
   {
     "name": "Company - DomDepo",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Bulgaria/Road to the Black Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable| or |Turkiye/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Austria/Base Game Reachable| or |Germany/Base Game Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Spain/Iberia Reachable|",
     "extra_data": {
@@ -11541,7 +11597,8 @@
   {
     "name": "Company - Drekkar Trans",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Denmark/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable|",
     "extra_data": {
@@ -11583,7 +11640,8 @@
   {
     "name": "Company - Dulcis",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Romania/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -11606,7 +11664,8 @@
   {
     "name": "Company - DunaVia",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Croatia/West Balkans Reachable| or |Serbia/West Balkans Reachable|",
     "extra_data": {
@@ -11634,7 +11693,8 @@
   {
     "name": "Company - Eliarchos",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable|",
     "extra_data": {
@@ -11657,7 +11717,8 @@
   {
     "name": "Company - Engeron",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable|",
     "extra_data": {
@@ -11680,7 +11741,8 @@
   {
     "name": "Company - Eolo Lines",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable| or |Italy/Italia Reachable| or |Greece/Greece Reachable| or |Spain/Iberia Reachable|",
     "extra_data": {
@@ -11721,7 +11783,8 @@
   {
     "name": "Company - EPPA",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Portugal/Iberia Reachable|",
     "extra_data": {
@@ -11744,7 +11807,8 @@
   {
     "name": "Company - Estonian Paper AS",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Estonia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -11767,7 +11831,8 @@
   {
     "name": "Company - Eumefa",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable| or |Albania/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Slovenia/West Balkans Reachable|",
     "extra_data": {
@@ -11811,7 +11876,8 @@
   {
     "name": "Company - EuroAcres",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|United Kingdom/Base Game Reachable| or |Netherlands/Base Game Reachable| or |Belgium/Base Game Reachable| or |Luxembourg/Base Game Reachable| or |France/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Italy/Base Game Reachable| or |Austria/Base Game Reachable| or |Hungary/Going East! Reachable| or |Czech Republic/Base Game Reachable| or |Poland/Base Game Reachable| or |Germany/Base Game Reachable| or |Netherlands/Base Game Reachable|",
     "extra_data": {
@@ -11891,7 +11957,8 @@
   {
     "name": "Company - EuroGoodies",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|United Kingdom/Base Game Reachable| or |France/Base Game Reachable| or |Italy/Base Game Reachable| or |Slovenia/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Montenegro/West Balkans Reachable| or |Hungary/Going East! Reachable| or |Slovakia/Going East! Reachable| or |Austria/Base Game Reachable| or |Czech Republic/Base Game Reachable| or |Poland/Base Game Reachable| or |Germany/Base Game Reachable| or |Netherlands/Base Game Reachable| or |Belgium/Base Game Reachable|",
     "extra_data": {
@@ -11977,7 +12044,8 @@
   {
     "name": "Company - Eviksi ZS",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Latvia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -12000,7 +12068,8 @@
   {
     "name": "Company - Exomar",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -12023,7 +12092,8 @@
   {
     "name": "Company - ECO",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable|",
     "extra_data": {
@@ -12046,7 +12116,8 @@
   {
     "name": "Company - Fallow Cargo",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Croatia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Montenegro/West Balkans Reachable| or |Albania/West Balkans Reachable| or |Greece/Greece Reachable| or |Turkiye/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -12101,7 +12172,8 @@
   {
     "name": "Company - Fattoria Felice",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -12124,7 +12196,8 @@
   {
     "name": "Company - FCP",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Belgium/Base Game Reachable| or |Germany/Base Game Reachable| or |Poland/Base Game Reachable| or |Austria/Base Game Reachable| or |Italy/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
     "extra_data": {
@@ -12170,7 +12243,8 @@
   {
     "name": "Company - Finnish Tyres",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -12198,7 +12272,8 @@
   {
     "name": "Company - Fjoste",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable|",
     "extra_data": {
@@ -12231,7 +12306,8 @@
   {
     "name": "Company - FLE",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Nordic Horizons Reachable| or |Denmark/Scandinavia Reachable| or |Germany/Base Game Reachable| or |France/Base Game Reachable| or |Spain/Iberia Reachable| or |Montenegro/West Balkans Reachable| or |North Macedonia/West Balkans Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Turkiye/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -12297,7 +12373,8 @@
   {
     "name": "Company - Freyr",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Nordic Horizons Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable| or |Denmark/Scandinavia Reachable|",
     "extra_data": {
@@ -12340,7 +12417,8 @@
   {
     "name": "Company - FUI SpA",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -12363,7 +12441,8 @@
   {
     "name": "Company - Gallia Ferries",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable| or |France/Vive la France ! Reachable|",
     "extra_data": {
@@ -12392,7 +12471,8 @@
   {
     "name": "Company - Globeur",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable|",
     "extra_data": {
@@ -12415,7 +12495,8 @@
   {
     "name": "Company - GNT",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable| or |Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -12469,7 +12550,8 @@
   {
     "name": "Company - Gomme du Monde",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable|",
     "extra_data": {
@@ -12492,7 +12574,8 @@
   {
     "name": "Company - Granoro",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Germany/Base Game Reachable|",
     "extra_data": {
@@ -12513,7 +12596,8 @@
   {
     "name": "Company - ITS / Hannover Expo",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Germany/Base Game Reachable|",
     "extra_data": {
@@ -12534,7 +12618,8 @@
   {
     "name": "Company - Hotel Artemia",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable|",
     "extra_data": {
@@ -12557,7 +12642,8 @@
   {
     "name": "Company - Huerta del Mar Menor, S.L.",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Portugal/Iberia Reachable| or |Spain/Iberia Reachable|",
     "extra_data": {
@@ -12585,7 +12671,8 @@
   {
     "name": "Company - Huilant",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable|",
     "extra_data": {
@@ -12608,7 +12695,8 @@
   {
     "name": "Company - Iberatomica",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable|",
     "extra_data": {
@@ -12631,7 +12719,8 @@
   {
     "name": "Company - IBP",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Lithuania/Beyond the Baltic Sea Reachable| or |Finland/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -12659,7 +12748,8 @@
   {
     "name": "Company - Icaria",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable|",
     "extra_data": {
@@ -12682,7 +12772,8 @@
   {
     "name": "Company - Ika Bohag",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Base Game Reachable| or |Germany/Base Game Reachable| or |Croatia/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Denmark/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |France/Base Game Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable| or |Russia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -12785,7 +12876,8 @@
   {
     "name": "Company - Ini",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -12808,7 +12900,8 @@
   {
     "name": "Company - ITCC",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|United Kingdom/Base Game Reachable| or |Belgium/Base Game Reachable| or |Luxembourg/Base Game Reachable| or |Germany/Base Game Reachable| or |Poland/Base Game Reachable| or |Czech Republic/Going East! Reachable| or |Slovakia/Going East! Reachable| or |Austria/Base Game Reachable| or |Slovenia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |North Macedonia/West Balkans Reachable|",
     "extra_data": {
@@ -12879,7 +12972,8 @@
   {
     "name": "Company - Jastuk",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Bosnia and Herzegovina/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Albania/West Balkans Reachable|",
     "extra_data": {
@@ -12912,7 +13006,8 @@
   {
     "name": "Company - Kaarfor",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Turkiye/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Hungary/Going East! Reachable| or |Czech Republic/Going East! Reachable| or |Poland/Base Game Reachable| or |Germany/Base Game Reachable| or |Netherlands/Base Game Reachable| or |France/Base Game Reachable| or |Italy/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
     "extra_data": {
@@ -12983,7 +13078,8 @@
   {
     "name": "Company - Kathode",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Austria/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Germany/Base Game Reachable| or |Finland/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable|",
     "extra_data": {
@@ -13024,7 +13120,8 @@
   {
     "name": "Company - Kivisydan Betoni",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -13047,7 +13144,8 @@
   {
     "name": "Company - Konstnorr",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -13089,7 +13187,8 @@
   {
     "name": "Company - Ladoga Auto",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable| or |Kaliningrad/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -13122,7 +13221,8 @@
   {
     "name": "Company - Larus",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Slovenia/West Balkans Reachable|",
     "extra_data": {
@@ -13145,7 +13245,8 @@
   {
     "name": "Company - Lateds",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Latvia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -13168,7 +13269,8 @@
   {
     "name": "Company - LVR / Latvijas Vagonu Rupnica",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Latvia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -13191,7 +13293,8 @@
   {
     "name": "Company - Lavish Foods",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable|",
     "extra_data": {
@@ -13214,7 +13317,8 @@
   {
     "name": "Company - Lefko Cotton",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable|",
     "extra_data": {
@@ -13237,7 +13341,8 @@
   {
     "name": "Company - Libellula",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Base Game Reachable|",
     "extra_data": {
@@ -13258,7 +13363,8 @@
   {
     "name": "Company - Lindakainen / Lintukainen Oy",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Estonia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -13291,7 +13397,8 @@
   {
     "name": "Company - Lisette Logistics",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Base Game Reachable|",
     "extra_data": {
@@ -13312,7 +13419,8 @@
   {
     "name": "Company - LKW",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|United Kingdom/Base Game Reachable| or |France/Base Game Reachable| or |Luxembourg/Base Game Reachable| or |Netherlands/Base Game Reachable| or |Germany/Base Game Reachable| or |Italy/Base Game Reachable| or |Austria/Base Game Reachable| or |Czech Republic/Base Game Reachable| or |Poland/Going East! Reachable| or |Slovakia/Going East! Reachable| or |Hungary/Going East! Reachable|",
     "extra_data": {
@@ -13383,7 +13491,8 @@
   {
     "name": "Company - Log n Stick",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Romania/Road to the Black Sea Reachable| or |Turkiye/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -13411,7 +13520,8 @@
   {
     "name": "Company - Logistica Atlantica",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Portugal/Iberia Reachable| or |Spain/Iberia Reachable|",
     "extra_data": {
@@ -13439,7 +13549,8 @@
   {
     "name": "Company - Low Field",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable| or |Turkiye/Road to the Black Sea Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Romania/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -13479,7 +13590,8 @@
   {
     "name": "Company - Maatila Egres",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -13507,7 +13619,8 @@
   {
     "name": "Company - Marina",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Sweden/Scandinavia Reachable| or |Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Denmark/Scandinavia Reachable| or |Germany/Base Game Reachable| or |Croatia/West Balkans Reachable| or |Italy/Italia Reachable| or |Romania/Road to the Black Sea Reachable| or |Turkiye/Road to the Black Sea Reachable| or |Greece/Greece Reachable| or |Albania/West Balkans Reachable| or |France/Vive la France ! Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -13616,7 +13729,8 @@
   {
     "name": "Company - Marmo SpA",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -13639,7 +13753,8 @@
   {
     "name": "Company - Medas",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable|",
     "extra_data": {
@@ -13662,7 +13777,8 @@
   {
     "name": "Company - Metallis",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -13695,7 +13811,8 @@
   {
     "name": "Company - Mjolnir Mining",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -13723,7 +13840,8 @@
   {
     "name": "Company - MS Stein",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable|",
     "extra_data": {
@@ -13751,7 +13869,8 @@
   {
     "name": "Company - Metallurgy Muromets",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Russia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -13774,7 +13893,8 @@
   {
     "name": "Company - MVM carriere",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable|",
     "extra_data": {
@@ -13797,7 +13917,8 @@
   {
     "name": "Company - NBFC",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|United Kingdom/Base Game Reachable| or |France/Base Game Reachable| or |Germany/Base Game Reachable| or |Czech Republic/Going East! Reachable| or |Hungary/Going East! Reachable|",
     "extra_data": {
@@ -13838,7 +13959,8 @@
   {
     "name": "Company - NCH",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Russia/Beyond the Baltic Sea Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -13881,7 +14003,8 @@
   {
     "name": "Company - NOFEBA",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -13914,7 +14037,8 @@
   {
     "name": "Company - Nordic Crown",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Denmark/Scandinavia Reachable| or |Norway/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable|",
     "extra_data": {
@@ -13952,7 +14076,8 @@
   {
     "name": "Company - Nordic Stenbrott",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable|",
     "extra_data": {
@@ -13980,7 +14105,8 @@
   {
     "name": "Company - Norrfood",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Denmark/Scandinavia Reachable|",
     "extra_data": {
@@ -14022,7 +14148,8 @@
   {
     "name": "Company - Norrsken",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Denmark/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable|",
     "extra_data": {
@@ -14060,7 +14187,8 @@
   {
     "name": "Company - Norse Rail",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Sweden/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -14093,7 +14221,8 @@
   {
     "name": "Company - Nos Paturages",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable| or |Spain/Iberia Reachable|",
     "extra_data": {
@@ -14122,7 +14251,8 @@
   {
     "name": "Company - Noskonitta",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Lithuania/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -14145,7 +14275,8 @@
   {
     "name": "Company - NS Chemicals",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Greece/Greece Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable| or |Russia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -14211,7 +14342,8 @@
   {
     "name": "Company - NS Oil",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Turkiye/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Austria/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Germany/Base Game Reachable| or |Denmark/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable| or |Kaliningrad/Beyond the Baltic Sea Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -14319,7 +14451,8 @@
   {
     "name": "Company - Nucleon",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -14353,7 +14486,8 @@
   {
     "name": "Company - Nutri Molle",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Nordic Horizons Reachable|",
     "extra_data": {
@@ -14376,7 +14510,8 @@
   {
     "name": "Company - Ocean Solutions Group",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Romania/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Greece/Greece Reachable| or |Germany/Base Game Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -14422,7 +14557,8 @@
   {
     "name": "Company - Onnelik talu",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Estonia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -14445,7 +14581,8 @@
   {
     "name": "Company - Ortiz",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -14473,7 +14610,8 @@
   {
     "name": "Company - Otel Impecabil",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Romania/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -14496,7 +14634,8 @@
   {
     "name": "Company - PIAC",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Serbia/West Balkans Reachable| or |Italy/Italia Reachable|",
     "extra_data": {
@@ -14525,7 +14664,8 @@
   {
     "name": "Company - PK Medved",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Russia/Beyond the Baltic Sea Reachable| or |Kaliningrad/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -14553,7 +14693,8 @@
   {
     "name": "Company - Polar Fish",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Denmark/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -14600,7 +14741,8 @@
   {
     "name": "Company - Polaris Lines",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Denmark/Scandinavia Reachable| or |Germany/Base Game Reachable|",
     "extra_data": {
@@ -14655,7 +14797,8 @@
   {
     "name": "Company - Port de Conteneur",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable|",
     "extra_data": {
@@ -14678,7 +14821,8 @@
   {
     "name": "Company - Posped",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Hungary/Going East! Reachable| or |Slovakia/Base Game Reachable| or |Poland/Going East! Reachable| or |Austria/Base Game Reachable| or |Italy/Base Game Reachable| or |France/Base Game Reachable| or |Netherlands/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
     "extra_data": {
@@ -14734,7 +14878,8 @@
   {
     "name": "Company - PP Chimica Italia",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -14757,7 +14902,8 @@
   {
     "name": "Company - Primel",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable| or |Denmark/Scandinavia Reachable|",
     "extra_data": {
@@ -14800,7 +14946,8 @@
   {
     "name": "Company - Quadrelli SpA",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -14823,7 +14970,8 @@
   {
     "name": "Company - Radus",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Bulgaria/Road to the Black Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Montenegro/West Balkans Reachable| or |Turkiye/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -14883,7 +15031,8 @@
   {
     "name": "Company - Renar Logistik",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |France/Vive la France ! Reachable|",
     "extra_data": {
@@ -14941,7 +15090,8 @@
   {
     "name": "Company - Renat",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Austria/Base Game Reachable| or |Germany/Base Game Reachable|",
     "extra_data": {
@@ -14997,7 +15147,8 @@
   {
     "name": "Company - Renor",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Nordic Horizons Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable| or |Denmark/Scandinavia Reachable|",
     "extra_data": {
@@ -15040,7 +15191,8 @@
   {
     "name": "Company - RIMAF",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Turkiye/Road to the Black Sea Reachable| or |North Macedonia/West Balkans Reachable| or |Romania/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -15074,7 +15226,8 @@
   {
     "name": "Company - Rock Eater",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable| or |North Macedonia/West Balkans Reachable| or |Montenegro/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Turkiye/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -15129,7 +15282,8 @@
   {
     "name": "Company - Rosmark",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Russia/Beyond the Baltic Sea Reachable| or |Kaliningrad/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -15162,7 +15316,8 @@
   {
     "name": "Company - RT Log",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Germany/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Austria/Base Game Reachable| or |Spain/Iberia Reachable|",
     "extra_data": {
@@ -15198,7 +15353,8 @@
   {
     "name": "Company - Rump",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Romania/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -15221,7 +15377,8 @@
   {
     "name": "Company - S.A.L. S.R.L.",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -15244,7 +15401,8 @@
   {
     "name": "Company - Sag & Tre",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable|",
     "extra_data": {
@@ -15272,7 +15430,8 @@
   {
     "name": "Company - SAL",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -15300,7 +15459,8 @@
   {
     "name": "Company - Sanbuilders",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|United Kingdom/Base Game Reachable| or |Luxembourg/Base Game Reachable| or |Netherlands/Base Game Reachable| or |Germany/Base Game Reachable| or |Denmark/Scandinavia Reachable| or |Czech Republic/Base Game Reachable| or |Poland/Going East! Reachable| or |Hungary/Going East! Reachable| or |Austria/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Serbia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Albania/West Balkans Reachable| or |Greece/Greece Reachable| or |Finland/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable|",
     "extra_data": {
@@ -15406,7 +15566,8 @@
   {
     "name": "Company - Scania",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|United Kingdom/Base Game Reachable| or |Germany/Base Game Reachable| or |Portugal/Iberia Reachable| or |Italy/Base Game Reachable| or |Croatia/West Balkans Reachable| or |Romania/Road to the Black Sea Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -15471,7 +15632,8 @@
   {
     "name": "Company - Scout",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Czech Republic/Base Game Reachable|",
     "extra_data": {
@@ -15492,7 +15654,8 @@
   {
     "name": "Company - SCS Paper",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Bosnia and Herzegovina/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Romania/Road to the Black Sea Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -15537,7 +15700,8 @@
   {
     "name": "Company - SellPlan",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Base Game Reachable| or |Austria/Base Game Reachable| or |Slovakia/Going East! Reachable| or |Czech Republic/Base Game Reachable| or |Poland/Going East! Reachable| or |Germany/Base Game Reachable| or |Netherlands/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
     "extra_data": {
@@ -15593,7 +15757,8 @@
   {
     "name": "Company - Severoatom",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Russia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -15616,7 +15781,8 @@
   {
     "name": "Company - Shuttle Cola",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Romania/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Greece/Greece Reachable| or |Albania/West Balkans Reachable| or |Montenegro/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Austria/Base Game Reachable| or |Germany/Base Game Reachable| or |Norway/Nordic Horizons Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -15692,7 +15858,8 @@
   {
     "name": "Company - Sirin Air",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Russia/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -15715,7 +15882,8 @@
   {
     "name": "Company - Skog Paperworks",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Sweden/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable|",
     "extra_data": {
@@ -15743,7 +15911,8 @@
   {
     "name": "Company - Slava Auto",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Croatia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Montenegro/West Balkans Reachable| or |Kosovo/West Balkans Reachable| or |Albania/West Balkans Reachable|",
     "extra_data": {
@@ -15786,7 +15955,8 @@
   {
     "name": "Company - Spinelli",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable| or |Italy/Base Game Reachable|",
     "extra_data": {
@@ -15812,7 +15982,8 @@
   {
     "name": "Company - Sporklift",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Romania/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -15840,7 +16011,8 @@
   {
     "name": "Company - Steinbruch",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Poland/Base Game Reachable| or |Czech Republic/Base Game Reachable| or |Austria/Base Game Reachable| or |Germany/Base Game Reachable| or |Switzerland/Base Game Reachable| or |France/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
     "extra_data": {
@@ -15891,7 +16063,8 @@
   {
     "name": "Company - Stokes",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|United Kingdom/Base Game Reachable| or |France/Base Game Reachable| or |Belgium/Base Game Reachable| or |Netherlands/Base Game Reachable| or |Germany/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Austria/Base Game Reachable| or |Slovakia/Going East! Reachable| or |Poland/Base Game Reachable| or |Slovenia/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Kosovo/West Balkans Reachable| or |Albania/West Balkans Reachable|",
     "extra_data": {
@@ -15977,7 +16150,8 @@
   {
     "name": "Company - Stomanena Roza",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Bulgaria/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -16000,7 +16174,8 @@
   {
     "name": "Company - Subse",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Croatia/West Balkans Reachable| or |Romania/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Montenegro/West Balkans Reachable| or |North Macedonia/West Balkans Reachable| or |Turkiye/Road to the Black Sea Reachable| or |Greece/Greece Reachable| or |France/Vive la France ! Reachable|",
     "extra_data": {
@@ -16061,7 +16236,8 @@
   {
     "name": "Company - SuperCesta",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable|",
     "extra_data": {
@@ -16084,7 +16260,8 @@
   {
     "name": "Company - Suprema",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable| or |Kaliningrad/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -16137,7 +16314,8 @@
   {
     "name": "Company - Sygomidi",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable|",
     "extra_data": {
@@ -16160,7 +16338,8 @@
   {
     "name": "Company - Syllurgy",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable| or |Serbia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable|",
     "extra_data": {
@@ -16194,7 +16373,8 @@
   {
     "name": "Company - SysChema",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Greece/Greece Reachable| or |Serbia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Croatia/West Balkans Reachable|",
     "extra_data": {
@@ -16233,7 +16413,8 @@
   {
     "name": "Company - TDC Auto Terminal",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable| or |Slovenia/West Balkans Reachable| or |Germany/Base Game Reachable|",
     "extra_data": {
@@ -16264,7 +16445,8 @@
   {
     "name": "Company - TE Logistica",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -16287,7 +16469,8 @@
   {
     "name": "Company - Terminal Container",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Base Game Reachable|",
     "extra_data": {
@@ -16308,7 +16491,8 @@
   {
     "name": "Company - Tesoro Gustoso",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Base Game Reachable|",
     "extra_data": {
@@ -16329,7 +16513,8 @@
   {
     "name": "Company - Timber Turtle",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Romania/Road to the Black Sea Reachable| or |Serbia/West Balkans Reachable|",
     "extra_data": {
@@ -16358,7 +16543,8 @@
   {
     "name": "Company - TQG",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Denmark/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable|",
     "extra_data": {
@@ -16401,7 +16587,8 @@
   {
     "name": "Company - Trade Market Istanbul",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Turkiye/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -16424,7 +16611,8 @@
   {
     "name": "Company - Tradeaux",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Hungary/Going East! Reachable| or |Austria/Base Game Reachable| or |Poland/Going East! Reachable| or |Czech Republic/Base Game Reachable| or |Germany/Base Game Reachable| or |France/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
     "extra_data": {
@@ -16475,7 +16663,8 @@
   {
     "name": "Company - Train Foundry",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Croatia/West Balkans Reachable| or |Romania/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Spain/Iberia Reachable|",
     "extra_data": {
@@ -16515,7 +16704,8 @@
   {
     "name": "Company - Trameri",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Nordic Horizons Reachable| or |Poland/Base Game Reachable| or |Czech Republic/Base Game Reachable| or |Hungary/Going East! Reachable| or |Austria/Base Game Reachable| or |France/Base Game Reachable| or |United Kingdom/Base Game Reachable| or |Netherlands/Base Game Reachable|",
     "extra_data": {
@@ -16571,7 +16761,8 @@
   {
     "name": "Company - TransiNet",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Poland/Base Game Reachable| or |Czech Republic/Going East! Reachable| or |Hungary/Going East! Reachable| or |Italy/Base Game Reachable| or |Germany/Base Game Reachable| or |Belgium/Base Game Reachable| or |Netherlands/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
     "extra_data": {
@@ -16627,7 +16818,8 @@
   {
     "name": "Company - Transportes Caballeria",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -16655,7 +16847,8 @@
   {
     "name": "Company - Transporti Mediterraneo",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Italy/Italia Reachable|",
     "extra_data": {
@@ -16678,7 +16871,8 @@
   {
     "name": "Company - Tree-ET",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Poland/Base Game Reachable| or |Slovakia/Base Game Reachable| or |Austria/Base Game Reachable| or |Germany/Base Game Reachable| or |Switzerland/Base Game Reachable| or |France/Base Game Reachable| or |Belgium/Base Game Reachable| or |United Kingdom/Base Game Reachable| or |Spain/Iberia Reachable|",
     "extra_data": {
@@ -16739,7 +16933,8 @@
   {
     "name": "Company - TS Atlas",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -16767,7 +16962,8 @@
   {
     "name": "Company - TTK",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Bulgaria/Road to the Black Sea Reachable|",
     "extra_data": {
@@ -16790,7 +16986,8 @@
   {
     "name": "Company - UKKO Voima",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -16813,7 +17010,8 @@
   {
     "name": "Company - Vainamoinen Oy",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -16836,7 +17034,8 @@
   {
     "name": "Company - Vanha Kivi",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Russia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Finland/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -16879,7 +17078,8 @@
   {
     "name": "Company - Vesna",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Bosnia and Herzegovina/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |North Macedonia/West Balkans Reachable|",
     "extra_data": {
@@ -16912,7 +17112,8 @@
   {
     "name": "Company - Viljo paperitehdas Oy",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -16940,7 +17141,8 @@
   {
     "name": "Company - Villco",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Slovenia/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Kosovo/West Balkans Reachable| or |Montenegro/West Balkans Reachable| or |North Macedonia/West Balkans Reachable| or |Greece/Greece Reachable|",
     "extra_data": {
@@ -16999,7 +17201,8 @@
   {
     "name": "Company - Vilniaus Popieriaus Fabrikas",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Lithuania/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -17022,7 +17225,8 @@
   {
     "name": "Company - Vitas Power",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Finland/Nordic Horizons Reachable| or |Denmark/Scandinavia Reachable| or |Germany/Base Game Reachable| or |Serbia/West Balkans Reachable| or |Italy/Italia Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
     "extra_data": {
@@ -17073,7 +17277,8 @@
   {
     "name": "Company - Voitreux",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Base Game Reachable|",
     "extra_data": {
@@ -17094,7 +17299,8 @@
   {
     "name": "Company - Volvo / Volvo Trucks",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|United Kingdom/Base Game Reachable| or |France/Vive la France ! Reachable| or |Luxembourg/Base Game Reachable| or |Spain/Iberia Reachable| or |Italy/Italia Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Sweden/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable|",
     "extra_data": {
@@ -17165,7 +17371,8 @@
   {
     "name": "Company - VPC",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Sweden/Scandinavia Reachable|",
     "extra_data": {
@@ -17188,7 +17395,8 @@
   {
     "name": "Company - WGCC",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Norway/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable| or |Poland/Going East! Reachable| or |Slovakia/Base Game Reachable| or |Germany/Base Game Reachable| or |France/Base Game Reachable| or |Netherlands/Base Game Reachable| or |United Kingdom/Base Game Reachable| or |Denmark/Scandinavia Reachable|",
     "extra_data": {
@@ -17254,7 +17462,8 @@
   {
     "name": "Company - Wilnet Transport",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|France/Vive la France ! Reachable|",
     "extra_data": {
@@ -17277,7 +17486,8 @@
   {
     "name": "Company - Zelenye Polja OOO",
     "category": [
-      "Company"
+      "Company",
+      "(1) Companies"
     ],
     "requires": "|Russia/Beyond the Baltic Sea Reachable| or |Kaliningrad/Beyond the Baltic Sea Reachable|",
     "extra_data": {
@@ -17305,6 +17515,9 @@
   {
     "name": "Player Level 1 - Internal",
     "requires": "|Player Level:0|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17316,6 +17529,9 @@
   {
     "name": "Player Level 2 - Internal",
     "requires": "|Player Level:1|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17327,6 +17543,9 @@
   {
     "name": "Player Level 3 - Internal",
     "requires": "|Player Level:2|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17338,6 +17557,9 @@
   {
     "name": "Player Level 4 - Internal",
     "requires": "|Player Level:3|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17349,6 +17571,9 @@
   {
     "name": "Player Level 5 - Internal",
     "requires": "|Player Level:4|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17360,6 +17585,9 @@
   {
     "name": "Player Level 6 - Internal",
     "requires": "|Player Level:5|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17371,6 +17599,9 @@
   {
     "name": "Player Level 7 - Internal",
     "requires": "|Player Level:6|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17382,6 +17613,9 @@
   {
     "name": "Player Level 8 - Internal",
     "requires": "|Player Level:7|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17393,6 +17627,9 @@
   {
     "name": "Player Level 9 - Internal",
     "requires": "|Player Level:8|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17404,6 +17641,9 @@
   {
     "name": "Player Level 10 - Internal",
     "requires": "|Player Level:9|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17415,6 +17655,9 @@
   {
     "name": "Player Level 11 - Internal",
     "requires": "|Player Level:10|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17426,6 +17669,9 @@
   {
     "name": "Player Level 12 - Internal",
     "requires": "|Player Level:11|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17437,6 +17683,9 @@
   {
     "name": "Player Level 13 - Internal",
     "requires": "|Player Level:12|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17448,6 +17697,9 @@
   {
     "name": "Player Level 14 - Internal",
     "requires": "|Player Level:13|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17459,6 +17711,9 @@
   {
     "name": "Player Level 15 - Internal",
     "requires": "|Player Level:14|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17470,6 +17725,9 @@
   {
     "name": "Player Level 16 - Internal",
     "requires": "|Player Level:15|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17481,6 +17739,9 @@
   {
     "name": "Player Level 17 - Internal",
     "requires": "|Player Level:16|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17492,6 +17753,9 @@
   {
     "name": "Player Level 18 - Internal",
     "requires": "|Player Level:17|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17503,6 +17767,9 @@
   {
     "name": "Player Level 19 - Internal",
     "requires": "|Player Level:18|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17514,6 +17781,9 @@
   {
     "name": "Player Level 20 - Internal",
     "requires": "|Player Level:19|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17525,6 +17795,9 @@
   {
     "name": "Player Level 21 - Internal",
     "requires": "|Player Level:20|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17536,6 +17809,9 @@
   {
     "name": "Player Level 22 - Internal",
     "requires": "|Player Level:21|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17547,6 +17823,9 @@
   {
     "name": "Player Level 23 - Internal",
     "requires": "|Player Level:22|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17558,6 +17837,9 @@
   {
     "name": "Player Level 24 - Internal",
     "requires": "|Player Level:23|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17569,6 +17851,9 @@
   {
     "name": "Player Level 25 - Internal",
     "requires": "|Player Level:24|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17580,6 +17865,9 @@
   {
     "name": "Player Level 26 - Internal",
     "requires": "|Player Level:25|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17591,6 +17879,9 @@
   {
     "name": "Player Level 27 - Internal",
     "requires": "|Player Level:26|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17602,6 +17893,9 @@
   {
     "name": "Player Level 28 - Internal",
     "requires": "|Player Level:27|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17613,6 +17907,9 @@
   {
     "name": "Player Level 29 - Internal",
     "requires": "|Player Level:28|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17624,6 +17921,9 @@
   {
     "name": "Player Level 30 - Internal",
     "requires": "|Player Level:29|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17635,6 +17935,9 @@
   {
     "name": "Player Level 31 - Internal",
     "requires": "|Player Level:30|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17646,6 +17949,9 @@
   {
     "name": "Player Level 32 - Internal",
     "requires": "|Player Level:31|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17657,6 +17963,9 @@
   {
     "name": "Player Level 33 - Internal",
     "requires": "|Player Level:32|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17668,6 +17977,9 @@
   {
     "name": "Player Level 34 - Internal",
     "requires": "|Player Level:33|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17679,6 +17991,9 @@
   {
     "name": "Player Level 35 - Internal",
     "requires": "|Player Level:34|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17690,6 +18005,9 @@
   {
     "name": "Player Level 36 - Internal",
     "requires": "|Player Level:35|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item": [
       "Player Level"
     ],
@@ -17701,6 +18019,9 @@
   {
     "name": "Player Level 1 - External",
     "requires": "|Player Level:0|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 1
@@ -17709,6 +18030,9 @@
   {
     "name": "Player Level 2 - External",
     "requires": "|Player Level:1|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 2
@@ -17717,6 +18041,9 @@
   {
     "name": "Player Level 3 - External",
     "requires": "|Player Level:2|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 3
@@ -17725,6 +18052,9 @@
   {
     "name": "Player Level 4 - External",
     "requires": "|Player Level:3|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 4
@@ -17733,6 +18063,9 @@
   {
     "name": "Player Level 5 - External",
     "requires": "|Player Level:4|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 5
@@ -17741,6 +18074,9 @@
   {
     "name": "Player Level 6 - External",
     "requires": "|Player Level:5|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 6
@@ -17749,6 +18085,9 @@
   {
     "name": "Player Level 7 - External",
     "requires": "|Player Level:6|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 7
@@ -17757,6 +18096,9 @@
   {
     "name": "Player Level 8 - External",
     "requires": "|Player Level:7|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 8
@@ -17765,6 +18107,9 @@
   {
     "name": "Player Level 9 - External",
     "requires": "|Player Level:8|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 9
@@ -17773,6 +18118,9 @@
   {
     "name": "Player Level 10 - External",
     "requires": "|Player Level:9|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 10
@@ -17781,6 +18129,9 @@
   {
     "name": "Player Level 11 - External",
     "requires": "|Player Level:10|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 11
@@ -17789,6 +18140,9 @@
   {
     "name": "Player Level 12 - External",
     "requires": "|Player Level:11|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 12
@@ -17797,6 +18151,9 @@
   {
     "name": "Player Level 13 - External",
     "requires": "|Player Level:12|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 13
@@ -17805,6 +18162,9 @@
   {
     "name": "Player Level 14 - External",
     "requires": "|Player Level:13|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 14
@@ -17813,6 +18173,9 @@
   {
     "name": "Player Level 15 - External",
     "requires": "|Player Level:14|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 15
@@ -17821,6 +18184,9 @@
   {
     "name": "Player Level 16 - External",
     "requires": "|Player Level:15|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 16
@@ -17829,6 +18195,9 @@
   {
     "name": "Player Level 17 - External",
     "requires": "|Player Level:16|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 17
@@ -17837,6 +18206,9 @@
   {
     "name": "Player Level 18 - External",
     "requires": "|Player Level:17|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 18
@@ -17845,6 +18217,9 @@
   {
     "name": "Player Level 19 - External",
     "requires": "|Player Level:18|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 19
@@ -17853,6 +18228,9 @@
   {
     "name": "Player Level 20 - External",
     "requires": "|Player Level:19|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 20
@@ -17861,6 +18239,9 @@
   {
     "name": "Player Level 21 - External",
     "requires": "|Player Level:20|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 21
@@ -17869,6 +18250,9 @@
   {
     "name": "Player Level 22 - External",
     "requires": "|Player Level:21|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 22
@@ -17877,6 +18261,9 @@
   {
     "name": "Player Level 23 - External",
     "requires": "|Player Level:22|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 23
@@ -17885,6 +18272,9 @@
   {
     "name": "Player Level 24 - External",
     "requires": "|Player Level:23|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 24
@@ -17893,6 +18283,9 @@
   {
     "name": "Player Level 25 - External",
     "requires": "|Player Level:24|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 25
@@ -17901,6 +18294,9 @@
   {
     "name": "Player Level 26 - External",
     "requires": "|Player Level:25|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 26
@@ -17909,6 +18305,9 @@
   {
     "name": "Player Level 27 - External",
     "requires": "|Player Level:26|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 27
@@ -17917,6 +18316,9 @@
   {
     "name": "Player Level 28 - External",
     "requires": "|Player Level:27|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 28
@@ -17925,6 +18327,9 @@
   {
     "name": "Player Level 29 - External",
     "requires": "|Player Level:28|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 29
@@ -17933,6 +18338,9 @@
   {
     "name": "Player Level 30 - External",
     "requires": "|Player Level:29|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 30
@@ -17941,6 +18349,9 @@
   {
     "name": "Player Level 31 - External",
     "requires": "|Player Level:30|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 31
@@ -17949,6 +18360,9 @@
   {
     "name": "Player Level 32 - External",
     "requires": "|Player Level:31|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 32
@@ -17957,6 +18371,9 @@
   {
     "name": "Player Level 33 - External",
     "requires": "|Player Level:32|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 33
@@ -17965,6 +18382,9 @@
   {
     "name": "Player Level 34 - External",
     "requires": "|Player Level:33|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 34
@@ -17973,6 +18393,9 @@
   {
     "name": "Player Level 35 - External",
     "requires": "|Player Level:34|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 35
@@ -17981,6 +18404,9 @@
   {
     "name": "Player Level 36 - External",
     "requires": "|Player Level:35|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "extra_data": {
       "type": "player_level_external",
       "player_level": 36
@@ -17989,6 +18415,9 @@
   {
     "name": "Player Level 1 - Skill",
     "requires": "|Player Level:0|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18000,6 +18429,9 @@
   {
     "name": "Player Level 2 - Skill",
     "requires": "|Player Level:1|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18011,6 +18443,9 @@
   {
     "name": "Player Level 3 - Skill",
     "requires": "|Player Level:2|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18022,6 +18457,9 @@
   {
     "name": "Player Level 4 - Skill",
     "requires": "|Player Level:3|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18033,6 +18471,9 @@
   {
     "name": "Player Level 5 - Skill",
     "requires": "|Player Level:4|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18044,6 +18485,9 @@
   {
     "name": "Player Level 6 - Skill",
     "requires": "|Player Level:5|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18055,6 +18499,9 @@
   {
     "name": "Player Level 7 - Skill",
     "requires": "|Player Level:6|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18066,6 +18513,9 @@
   {
     "name": "Player Level 8 - Skill",
     "requires": "|Player Level:7|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18077,6 +18527,9 @@
   {
     "name": "Player Level 9 - Skill",
     "requires": "|Player Level:8|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18088,6 +18541,9 @@
   {
     "name": "Player Level 10 - Skill",
     "requires": "|Player Level:9|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18099,6 +18555,9 @@
   {
     "name": "Player Level 11 - Skill",
     "requires": "|Player Level:10|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18110,6 +18569,9 @@
   {
     "name": "Player Level 12 - Skill",
     "requires": "|Player Level:11|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18121,6 +18583,9 @@
   {
     "name": "Player Level 13 - Skill",
     "requires": "|Player Level:12|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18132,6 +18597,9 @@
   {
     "name": "Player Level 14 - Skill",
     "requires": "|Player Level:13|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18143,6 +18611,9 @@
   {
     "name": "Player Level 15 - Skill",
     "requires": "|Player Level:14|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18154,6 +18625,9 @@
   {
     "name": "Player Level 16 - Skill",
     "requires": "|Player Level:15|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18165,6 +18639,9 @@
   {
     "name": "Player Level 17 - Skill",
     "requires": "|Player Level:16|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18176,6 +18653,9 @@
   {
     "name": "Player Level 18 - Skill",
     "requires": "|Player Level:17|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18187,6 +18667,9 @@
   {
     "name": "Player Level 19 - Skill",
     "requires": "|Player Level:18|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18198,6 +18681,9 @@
   {
     "name": "Player Level 20 - Skill",
     "requires": "|Player Level:19|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18209,6 +18695,9 @@
   {
     "name": "Player Level 21 - Skill",
     "requires": "|Player Level:20|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18220,6 +18709,9 @@
   {
     "name": "Player Level 22 - Skill",
     "requires": "|Player Level:21|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18231,6 +18723,9 @@
   {
     "name": "Player Level 23 - Skill",
     "requires": "|Player Level:22|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18242,6 +18737,9 @@
   {
     "name": "Player Level 24 - Skill",
     "requires": "|Player Level:23|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18253,6 +18751,9 @@
   {
     "name": "Player Level 25 - Skill",
     "requires": "|Player Level:24|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18264,6 +18765,9 @@
   {
     "name": "Player Level 26 - Skill",
     "requires": "|Player Level:25|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18275,6 +18779,9 @@
   {
     "name": "Player Level 27 - Skill",
     "requires": "|Player Level:26|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18286,6 +18793,9 @@
   {
     "name": "Player Level 28 - Skill",
     "requires": "|Player Level:27|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18297,6 +18807,9 @@
   {
     "name": "Player Level 29 - Skill",
     "requires": "|Player Level:28|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18308,6 +18821,9 @@
   {
     "name": "Player Level 30 - Skill",
     "requires": "|Player Level:29|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18319,6 +18835,9 @@
   {
     "name": "Player Level 31 - Skill",
     "requires": "|Player Level:30|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18330,6 +18849,9 @@
   {
     "name": "Player Level 32 - Skill",
     "requires": "|Player Level:31|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18341,6 +18863,9 @@
   {
     "name": "Player Level 33 - Skill",
     "requires": "|Player Level:32|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18352,6 +18877,9 @@
   {
     "name": "Player Level 34 - Skill",
     "requires": "|Player Level:33|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18363,6 +18891,9 @@
   {
     "name": "Player Level 35 - Skill",
     "requires": "|Player Level:34|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],
@@ -18374,6 +18905,9 @@
   {
     "name": "Player Level 36 - Skill",
     "requires": "|Player Level:35|",
+    "category": [
+      "(2) Level Ups"
+    ],
     "place_item_category": [
       "Skill"
     ],

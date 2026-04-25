@@ -16,12 +16,14 @@ from .OptionDefs import KeyItemChoice
 
 early_item_count: int = 0
 total_checks: Counter[str] = Counter()
+early_checks: Counter[str] = Counter()
 
 @dataclass(frozen=True)
 class CheckInfo:
     name: str
     check_type: str
     region: Optional[Region] # Companies do not have a singular region
+    count_early: bool
 
 def check_for_item(multiworld: MultiWorld, player: int, item:  dict[str, Any]) -> Optional[bool]:
     if not 'extra_data' in item: return None
@@ -78,67 +80,9 @@ def early_item(item_name: str, world: World) -> None:
         opt[item_name] = 1
     early_item_count += 1
 
-def perform_final_grants(item_pool: list, world: World) -> list[str]:
-    options = world.options
-
-    # Assign the selected Starter Key and Key.
-    start_with_item(f'{get_starting_state()} Starter Key', item_pool, world)
-    start_with_item(f'{get_starting_state()} Key', item_pool, world)
-
-    # For truck contracts, first we should check which option was selected...
-    truck_on_brand = options.truck_contract_item_brand.current_key.removeprefix('option_')
-
-    item_names_to_remove: list[str] = [] # List of item names
-
-    for k, v in item_name_to_item.items():
-        if not 'extra_data' in v: continue
-        data: dict[str, Any] = v['extra_data']
-        tp: str = data.get('type')
-        which: str = data.get('which')
-
-        # Remove all Starter Keys
-        if tp == 'state_starter_key':
-            item_names_to_remove.append(k)
-
-        # Truck contract handling
-        if tp == 'truck_purchase_contract':
-            nixprint(f'Truck Contract: {k}')
-            if truck_on_brand in [snake_case(which), 'all']:
-                nixprint(f'On brand:')
-                if options.truck_contract_brand_item_location == KeyItemChoice.option_start_with_item:
-                    nixprint(f'Start with contract.')
-                    start_with_item(k, item_pool, world)
-                elif options.truck_contract_brand_item_location == KeyItemChoice.option_find_item_early:
-                    nixprint(f'Find contract early.')
-                    early_item(k, world)
-                else:
-                    nixprint(f'Find contract anywhere.')
-            else:
-                nixprint(f'Off brand:')
-                if options.truck_contract_off_brand_item_location == KeyItemChoice.option_start_with_item:
-                    nixprint(f'Start with contract.')
-                    start_with_item(k, item_pool, world)
-                elif options.truck_contract_off_brand_item_location == KeyItemChoice.option_find_item_early:
-                    nixprint(f'Find contract early.')
-                    early_item(k, world)
-                else:
-                    nixprint(f'Find contract anywhere.')
-
-        # For grantable items, check the option to find out what's done about it
-        if opt := data.get('granting_option'):
-            val = getattr(options, opt).value
-            if val == KeyItemChoice.option_start_with_item:
-                start_with_item(k, item_pool, world)
-            elif val == KeyItemChoice.option_find_item_early:
-                early_item(k, world)
-
-    # Get additional keys if needed
-    get_additional_state_keys(item_pool, world)
-
-    return item_names_to_remove
-
 def implement_checks_reduction(world: World):
     global total_checks
+    global early_checks
     global early_item_count
     options = world.options
     randomizer: Random = world.random
@@ -185,19 +129,23 @@ def implement_checks_reduction(world: World):
     # Build the list of checks
     if options.enable_citysanity:
         for city in city_dict.values():
-            all_checks_list.append(CheckInfo(city.check_name, 'City', city.region))
+            all_checks_list.append(CheckInfo(city.check_name, 'City', city.region, True))
 
     if options.enable_companysanity:
         for company in company_list:
-            all_checks_list.append(CheckInfo(company, 'Company', None))
+            all_checks_list.append(CheckInfo(company, 'Company', None, False))
+
+    photosanity_early = (options.enable_photosanity == KeyItemChoice.option_start_with_item)
 
     if options.enable_photosanity:
         for photo in photo_trophies_dict.values():
-            all_checks_list.append(CheckInfo(photo.check_name, 'Photo Trophy', photo.region))
+            all_checks_list.append(CheckInfo(photo.check_name, 'Photo Trophy', photo.region, photosanity_early))
+
+    viewsanity_early = (options.enable_viewpointsanity == KeyItemChoice.option_start_with_item)
 
     if options.enable_viewpointsanity:
         for view in viewpoints_dict.values():
-            all_checks_list.append(CheckInfo(view.check_name, 'Viewpoint', viewpoints_dict))
+            all_checks_list.append(CheckInfo(view.check_name, 'Viewpoint', view.region, viewsanity_early))
 
     randomizer.shuffle(all_checks_list)
 
@@ -224,6 +172,8 @@ def implement_checks_reduction(world: World):
             # nixprint(f'Keeping check: {check.check_type} - {check.name}')
             sum_checks += 1
             total_checks[state] += 1
+            if check.count_early:
+                early_checks[state] += 1
             if max_check_count and sum_checks >= max_check_count: break
 
     for check in all_checks_list:
@@ -231,38 +181,111 @@ def implement_checks_reduction(world: World):
 
     return checks_to_remove
 
+def perform_final_grants(item_pool: list, world: World) -> list[str]:
+    options = world.options
+
+    # Assign the selected Starter Key and Key.
+    start_with_item(f'{get_starting_state()} Starter Key', item_pool, world)
+    start_with_item(f'{get_starting_state()} Key', item_pool, world)
+
+    # For truck contracts, first we should check which option was selected...
+    truck_on_brand = options.truck_contract_item_brand.current_key.removeprefix('option_')
+
+    item_names_to_remove: list[str] = [] # List of item names
+
+    for k, v in item_name_to_item.items():
+        if not 'extra_data' in v: continue
+        data: dict[str, Any] = v['extra_data']
+        tp: str = data.get('type')
+        which: str = data.get('which')
+
+        # Remove all Starter Keys
+        if tp == 'state_starter_key':
+            item_names_to_remove.append(k)
+
+        # Truck contract handling
+        if tp == 'truck_purchase_contract':
+            # nixprint(f'Truck Contract: {k}')
+            if truck_on_brand in [snake_case(which), 'all']:
+                # nixprint(f'On brand:')
+                if options.truck_contract_brand_item_location == KeyItemChoice.option_start_with_item:
+                    # nixprint(f'Start with contract.')
+                    start_with_item(k, item_pool, world)
+                elif options.truck_contract_brand_item_location == KeyItemChoice.option_find_item_early:
+                    # nixprint(f'Find contract early.')
+                    early_item(k, world)
+                # else:
+                #     nixprint(f'Find contract anywhere.')
+            else:
+                # nixprint(f'Off brand:')
+                if options.truck_contract_off_brand_item_location == KeyItemChoice.option_start_with_item:
+                    # nixprint(f'Start with contract.')
+                    start_with_item(k, item_pool, world)
+                elif options.truck_contract_off_brand_item_location == KeyItemChoice.option_find_item_early:
+                    # nixprint(f'Find contract early.')
+                    early_item(k, world)
+                # else:
+                #     nixprint(f'Find contract anywhere.')
+
+        # For grantable items, check the option to find out what's done about it
+        if opt := data.get('granting_option'):
+            val = getattr(options, opt).value
+            if val == KeyItemChoice.option_start_with_item:
+                start_with_item(k, item_pool, world)
+            elif val == KeyItemChoice.option_find_item_early:
+                early_item(k, world)
+
+    # Get additional keys if needed
+    get_additional_state_keys(item_pool, world)
+
+    return item_names_to_remove
+
 def get_additional_state_keys(item_pool: list, world: World) -> None:
     """
     Gets additional keys to put enough early checks in logic in sphere 1.
     """
-    global total_checks
+    global early_checks
     global early_item_count
 
     dlcs = world.options.dlcs_available.value
-    total_checks_in_starting_logic = total_checks[get_starting_state()]
+    total_checks_in_starting_logic = early_checks[get_starting_state()]
     checks_needed = early_item_count + 1
 
-    if total_checks_in_starting_logic >= checks_needed: return
+    nixprint(f'DLCs: {dlcs}', 2)
+    nixprint(f'Total checks in starting logic: {total_checks_in_starting_logic}', 2)
+    nixprint(f'Total starting checks needed: {checks_needed}', 2)
+
+    if total_checks_in_starting_logic >= checks_needed:
+        nixprint('Total check requirement satisfied without additional keys.', 2)
+        return
 
     states_in_starting_logic = {get_starting_state()}
     connected_states = get_land_connected_states(get_starting_state(), dlcs)
     randomizer: Random = world.random
 
+    nixprint(f'States in starting logic: {states_in_starting_logic}', 2)
+    nixprint(f'Connected states: {connected_states}', 2)
+
     while total_checks_in_starting_logic < checks_needed and connected_states:
-        next_state = randomizer.choice(connected_states)
+        nixprint('Total checks in starting logic still not satisfied.', 2)
+        next_state = randomizer.choice(list(connected_states))
+        nixprint(f'Next state: {next_state}', 2)
         connected_states.remove(next_state)
         states_in_starting_logic.add(next_state)
         start_with_item(f'{next_state} Key', item_pool, world)
-        total_checks_in_starting_logic += total_checks[next_state]
+        total_checks_in_starting_logic += early_checks[next_state]
+        nixprint(f'Checks now in starting logic: {total_checks_in_starting_logic}')
         connected_states |= get_land_connected_states(next_state, dlcs) - states_in_starting_logic
+        nixprint(f'States now connected: {connected_states}', 2)
 
 def get_land_connected_states(state: str, dlc_list: set[str]) -> set[str]:
+    nixprint(f'Checking land connections for {state} with DLCs {dlc_list}:', 2)
     out = set[str]()
 
-    for r1, r2_list in land_connections_dict.items():
-        if r1.state != state: continue
-        if r1.dlc not in dlc_list: continue
+    subdict = {k: v for k, v in land_connections_dict.items() if k.state == state and k.dlc in dlc_list}
+    nixprint(f'Subdict of land connections: {subdict}')
 
-        out |= {r.state for r in r2_list if r.dlc in dlc_list and r.state != r1.state}
+    for r2_list in subdict.values():
+        out |= {r.state for r in r2_list if r.dlc in dlc_list and r.state != state}
 
     return out

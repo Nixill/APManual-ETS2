@@ -2,14 +2,15 @@ from typing import Iterable, Any, Optional, Sequence, TypeVar
 from unicodedata import normalize
 
 ENABLE_NIXPRINT = False
+NIXPRINT_VERSIONS = [2]
 
 T = TypeVar('T')
 
-def nixprint(msg: Optional[str] = None) -> None:
+def nixprint(msg: Optional[str] = None, version: int = 1) -> None:
     """
     Prints the message. It's an external method just for ease of turning off.
     """
-    if ENABLE_NIXPRINT:
+    if ENABLE_NIXPRINT and version in NIXPRINT_VERSIONS:
         if msg:
             print(msg)
         else:

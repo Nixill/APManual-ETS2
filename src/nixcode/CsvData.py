@@ -20,7 +20,7 @@ dlc_list: list[str] = [dlc_of(line) for line in load_data_csv('csv', 'dlcs.csv')
 
 #region Regions
 def region_of(line: dict[str, str], state_key: str = 'State', dlc_key: str = 'DLC'):
-    return Region(line[state_key], line[dlc_key])
+    return Region(line[state_key], line[dlc_key] or 'Base Game')
 
 _region_list_csv: list[dict[str, str]] = load_data_csv('csv', 'regions.csv')
 

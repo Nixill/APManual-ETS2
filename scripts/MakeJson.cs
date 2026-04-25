@@ -224,8 +224,10 @@ public static class Str
     public const string TruckContract = "Truck Purchase Contract";
     // public const string TruckDealer = "Truck Dealer";
     public const string Viewpoint = "Viewpoint";
-    public static string VisibleStateKeys => $"(1) {StateCountry} Keys";
+    public const string VisibleCompany = "(1) Companies";
+    public const string VisibleLevelUp = "(2) Level Ups";
     public const string VisibleSecretDeliveryInstructions = "(2) Secret Delivery Instructions";
+    public static string VisibleStateKeys => $"(1) {StateCountry} Keys";
     public const string VisiblePlayerSkills = "(3) Player Skills";
     public const string VisibleMiscItems = "(4) Misc Items";
   }
@@ -662,7 +664,10 @@ public static class JsonDefs
 
       yield return Obj([
         KVP(Str.Syntax.Name, Str.Location.CheckConst(Str.Category.Company, company)),
-        KVPA(Str.Syntax.Category, [ Str.Category.Company ]),
+        KVPA(Str.Syntax.Category, [
+          Str.Category.Company,
+          Str.Category.VisibleCompany
+        ]),
         KVP(Str.Syntax.Requires, requires),
         KVPO(Str.Syntax.ExtraData, [
           KVP(Str.ExtraData.Key.Type, Str.SnakeCase(Str.Category.Company)),
@@ -682,6 +687,7 @@ public static class JsonDefs
     => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.InternalLevel(i)),
       KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
+      KVPA(Str.Syntax.Category, [Str.Category.VisibleLevelUp]),
       KVPA(Str.Syntax.LocationPlaceItem, [ Str.Item.LevelItem ]),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.PlayerLevelInternal),
@@ -693,6 +699,7 @@ public static class JsonDefs
     => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.ExternalLevel(i)),
       KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
+      KVPA(Str.Syntax.Category, [Str.Category.VisibleLevelUp]),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.PlayerLevelExternal),
         KVP(Str.ExtraData.Key.PlayerLevel, i)
@@ -703,6 +710,7 @@ public static class JsonDefs
     => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.SkillLevel(i)),
       KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
+      KVPA(Str.Syntax.Category, [Str.Category.VisibleLevelUp]),
       KVPA(Str.Syntax.LocationPlaceItemCategory, [ Str.Category.PlayerSkill ]),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.PlayerLevelSkill),
@@ -1083,7 +1091,9 @@ public static class JsonDefs
     KVPO(Str.Category.VisibleStateKeys),
     KVPO(Str.Category.VisibleSecretDeliveryInstructions),
     KVPO(Str.Category.VisiblePlayerSkills),
-    KVPO(Str.Category.VisibleMiscItems)
+    KVPO(Str.Category.VisibleMiscItems),
+    KVPO(Str.Category.VisibleCompany),
+    KVPO(Str.Category.VisibleLevelUp)
   ];
   #endregion
 
