@@ -31,8 +31,6 @@ def validate_options_early(world: World):
     options.dlcs_available.value = chosen_dlcs = get_enabled_dlcs_and_base_game(options.dlcs_available.value)
     available_states = get_available_states(chosen_dlcs)
     options.states_available.value = enabled_states = get_enabled_states(options.states_available.value, chosen_dlcs)
-    if not options.checks_reduction_seed:
-        options.checks_reduction_seed.value = random_string(world.random)
 
     # If enabled DLCs are not all connected and the Quick Travel Ticket is disabled, enable it.
     if not options.quick_travel_item and not are_dlcs_connected(chosen_dlcs):

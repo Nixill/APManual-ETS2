@@ -82,14 +82,15 @@ def early_item(item_name: str, world: World) -> None:
     early_item_count += 1
 
 def implement_checks_reduction(world: World):
+    # do nothing in a fake gen (UT)
+    if hasattr(world.multiworld, 'generation_is_fake'): return []
+
     global total_checks
     global early_checks
     global early_item_count
-    global randomizer
 
     options = world.options
-    if not randomizer:
-        randomizer = Random(options.checks_reduction_seed.value)
+    randomizer = world.random
 
     chance_of_state: float = options.checks_percent_of_state_count.value / 100
     max_state_count: int = options.checks_max_state_count.value

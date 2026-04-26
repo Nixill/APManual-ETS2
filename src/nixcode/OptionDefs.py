@@ -224,6 +224,22 @@ class SkillItemsScattered(Toggle):
     """
     display_name = ''
 
+class _PercentOption(Range):
+    range_start = 1
+    range_end = 100
+    default = 100
+
+class PlayerLevelLogicalLockFactor(Range):
+    """
+    What percentage of available regions need to be reachable in order for all player level checks
+    to be in logic? Levels before the final level will require proportionally fewer regions. Level
+    1 always requires only the starting region.
+    """
+    display_name = 'Player Level Logical Lock Factor'
+    range_start = 0
+    range_end = 100
+    default = 30
+
 class FerryTicketItem(KeyItemChoice):
     """
     A Ferry Ticket is required before riding any ferries. Should it be part of the player's
@@ -293,20 +309,6 @@ class QuickTravelTicketItem(_KeyItemChoiceWithDisable):
     to in_starting_inventory.
     """
     display_name = 'Quick Travel Ticket Item'
-
-class ChecksReductionSeed(FreeText):
-    """
-    What seed should be used for Checks Reduction? This affects *only* the Checks Reduction
-    procedures and is not used by the rest of the Archipelago randomizer. If empty, a random seed
-    is used.
-    """
-    display_name = 'Checks Reduction Randomization Seed'
-    default = ''
-
-class _PercentOption(Range):
-    range_start = 1
-    range_end = 100
-    default = 100
 
 class ChecksPercentOfStateCount(_PercentOption):
     """
@@ -385,6 +387,7 @@ def define_options(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Opti
     options["player_level_checks"] = PlayerLevelChecks
     options["skill_items_on_levels"] = SkillItemsOnLevels
     options["skill_items_scattered"] = SkillItemsScattered
+    options["player_level_logical_lock_factor"] = PlayerLevelLogicalLockFactor
     options["ferry_ticket_item"] = FerryTicketItem
     options["bank_loan_approval_item"] = BankLoanApprovalItem
     options["truck_contract_item_brand"] = TruckContractItemBrand
@@ -392,7 +395,6 @@ def define_options(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Opti
     options["truck_contract_off_brand_item_location"] = TruckContractOffBrandItemLocation
     options["trailer_contract_item"] = TrailerContractItem
     options["quick_travel_item"] = QuickTravelTicketItem
-    options["checks_reduction_seed"] = ChecksReductionSeed
     options["checks_percent_of_state_count"] = ChecksPercentOfStateCount
     options["checks_max_state_count"] = ChecksMaxStateCount
     options["checks_percent"] = ChecksPercent
@@ -436,7 +438,6 @@ def group_options(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[
     ]
 
     groups['Checks Reduction'] = [
-        ChecksReductionSeed,
         ChecksPercentOfStateCount,
         ChecksMaxStateCount,
         ChecksPercent,

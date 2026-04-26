@@ -17514,7 +17514,7 @@
   },
   {
     "name": "Player Level 1 - Internal",
-    "requires": "|Player Level:0|",
+    "requires": "|Player Level:0| and {playerLevelRegionsCheck(1)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17528,7 +17528,7 @@
   },
   {
     "name": "Player Level 2 - Internal",
-    "requires": "|Player Level:1|",
+    "requires": "|Player Level:1| and {playerLevelRegionsCheck(2)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17542,7 +17542,7 @@
   },
   {
     "name": "Player Level 3 - Internal",
-    "requires": "|Player Level:2|",
+    "requires": "|Player Level:2| and {playerLevelRegionsCheck(3)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17556,7 +17556,7 @@
   },
   {
     "name": "Player Level 4 - Internal",
-    "requires": "|Player Level:3|",
+    "requires": "|Player Level:3| and {playerLevelRegionsCheck(4)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17570,7 +17570,7 @@
   },
   {
     "name": "Player Level 5 - Internal",
-    "requires": "|Player Level:4|",
+    "requires": "|Player Level:4| and {playerLevelRegionsCheck(5)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17584,7 +17584,7 @@
   },
   {
     "name": "Player Level 6 - Internal",
-    "requires": "|Player Level:5|",
+    "requires": "|Player Level:5| and {playerLevelRegionsCheck(6)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17598,7 +17598,7 @@
   },
   {
     "name": "Player Level 7 - Internal",
-    "requires": "|Player Level:6|",
+    "requires": "|Player Level:6| and {playerLevelRegionsCheck(7)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17612,7 +17612,7 @@
   },
   {
     "name": "Player Level 8 - Internal",
-    "requires": "|Player Level:7|",
+    "requires": "|Player Level:7| and {playerLevelRegionsCheck(8)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17626,7 +17626,7 @@
   },
   {
     "name": "Player Level 9 - Internal",
-    "requires": "|Player Level:8|",
+    "requires": "|Player Level:8| and {playerLevelRegionsCheck(9)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17640,7 +17640,7 @@
   },
   {
     "name": "Player Level 10 - Internal",
-    "requires": "|Player Level:9|",
+    "requires": "|Player Level:9| and {playerLevelRegionsCheck(10)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17654,7 +17654,7 @@
   },
   {
     "name": "Player Level 11 - Internal",
-    "requires": "|Player Level:10|",
+    "requires": "|Player Level:10| and {playerLevelRegionsCheck(11)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17668,7 +17668,7 @@
   },
   {
     "name": "Player Level 12 - Internal",
-    "requires": "|Player Level:11|",
+    "requires": "|Player Level:11| and {playerLevelRegionsCheck(12)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17682,7 +17682,7 @@
   },
   {
     "name": "Player Level 13 - Internal",
-    "requires": "|Player Level:12|",
+    "requires": "|Player Level:12| and {playerLevelRegionsCheck(13)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17696,7 +17696,7 @@
   },
   {
     "name": "Player Level 14 - Internal",
-    "requires": "|Player Level:13|",
+    "requires": "|Player Level:13| and {playerLevelRegionsCheck(14)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17710,7 +17710,7 @@
   },
   {
     "name": "Player Level 15 - Internal",
-    "requires": "|Player Level:14|",
+    "requires": "|Player Level:14| and {playerLevelRegionsCheck(15)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17724,7 +17724,7 @@
   },
   {
     "name": "Player Level 16 - Internal",
-    "requires": "|Player Level:15|",
+    "requires": "|Player Level:15| and {playerLevelRegionsCheck(16)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17738,7 +17738,7 @@
   },
   {
     "name": "Player Level 17 - Internal",
-    "requires": "|Player Level:16|",
+    "requires": "|Player Level:16| and {playerLevelRegionsCheck(17)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17752,7 +17752,7 @@
   },
   {
     "name": "Player Level 18 - Internal",
-    "requires": "|Player Level:17|",
+    "requires": "|Player Level:17| and {playerLevelRegionsCheck(18)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17766,7 +17766,7 @@
   },
   {
     "name": "Player Level 19 - Internal",
-    "requires": "|Player Level:18|",
+    "requires": "|Player Level:18| and {playerLevelRegionsCheck(19)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17780,7 +17780,7 @@
   },
   {
     "name": "Player Level 20 - Internal",
-    "requires": "|Player Level:19|",
+    "requires": "|Player Level:19| and {playerLevelRegionsCheck(20)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17794,7 +17794,7 @@
   },
   {
     "name": "Player Level 21 - Internal",
-    "requires": "|Player Level:20|",
+    "requires": "|Player Level:20| and {playerLevelRegionsCheck(21)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17808,7 +17808,7 @@
   },
   {
     "name": "Player Level 22 - Internal",
-    "requires": "|Player Level:21|",
+    "requires": "|Player Level:21| and {playerLevelRegionsCheck(22)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17822,7 +17822,7 @@
   },
   {
     "name": "Player Level 23 - Internal",
-    "requires": "|Player Level:22|",
+    "requires": "|Player Level:22| and {playerLevelRegionsCheck(23)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17836,7 +17836,7 @@
   },
   {
     "name": "Player Level 24 - Internal",
-    "requires": "|Player Level:23|",
+    "requires": "|Player Level:23| and {playerLevelRegionsCheck(24)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17850,7 +17850,7 @@
   },
   {
     "name": "Player Level 25 - Internal",
-    "requires": "|Player Level:24|",
+    "requires": "|Player Level:24| and {playerLevelRegionsCheck(25)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17864,7 +17864,7 @@
   },
   {
     "name": "Player Level 26 - Internal",
-    "requires": "|Player Level:25|",
+    "requires": "|Player Level:25| and {playerLevelRegionsCheck(26)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17878,7 +17878,7 @@
   },
   {
     "name": "Player Level 27 - Internal",
-    "requires": "|Player Level:26|",
+    "requires": "|Player Level:26| and {playerLevelRegionsCheck(27)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17892,7 +17892,7 @@
   },
   {
     "name": "Player Level 28 - Internal",
-    "requires": "|Player Level:27|",
+    "requires": "|Player Level:27| and {playerLevelRegionsCheck(28)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17906,7 +17906,7 @@
   },
   {
     "name": "Player Level 29 - Internal",
-    "requires": "|Player Level:28|",
+    "requires": "|Player Level:28| and {playerLevelRegionsCheck(29)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17920,7 +17920,7 @@
   },
   {
     "name": "Player Level 30 - Internal",
-    "requires": "|Player Level:29|",
+    "requires": "|Player Level:29| and {playerLevelRegionsCheck(30)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17934,7 +17934,7 @@
   },
   {
     "name": "Player Level 31 - Internal",
-    "requires": "|Player Level:30|",
+    "requires": "|Player Level:30| and {playerLevelRegionsCheck(31)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17948,7 +17948,7 @@
   },
   {
     "name": "Player Level 32 - Internal",
-    "requires": "|Player Level:31|",
+    "requires": "|Player Level:31| and {playerLevelRegionsCheck(32)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17962,7 +17962,7 @@
   },
   {
     "name": "Player Level 33 - Internal",
-    "requires": "|Player Level:32|",
+    "requires": "|Player Level:32| and {playerLevelRegionsCheck(33)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17976,7 +17976,7 @@
   },
   {
     "name": "Player Level 34 - Internal",
-    "requires": "|Player Level:33|",
+    "requires": "|Player Level:33| and {playerLevelRegionsCheck(34)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -17990,7 +17990,7 @@
   },
   {
     "name": "Player Level 35 - Internal",
-    "requires": "|Player Level:34|",
+    "requires": "|Player Level:34| and {playerLevelRegionsCheck(35)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18004,7 +18004,7 @@
   },
   {
     "name": "Player Level 36 - Internal",
-    "requires": "|Player Level:35|",
+    "requires": "|Player Level:35| and {playerLevelRegionsCheck(36)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18018,7 +18018,7 @@
   },
   {
     "name": "Player Level 1 - External",
-    "requires": "|Player Level:0|",
+    "requires": "|Player Level:0| and {playerLevelRegionsCheck(1)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18029,7 +18029,7 @@
   },
   {
     "name": "Player Level 2 - External",
-    "requires": "|Player Level:1|",
+    "requires": "|Player Level:1| and {playerLevelRegionsCheck(2)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18040,7 +18040,7 @@
   },
   {
     "name": "Player Level 3 - External",
-    "requires": "|Player Level:2|",
+    "requires": "|Player Level:2| and {playerLevelRegionsCheck(3)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18051,7 +18051,7 @@
   },
   {
     "name": "Player Level 4 - External",
-    "requires": "|Player Level:3|",
+    "requires": "|Player Level:3| and {playerLevelRegionsCheck(4)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18062,7 +18062,7 @@
   },
   {
     "name": "Player Level 5 - External",
-    "requires": "|Player Level:4|",
+    "requires": "|Player Level:4| and {playerLevelRegionsCheck(5)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18073,7 +18073,7 @@
   },
   {
     "name": "Player Level 6 - External",
-    "requires": "|Player Level:5|",
+    "requires": "|Player Level:5| and {playerLevelRegionsCheck(6)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18084,7 +18084,7 @@
   },
   {
     "name": "Player Level 7 - External",
-    "requires": "|Player Level:6|",
+    "requires": "|Player Level:6| and {playerLevelRegionsCheck(7)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18095,7 +18095,7 @@
   },
   {
     "name": "Player Level 8 - External",
-    "requires": "|Player Level:7|",
+    "requires": "|Player Level:7| and {playerLevelRegionsCheck(8)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18106,7 +18106,7 @@
   },
   {
     "name": "Player Level 9 - External",
-    "requires": "|Player Level:8|",
+    "requires": "|Player Level:8| and {playerLevelRegionsCheck(9)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18117,7 +18117,7 @@
   },
   {
     "name": "Player Level 10 - External",
-    "requires": "|Player Level:9|",
+    "requires": "|Player Level:9| and {playerLevelRegionsCheck(10)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18128,7 +18128,7 @@
   },
   {
     "name": "Player Level 11 - External",
-    "requires": "|Player Level:10|",
+    "requires": "|Player Level:10| and {playerLevelRegionsCheck(11)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18139,7 +18139,7 @@
   },
   {
     "name": "Player Level 12 - External",
-    "requires": "|Player Level:11|",
+    "requires": "|Player Level:11| and {playerLevelRegionsCheck(12)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18150,7 +18150,7 @@
   },
   {
     "name": "Player Level 13 - External",
-    "requires": "|Player Level:12|",
+    "requires": "|Player Level:12| and {playerLevelRegionsCheck(13)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18161,7 +18161,7 @@
   },
   {
     "name": "Player Level 14 - External",
-    "requires": "|Player Level:13|",
+    "requires": "|Player Level:13| and {playerLevelRegionsCheck(14)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18172,7 +18172,7 @@
   },
   {
     "name": "Player Level 15 - External",
-    "requires": "|Player Level:14|",
+    "requires": "|Player Level:14| and {playerLevelRegionsCheck(15)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18183,7 +18183,7 @@
   },
   {
     "name": "Player Level 16 - External",
-    "requires": "|Player Level:15|",
+    "requires": "|Player Level:15| and {playerLevelRegionsCheck(16)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18194,7 +18194,7 @@
   },
   {
     "name": "Player Level 17 - External",
-    "requires": "|Player Level:16|",
+    "requires": "|Player Level:16| and {playerLevelRegionsCheck(17)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18205,7 +18205,7 @@
   },
   {
     "name": "Player Level 18 - External",
-    "requires": "|Player Level:17|",
+    "requires": "|Player Level:17| and {playerLevelRegionsCheck(18)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18216,7 +18216,7 @@
   },
   {
     "name": "Player Level 19 - External",
-    "requires": "|Player Level:18|",
+    "requires": "|Player Level:18| and {playerLevelRegionsCheck(19)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18227,7 +18227,7 @@
   },
   {
     "name": "Player Level 20 - External",
-    "requires": "|Player Level:19|",
+    "requires": "|Player Level:19| and {playerLevelRegionsCheck(20)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18238,7 +18238,7 @@
   },
   {
     "name": "Player Level 21 - External",
-    "requires": "|Player Level:20|",
+    "requires": "|Player Level:20| and {playerLevelRegionsCheck(21)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18249,7 +18249,7 @@
   },
   {
     "name": "Player Level 22 - External",
-    "requires": "|Player Level:21|",
+    "requires": "|Player Level:21| and {playerLevelRegionsCheck(22)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18260,7 +18260,7 @@
   },
   {
     "name": "Player Level 23 - External",
-    "requires": "|Player Level:22|",
+    "requires": "|Player Level:22| and {playerLevelRegionsCheck(23)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18271,7 +18271,7 @@
   },
   {
     "name": "Player Level 24 - External",
-    "requires": "|Player Level:23|",
+    "requires": "|Player Level:23| and {playerLevelRegionsCheck(24)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18282,7 +18282,7 @@
   },
   {
     "name": "Player Level 25 - External",
-    "requires": "|Player Level:24|",
+    "requires": "|Player Level:24| and {playerLevelRegionsCheck(25)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18293,7 +18293,7 @@
   },
   {
     "name": "Player Level 26 - External",
-    "requires": "|Player Level:25|",
+    "requires": "|Player Level:25| and {playerLevelRegionsCheck(26)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18304,7 +18304,7 @@
   },
   {
     "name": "Player Level 27 - External",
-    "requires": "|Player Level:26|",
+    "requires": "|Player Level:26| and {playerLevelRegionsCheck(27)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18315,7 +18315,7 @@
   },
   {
     "name": "Player Level 28 - External",
-    "requires": "|Player Level:27|",
+    "requires": "|Player Level:27| and {playerLevelRegionsCheck(28)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18326,7 +18326,7 @@
   },
   {
     "name": "Player Level 29 - External",
-    "requires": "|Player Level:28|",
+    "requires": "|Player Level:28| and {playerLevelRegionsCheck(29)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18337,7 +18337,7 @@
   },
   {
     "name": "Player Level 30 - External",
-    "requires": "|Player Level:29|",
+    "requires": "|Player Level:29| and {playerLevelRegionsCheck(30)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18348,7 +18348,7 @@
   },
   {
     "name": "Player Level 31 - External",
-    "requires": "|Player Level:30|",
+    "requires": "|Player Level:30| and {playerLevelRegionsCheck(31)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18359,7 +18359,7 @@
   },
   {
     "name": "Player Level 32 - External",
-    "requires": "|Player Level:31|",
+    "requires": "|Player Level:31| and {playerLevelRegionsCheck(32)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18370,7 +18370,7 @@
   },
   {
     "name": "Player Level 33 - External",
-    "requires": "|Player Level:32|",
+    "requires": "|Player Level:32| and {playerLevelRegionsCheck(33)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18381,7 +18381,7 @@
   },
   {
     "name": "Player Level 34 - External",
-    "requires": "|Player Level:33|",
+    "requires": "|Player Level:33| and {playerLevelRegionsCheck(34)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18392,7 +18392,7 @@
   },
   {
     "name": "Player Level 35 - External",
-    "requires": "|Player Level:34|",
+    "requires": "|Player Level:34| and {playerLevelRegionsCheck(35)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18403,7 +18403,7 @@
   },
   {
     "name": "Player Level 36 - External",
-    "requires": "|Player Level:35|",
+    "requires": "|Player Level:35| and {playerLevelRegionsCheck(36)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18414,7 +18414,7 @@
   },
   {
     "name": "Player Level 1 - Skill",
-    "requires": "|Player Level:0|",
+    "requires": "|Player Level:0| and {playerLevelRegionsCheck(1)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18428,7 +18428,7 @@
   },
   {
     "name": "Player Level 2 - Skill",
-    "requires": "|Player Level:1|",
+    "requires": "|Player Level:1| and {playerLevelRegionsCheck(2)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18442,7 +18442,7 @@
   },
   {
     "name": "Player Level 3 - Skill",
-    "requires": "|Player Level:2|",
+    "requires": "|Player Level:2| and {playerLevelRegionsCheck(3)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18456,7 +18456,7 @@
   },
   {
     "name": "Player Level 4 - Skill",
-    "requires": "|Player Level:3|",
+    "requires": "|Player Level:3| and {playerLevelRegionsCheck(4)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18470,7 +18470,7 @@
   },
   {
     "name": "Player Level 5 - Skill",
-    "requires": "|Player Level:4|",
+    "requires": "|Player Level:4| and {playerLevelRegionsCheck(5)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18484,7 +18484,7 @@
   },
   {
     "name": "Player Level 6 - Skill",
-    "requires": "|Player Level:5|",
+    "requires": "|Player Level:5| and {playerLevelRegionsCheck(6)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18498,7 +18498,7 @@
   },
   {
     "name": "Player Level 7 - Skill",
-    "requires": "|Player Level:6|",
+    "requires": "|Player Level:6| and {playerLevelRegionsCheck(7)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18512,7 +18512,7 @@
   },
   {
     "name": "Player Level 8 - Skill",
-    "requires": "|Player Level:7|",
+    "requires": "|Player Level:7| and {playerLevelRegionsCheck(8)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18526,7 +18526,7 @@
   },
   {
     "name": "Player Level 9 - Skill",
-    "requires": "|Player Level:8|",
+    "requires": "|Player Level:8| and {playerLevelRegionsCheck(9)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18540,7 +18540,7 @@
   },
   {
     "name": "Player Level 10 - Skill",
-    "requires": "|Player Level:9|",
+    "requires": "|Player Level:9| and {playerLevelRegionsCheck(10)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18554,7 +18554,7 @@
   },
   {
     "name": "Player Level 11 - Skill",
-    "requires": "|Player Level:10|",
+    "requires": "|Player Level:10| and {playerLevelRegionsCheck(11)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18568,7 +18568,7 @@
   },
   {
     "name": "Player Level 12 - Skill",
-    "requires": "|Player Level:11|",
+    "requires": "|Player Level:11| and {playerLevelRegionsCheck(12)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18582,7 +18582,7 @@
   },
   {
     "name": "Player Level 13 - Skill",
-    "requires": "|Player Level:12|",
+    "requires": "|Player Level:12| and {playerLevelRegionsCheck(13)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18596,7 +18596,7 @@
   },
   {
     "name": "Player Level 14 - Skill",
-    "requires": "|Player Level:13|",
+    "requires": "|Player Level:13| and {playerLevelRegionsCheck(14)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18610,7 +18610,7 @@
   },
   {
     "name": "Player Level 15 - Skill",
-    "requires": "|Player Level:14|",
+    "requires": "|Player Level:14| and {playerLevelRegionsCheck(15)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18624,7 +18624,7 @@
   },
   {
     "name": "Player Level 16 - Skill",
-    "requires": "|Player Level:15|",
+    "requires": "|Player Level:15| and {playerLevelRegionsCheck(16)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18638,7 +18638,7 @@
   },
   {
     "name": "Player Level 17 - Skill",
-    "requires": "|Player Level:16|",
+    "requires": "|Player Level:16| and {playerLevelRegionsCheck(17)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18652,7 +18652,7 @@
   },
   {
     "name": "Player Level 18 - Skill",
-    "requires": "|Player Level:17|",
+    "requires": "|Player Level:17| and {playerLevelRegionsCheck(18)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18666,7 +18666,7 @@
   },
   {
     "name": "Player Level 19 - Skill",
-    "requires": "|Player Level:18|",
+    "requires": "|Player Level:18| and {playerLevelRegionsCheck(19)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18680,7 +18680,7 @@
   },
   {
     "name": "Player Level 20 - Skill",
-    "requires": "|Player Level:19|",
+    "requires": "|Player Level:19| and {playerLevelRegionsCheck(20)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18694,7 +18694,7 @@
   },
   {
     "name": "Player Level 21 - Skill",
-    "requires": "|Player Level:20|",
+    "requires": "|Player Level:20| and {playerLevelRegionsCheck(21)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18708,7 +18708,7 @@
   },
   {
     "name": "Player Level 22 - Skill",
-    "requires": "|Player Level:21|",
+    "requires": "|Player Level:21| and {playerLevelRegionsCheck(22)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18722,7 +18722,7 @@
   },
   {
     "name": "Player Level 23 - Skill",
-    "requires": "|Player Level:22|",
+    "requires": "|Player Level:22| and {playerLevelRegionsCheck(23)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18736,7 +18736,7 @@
   },
   {
     "name": "Player Level 24 - Skill",
-    "requires": "|Player Level:23|",
+    "requires": "|Player Level:23| and {playerLevelRegionsCheck(24)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18750,7 +18750,7 @@
   },
   {
     "name": "Player Level 25 - Skill",
-    "requires": "|Player Level:24|",
+    "requires": "|Player Level:24| and {playerLevelRegionsCheck(25)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18764,7 +18764,7 @@
   },
   {
     "name": "Player Level 26 - Skill",
-    "requires": "|Player Level:25|",
+    "requires": "|Player Level:25| and {playerLevelRegionsCheck(26)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18778,7 +18778,7 @@
   },
   {
     "name": "Player Level 27 - Skill",
-    "requires": "|Player Level:26|",
+    "requires": "|Player Level:26| and {playerLevelRegionsCheck(27)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18792,7 +18792,7 @@
   },
   {
     "name": "Player Level 28 - Skill",
-    "requires": "|Player Level:27|",
+    "requires": "|Player Level:27| and {playerLevelRegionsCheck(28)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18806,7 +18806,7 @@
   },
   {
     "name": "Player Level 29 - Skill",
-    "requires": "|Player Level:28|",
+    "requires": "|Player Level:28| and {playerLevelRegionsCheck(29)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18820,7 +18820,7 @@
   },
   {
     "name": "Player Level 30 - Skill",
-    "requires": "|Player Level:29|",
+    "requires": "|Player Level:29| and {playerLevelRegionsCheck(30)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18834,7 +18834,7 @@
   },
   {
     "name": "Player Level 31 - Skill",
-    "requires": "|Player Level:30|",
+    "requires": "|Player Level:30| and {playerLevelRegionsCheck(31)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18848,7 +18848,7 @@
   },
   {
     "name": "Player Level 32 - Skill",
-    "requires": "|Player Level:31|",
+    "requires": "|Player Level:31| and {playerLevelRegionsCheck(32)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18862,7 +18862,7 @@
   },
   {
     "name": "Player Level 33 - Skill",
-    "requires": "|Player Level:32|",
+    "requires": "|Player Level:32| and {playerLevelRegionsCheck(33)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18876,7 +18876,7 @@
   },
   {
     "name": "Player Level 34 - Skill",
-    "requires": "|Player Level:33|",
+    "requires": "|Player Level:33| and {playerLevelRegionsCheck(34)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18890,7 +18890,7 @@
   },
   {
     "name": "Player Level 35 - Skill",
-    "requires": "|Player Level:34|",
+    "requires": "|Player Level:34| and {playerLevelRegionsCheck(35)}",
     "category": [
       "(2) Level Ups"
     ],
@@ -18904,7 +18904,7 @@
   },
   {
     "name": "Player Level 36 - Skill",
-    "requires": "|Player Level:35|",
+    "requires": "|Player Level:35| and {playerLevelRegionsCheck(36)}",
     "category": [
       "(2) Level Ups"
     ],

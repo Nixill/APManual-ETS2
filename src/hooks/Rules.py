@@ -1,9 +1,45 @@
+import math
 from typing import Optional
 from worlds.AutoWorld import World
 from ..Helpers import clamp, get_items_with_value
 from BaseClasses import MultiWorld, CollectionState
+from ..nixcode.CsvData import region_list
 
 import re
+
+def playerLevelRegionsCheck(world: World, state: CollectionState, n: int):
+    """
+    The region accessibility requirement for a player level.
+
+    Is based on both the number of enabled level checks and the factor.
+    """
+    if n <= 1: return "|@Regions Reachable:0|"
+
+    allow_rule = world.options.enable_citysanity \
+        or world.options.enable_photosanity \
+        or world.options.enable_viewpointsanity
+
+    if not allow_rule: return "|@Regions Reachable:0|"
+
+    enabled_dlcs = world.options.dlcs_available.value
+    enabled_regions = {r for r in region_list if r.dlc in enabled_dlcs}
+    region_count = len(enabled_regions)
+
+    player_level_max = world.options.player_level_checks.value
+    lock_factor = world.options.player_level_logical_lock_factor.value / 100
+
+    if region_count == 1 or player_level_max == 1: return "|@Regions Reachable:0|"
+    if lock_factor == 0: return "|@Regions Reachable:0|"
+
+    if n > player_level_max: n = player_level_max
+
+    n -= 1
+    player_level_max -= 1
+    region_count -= 1
+
+    region_need = math.ceil(region_count * (n / player_level_max) * lock_factor) + 1
+
+    return f"|@Regions Reachable:{region_need}|"
 
 # Sometimes you have a requirement that is just too messy or repetitive to write out with boolean logic.
 # Define a function here, and you can use it in a requires string with {function_name()}.

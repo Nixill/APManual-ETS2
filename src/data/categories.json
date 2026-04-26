@@ -833,6 +833,13 @@
       "which": "truck_purchase_contract"
     }
   },
+  "Regions Reachable": {
+    "hidden": true,
+    "extra_data": {
+      "type": "type_categories",
+      "which": "regions_reachable"
+    }
+  },
   "(1) Country Keys": {},
   "(2) Secret Delivery Instructions": {},
   "(3) Player Skills": {},

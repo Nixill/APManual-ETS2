@@ -212,6 +212,7 @@ public static class Str
     public const string PhotoTrophy = "Photo Trophy";
     public const string PlayerSkill = "Skill";
     // public const string RecruitmentAgent = "Recruitment Agency Branch";
+    public const string RegionReachableEvent = "Regions Reachable";
     public const string SecretDeliveries = "Secret Delivery";
     public const string SecretDeliveryCompletions = "Secret Delivery Completions";
     public const string SecretDeliveryInstructions = "Secret Delivery Instructions";
@@ -429,6 +430,8 @@ public static class Str
       => $"{{OptionCount({itemName}, {optionName})}}";
     public static string YamlCompare(string left, string oper, string right)
       => $"{{YamlCompare({left} {oper} {right})}}";
+    public static string RegionsCheck(int n)
+      => $"{{playerLevelRegionsCheck({n})}}";
   }
 
   public static class Victory
@@ -686,7 +689,7 @@ public static class JsonDefs
   public static IEnumerable<JToken> GetInternalLevelLocations()
     => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.InternalLevel(i)),
-      KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
+      KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}| and {Str.Syntax.RegionsCheck(i)}"),
       KVPA(Str.Syntax.Category, [Str.Category.VisibleLevelUp]),
       KVPA(Str.Syntax.LocationPlaceItem, [ Str.Item.LevelItem ]),
       KVPO(Str.Syntax.ExtraData, [
@@ -698,7 +701,7 @@ public static class JsonDefs
   public static IEnumerable<JToken> GetExternalLevelLocations()
     => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.ExternalLevel(i)),
-      KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
+      KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}| and {Str.Syntax.RegionsCheck(i)}"),
       KVPA(Str.Syntax.Category, [Str.Category.VisibleLevelUp]),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.PlayerLevelExternal),
@@ -709,7 +712,7 @@ public static class JsonDefs
   public static IEnumerable<JToken> GetSkillLevelLocations()
     => Enumerable.Range(1, 36).Select(i => Obj([
       KVP(Str.Syntax.Name, Str.Location.SkillLevel(i)),
-      KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}|"),
+      KVP(Str.Syntax.Requires, $"|{Str.Item.LevelItem}:{i-1}| and {Str.Syntax.RegionsCheck(i)}"),
       KVPA(Str.Syntax.Category, [Str.Category.VisibleLevelUp]),
       KVPA(Str.Syntax.LocationPlaceItemCategory, [ Str.Category.PlayerSkill ]),
       KVPO(Str.Syntax.ExtraData, [
@@ -1075,7 +1078,8 @@ public static class JsonDefs
     GetTypeCategory(Str.Category.PlayerSkill),
     GetTypeCategory(Str.Category.StateKey),
     GetTypeCategory(Str.Category.StateStarterKey),
-    GetTypeCategory(Str.Category.TruckContract)
+    GetTypeCategory(Str.Category.TruckContract),
+    GetTypeCategory(Str.Category.RegionReachableEvent)
   ];
 
   public static JProperty GetTypeCategory(string name, string? option = null, bool hidden = true)
@@ -1107,7 +1111,8 @@ public static class JsonDefs
       KVP(Str.Syntax.Name, Str.Event.RegionReachable(r.ToString())),
       KVPA(Str.Syntax.Category, [
         Str.Category.State(r.StateName),
-        Str.Category.DLC(r.DLCName)
+        Str.Category.DLC(r.DLCName),
+        Str.Category.RegionReachableEvent
       ]),
       KVP(Str.Syntax.Region, r.ToString()),
       KVPO(Str.Syntax.ExtraData, [
