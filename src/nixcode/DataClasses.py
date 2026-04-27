@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from random import Random
 
 @dataclass(frozen=True)
 class Region:
@@ -25,3 +26,17 @@ class GameInfo:
     name: str
     creator: str
     filler_item_name: str
+
+@dataclass(frozen=True)
+class SecretDeliveryLetter:
+    text: str
+    signatures: list[str]
+    signature_chance: float
+
+    def create(self, source: str, destination: str, randomizer: Random):
+        text = self.text.replace('{source}', source).replace('{destination}', destination)
+
+        if randomizer.random() < self.signature_chance:
+            text += f'\n\n  - {randomizer.choice(self.signatures)}'
+
+        return text

@@ -80,14 +80,27 @@ class SecretDeliveriesRequired(_SecretDeliveryCountOption):
 class SecretDeliveryInstructionParts(Range):
     """
     Number of separate parts to the instructions of each Secret Delivery.
-
-    Not all parts must be found in order to perform a Secret Delivery; once the instructions are
-    readable, the delivery may be performed.
     """
     display_name = 'Secret Delivery Instruction Parts'
     rich_text_doc = True
     range_start = 1
     range_end = 5
+    default = 2
+
+class SecretDeliveryCountryLimit(NamedRange):
+    """
+    Maximum number of country borders a secret delivery may cross.
+
+    Must be at least one due to the single-city countries of Kosovo and Luxembourg, and the special
+    case of Kaliningrad.
+    """
+    display_name = 'Secret Delivery Country Border Limit'
+    rich_text_doc = True
+    range_start = 1
+    range_end = 7
+    special_range_names = {
+        'unlimited': 0
+    }
     default = 2
 
 class DLCsAvailableOption(OptionSet):
@@ -153,8 +166,10 @@ class EnableCompanyChecks(Toggle):
 class KeyItemChoice(Choice):
     rich_text_doc = True
     option_find_item = 1
-    option_find_item_early = 2
-    default = option_start_with_item = 3
+    option_find_item_with_hint = 2
+    option_find_item_early = 3
+    option_find_item_early_with_hint = 4
+    default = option_start_with_item = 5
 
 class _KeyItemChoiceWithDisable(KeyItemChoice):
     rich_text_doc = True
@@ -378,6 +393,7 @@ def define_options(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Opti
     options["secret_deliveries_available"] = SecretDeliveriesAvailable
     options["secret_deliveries_required"] = SecretDeliveriesRequired
     options["secret_delivery_instruction_parts"] = SecretDeliveryInstructionParts
+    options["secret_delivery_country_border_limit"] = SecretDeliveryCountryLimit
     options["dlcs_available"] = DLCsAvailableOption
     options["states_available"] = StatesAvailableOption
     options["enable_citysanity"] = EnableCityChecks
@@ -412,7 +428,8 @@ def group_options(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[
     groups['Secret Deliveries'] = [
         SecretDeliveriesAvailable,
         SecretDeliveriesRequired,
-        SecretDeliveryInstructionParts
+        SecretDeliveryInstructionParts,
+        SecretDeliveryCountryLimit
     ]
 
     groups['Check Types Available'] = [

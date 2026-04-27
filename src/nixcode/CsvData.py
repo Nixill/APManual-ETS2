@@ -3,7 +3,7 @@ import csv, pkgutil
 from dataclasses import dataclass
 from collections import defaultdict
 
-from .DataClasses import CheckLocation, GameInfo, Region, TruckModel
+from .DataClasses import CheckLocation, GameInfo, Region, SecretDeliveryLetter, TruckModel
 from .Func import snake_case
 
 from ..Helpers import load_data_csv
@@ -113,6 +113,11 @@ photo_trophies_dict: dict[str, CheckLocation] = {
 
 #region Quick Travel
 quick_travel_list: list[Region] = [Region(line['State'], dlc_of(line)) for line in load_data_csv('csv', 'quick-travel.csv')]
+#endregion
+
+#region Secret Delivery Texts
+secret_delivery_list: list[SecretDeliveryLetter] = [SecretDeliveryLetter(line['LetterText'], line['Writers'].split(';'), float(line['SignChance']))
+                                                    for line in load_data_csv('csv', 'secret-delivery-texts.csv')]
 #endregion
 
 #region States

@@ -62,25 +62,6 @@ def adjust_item_counts(item_config: dict[str, int|dict], world: World) -> None:
         else:
             item_config['Player Level'] = world.options.player_level_checks.value
 
-def start_with_item(item_name: str, item_pool: list, world: World) -> None:
-    if item_name in world.start_inventory:
-        world.start_inventory[item_name] += 1
-    else:
-        world.start_inventory[item_name] = 1
-
-    item = next(i for i in item_pool if i.name == item_name)
-    world.multiworld.push_precollected(item)
-    remove_specific_item(item_pool, item)
-
-def early_item(item_name: str, world: World) -> None:
-    global early_item_count
-    opt = world.multiworld.local_early_items[world.player]
-    if item_name in opt:
-        opt[item_name] += 1
-    else:
-        opt[item_name] = 1
-    early_item_count += 1
-
 def implement_checks_reduction(world: World):
     # do nothing in a fake gen (UT)
     if hasattr(world.multiworld, 'generation_is_fake'): return []
@@ -186,6 +167,28 @@ def implement_checks_reduction(world: World):
 
     return checks_to_remove
 
+def start_with_item(item_name: str, item_pool: list, world: World) -> None:
+    if item_name in world.start_inventory:
+        world.start_inventory[item_name] += 1
+    else:
+        world.start_inventory[item_name] = 1
+
+    item = next(i for i in item_pool if i.name == item_name)
+    world.multiworld.push_precollected(item)
+    remove_specific_item(item_pool, item)
+
+def early_item(item_name: str, world: World) -> None:
+    global early_item_count
+    opt = world.multiworld.local_early_items[world.player]
+    if item_name in opt:
+        opt[item_name] += 1
+    else:
+        opt[item_name] = 1
+    early_item_count += 1
+
+def hint_item(item_name: str, world: World) -> None:
+    world.options.start_hints.value.add(item_name)
+
 def perform_final_grants(item_pool: list, world: World) -> list[str]:
     options = world.options
 
@@ -216,29 +219,44 @@ def perform_final_grants(item_pool: list, world: World) -> list[str]:
                 if options.truck_contract_brand_item_location == KeyItemChoice.option_start_with_item:
                     # nixprint(f'Start with contract.')
                     start_with_item(k, item_pool, world)
-                elif options.truck_contract_brand_item_location == KeyItemChoice.option_find_item_early:
-                    # nixprint(f'Find contract early.')
-                    early_item(k, world)
+                elif options.truck_contract_brand_item_location in \
+                    [KeyItemChoice.option_find_item_early, KeyItemChoice.option_find_item_early_with_hint]:
+                        # nixprint(f'Find contract early.')
+                        early_item(k, world)
                 # else:
                 #     nixprint(f'Find contract anywhere.')
+
+                if options.truck_contract_brand_item_location in \
+                    [KeyItemChoice.option_find_item_with_hint, KeyItemChoice.option_find_item_early_with_hint]:
+                        # nixprint(f'Hint enabled for contract.')
+                        hint_item(k, world)
             else:
                 # nixprint(f'Off brand:')
                 if options.truck_contract_off_brand_item_location == KeyItemChoice.option_start_with_item:
                     # nixprint(f'Start with contract.')
                     start_with_item(k, item_pool, world)
-                elif options.truck_contract_off_brand_item_location == KeyItemChoice.option_find_item_early:
-                    # nixprint(f'Find contract early.')
-                    early_item(k, world)
+                elif options.truck_contract_off_brand_item_location in \
+                    [KeyItemChoice.option_find_item_early, KeyItemChoice.option_find_item_early_with_hint]:
+                        # nixprint(f'Find contract early.')
+                        early_item(k, world)
                 # else:
                 #     nixprint(f'Find contract anywhere.')
+
+                if options.truck_contract_brand_item_location in \
+                    [KeyItemChoice.option_find_item_with_hint, KeyItemChoice.option_find_item_early_with_hint]:
+                        # nixprint(f'Hint enabled for contract.')
+                        hint_item(k, world)
 
         # For grantable items, check the option to find out what's done about it
         if opt := data.get('granting_option'):
             val = getattr(options, opt).value
             if val == KeyItemChoice.option_start_with_item:
                 start_with_item(k, item_pool, world)
-            elif val == KeyItemChoice.option_find_item_early:
+            elif val in [KeyItemChoice.option_find_item_early, KeyItemChoice.option_find_item_early_with_hint]:
                 early_item(k, world)
+
+            if val in [KeyItemChoice.option_find_item_with_hint, KeyItemChoice.option_find_item_early_with_hint]:
+                hint_item(k, world)
 
     # Get additional keys if needed
     get_additional_state_keys(item_pool, world)

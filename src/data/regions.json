@@ -217,7 +217,8 @@
     "connects_to": [
       "Austria/Base Game",
       "Czech Republic/Base Game",
-      "Hungary/Going East!"
+      "Hungary/Going East!",
+      "Slovakia/Going East!"
     ]
   },
   "Switzerland/Base Game": {
@@ -263,7 +264,8 @@
   "Slovakia/Going East!": {
     "requires": "|Slovakia Key| or |Slovakia Starter Key|",
     "connects_to": [
-      "Poland/Going East!"
+      "Poland/Going East!",
+      "Slovakia/Base Game"
     ]
   },
   "Poland/Going East!": {
@@ -296,6 +298,7 @@
     "requires": "|Norway Key| or |Norway Starter Key|",
     "connects_to": [
       "Denmark/Scandinavia",
+      "Norway/Nordic Horizons",
       "Sweden/Scandinavia"
     ],
     "exit_requires": {
@@ -311,7 +314,8 @@
       "Germany/Base Game",
       "Latvia/Beyond the Baltic Sea",
       "Norway/Scandinavia",
-      "Poland/Going East!"
+      "Poland/Going East!",
+      "Sweden/Nordic Horizons"
     ],
     "exit_requires": {
       "Estonia/Beyond the Baltic Sea": "|Ferry Ticket|",
@@ -562,6 +566,7 @@
     "requires": "|Norway Key| or |Norway Starter Key|",
     "connects_to": [
       "Finland/Nordic Horizons",
+      "Norway/Scandinavia",
       "Sweden/Nordic Horizons"
     ]
   },
@@ -569,7 +574,8 @@
     "requires": "|Sweden Key| or |Sweden Starter Key|",
     "connects_to": [
       "Finland/Nordic Horizons",
-      "Norway/Nordic Horizons"
+      "Norway/Nordic Horizons",
+      "Sweden/Scandinavia"
     ]
   }
 }

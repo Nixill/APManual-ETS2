@@ -438,6 +438,7 @@ class ManualWorld(World):
         zf_path = os.path.join(output_directory, filename)
 
         apmanual = APManualFile(zf_path, player=self.player, player_name=self.player_name)
+        apmanual.add_world(self)
         apmanual.write()
 
 

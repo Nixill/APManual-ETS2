@@ -741,15 +741,15 @@ public static class JsonDefs
 
   public static IEnumerable<JToken> GetVictoryLocations() => [
     Obj([
-      KVP(Str.Syntax.Name, Str.Victory.SecretDeliveriesCompleted),
-      KVP(Str.Syntax.Requires, Str.Syntax.OptionCount(Str.Item.SecretDeliveryCompletion,
-        Str.Option.SecretDeliveriesRequired)),
+      KVP(Str.Syntax.Name, Str.Victory.DeliveryTokensCollected),
+      KVP(Str.Syntax.Requires, Str.Syntax.OptionCount(Str.Item.DeliveryToken, Str.Option.DeliveryTokensRequired)),
       KVP(Str.Syntax.LocationVictory, true)
     ]),
 
     Obj([
-      KVP(Str.Syntax.Name, Str.Victory.DeliveryTokensCollected),
-      KVP(Str.Syntax.Requires, Str.Syntax.OptionCount(Str.Item.DeliveryToken, Str.Option.DeliveryTokensRequired)),
+      KVP(Str.Syntax.Name, Str.Victory.SecretDeliveriesCompleted),
+      KVP(Str.Syntax.Requires, Str.Syntax.OptionCount(Str.Item.SecretDeliveryCompletion,
+        Str.Option.SecretDeliveriesRequired)),
       KVP(Str.Syntax.LocationVictory, true)
     ]),
 

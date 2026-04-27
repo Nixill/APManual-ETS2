@@ -1,5 +1,6 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from typing import Any
+from ..nixcode.SecretDeliveries import get_secret_deliveries
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
@@ -187,6 +188,12 @@ def after_fill_slot_data(slot_data: dict, world: World, multiworld: MultiWorld, 
 # This is called right at the end, in case you want to write stuff to the spoiler log
 def before_write_spoiler(world: World, multiworld: MultiWorld, spoiler_handle) -> None:
     pass
+
+# This is called when creating output, in case you want to add additional data files to the output multiworld.
+# Keys are filenames, values are the texts of those files.
+def create_additional_data_files(world: World) -> dict[str, str]:
+    secret_delivery_texts = get_secret_deliveries(world)
+    return {f'secret-delivery-{i}.txt': v for i, v in enumerate(secret_delivery_texts, 1)}
 
 # This is called when you want to add information to the hint text
 def before_extend_hint_information(hint_data: dict[int, dict[int, str]], world: World, multiworld: MultiWorld, player: int) -> None:

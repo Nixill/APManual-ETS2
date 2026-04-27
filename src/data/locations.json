@@ -19197,13 +19197,13 @@
     }
   },
   {
-    "name": "All Secret Deliveries Completed",
-    "requires": "{OptionCount(Secret Delivery Completion, secret_deliveries_required)}",
+    "name": "All Delivery Tokens Collected",
+    "requires": "{OptionCount(Delivery Token, delivery_tokens_required)}",
     "victory": true
   },
   {
-    "name": "All Delivery Tokens Collected",
-    "requires": "{OptionCount(Delivery Token, delivery_tokens_required)}",
+    "name": "All Secret Deliveries Completed",
+    "requires": "{OptionCount(Secret Delivery Completion, secret_deliveries_required)}",
     "victory": true
   },
   {
