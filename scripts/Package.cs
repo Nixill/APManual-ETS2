@@ -18,6 +18,8 @@ string timestamp = (string)obj["build"]!;
 
 string filename = $"Manual_{gameName}_{creator}";
 
+int buildNumber = File.ReadAllLines($"release/{filename}.build.log").Length;
+
 File.Delete($"release/{filename}.apworld");
 ZipArchive archive = ZipFile.Open($"release/{filename}.apworld", ZipArchiveMode.Create);
 
@@ -27,6 +29,18 @@ foreach (string path in Directory.EnumerateFiles("src", "*", new EnumerationOpti
 }))
 {
   archive.CreateEntryFromFile(path, $"{filename}/{path[4..].Replace("\\", "/")}");
+}
+
+var entry = archive.CreateEntry($"{filename}/data/version.txt");
+
+using (var entryStream = entry.Open())
+using (var streamWriter = new StreamWriter(entryStream))
+{
+  streamWriter.Write($"""
+  JSON files generated at: {timestamp}
+  Package built at: {DateTime.UtcNow:yyyy-MM-dd HH:mm:ss}
+  Build number: {buildNumber + 1}
+  """);
 }
 
 archive.Dispose();
