@@ -32,8 +32,9 @@ def check_for_category(multiworld: MultiWorld, player: int, category_name: str) 
     elif tp == 'dlc':
         if extra_data['which'] not in get_option_value(multiworld, player, 'dlcs_available'): return False
 
-    elif tp == 'type_categories' and extra_data['which'] == 'skill':
-        if not get_option_value(multiworld, player, 'skill_items_on_levels') and not get_option_value(multiworld, player, 'skill_items_scattered'): return False
+    # Moving this to "grant skills automatically"
+    # elif tp == 'type_categories' and extra_data['which'] == 'skill':
+    #     if not get_option_value(multiworld, player, 'skill_items_on_levels') and not get_option_value(multiworld, player, 'skill_items_scattered'): return False
 
     elif tp == 'victory':
         goal_option = multiworld.worlds[player].options.goal

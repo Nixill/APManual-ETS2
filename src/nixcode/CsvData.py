@@ -3,8 +3,8 @@ import csv, pkgutil
 from dataclasses import dataclass
 from collections import defaultdict
 
-from .DataClasses import CheckLocation, GameInfo, Region, SecretDeliveryLetter, TruckModel
-from .Func import snake_case
+from .DataClasses import DLC, CheckLocation, GameInfo, Region, SecretDeliveryLetter, TruckModel
+from .Func import nixprint, snake_case
 
 from ..Helpers import load_data_csv
 
@@ -15,7 +15,10 @@ def get_dlc(name: str) -> str:
 def dlc_of(line: dict[str, str], key: str = 'DLC') -> str:
     return line[key] or 'Base Game'
 
-dlc_list: list[str] = [dlc_of(line) for line in load_data_csv('csv', 'dlcs.csv')]
+dlc_dict: dict[str, DLC] = {get_dlc(line['DLC']): DLC(get_dlc(line['DLC']), int(line['Release']), line['MainMap'] != 'false')
+                            for line in load_data_csv('csv', 'dlcs.csv')}
+dlc_name_list: list[str] = [*dlc_dict.keys()]
+nixprint(f'DLCs: {dlc_dict}', 6)
 #endregion
 
 #region Regions
@@ -80,7 +83,7 @@ ferry_connections_dict = {key: {k for k, v in value.items() if v} for key, value
 #endregion
 
 #region DLC Aliases
-dlc_aliases_dict: dict[str, str] = {dlc.lower(): dlc for dlc in dlc_list} \
+dlc_aliases_dict: dict[str, str] = {dlc.lower(): dlc for dlc in dlc_name_list} \
     | {line['Alias']: dlc_of(line) for line in load_data_csv('csv', 'dlc-aliases.csv')}
 #endregion
 

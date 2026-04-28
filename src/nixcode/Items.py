@@ -87,10 +87,10 @@ def implement_checks_reduction(world: World):
     # nixprint(f'max_count_companies: {max_count_companies}')
     # nixprint(f'max_check_count: {max_check_count}')
     # temporarily skipping this shortcut for debugging this method
-    # shortcut
-    if chance_of_state == 1 and chance_of_check == 1 and max_check_count == 0 \
-        and max_count_per_state == 0 and max_count_companies == 0 and max_check_count == 0:
-            return []
+    # shortcut, which doesn't work because early_checks doesn't get set
+    # if chance_of_state == 1 and chance_of_check == 1 and max_check_count == 0 \
+    #     and max_count_per_state == 0 and max_count_companies == 0 and max_check_count == 0:
+    #         return []
 
     all_states = list[str](options.states_available.value)
     # nixprint(f'all_states: {all_states}')
@@ -199,6 +199,9 @@ def perform_final_grants(item_pool: list, world: World) -> list[str]:
     # For truck contracts, first we should check which option was selected...
     truck_on_brand = options.truck_contract_item_brand.current_key.removeprefix('option_')
 
+    # For player skills, check if we're granting those items automatically...
+    player_skills_auto_grant = not (options.skill_items_on_levels or options.skill_items_scattered)
+
     item_names_to_remove: list[str] = [] # List of item names
 
     for k, v in item_name_to_item.items():
@@ -206,6 +209,10 @@ def perform_final_grants(item_pool: list, world: World) -> list[str]:
         data: dict[str, Any] = v['extra_data']
         tp: str = data.get('type')
         which: str = data.get('which')
+
+        # Start with player skills if not scattered
+        if tp == 'skill' and player_skills_auto_grant:
+            start_with_item(k, item_pool, world)
 
         # Remove all Starter Keys
         if tp == 'state_starter_key':

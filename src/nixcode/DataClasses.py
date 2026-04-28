@@ -2,6 +2,12 @@ from dataclasses import dataclass
 from random import Random
 
 @dataclass(frozen=True)
+class DLC:
+    name: str
+    date: int
+    is_main_map: bool = True
+
+@dataclass(frozen=True)
 class Region:
     state: str
     dlc: str

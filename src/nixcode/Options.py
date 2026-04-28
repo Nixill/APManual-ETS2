@@ -1,10 +1,10 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from random import Random
-from typing import Any
+from typing import Any, Iterable
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
-from .CsvData import dlc_connections, dlc_aliases_dict, dlc_states_dict, dlc_list, state_list
+from .CsvData import dlc_connections, dlc_aliases_dict, dlc_states_dict, dlc_name_list, state_list, dlc_dict
 from .OptionDefs import QuickTravelTicketItem, StartingLocation
 from .Func import get_case_key_opt, get_case_opt, in_case, nixprint, snake_case, random_string
 from ..Helpers import is_option_enabled, get_option_value
@@ -49,7 +49,7 @@ def validate_options_early(world: World):
     if start_array:
         starting_state = start_array.pop()
     if options.starting_location.current_key not in [snake_case(state) for state in available_states]:
-        starting_state = world.random.choice(available_states)
+        starting_state = world.random.choice([*available_states])
         options.starting_location.value = getattr(StartingLocation, f'option_{snake_case(starting_state)}')
 
     # Ensures that the starting state has checks that exist.
@@ -95,8 +95,34 @@ def get_enabled_dlcs(dlcs_in: set[str]) -> set[str]:
     """
     Returns the set of all enabled DLCs, with aliases parsed.
     """
-    if 'all' in {a.lower() for a in dlcs_in}: return {*dlc_list}
-    return {dlc_aliases_dict[dlc_in.lower()] for dlc_in in dlcs_in}
+    if 'all' in {a.lower() for a in dlcs_in}:
+        result = {dlc.name for dlc in dlc_dict.values() if dlc.is_main_map}
+        nixprint(f'ALL detected, returning {result}', 5)
+        return result
+    if 'really_all' in {snake_case(a) for a in dlcs_in}:
+        result = {*dlc_name_list}
+        nixprint(f'REALLY_ALL detected, returning {result}', 5)
+        return result
+    return [*parse_dlc_names(dlcs_in)]
+    # dlc_aliases_dict[dlc_in.lower()] for dlc_in in dlcs_in
+
+def parse_dlc_names(dlcs_in: set[str]) -> Iterable[str]:
+    for name in dlcs_in:
+        preceding_mode = False
+
+        if name.startswith('<'):
+            name = name[1:].lstrip()
+            preceding_mode = True
+
+        if name.lower() in dlc_aliases_dict:
+            name = dlc_aliases_dict[name]
+
+        yield name
+
+        if preceding_mode:
+            release = dlc_dict[name].date
+            for dlc in [dlc.name for dlc in dlc_dict.values() if dlc.date < release and dlc.is_main_map]:
+                yield dlc
 
 def get_available_states(dlcs: set[str]) -> set[str]:
     """
@@ -125,7 +151,7 @@ def get_enabled_states(states: set[str], dlcs: set[str]) -> set[str]:
     for state in states:
         if state := get_case_opt(state_list, state):
             states_output.add(state)
-        if states_by_dlc := get_case_key_opt(dlc_list, state):
+        if states_by_dlc := get_case_key_opt(dlc_name_list, state):
             states_output.update(states_by_dlc)
 
     result = states_output.intersection(available_states)

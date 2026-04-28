@@ -2,8 +2,10 @@ from random import Random
 from typing import Iterable, Any, Optional, Sequence, TypeVar
 from unicodedata import normalize
 
-ENABLE_NIXPRINT = False
-NIXPRINT_VERSIONS = [2]
+ENABLE_NIXPRINT = True
+# Disabled nixprint versions: 1, 2, 3, 4, 5, 6
+# may still need 5 for now
+NIXPRINT_VERSIONS = []
 
 T = TypeVar('T')
 

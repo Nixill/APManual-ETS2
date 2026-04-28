@@ -3,7 +3,7 @@ from typing import Any, Type
 from worlds.AutoWorld import World
 from Options import Option, FreeText, NumericOption, Toggle, DefaultOnToggle, Choice, TextChoice, Range, NamedRange, OptionGroup, PerGameCommonOptions, OptionSet
 from .Func import nixprint, snake_case
-from .CsvData import state_list, dlc_list, truck_makes_list, company_list, photo_trophies_dict, viewpoints_dict, city_dict, dlc_aliases_dict
+from .CsvData import state_list, dlc_name_list, truck_makes_list, company_list, photo_trophies_dict, viewpoints_dict, city_dict, dlc_aliases_dict
 
 start_args = {f'option_{snake_case(s)}': i for i, s in enumerate(state_list)} | {
         'display_name': 'Starting Location',
@@ -110,13 +110,15 @@ class DLCsAvailableOption(OptionSet):
     A disabled DLC does not contribute any checks or items to the multiworld. However, companies
     specifically may be present in multiple DLCs and may be checks if any such DLC is enabled.
 
-    Valid values are any DLC name or "All".
+    Valid values are any DLC name, "All" (excludes trailer packs), or "Really All" (includes
+    trailer packs). You may also put a '<' before a DLC's name to additionally include all
+    released before it (excludes trailer packs).
 
     "Base Game" is implied and cannot be disabled.
     """
     display_name = 'Available DLCs'
     rich_text_doc = True
-    valid_keys = {*dlc_aliases_dict.values(), 'all'} - {'base game', 'base'}
+    valid_keys = {*dlc_aliases_dict.keys(), *{f'<{dlc}' for dlc in dlc_aliases_dict.keys()}, 'all', 'really all'} - {'base game', 'base'}
     valid_keys_casefold = True
     default = set()
 
@@ -136,7 +138,7 @@ class StatesAvailableOption(OptionSet):
     """
     display_name = 'Available Countries'
     rich_text_doc = True
-    valid_keys = state_list + dlc_list + ['All']
+    valid_keys = state_list + dlc_name_list + ['All']
     valid_keys_casefold = True
     default = set()
 
@@ -153,7 +155,7 @@ class EnableCityChecks(DefaultOnToggle):
 class EnableCompanyChecks(Toggle):
     """
     Whether or not companies are checks. If so, the player chooses from one of the following:
-    - A check is performed by driving onto any of that company's depos. Click it when the depot on
+    - A check is performed by driving onto any of that company's depots. Click it when the depot on
       the map turns yellow.
     - A check is performed by performing a delivery to that company. Click it when the results
       screen appears.
@@ -237,7 +239,7 @@ class SkillItemsScattered(Toggle):
     If this option AND skill_items_on_levels are enabled, skill items are placed on level up
     checks first, and then the remainder are spread throughout the multiworld item pool.
     """
-    display_name = ''
+    display_name = 'Skills Scattered'
 
 class _PercentOption(Range):
     range_start = 1
@@ -253,7 +255,7 @@ class PlayerLevelLogicalLockFactor(Range):
     display_name = 'Player Level Logical Lock Factor'
     range_start = 0
     range_end = 100
-    default = 30
+    default = 60
 
 class FerryTicketItem(KeyItemChoice):
     """
