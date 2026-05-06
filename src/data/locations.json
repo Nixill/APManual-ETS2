@@ -84,6 +84,20 @@
     "region": "Austria/Base Game"
   },
   {
+    "name": "City - Antwerp",
+    "category": [
+      "City",
+      "Belgium",
+      "Belgium (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "city",
+      "which": "Antwerp"
+    },
+    "region": "Belgium/Base Game"
+  },
+  {
     "name": "City - Brussels",
     "category": [
       "City",
@@ -1408,6 +1422,20 @@
     "extra_data": {
       "type": "city",
       "which": "Amsterdam"
+    },
+    "region": "Netherlands/Base Game"
+  },
+  {
+    "name": "City - Eindhoven",
+    "category": [
+      "City",
+      "Netherlands",
+      "Netherlands (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "city",
+      "which": "Eindhoven"
     },
     "region": "Netherlands/Base Game"
   },

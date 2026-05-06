@@ -46,4 +46,4 @@ using (var streamWriter = new StreamWriter(entryStream))
 archive.Dispose();
 
 File.AppendAllText($"release/{filename}.build.log", $"ver {timestamp} packaged at {DateTime.UtcNow:yyyy-MM-dd HH:mm:ss}"
-  + $" with size of {new FileInfo($"release/{filename}.apworld").Length}\n");
+  + $" (build {buildNumber}) with size of {new FileInfo($"release/{filename}.apworld").Length}\n");
