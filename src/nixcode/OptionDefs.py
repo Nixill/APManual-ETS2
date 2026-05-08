@@ -443,6 +443,11 @@ def group_options(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[
         SecretDeliveryCountryLimit
     ]
 
+    groups['DLC and State Availability'] = [
+        DLCsAvailableOption,
+        StatesAvailableOption
+    ]
+
     groups['Check Types Available'] = [
         EnableCityChecks,
         EnableCompanyChecks,
@@ -454,7 +459,8 @@ def group_options(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[
     groups['Level and Skill Checks'] = [
         PlayerLevelChecks,
         SkillItemsOnLevels,
-        SkillItemsScattered
+        SkillItemsScattered,
+        PlayerLevelLogicalLockFactor
     ]
 
     groups['Items Available'] = [
