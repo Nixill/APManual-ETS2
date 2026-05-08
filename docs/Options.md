@@ -139,6 +139,11 @@ Whether or not viewpoints are checks.
 
 Viewpoint checks require the TV item to be performed, so the values of this setting are the same as for [photosanity](#enable_photosanity).
 
+## `secret_road_checks`
+Whether or not checks that are accessible by secret roads should be included.
+
+Currently, this includes nine Viewpoints and nothing else.
+
 # Player Level Checks
 ## `player_level_checks`
 How many player levels should be checks? All levels from 1 to the specified number will be included. This number controls External checks that can have any multiworld item placed on them.
