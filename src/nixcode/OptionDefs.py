@@ -193,6 +193,14 @@ class EnableViewpointsanity(_KeyItemChoiceWithDisable):
     """
     display_name = 'Enable Viewpointsanity'
 
+class SecretRoadChecks(Toggle):
+    """
+    Whether or not checks located on hidden paths are included. Currently, this only affects some
+    viewpoints, but may expand to include photo trophies if SCS decides to add those to hidden
+    paths.
+    """
+    display_name = 'Secret Road Checks'
+
 class PlayerLevelChecks(NamedRange):
     """
     How many player levels should be checks? All levels from 1 to the specified number will be
@@ -402,6 +410,7 @@ def define_options(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Opti
     options["enable_companysanity"] = EnableCompanyChecks
     options["enable_photosanity"] = EnablePhotosanity
     options["enable_viewpointsanity"] = EnableViewpointsanity
+    options["secret_road_checks"] = SecretRoadChecks
     options["player_level_checks"] = PlayerLevelChecks
     options["skill_items_on_levels"] = SkillItemsOnLevels
     options["skill_items_scattered"] = SkillItemsScattered
@@ -438,7 +447,8 @@ def group_options(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[
         EnableCityChecks,
         EnableCompanyChecks,
         EnablePhotosanity,
-        EnableViewpointsanity
+        EnableViewpointsanity,
+        SecretRoadChecks
     ]
 
     groups['Level and Skill Checks'] = [

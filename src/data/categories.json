@@ -798,6 +798,16 @@
       "enable_companysanity"
     ]
   },
+  "Hidden Path": {
+    "hidden": true,
+    "extra_data": {
+      "type": "type_categories",
+      "which": "hidden_path"
+    },
+    "yaml_option": [
+      "secret_road_checks"
+    ]
+  },
   "Player Level": {
     "hidden": true,
     "extra_data": {

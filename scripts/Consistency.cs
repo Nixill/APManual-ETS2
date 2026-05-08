@@ -17,7 +17,7 @@ public readonly record struct Region(string StateName, string DLCName) : ICompar
 }
 
 public readonly record struct Connection(Region Region1, Region Region2, bool FerryRequired);
-public readonly record struct Check(string Name, Region Region, bool FerryRequired);
+public readonly record struct Check(string Name, Region Region, bool FerryRequired, bool HiddenPath = false);
 public readonly record struct CompanyName(string LatinName, string? CyrillicName, string? GreekName);
 public readonly record struct Truck(string Make, string Model, string DLC);
 #endregion
@@ -25,7 +25,7 @@ public readonly record struct Truck(string Make, string Model, string DLC);
 #region Data
 public static class Data
 {
-  public const string CsvPath = "data/csv/{0}.csv";
+  public const string CsvPath = "src/data/csv/{0}.csv";
 
   public const string CitiesFN = "cities";
   public static readonly CSVObjectDictionary<string, Check> Cities =
@@ -174,7 +174,8 @@ public static class Data
         DLCName: d["DLC"] ?? "Base Game",
         StateName: d["State"]!
       ),
-      FerryRequired: d["FerryRequired"] == "true"
+      FerryRequired: d["FerryRequired"] == "true",
+      HiddenPath: d["HiddenPath"] == "true"
     ));
 }
 #endregion
@@ -184,7 +185,7 @@ public static class Program
 {
   static void Main()
   {
-    using FileStream stream = File.Open("csvdata/consistency.md", FileMode.Create);
+    using FileStream stream = File.Open("src/data/csv/consistency.md", FileMode.Create);
     using StreamWriter writer = new(stream);
 
     Dictionary<string, string[]> fileErrors = [];

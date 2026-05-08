@@ -5359,21 +5359,6 @@
     "requires": "|Camera|"
   },
   {
-    "name": "Photo Trophy - Basilica of the Sacred Heart (Belgium)",
-    "category": [
-      "Photo Trophy",
-      "Belgium",
-      "Belgium (Checks)",
-      "Base Game (DLC)"
-    ],
-    "extra_data": {
-      "type": "photo_trophy",
-      "which": "Basilica of the Sacred Heart (Belgium)"
-    },
-    "region": "Belgium/Base Game",
-    "requires": "|Camera|"
-  },
-  {
     "name": "Photo Trophy - Sarajevo City Hall",
     "category": [
       "Photo Trophy",
@@ -6526,36 +6511,6 @@
       "which": "Basilica of the Sacred Heart (France)"
     },
     "region": "France/Base Game",
-    "requires": "|Camera|"
-  },
-  {
-    "name": "Photo Trophy - State Bank and Savings Fund",
-    "category": [
-      "Photo Trophy",
-      "Luxembourg",
-      "Luxembourg (Checks)",
-      "Base Game (DLC)"
-    ],
-    "extra_data": {
-      "type": "photo_trophy",
-      "which": "State Bank and Savings Fund"
-    },
-    "region": "Luxembourg/Base Game",
-    "requires": "|Camera|"
-  },
-  {
-    "name": "Photo Trophy - Amsterdam Panorama",
-    "category": [
-      "Photo Trophy",
-      "Netherlands",
-      "Netherlands (Checks)",
-      "Base Game (DLC)"
-    ],
-    "extra_data": {
-      "type": "photo_trophy",
-      "which": "Amsterdam Panorama"
-    },
-    "region": "Netherlands/Base Game",
     "requires": "|Camera|"
   },
   {
@@ -7969,6 +7924,141 @@
     "requires": "|Camera|"
   },
   {
+    "name": "Photo Trophy - Amsterdam Venue",
+    "category": [
+      "Photo Trophy",
+      "Netherlands",
+      "Netherlands (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "photo_trophy",
+      "which": "Amsterdam Venue"
+    },
+    "region": "Netherlands/Base Game",
+    "requires": "|Camera|"
+  },
+  {
+    "name": "Photo Trophy - Lonje Windmill",
+    "category": [
+      "Photo Trophy",
+      "Netherlands",
+      "Netherlands (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "photo_trophy",
+      "which": "Lonje Windmill"
+    },
+    "region": "Netherlands/Base Game",
+    "requires": "|Camera|"
+  },
+  {
+    "name": "Photo Trophy - Pesse Gas Station",
+    "category": [
+      "Photo Trophy",
+      "Netherlands",
+      "Netherlands (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "photo_trophy",
+      "which": "Pesse Gas Station"
+    },
+    "region": "Netherlands/Base Game",
+    "requires": "|Camera|"
+  },
+  {
+    "name": "Photo Trophy - Van Brienenoord Bridge",
+    "category": [
+      "Photo Trophy",
+      "Netherlands",
+      "Netherlands (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "photo_trophy",
+      "which": "Van Brienenoord Bridge"
+    },
+    "region": "Netherlands/Base Game",
+    "requires": "|Camera|"
+  },
+  {
+    "name": "Photo Trophy - Zuidas District",
+    "category": [
+      "Photo Trophy",
+      "Netherlands",
+      "Netherlands (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "photo_trophy",
+      "which": "Zuidas District"
+    },
+    "region": "Netherlands/Base Game",
+    "requires": "|Camera|"
+  },
+  {
+    "name": "Photo Trophy - Antwerpen-Central Railway Station",
+    "category": [
+      "Photo Trophy",
+      "Belgium",
+      "Belgium (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "photo_trophy",
+      "which": "Antwerpen-Central Railway Station"
+    },
+    "region": "Belgium/Base Game",
+    "requires": "|Camera|"
+  },
+  {
+    "name": "Photo Trophy - Liege-Guillemins Railway Station",
+    "category": [
+      "Photo Trophy",
+      "Belgium",
+      "Belgium (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "photo_trophy",
+      "which": "Liege-Guillemins Railway Station"
+    },
+    "region": "Belgium/Base Game",
+    "requires": "|Camera|"
+  },
+  {
+    "name": "Photo Trophy - Wanlin Rest Stop",
+    "category": [
+      "Photo Trophy",
+      "Belgium",
+      "Belgium (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "photo_trophy",
+      "which": "Wanlin Rest Stop"
+    },
+    "region": "Belgium/Base Game",
+    "requires": "|Camera|"
+  },
+  {
+    "name": "Photo Trophy - Philharmonie Luxembourg",
+    "category": [
+      "Photo Trophy",
+      "Luxembourg",
+      "Luxembourg (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "photo_trophy",
+      "which": "Philharmonie Luxembourg"
+    },
+    "region": "Luxembourg/Base Game",
+    "requires": "|Camera|"
+  },
+  {
     "name": "Viewpoint - Ettal Abbey",
     "category": [
       "Viewpoint",
@@ -8229,7 +8319,8 @@
       "Viewpoint",
       "Switzerland",
       "Switzerland (Checks)",
-      "Base Game (DLC)"
+      "Base Game (DLC)",
+      "Hidden Path"
     ],
     "extra_data": {
       "type": "viewpoint",
@@ -8259,7 +8350,8 @@
       "Viewpoint",
       "Switzerland",
       "Switzerland (Checks)",
-      "Base Game (DLC)"
+      "Base Game (DLC)",
+      "Hidden Path"
     ],
     "extra_data": {
       "type": "viewpoint",
@@ -8394,7 +8486,8 @@
       "Viewpoint",
       "Denmark",
       "Denmark (Checks)",
-      "Scandinavia (DLC)"
+      "Scandinavia (DLC)",
+      "Hidden Path"
     ],
     "extra_data": {
       "type": "viewpoint",
@@ -8424,7 +8517,8 @@
       "Viewpoint",
       "Denmark",
       "Denmark (Checks)",
-      "Scandinavia (DLC)"
+      "Scandinavia (DLC)",
+      "Hidden Path"
     ],
     "extra_data": {
       "type": "viewpoint",
@@ -8604,7 +8698,8 @@
       "Viewpoint",
       "Norway",
       "Norway (Checks)",
-      "Nordic Horizons (DLC)"
+      "Nordic Horizons (DLC)",
+      "Hidden Path"
     ],
     "extra_data": {
       "type": "viewpoint",
@@ -9639,7 +9734,8 @@
       "Viewpoint",
       "Greece",
       "Greece (Checks)",
-      "Greece (DLC)"
+      "Greece (DLC)",
+      "Hidden Path"
     ],
     "extra_data": {
       "type": "viewpoint",
@@ -9714,7 +9810,8 @@
       "Viewpoint",
       "Greece",
       "Greece (Checks)",
-      "Greece (DLC)"
+      "Greece (DLC)",
+      "Hidden Path"
     ],
     "extra_data": {
       "type": "viewpoint",
@@ -9751,6 +9848,113 @@
       "which": "Thessaloniki Cement Plant"
     },
     "region": "Greece/Greece",
+    "requires": "|TV|"
+  },
+  {
+    "name": "Viewpoint - Brouwersdam",
+    "category": [
+      "Viewpoint",
+      "Netherlands",
+      "Netherlands (Checks)",
+      "Base Game (DLC)",
+      "Hidden Path"
+    ],
+    "extra_data": {
+      "type": "viewpoint",
+      "which": "Brouwersdam"
+    },
+    "region": "Netherlands/Base Game",
+    "requires": "|TV|"
+  },
+  {
+    "name": "Viewpoint - Eindhoven",
+    "category": [
+      "Viewpoint",
+      "Netherlands",
+      "Netherlands (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "viewpoint",
+      "which": "Eindhoven"
+    },
+    "region": "Netherlands/Base Game",
+    "requires": "|TV|"
+  },
+  {
+    "name": "Viewpoint - Groningen",
+    "category": [
+      "Viewpoint",
+      "Netherlands",
+      "Netherlands (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "viewpoint",
+      "which": "Groningen"
+    },
+    "region": "Netherlands/Base Game",
+    "requires": "|TV|"
+  },
+  {
+    "name": "Viewpoint - De Vlieter",
+    "category": [
+      "Viewpoint",
+      "Netherlands",
+      "Netherlands (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "viewpoint",
+      "which": "De Vlieter"
+    },
+    "region": "Netherlands/Base Game",
+    "requires": "|TV|"
+  },
+  {
+    "name": "Viewpoint - La Roche-en-Ardennes",
+    "category": [
+      "Viewpoint",
+      "Belgium",
+      "Belgium (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "viewpoint",
+      "which": "La Roche-en-Ardennes"
+    },
+    "region": "Belgium/Base Game",
+    "requires": "|TV|"
+  },
+  {
+    "name": "Viewpoint - Antwerp",
+    "category": [
+      "Viewpoint",
+      "Belgium",
+      "Belgium (Checks)",
+      "Base Game (DLC)"
+    ],
+    "extra_data": {
+      "type": "viewpoint",
+      "which": "Antwerp"
+    },
+    "region": "Belgium/Base Game",
+    "requires": "|TV|"
+  },
+  {
+    "name": "Viewpoint - Luxembourg",
+    "category": [
+      "Viewpoint",
+      "Luxembourg",
+      "Luxembourg (Checks)",
+      "Base Game (DLC)",
+      "Hidden Path"
+    ],
+    "extra_data": {
+      "type": "viewpoint",
+      "which": "Luxembourg"
+    },
+    "region": "Luxembourg/Base Game",
     "requires": "|TV|"
   },
   {
@@ -11205,7 +11409,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Germany/Base Game Reachable| or |Austria/Base Game Reachable| or |Croatia/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Italy/Italia Reachable| or |Albania/West Balkans Reachable| or |Greece/Greece Reachable|",
+    "requires": "|Germany/Base Game Reachable| or |Austria/Base Game Reachable| or |Netherlands/Base Game Reachable| or |Croatia/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Italy/Italia Reachable| or |Albania/West Balkans Reachable| or |Greece/Greece Reachable|",
     "extra_data": {
       "type": "company",
       "which": "CNP",
@@ -11213,6 +11417,7 @@
       "state_list": [
         "Germany",
         "Austria",
+        "Netherlands",
         "Croatia",
         "Serbia",
         "Italy",
@@ -11227,6 +11432,10 @@
         {
           "dlc": "Base Game",
           "state": "Austria"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Netherlands"
         },
         {
           "dlc": "West Balkans",
@@ -11305,7 +11514,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Germany/Base Game Reachable| or |Denmark/Scandinavia Reachable| or |Slovenia/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Albania/West Balkans Reachable| or |Greece/Greece Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable|",
+    "requires": "|Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Germany/Base Game Reachable| or |Denmark/Scandinavia Reachable| or |Slovenia/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Albania/West Balkans Reachable| or |Greece/Greece Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable| or |Netherlands/Base Game Reachable| or |Belgium/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "Container port",
@@ -11324,7 +11533,9 @@
         "Greece",
         "Bulgaria",
         "Romania",
-        "Russia"
+        "Russia",
+        "Netherlands",
+        "Belgium"
       ],
       "region_list": [
         {
@@ -11390,6 +11601,14 @@
         {
           "dlc": "Beyond the Baltic Sea",
           "state": "Russia"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Netherlands"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Belgium"
         }
       ]
     }
@@ -11462,6 +11681,82 @@
         {
           "dlc": "West Balkans",
           "state": "Montenegro"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Company - DAF Trucks",
+    "category": [
+      "Company",
+      "(1) Companies"
+    ],
+    "requires": "|Netherlands/Base Game Reachable| or |France/Vive la France ! Reachable| or |Spain/Iberia Reachable| or |United Kingdom/Base Game Reachable| or |Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable| or |Russia/Beyond the Baltic Sea Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Greece/Greece Reachable| or |Italy/Italia Reachable|",
+    "extra_data": {
+      "type": "company",
+      "which": "DAF Trucks",
+      "dlc_list": false,
+      "state_list": [
+        "Netherlands",
+        "France",
+        "Spain",
+        "United Kingdom",
+        "Norway",
+        "Finland",
+        "Russia",
+        "Estonia",
+        "Romania",
+        "Greece",
+        "Italy"
+      ],
+      "region_list": [
+        {
+          "dlc": "Base Game",
+          "state": "Netherlands"
+        },
+        {
+          "dlc": "Vive la France !",
+          "state": "France"
+        },
+        {
+          "dlc": "Iberia",
+          "state": "Spain"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "United Kingdom"
+        },
+        {
+          "dlc": "Scandinavia",
+          "state": "Norway"
+        },
+        {
+          "dlc": "Nordic Horizons",
+          "state": "Norway"
+        },
+        {
+          "dlc": "Nordic Horizons",
+          "state": "Finland"
+        },
+        {
+          "dlc": "Beyond the Baltic Sea",
+          "state": "Russia"
+        },
+        {
+          "dlc": "Beyond the Baltic Sea",
+          "state": "Estonia"
+        },
+        {
+          "dlc": "Road to the Black Sea",
+          "state": "Romania"
+        },
+        {
+          "dlc": "Greece",
+          "state": "Greece"
+        },
+        {
+          "dlc": "Italia",
+          "state": "Italy"
         }
       ]
     }
@@ -11907,7 +12202,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|United Kingdom/Base Game Reachable| or |Netherlands/Base Game Reachable| or |Belgium/Base Game Reachable| or |Luxembourg/Base Game Reachable| or |France/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Italy/Base Game Reachable| or |Austria/Base Game Reachable| or |Hungary/Going East! Reachable| or |Czech Republic/Base Game Reachable| or |Poland/Base Game Reachable| or |Germany/Base Game Reachable| or |Netherlands/Base Game Reachable|",
+    "requires": "|United Kingdom/Base Game Reachable| or |Netherlands/Base Game Reachable| or |France/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Italy/Base Game Reachable| or |Austria/Base Game Reachable| or |Hungary/Going East! Reachable| or |Czech Republic/Base Game Reachable| or |Poland/Base Game Reachable| or |Germany/Base Game Reachable| or |Netherlands/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "EuroAcres",
@@ -11915,8 +12210,6 @@
       "state_list": [
         "United Kingdom",
         "Netherlands",
-        "Belgium",
-        "Luxembourg",
         "France",
         "Switzerland",
         "Italy",
@@ -11934,14 +12227,6 @@
         {
           "dlc": "Base Game",
           "state": "Netherlands"
-        },
-        {
-          "dlc": "Base Game",
-          "state": "Belgium"
-        },
-        {
-          "dlc": "Base Game",
-          "state": "Luxembourg"
         },
         {
           "dlc": "Base Game",
@@ -11978,6 +12263,28 @@
         {
           "dlc": "Base Game",
           "state": "Netherlands"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Company - Euro Flow Ports",
+    "category": [
+      "Company",
+      "(1) Companies"
+    ],
+    "requires": "|Belgium/Base Game Reachable|",
+    "extra_data": {
+      "type": "company",
+      "which": "Euro Flow Ports",
+      "dlc_list": false,
+      "state_list": [
+        "Belgium"
+      ],
+      "region_list": [
+        {
+          "dlc": "Base Game",
+          "state": "Belgium"
         }
       ]
     }
@@ -12803,7 +13110,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Italy/Base Game Reachable| or |Germany/Base Game Reachable| or |Croatia/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Denmark/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |France/Base Game Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable| or |Russia/Beyond the Baltic Sea Reachable|",
+    "requires": "|Italy/Base Game Reachable| or |Germany/Base Game Reachable| or |Croatia/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Denmark/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |France/Base Game Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable| or |Russia/Beyond the Baltic Sea Reachable| or |Netherlands/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "Ika Bohag",
@@ -12823,7 +13130,8 @@
         "France",
         "Spain",
         "Portugal",
-        "Russia"
+        "Russia",
+        "Netherlands"
       ],
       "region_list": [
         {
@@ -12897,6 +13205,10 @@
         {
           "dlc": "Beyond the Baltic Sea",
           "state": "Russia"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Netherlands"
         }
       ]
     }
@@ -12931,14 +13243,13 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|United Kingdom/Base Game Reachable| or |Belgium/Base Game Reachable| or |Luxembourg/Base Game Reachable| or |Germany/Base Game Reachable| or |Poland/Base Game Reachable| or |Czech Republic/Going East! Reachable| or |Slovakia/Going East! Reachable| or |Austria/Base Game Reachable| or |Slovenia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |North Macedonia/West Balkans Reachable|",
+    "requires": "|United Kingdom/Base Game Reachable| or |Luxembourg/Base Game Reachable| or |Germany/Base Game Reachable| or |Poland/Base Game Reachable| or |Czech Republic/Going East! Reachable| or |Slovakia/Going East! Reachable| or |Austria/Base Game Reachable| or |Slovenia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |North Macedonia/West Balkans Reachable| or |Netherlands/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "ITCC",
       "dlc_list": false,
       "state_list": [
         "United Kingdom",
-        "Belgium",
         "Luxembourg",
         "Germany",
         "Poland",
@@ -12947,16 +13258,13 @@
         "Austria",
         "Slovenia",
         "Bosnia and Herzegovina",
-        "North Macedonia"
+        "North Macedonia",
+        "Netherlands"
       ],
       "region_list": [
         {
           "dlc": "Base Game",
           "state": "United Kingdom"
-        },
-        {
-          "dlc": "Base Game",
-          "state": "Belgium"
         },
         {
           "dlc": "Base Game",
@@ -12993,6 +13301,10 @@
         {
           "dlc": "West Balkans",
           "state": "North Macedonia"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Netherlands"
         }
       ]
     }
@@ -13037,7 +13349,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Turkiye/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Hungary/Going East! Reachable| or |Czech Republic/Going East! Reachable| or |Poland/Base Game Reachable| or |Germany/Base Game Reachable| or |Netherlands/Base Game Reachable| or |France/Base Game Reachable| or |Italy/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
+    "requires": "|Turkiye/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Hungary/Going East! Reachable| or |Czech Republic/Going East! Reachable| or |Poland/Base Game Reachable| or |Germany/Base Game Reachable| or |France/Base Game Reachable| or |Italy/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "Kaarfor",
@@ -13050,7 +13362,6 @@
         "Czech Republic",
         "Poland",
         "Germany",
-        "Netherlands",
         "France",
         "Italy",
         "United Kingdom"
@@ -13086,10 +13397,6 @@
         },
         {
           "dlc": "Base Game",
-          "state": "Netherlands"
-        },
-        {
-          "dlc": "Base Game",
           "state": "France"
         },
         {
@@ -13109,7 +13416,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Austria/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Germany/Base Game Reachable| or |Finland/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable|",
+    "requires": "|Austria/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Germany/Base Game Reachable| or |Finland/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable| or |Netherlands/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "Kathode",
@@ -13119,7 +13426,8 @@
         "Switzerland",
         "Germany",
         "Finland",
-        "Norway"
+        "Norway",
+        "Netherlands"
       ],
       "region_list": [
         {
@@ -13141,6 +13449,10 @@
         {
           "dlc": "Nordic Horizons",
           "state": "Norway"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Netherlands"
         }
       ]
     }
@@ -14373,7 +14685,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Turkiye/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Austria/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Germany/Base Game Reachable| or |Denmark/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable| or |Kaliningrad/Beyond the Baltic Sea Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
+    "requires": "|Turkiye/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Austria/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Germany/Base Game Reachable| or |Denmark/Scandinavia Reachable| or |Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Beyond the Baltic Sea Reachable| or |Finland/Nordic Horizons Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Latvia/Beyond the Baltic Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Russia/Beyond the Baltic Sea Reachable| or |Kaliningrad/Beyond the Baltic Sea Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable| or |Netherlands/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "NS Oil",
@@ -14394,7 +14706,8 @@
         "Russia",
         "Kaliningrad",
         "Spain",
-        "Portugal"
+        "Portugal",
+        "Netherlands"
       ],
       "region_list": [
         {
@@ -14472,6 +14785,10 @@
         {
           "dlc": "Iberia",
           "state": "Portugal"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Netherlands"
         }
       ]
     }
@@ -14933,19 +15250,18 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable| or |Denmark/Scandinavia Reachable|",
+    "requires": "|Sweden/Scandinavia Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable| or |Denmark/Scandinavia Reachable| or |Netherlands/Base Game Reachable| or |Luxembourg/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "Primel",
-      "dlc_list": [
-        "scandinavia",
-        "nordic_horizons"
-      ],
+      "dlc_list": false,
       "state_list": [
         "Sweden",
         "Finland",
         "Norway",
-        "Denmark"
+        "Denmark",
+        "Netherlands",
+        "Luxembourg"
       ],
       "region_list": [
         {
@@ -14967,6 +15283,14 @@
         {
           "dlc": "Scandinavia",
           "state": "Denmark"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Netherlands"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Luxembourg"
         }
       ]
     }
@@ -15490,7 +15814,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|United Kingdom/Base Game Reachable| or |Luxembourg/Base Game Reachable| or |Netherlands/Base Game Reachable| or |Germany/Base Game Reachable| or |Denmark/Scandinavia Reachable| or |Czech Republic/Base Game Reachable| or |Poland/Going East! Reachable| or |Hungary/Going East! Reachable| or |Austria/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Serbia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Albania/West Balkans Reachable| or |Greece/Greece Reachable| or |Finland/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable|",
+    "requires": "|United Kingdom/Base Game Reachable| or |Luxembourg/Base Game Reachable| or |Netherlands/Base Game Reachable| or |Germany/Base Game Reachable| or |Denmark/Scandinavia Reachable| or |Czech Republic/Base Game Reachable| or |Poland/Going East! Reachable| or |Hungary/Going East! Reachable| or |Austria/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Serbia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Albania/West Balkans Reachable| or |Greece/Greece Reachable| or |Finland/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Norway/Nordic Horizons Reachable| or |Belgium/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "Sanbuilders",
@@ -15513,7 +15837,8 @@
         "Greece",
         "Finland",
         "Sweden",
-        "Norway"
+        "Norway",
+        "Belgium"
       ],
       "region_list": [
         {
@@ -15587,6 +15912,10 @@
         {
           "dlc": "Nordic Horizons",
           "state": "Norway"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Belgium"
         }
       ]
     }
@@ -15731,7 +16060,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Italy/Base Game Reachable| or |Austria/Base Game Reachable| or |Slovakia/Going East! Reachable| or |Czech Republic/Base Game Reachable| or |Poland/Going East! Reachable| or |Germany/Base Game Reachable| or |Netherlands/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
+    "requires": "|Italy/Base Game Reachable| or |Austria/Base Game Reachable| or |Slovakia/Going East! Reachable| or |Czech Republic/Base Game Reachable| or |Poland/Going East! Reachable| or |Germany/Base Game Reachable| or |Netherlands/Base Game Reachable| or |United Kingdom/Base Game Reachable| or |Belgium/Base Game Reachable| or |Luxembourg/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "SellPlan",
@@ -15744,7 +16073,9 @@
         "Poland",
         "Germany",
         "Netherlands",
-        "United Kingdom"
+        "United Kingdom",
+        "Belgium",
+        "Luxembourg"
       ],
       "region_list": [
         {
@@ -15778,6 +16109,14 @@
         {
           "dlc": "Base Game",
           "state": "United Kingdom"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Belgium"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Luxembourg"
         }
       ]
     }
@@ -15812,7 +16151,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Romania/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Greece/Greece Reachable| or |Albania/West Balkans Reachable| or |Montenegro/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Austria/Base Game Reachable| or |Germany/Base Game Reachable| or |Norway/Nordic Horizons Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable|",
+    "requires": "|Romania/Road to the Black Sea Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Greece/Greece Reachable| or |Albania/West Balkans Reachable| or |Montenegro/West Balkans Reachable| or |Serbia/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Austria/Base Game Reachable| or |Germany/Base Game Reachable| or |Norway/Nordic Horizons Reachable| or |Spain/Iberia Reachable| or |Portugal/Iberia Reachable| or |Belgium/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "Shuttle Cola",
@@ -15829,7 +16168,8 @@
         "Germany",
         "Norway",
         "Spain",
-        "Portugal"
+        "Portugal",
+        "Belgium"
       ],
       "region_list": [
         {
@@ -15879,6 +16219,10 @@
         {
           "dlc": "Iberia",
           "state": "Portugal"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Belgium"
         }
       ]
     }
@@ -16042,7 +16386,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Poland/Base Game Reachable| or |Czech Republic/Base Game Reachable| or |Austria/Base Game Reachable| or |Germany/Base Game Reachable| or |Switzerland/Base Game Reachable| or |France/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
+    "requires": "|Poland/Base Game Reachable| or |Czech Republic/Base Game Reachable| or |Austria/Base Game Reachable| or |Germany/Base Game Reachable| or |Switzerland/Base Game Reachable| or |France/Base Game Reachable| or |United Kingdom/Base Game Reachable| or |Belgium/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "Steinbruch",
@@ -16054,7 +16398,8 @@
         "Germany",
         "Switzerland",
         "France",
-        "United Kingdom"
+        "United Kingdom",
+        "Belgium"
       ],
       "region_list": [
         {
@@ -16084,6 +16429,10 @@
         {
           "dlc": "Base Game",
           "state": "United Kingdom"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Belgium"
         }
       ]
     }
@@ -16094,7 +16443,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|United Kingdom/Base Game Reachable| or |France/Base Game Reachable| or |Belgium/Base Game Reachable| or |Netherlands/Base Game Reachable| or |Germany/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Austria/Base Game Reachable| or |Slovakia/Going East! Reachable| or |Poland/Base Game Reachable| or |Slovenia/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Kosovo/West Balkans Reachable| or |Albania/West Balkans Reachable|",
+    "requires": "|United Kingdom/Base Game Reachable| or |France/Base Game Reachable| or |Netherlands/Base Game Reachable| or |Germany/Base Game Reachable| or |Switzerland/Base Game Reachable| or |Austria/Base Game Reachable| or |Slovakia/Going East! Reachable| or |Poland/Base Game Reachable| or |Slovenia/West Balkans Reachable| or |Croatia/West Balkans Reachable| or |Bosnia and Herzegovina/West Balkans Reachable| or |Kosovo/West Balkans Reachable| or |Albania/West Balkans Reachable|",
     "extra_data": {
       "type": "company",
       "which": "Stokes",
@@ -16102,7 +16451,6 @@
       "state_list": [
         "United Kingdom",
         "France",
-        "Belgium",
         "Netherlands",
         "Germany",
         "Switzerland",
@@ -16123,10 +16471,6 @@
         {
           "dlc": "Base Game",
           "state": "France"
-        },
-        {
-          "dlc": "Base Game",
-          "state": "Belgium"
         },
         {
           "dlc": "Base Game",
@@ -16200,6 +16544,28 @@
     }
   },
   {
+    "name": "Company - Stronghold",
+    "category": [
+      "Company",
+      "(1) Companies"
+    ],
+    "requires": "|Netherlands/Base Game Reachable|",
+    "extra_data": {
+      "type": "company",
+      "which": "Stronghold",
+      "dlc_list": false,
+      "state_list": [
+        "Netherlands"
+      ],
+      "region_list": [
+        {
+          "dlc": "Base Game",
+          "state": "Netherlands"
+        }
+      ]
+    }
+  },
+  {
     "name": "Company - Subse",
     "category": [
       "Company",
@@ -16257,6 +16623,28 @@
         {
           "dlc": "Vive la France !",
           "state": "France"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Company - Suikersmij",
+    "category": [
+      "Company",
+      "(1) Companies"
+    ],
+    "requires": "|Netherlands/Base Game Reachable|",
+    "extra_data": {
+      "type": "company",
+      "which": "Suikersmij",
+      "dlc_list": false,
+      "state_list": [
+        "Netherlands"
+      ],
+      "region_list": [
+        {
+          "dlc": "Base Game",
+          "state": "Netherlands"
         }
       ]
     }
@@ -16444,7 +16832,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Spain/Iberia Reachable| or |Slovenia/West Balkans Reachable| or |Germany/Base Game Reachable|",
+    "requires": "|Spain/Iberia Reachable| or |Slovenia/West Balkans Reachable| or |Germany/Base Game Reachable| or |Netherlands/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "TDC Auto Terminal",
@@ -16452,7 +16840,8 @@
       "state_list": [
         "Spain",
         "Slovenia",
-        "Germany"
+        "Germany",
+        "Netherlands"
       ],
       "region_list": [
         {
@@ -16466,6 +16855,10 @@
         {
           "dlc": "Base Game",
           "state": "Germany"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Netherlands"
         }
       ]
     }
@@ -16735,7 +17128,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Finland/Nordic Horizons Reachable| or |Poland/Base Game Reachable| or |Czech Republic/Base Game Reachable| or |Hungary/Going East! Reachable| or |Austria/Base Game Reachable| or |France/Base Game Reachable| or |United Kingdom/Base Game Reachable| or |Netherlands/Base Game Reachable|",
+    "requires": "|Finland/Nordic Horizons Reachable| or |Poland/Base Game Reachable| or |Czech Republic/Base Game Reachable| or |Hungary/Going East! Reachable| or |Austria/Base Game Reachable| or |France/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "Trameri",
@@ -16747,8 +17140,7 @@
         "Hungary",
         "Austria",
         "France",
-        "United Kingdom",
-        "Netherlands"
+        "United Kingdom"
       ],
       "region_list": [
         {
@@ -16778,10 +17170,6 @@
         {
           "dlc": "Base Game",
           "state": "United Kingdom"
-        },
-        {
-          "dlc": "Base Game",
-          "state": "Netherlands"
         }
       ]
     }
@@ -16792,7 +17180,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Poland/Base Game Reachable| or |Czech Republic/Going East! Reachable| or |Hungary/Going East! Reachable| or |Italy/Base Game Reachable| or |Germany/Base Game Reachable| or |Belgium/Base Game Reachable| or |Netherlands/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
+    "requires": "|Poland/Base Game Reachable| or |Czech Republic/Going East! Reachable| or |Hungary/Going East! Reachable| or |Italy/Base Game Reachable| or |Germany/Base Game Reachable| or |Belgium/Base Game Reachable| or |United Kingdom/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "TransiNet",
@@ -16804,7 +17192,6 @@
         "Italy",
         "Germany",
         "Belgium",
-        "Netherlands",
         "United Kingdom"
       ],
       "region_list": [
@@ -16831,10 +17218,6 @@
         {
           "dlc": "Base Game",
           "state": "Belgium"
-        },
-        {
-          "dlc": "Base Game",
-          "state": "Netherlands"
         },
         {
           "dlc": "Base Game",
@@ -17426,7 +17809,7 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Norway/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable| or |Poland/Going East! Reachable| or |Slovakia/Base Game Reachable| or |Germany/Base Game Reachable| or |France/Base Game Reachable| or |Netherlands/Base Game Reachable| or |United Kingdom/Base Game Reachable| or |Denmark/Scandinavia Reachable|",
+    "requires": "|Norway/Nordic Horizons Reachable| or |Sweden/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable| or |Poland/Going East! Reachable| or |Slovakia/Base Game Reachable| or |Germany/Base Game Reachable| or |France/Base Game Reachable| or |Netherlands/Base Game Reachable| or |United Kingdom/Base Game Reachable| or |Denmark/Scandinavia Reachable| or |Belgium/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "WGCC",
@@ -17441,7 +17824,8 @@
         "France",
         "Netherlands",
         "United Kingdom",
-        "Denmark"
+        "Denmark",
+        "Belgium"
       ],
       "region_list": [
         {
@@ -17483,6 +17867,10 @@
         {
           "dlc": "Scandinavia",
           "state": "Denmark"
+        },
+        {
+          "dlc": "Base Game",
+          "state": "Belgium"
         }
       ]
     }

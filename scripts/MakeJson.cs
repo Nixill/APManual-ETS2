@@ -15,7 +15,7 @@ public readonly record struct Region(string StateName, string DLCName)
 }
 
 public readonly record struct Connection(Region Region1, Region Region2, bool FerryRequired);
-public readonly record struct Check(string Name, Region Region, bool FerryRequired);
+public readonly record struct Check(string Name, Region Region, bool FerryRequired, bool HiddenPath = false);
 public readonly record struct CompanyName(string LatinName, string? CyrillicName, string? GreekName);
 public readonly record struct Truck(string Make, string Model, string DLC);
 #endregion
@@ -172,7 +172,8 @@ public static class Data
         DLCName: d["DLC"] ?? "Base Game",
         StateName: d["State"]!
       ),
-      FerryRequired: d["FerryRequired"] == "true"
+      FerryRequired: d["FerryRequired"] == "true",
+      HiddenPath: d["HiddenPath"] == "true"
     ));
 }
 #endregion
@@ -208,6 +209,7 @@ public static class Str
     public const string Company = "Company";
     public const string DeliveryTokens = "Delivery Tokens";
     public static string DLC(string dlcName) => $"{dlcName} (DLC)";
+    public const string HiddenPath = "Hidden Path";
     public const string Level = "Player Level";
     public const string PhotoTrophy = "Photo Trophy";
     public const string PlayerSkill = "Skill";
@@ -335,6 +337,7 @@ public static class Str
     public const string SecretDeliveriesAvailable = "secret_deliveries_available";
     public const string SecretDeliveriesRequired = "secret_deliveries_required";
     public const string SecretDeliveryInstructionParts = "secret_delivery_instruction_parts";
+    public const string SecretRoadChecks = "secret_road_checks";
     public const string SkillScatter = "skill_scatter";
     public const string SkillScatterCondensed = "condensed";
     public const string SkillScatterSpread = "spread";
@@ -626,12 +629,12 @@ public static class JsonDefs
     {
       yield return Obj([
         KVP(Str.Syntax.Name, Str.Location.CheckConst(name, check.Name)),
-        KVPA(Str.Syntax.Category, [
+        KVPA(Str.Syntax.Category, Arr([
           name,
           Str.Category.State(check.Region.StateName),
           Str.Category.StateCheck(check.Region.StateName),
           Str.Category.DLC(check.Region.DLCName)
-        ]),
+        ]).AddIf(check.HiddenPath, Str.Category.HiddenPath)),
         KVPO(Str.Syntax.ExtraData, [
           KVP(Str.ExtraData.Key.Type, Str.SnakeCase(name)),
           KVP(Str.ExtraData.Key.Which, check.Name)
@@ -1074,6 +1077,7 @@ public static class JsonDefs
     GetTypeCategory(Str.Category.Company, Str.Option.Companysanity)/* ,
     // GetTypeCategory(Str.Category.RecruitmentAgent, Str.Option.Recruitmentsanity),
     // GetTypeCategory(Str.Category.TruckDealer, Str.Option.Dealersanity) */,
+    GetTypeCategory(Str.Category.HiddenPath, Str.Option.SecretRoadChecks),
     GetTypeCategory(Str.Category.Level),
     GetTypeCategory(Str.Category.PlayerSkill),
     GetTypeCategory(Str.Category.StateKey),
