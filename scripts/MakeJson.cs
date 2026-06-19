@@ -230,6 +230,7 @@ public static class Str
     public const string VisibleCompany = "(1) Companies";
     public const string VisibleLevelUp = "(2) Level Ups";
     public const string VisibleSecretDeliveryInstructions = "(2) Secret Delivery Instructions";
+    public const string VisibleSecretDeliveries = "(3) Secret Deliveries";
     public static string VisibleStateKeys => $"(1) {StateCountry} Keys";
     public const string VisiblePlayerSkills = "(3) Player Skills";
     public const string VisibleMiscItems = "(4) Misc Items";
@@ -730,7 +731,10 @@ public static class JsonDefs
     {
       yield return Obj([
         KVP(Str.Syntax.Name, Str.Location.SecretDeliveryCompleted(i)),
-        KVPA(Str.Syntax.Category, [ Str.Category.SecretDeliveries ]),
+        KVPA(Str.Syntax.Category, [
+          Str.Category.SecretDeliveries,
+          Str.Category.VisibleSecretDeliveries,
+        ]),
         KVP(Str.Syntax.Requires, Str.Syntax.OptionCount(Str.Item.SecretDeliveryInstruction(i),
           Str.Option.SecretDeliveryInstructionParts)),
         KVPA(Str.Syntax.LocationPlaceItem, [Str.Item.SecretDeliveryCompletion]),
@@ -1009,6 +1013,7 @@ public static class JsonDefs
 
   public static IEnumerable<JProperty> GetVictoryCategories() => [
     KVPO(Str.Category.DeliveryTokens, [
+      KVP(Str.Syntax.CategoryHidden, true),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.Victory),
         KVP(Str.ExtraData.Key.Which, Str.SnakeCase(Str.Category.DeliveryTokens))
@@ -1016,6 +1021,7 @@ public static class JsonDefs
     ]),
 
     KVPO(Str.Category.SecretDeliveries, [
+      KVP(Str.Syntax.CategoryHidden, true),
       KVPO(Str.Syntax.ExtraData, [
         KVP(Str.ExtraData.Key.Type, Str.ExtraData.Value.Victory),
         KVP(Str.ExtraData.Key.Which, Str.SnakeCase(Str.Category.SecretDeliveries))
@@ -1098,6 +1104,7 @@ public static class JsonDefs
   public static IEnumerable<JProperty> GetVisibleItemCategories() => [
     KVPO(Str.Category.VisibleStateKeys),
     KVPO(Str.Category.VisibleSecretDeliveryInstructions),
+    KVPO(Str.Category.VisibleSecretDeliveries),
     KVPO(Str.Category.VisiblePlayerSkills),
     KVPO(Str.Category.VisibleMiscItems),
     KVPO(Str.Category.VisibleCompany),
