@@ -142,6 +142,7 @@ def get_enabled_states(states: set[str], dlcs: set[str]) -> set[str]:
     and parsing DLC names as well.
     """
     available_states = get_available_states(dlcs)
+    nixprint(f'States selected: {states}', 7)
     if not states or in_case(states, 'all'):
         # nixprint('No states specified in option. Returning all available, which was just printed above.')
         return available_states
@@ -149,11 +150,11 @@ def get_enabled_states(states: set[str], dlcs: set[str]) -> set[str]:
     states_output = set[str]()
 
     for state in states:
-        if state := get_case_opt(state_list, state):
-            states_output.add(state)
-        if states_by_dlc := get_case_key_opt(dlc_name_list, state):
+        if matched_state := get_case_opt(state_list, state):
+            states_output.add(matched_state)
+        if states_by_dlc := get_case_key_opt(dlc_states_dict, state):
             states_output.update(states_by_dlc)
 
     result = states_output.intersection(available_states)
-    # nixprint(f'Enabled states: {result}')
+    nixprint(f'Enabled states: {result}', 7)
     return result
