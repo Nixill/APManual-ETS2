@@ -138,7 +138,7 @@ class StatesAvailableOption(OptionSet):
     """
     display_name = 'Available Countries'
     rich_text_doc = True
-    valid_keys = state_list + dlc_name_list + ['All']
+    valid_keys = [a.lower() for a in state_list] + [a.lower() for a in dlc_name_list] + ['all']
     valid_keys_casefold = True
     default = set()
 
