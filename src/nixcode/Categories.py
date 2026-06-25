@@ -6,7 +6,14 @@ from ..hooks.Helpers import get_option_value, is_dlc_enabled
 from .Options import get_available_states
 from BaseClasses import MultiWorld
 
+printed_multiworld_options = False
+
 def check_for_category(multiworld: MultiWorld, player: int, category_name: str) -> Optional[bool]:
+    global printed_multiworld_options
+    if not printed_multiworld_options:
+        nixprint(f'Options as of multiworld: {multiworld.worlds[player].options}', 9)
+        printed_multiworld_options = True
+
     # Pull category from existing data
     from ..Data import category_table
     category: dict = category_table[category_name]
@@ -19,12 +26,14 @@ def check_for_category(multiworld: MultiWorld, player: int, category_name: str) 
     tp = extra_data['type']
 
     if tp == 'state':
-        # nixprint(f'Checking for State eligibility for category {category_name}:')
-        if extra_data['which'] not in get_available_states(get_option_value(multiworld, player, 'dlcs_available')):
-            # nixprint('State not available, returning false.')
+        nixprint(f'Checking for State eligibility for category {category_name}:', 8)
+        dlcs = get_option_value(multiworld, player, 'dlcs_available')
+        nixprint(f'DLCs available: {dlcs}', 8)
+        if extra_data['which'] not in get_available_states(dlcs):
+            nixprint('State not available, returning false.', 8)
             return False
-        # else:
-        #     nixprint('State available, returning true.')
+        else:
+            nixprint('State available, returning true.', 8)
 
     elif tp == 'state_checks':
         if extra_data['which'] not in get_option_value(multiworld, player, 'states_available'): return False

@@ -192,6 +192,9 @@ def hint_item(item_name: str, world: World) -> None:
 def perform_final_grants(item_pool: list, world: World) -> list[str]:
     options = world.options
 
+    nixprint(f'Options: {options}', 8)
+    nixprint(f'Item Pool: {[item.name for item in item_pool]}', 8)
+
     # Assign the selected Starter Key and Key.
     start_with_item(f'{get_starting_state()} Starter Key', item_pool, world)
     start_with_item(f'{get_starting_state()} Key', item_pool, world)

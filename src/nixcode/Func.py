@@ -3,9 +3,9 @@ from typing import Iterable, Any, Optional, Sequence, TypeVar
 from unicodedata import normalize
 
 ENABLE_NIXPRINT = True
-# Disabled nixprint versions: 1, 2, 3, 4, 5, 6
+# Disabled nixprint versions: 1, 2, 3, 4, 5, 6, 7, 8
 # may still need 5 for now
-NIXPRINT_VERSIONS = []
+NIXPRINT_VERSIONS = [9]
 
 T = TypeVar('T')
 
@@ -15,9 +15,15 @@ def nixprint(msg: Optional[str] = None, version: int = 1) -> None:
     """
     if ENABLE_NIXPRINT and version in NIXPRINT_VERSIONS:
         if msg:
-            print(msg)
+            print(f'{msg}\n')
         else:
             print()
+
+def fullprint(msg: str):
+    """
+    Prints the message, prefixing it with "Euro Truck Simulator 2: "
+    """
+    print(f'Euro Truck Simulator 2: {msg}')
 
 def get_case_key(input: dict[str, T], match: str) -> T:
     """
