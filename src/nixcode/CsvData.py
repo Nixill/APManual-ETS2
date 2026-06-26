@@ -66,6 +66,25 @@ for line in load_data_csv('csv', 'company-locations.csv'):
     company_locations_dict[line['Company']].append(CheckLocation(line['Company'],
                                                                  region_of(line),
                                                                  bool(line['FerryRequired'])))
+
+company_regions_dict = {c: {cl.region for cl in company_locations_dict[c]} for c in company_list}
+
+company_dlcs_dict = {c: {r.dlc for r in company_regions_dict[c]} for c in company_list}
+
+company_states_dict = {c: {r.state for r in company_regions_dict[c]} for c in company_list}
+
+def is_company_in_dlcs(company: str, dlcs: set[str]) -> bool:
+    c_dlcs = company_dlcs_dict[company]
+    for dlc in c_dlcs:
+        if dlc in dlcs: return True
+    return False
+
+def is_company_available(company: str, states: set[str], dlcs: set[str]) -> bool:
+    regions = company_regions_dict[company]
+    for region in regions:
+        if region.dlc in dlcs and region.state in states:
+            return True
+    return False
 #endregion
 
 #region Connections

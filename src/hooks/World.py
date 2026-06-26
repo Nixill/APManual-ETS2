@@ -1,5 +1,7 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from typing import Any
+
+from ..nixcode.Locations import implement_checks_reduction
 from ..nixcode.SecretDeliveries import get_secret_deliveries
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
@@ -21,7 +23,7 @@ import logging
 
 # Organizing my methods into my own files to make things easier and more readable
 from ..nixcode.Options import validate_options_early
-from ..nixcode.Items import perform_final_grants, adjust_item_counts, implement_checks_reduction
+from ..nixcode.Items import perform_final_grants, adjust_item_counts
 
 ########################################################################################
 ## Order of method calls when the world generates:

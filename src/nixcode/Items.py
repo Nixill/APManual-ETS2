@@ -9,22 +9,12 @@ from BaseClasses import MultiWorld
 from ..Helpers import get_option_value, remove_specific_item
 from ..Items import ManualItem, item_name_to_item
 
-from .CsvData import Region, city_dict, company_list, photo_trophies_dict, viewpoints_dict, land_connections_dict
-from .Func import nixprint, snake_case, pop_iter
-from .Options import get_starting_state
+from .CsvData import land_connections_dict, truck_makes_list
+from .Func import nixprint, snake_case
+from .Options import get_available_states, get_starting_state
 from .OptionDefs import KeyItemChoice
 
-early_item_count: int = 0
-total_checks: Counter[str] = Counter()
-early_checks: Counter[str] = Counter()
 randomizer: Random = None
-
-@dataclass(frozen=True)
-class CheckInfo:
-    name: str
-    check_type: str
-    region: Optional[Region] # Companies do not have a singular region
-    count_early: bool
 
 def check_for_item(multiworld: MultiWorld, player: int, item:  dict[str, Any]) -> Optional[bool]:
     if not 'extra_data' in item: return None
@@ -61,111 +51,6 @@ def adjust_item_counts(item_config: dict[str, int|dict], world: World) -> None:
             item_config['Player Level'] = 36
         else:
             item_config['Player Level'] = world.options.player_level_checks.value
-
-def implement_checks_reduction(world: World):
-    # do nothing in a fake gen (UT)
-    if hasattr(world.multiworld, 'generation_is_fake'): return []
-
-    global total_checks
-    global early_checks
-    global early_item_count
-
-    options = world.options
-    randomizer = world.random
-
-    chance_of_state: float = options.checks_percent_of_state_count.value / 100
-    max_state_count: int = options.checks_max_state_count.value
-    chance_of_check: float = options.checks_percent.value / 100
-    max_count_per_state: int = options.checks_max_per_state_count.value
-    max_count_companies: int = options.company_checks_count.value
-    max_check_count: int = options.max_checks_count.value
-
-    # nixprint(f'chance_of_state: {chance_of_state}')
-    # nixprint(f'chance_of_check: {chance_of_check}')
-    # nixprint(f'max_check_count: {max_check_count}')
-    # nixprint(f'max_count_per_state: {max_count_per_state}')
-    # nixprint(f'max_count_companies: {max_count_companies}')
-    # nixprint(f'max_check_count: {max_check_count}')
-    # temporarily skipping this shortcut for debugging this method
-    # shortcut, which doesn't work because early_checks doesn't get set
-    # if chance_of_state == 1 and chance_of_check == 1 and max_check_count == 0 \
-    #     and max_count_per_state == 0 and max_count_companies == 0 and max_check_count == 0:
-    #         return []
-
-    all_states = list[str](options.states_available.value)
-    # nixprint(f'all_states: {all_states}')
-    # nixprint(f'starting_state: {get_starting_state()}')
-    all_states.remove(get_starting_state())
-    accepted_states = {get_starting_state()}
-
-    randomizer.shuffle(all_states)
-
-    if max_state_count != 1:
-        for state in all_states:
-            # Don't call for randomization if chance is guaranteed:
-            if chance_of_state == 1 or randomizer.random() <= chance_of_state:
-                accepted_states.add(state)
-                if max_state_count and len(accepted_states) >= max_state_count:
-                    break
-
-    # nixprint(f'Accepted states: {accepted_states}')
-
-    all_checks_list: list[CheckInfo] = []
-
-    # Build the list of checks
-    if options.enable_citysanity:
-        for city in city_dict.values():
-            all_checks_list.append(CheckInfo(city.check_name, 'City', city.region, True))
-
-    if options.enable_companysanity:
-        for company in company_list:
-            all_checks_list.append(CheckInfo(company, 'Company', None, False))
-
-    photosanity_early = (options.enable_photosanity == KeyItemChoice.option_start_with_item)
-
-    if options.enable_photosanity:
-        for photo in photo_trophies_dict.values():
-            all_checks_list.append(CheckInfo(photo.check_name, 'Photo Trophy', photo.region, photosanity_early))
-
-    viewsanity_early = (options.enable_viewpointsanity == KeyItemChoice.option_start_with_item)
-
-    if options.enable_viewpointsanity:
-        for view in viewpoints_dict.values():
-            all_checks_list.append(CheckInfo(view.check_name, 'Viewpoint', view.region, viewsanity_early))
-
-    randomizer.shuffle(all_checks_list)
-
-    # And start tearing it down
-    checks_to_remove: list[str] = []
-    sum_checks = 0
-
-    for check in pop_iter(all_checks_list):
-        reject: bool = False
-
-        state = check.region.state if check.region else None
-        if state:
-            if max_count_per_state and total_checks[state] >= max_count_per_state: reject = True
-        else:
-            if max_count_companies and total_checks[None] >= max_count_companies: reject = True
-
-        if chance_of_check < 1 and randomizer.random() > chance_of_check:
-            reject = True
-
-        if reject:
-            # nixprint(f'Removing check: {check.check_type} - {check.name}')
-            checks_to_remove.append(f'{check.check_type} - {check.name}')
-        else:
-            # nixprint(f'Keeping check: {check.check_type} - {check.name}')
-            sum_checks += 1
-            total_checks[state] += 1
-            if check.count_early:
-                early_checks[state] += 1
-            if max_check_count and sum_checks >= max_check_count: break
-
-    for check in all_checks_list:
-        checks_to_remove.append(f'{check.check_type} - {check.name}')
-
-    return checks_to_remove
 
 def start_with_item(item_name: str, item_pool: list, world: World) -> None:
     if item_name in world.start_inventory:
@@ -277,7 +162,8 @@ def get_additional_state_keys(item_pool: list, world: World) -> None:
     """
     Gets additional keys to put enough early checks in logic in sphere 1.
     """
-    global early_checks
+    from .Locations import early_checks
+
     global early_item_count
 
     dlcs = world.options.dlcs_available.value
@@ -323,3 +209,97 @@ def get_land_connected_states(state: str, dlc_list: set[str]) -> set[str]:
         out |= {r.state for r in r2_list if r.dlc in dlc_list and r.state != state}
 
     return out
+
+def item_options_enabled(options: World.Options, keys: set[str]) -> int:
+    count = 0
+    for key in keys:
+        if 'find_item' in getattr(options, key):
+            count += 1
+    return count
+
+@dataclass(frozen=False)
+class ProgressionCount:
+    mandatory: int = 0
+    '''
+    Mandatory progression items.
+
+    Country keys, misc items, on-brand truck contract(s), progression skills, and at least one victory item.
+
+    Up to 16 player levels are also counted, if there are fewer than 16 Skill locations.
+    '''
+    trucks: int = 0
+    '''Off-brand truck contracts, which are considered optional.'''
+    levels: int = 0
+    '''
+    Removable player levels.
+
+    20 of the 36 player levels are non-progression and can be removed. If there are more than 16 Skill locations,
+    this number is reduced by (16 less than) the number of Skill locations.
+    '''
+    tokens: int = -1
+    '''
+    Delivery tokens.
+
+    -1 means the goal is disabled. Otherwise, this counts the number of REMOVABLE tokens.
+    At least one must be kept, which is not part of this count.
+    '''
+    deliveries: int = -1
+    '''
+    Secret deliveries.
+
+    -1 means the goal is disabled. Otherwise, this counts the number of REMOVABLE PARTS of secret deliveries.
+    At least one secret delivery must be kept, which is not part of this count.
+    '''
+    def total(self) -> int:
+        '''Total count of all items counted.'''
+        return self.mandatory + self.trucks + self.levels + self.tokens + self.deliveries
+
+def count_progression_items(options: World.Options) -> ProgressionCount:
+    output = ProgressionCount()
+
+    # One for each available state you don't start in
+    output.mandatory += get_available_states(options.dlcs_available.value) - 1
+
+    # One for each singular Misc Item that needs to be found (not started or disabled)
+    output.mandatory += item_options_enabled(options, [
+        'enable_photosanity', 'enable_viewpointsanity', 'ferry_ticket_item', 'bank_loan_approval_item', 'trailer_contract_item', 'quick_travel_item'
+    ])
+
+    # For truck contracts, figure out on brand vs off brand
+    truck_count = len(truck_makes_list)
+    on_brand = 0
+
+    if options.truck_contract_item_brand.key == 'all':
+        on_brand = truck_count
+    elif options.truck_contract_item_brand.key != 'none':
+        on_brand = 1
+
+    off_brand = truck_count - on_brand
+
+    output.mandatory += on_brand * item_options_enabled(options, ['truck_contract_brand_item_location'])
+    output.trucks += off_brand * item_options_enabled(options, ['truck_contract_off_brand_item_location'])
+
+    # Player skills, if enabled
+    if options.skill_items_scattered:
+        levels = 36
+        if options.skill_items_on_levels:
+            levels -= options.player_level_count.value
+
+        if levels > 20:
+            output.mandatory += levels - 20
+            output.levels = 20
+        else:
+            output.levels = levels
+
+    # Delivery tokens, if enabled
+    if options.goal.key == 'all delivery tokens collected':
+        output.tokens += options.delivery_tokens_available.value - 1
+        output.mandatory += 1
+
+    # Secret deliveries, if enabled
+    elif options.goal.key == 'all secret deliveries completed':
+        pieces = options.secret_delivery_instruction_parts.value
+        output.deliveries += (options.secret_deliveries_available.value - 1) * pieces
+        output.mandatory += 1
+
+    return output

@@ -5,7 +5,7 @@ from unicodedata import normalize
 ENABLE_NIXPRINT = True
 # Disabled nixprint versions: 1, 2, 3, 4, 5, 6, 7, 8, 9
 # may still need 5 for now
-NIXPRINT_VERSIONS = []
+NIXPRINT_VERSIONS = [10]
 
 T = TypeVar('T')
 
@@ -15,7 +15,7 @@ def nixprint(msg: Optional[str] = None, version: int = 1) -> None:
     """
     if ENABLE_NIXPRINT and version in NIXPRINT_VERSIONS:
         if msg:
-            print(f'{msg}\n')
+            print(f'{msg}')
         else:
             print()
 
