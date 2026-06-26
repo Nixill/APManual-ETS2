@@ -3,9 +3,9 @@ from typing import Iterable, Any, Optional, Sequence, TypeVar
 from unicodedata import normalize
 
 ENABLE_NIXPRINT = True
-# Disabled nixprint versions: 1, 2, 3, 4, 5, 6, 7, 8
+# Disabled nixprint versions: 1, 2, 3, 4, 5, 6, 7, 8, 9
 # may still need 5 for now
-NIXPRINT_VERSIONS = [9]
+NIXPRINT_VERSIONS = []
 
 T = TypeVar('T')
 

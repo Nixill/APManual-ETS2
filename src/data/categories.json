@@ -1,11 +1,13 @@
 {
   "Delivery Tokens": {
+    "hidden": true,
     "extra_data": {
       "type": "victory",
       "which": "delivery_tokens"
     }
   },
   "Secret Delivery": {
+    "hidden": true,
     "extra_data": {
       "type": "victory",
       "which": "secret_delivery"
@@ -852,6 +854,7 @@
   },
   "(1) Country Keys": {},
   "(2) Secret Delivery Instructions": {},
+  "(3) Secret Deliveries": {},
   "(3) Player Skills": {},
   "(4) Misc Items": {},
   "(1) Companies": {},

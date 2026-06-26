@@ -6331,7 +6331,7 @@
       "which": "Bastia International Airport"
     },
     "region": "France/Vive la France !",
-    "requires": "|Camera|"
+    "requires": "(|Camera|) and |Ferry Ticket|"
   },
   {
     "name": "Photo Trophy - Bonifacio Citadel",
@@ -6346,7 +6346,7 @@
       "which": "Bonifacio Citadel"
     },
     "region": "France/Vive la France !",
-    "requires": "|Camera|"
+    "requires": "(|Camera|) and |Ferry Ticket|"
   },
   {
     "name": "Photo Trophy - Marseille Office Towers",
@@ -6496,21 +6496,6 @@
       "which": "Iroise Bridge"
     },
     "region": "France/Vive la France !",
-    "requires": "|Camera|"
-  },
-  {
-    "name": "Photo Trophy - Basilica of the Sacred Heart (France)",
-    "category": [
-      "Photo Trophy",
-      "France",
-      "France (Checks)",
-      "Base Game (DLC)"
-    ],
-    "extra_data": {
-      "type": "photo_trophy",
-      "which": "Basilica of the Sacred Heart (France)"
-    },
-    "region": "France/Base Game",
     "requires": "|Camera|"
   },
   {
@@ -11691,72 +11676,18 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Netherlands/Base Game Reachable| or |France/Vive la France ! Reachable| or |Spain/Iberia Reachable| or |United Kingdom/Base Game Reachable| or |Norway/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable| or |Russia/Beyond the Baltic Sea Reachable| or |Estonia/Beyond the Baltic Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Greece/Greece Reachable| or |Italy/Italia Reachable|",
+    "requires": "|Netherlands/Base Game Reachable|",
     "extra_data": {
       "type": "company",
       "which": "DAF Trucks",
       "dlc_list": false,
       "state_list": [
-        "Netherlands",
-        "France",
-        "Spain",
-        "United Kingdom",
-        "Norway",
-        "Finland",
-        "Russia",
-        "Estonia",
-        "Romania",
-        "Greece",
-        "Italy"
+        "Netherlands"
       ],
       "region_list": [
         {
           "dlc": "Base Game",
           "state": "Netherlands"
-        },
-        {
-          "dlc": "Vive la France !",
-          "state": "France"
-        },
-        {
-          "dlc": "Iberia",
-          "state": "Spain"
-        },
-        {
-          "dlc": "Base Game",
-          "state": "United Kingdom"
-        },
-        {
-          "dlc": "Scandinavia",
-          "state": "Norway"
-        },
-        {
-          "dlc": "Nordic Horizons",
-          "state": "Norway"
-        },
-        {
-          "dlc": "Nordic Horizons",
-          "state": "Finland"
-        },
-        {
-          "dlc": "Beyond the Baltic Sea",
-          "state": "Russia"
-        },
-        {
-          "dlc": "Beyond the Baltic Sea",
-          "state": "Estonia"
-        },
-        {
-          "dlc": "Road to the Black Sea",
-          "state": "Romania"
-        },
-        {
-          "dlc": "Greece",
-          "state": "Greece"
-        },
-        {
-          "dlc": "Italia",
-          "state": "Italy"
         }
       ]
     }
@@ -12406,17 +12337,23 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|Italy/Italia Reachable|",
+    "requires": "|Spain/Iberia Reachable| or |Italy/Italia Reachable|",
     "extra_data": {
       "type": "company",
       "which": "Exomar",
       "dlc_list": [
+        "iberia",
         "italia"
       ],
       "state_list": [
+        "Spain",
         "Italy"
       ],
       "region_list": [
+        {
+          "dlc": "Iberia",
+          "state": "Spain"
+        },
         {
           "dlc": "Italia",
           "state": "Italy"
@@ -17713,68 +17650,20 @@
       "Company",
       "(1) Companies"
     ],
-    "requires": "|United Kingdom/Base Game Reachable| or |France/Vive la France ! Reachable| or |Luxembourg/Base Game Reachable| or |Spain/Iberia Reachable| or |Italy/Italia Reachable| or |Bulgaria/Road to the Black Sea Reachable| or |Romania/Road to the Black Sea Reachable| or |Lithuania/Beyond the Baltic Sea Reachable| or |Sweden/Scandinavia Reachable| or |Norway/Nordic Horizons Reachable| or |Finland/Nordic Horizons Reachable|",
+    "requires": "|Sweden/Scandinavia Reachable|",
     "extra_data": {
       "type": "company",
       "which": "Volvo / Volvo Trucks",
-      "dlc_list": false,
+      "dlc_list": [
+        "scandinavia"
+      ],
       "state_list": [
-        "United Kingdom",
-        "France",
-        "Luxembourg",
-        "Spain",
-        "Italy",
-        "Bulgaria",
-        "Romania",
-        "Lithuania",
-        "Sweden",
-        "Norway",
-        "Finland"
+        "Sweden"
       ],
       "region_list": [
         {
-          "dlc": "Base Game",
-          "state": "United Kingdom"
-        },
-        {
-          "dlc": "Vive la France !",
-          "state": "France"
-        },
-        {
-          "dlc": "Base Game",
-          "state": "Luxembourg"
-        },
-        {
-          "dlc": "Iberia",
-          "state": "Spain"
-        },
-        {
-          "dlc": "Italia",
-          "state": "Italy"
-        },
-        {
-          "dlc": "Road to the Black Sea",
-          "state": "Bulgaria"
-        },
-        {
-          "dlc": "Road to the Black Sea",
-          "state": "Romania"
-        },
-        {
-          "dlc": "Beyond the Baltic Sea",
-          "state": "Lithuania"
-        },
-        {
           "dlc": "Scandinavia",
           "state": "Sweden"
-        },
-        {
-          "dlc": "Nordic Horizons",
-          "state": "Norway"
-        },
-        {
-          "dlc": "Nordic Horizons",
-          "state": "Finland"
         }
       ]
     }
@@ -19335,7 +19224,8 @@
   {
     "name": "Secret Delivery 1 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #1 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19349,7 +19239,8 @@
   {
     "name": "Secret Delivery 2 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #2 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19363,7 +19254,8 @@
   {
     "name": "Secret Delivery 3 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #3 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19377,7 +19269,8 @@
   {
     "name": "Secret Delivery 4 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #4 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19391,7 +19284,8 @@
   {
     "name": "Secret Delivery 5 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #5 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19405,7 +19299,8 @@
   {
     "name": "Secret Delivery 6 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #6 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19419,7 +19314,8 @@
   {
     "name": "Secret Delivery 7 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #7 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19433,7 +19329,8 @@
   {
     "name": "Secret Delivery 8 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #8 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19447,7 +19344,8 @@
   {
     "name": "Secret Delivery 9 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #9 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19461,7 +19359,8 @@
   {
     "name": "Secret Delivery 10 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #10 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19475,7 +19374,8 @@
   {
     "name": "Secret Delivery 11 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #11 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19489,7 +19389,8 @@
   {
     "name": "Secret Delivery 12 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #12 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19503,7 +19404,8 @@
   {
     "name": "Secret Delivery 13 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #13 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19517,7 +19419,8 @@
   {
     "name": "Secret Delivery 14 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #14 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19531,7 +19434,8 @@
   {
     "name": "Secret Delivery 15 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #15 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19545,7 +19449,8 @@
   {
     "name": "Secret Delivery 16 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #16 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19559,7 +19464,8 @@
   {
     "name": "Secret Delivery 17 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #17 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19573,7 +19479,8 @@
   {
     "name": "Secret Delivery 18 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #18 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19587,7 +19494,8 @@
   {
     "name": "Secret Delivery 19 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #19 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
@@ -19601,7 +19509,8 @@
   {
     "name": "Secret Delivery 20 Completed",
     "category": [
-      "Secret Delivery"
+      "Secret Delivery",
+      "(3) Secret Deliveries"
     ],
     "requires": "{OptionCount(Piece of Secret Delivery #20 Instructions, secret_delivery_instruction_parts)}",
     "place_item": [
