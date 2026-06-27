@@ -1,6 +1,6 @@
 from typing import Optional
 
-from .Func import nixprint
+from .Func import dbgprint
 
 from ..hooks.Helpers import get_option_value, is_dlc_enabled
 from .Options import get_available_states
@@ -11,7 +11,7 @@ printed_multiworld_options = False
 def check_for_category(multiworld: MultiWorld, player: int, category_name: str) -> Optional[bool]:
     global printed_multiworld_options
     if not printed_multiworld_options:
-        nixprint(f'Options as of multiworld: {multiworld.worlds[player].options}', 9)
+        dbgprint(lambda : f'Options as of multiworld: {multiworld.worlds[player].options}')
         printed_multiworld_options = True
 
     # Pull category from existing data
@@ -26,14 +26,14 @@ def check_for_category(multiworld: MultiWorld, player: int, category_name: str) 
     tp = extra_data['type']
 
     if tp == 'state':
-        nixprint(f'Checking for State eligibility for category {category_name}:', 8)
+        dbgprint(lambda : f'Checking for State eligibility for category {category_name}:')
         dlcs = get_option_value(multiworld, player, 'dlcs_available')
-        nixprint(f'DLCs available: {dlcs}', 8)
+        dbgprint(lambda : f'DLCs available: {dlcs}')
         if extra_data['which'] not in get_available_states(dlcs):
-            nixprint('State not available, returning false.', 8)
+            dbgprint(lambda : 'State not available, returning false.')
             return False
         else:
-            nixprint('State available, returning true.', 8)
+            dbgprint(lambda : 'State available, returning true.')
 
     elif tp == 'state_checks':
         if extra_data['which'] not in get_option_value(multiworld, player, 'states_available'): return False
@@ -49,18 +49,18 @@ def check_for_category(multiworld: MultiWorld, player: int, category_name: str) 
         goal_option = multiworld.worlds[player].options.goal
         victory_condition = goal_option.value
         if extra_data['which'] == 'delivery_tokens':
-            # nixprint(f'Delivery tokens (category {category_name}):')
+            # dbgprint(lambda : f'Delivery tokens (category {category_name}):')
             if victory_condition != getattr(goal_option, 'option_All Delivery Tokens Collected'):
-                # nixprint('Removing, not goal.')
+                # dbgprint(lambda : 'Removing, not goal.')
                 return False
             # else:
-            #     nixprint('Keeping, goal.')
+            #     dbgprint(lambda : 'Keeping, goal.')
         if extra_data['which'] == 'secret_delivery':
-            # nixprint(f'Secret deliveries (category {category_name}):')
+            # dbgprint(lambda : f'Secret deliveries (category {category_name}):')
             if victory_condition != getattr(goal_option, 'option_All Secret Deliveries Completed'):
-                # nixprint('Removing, not goal.')
+                # dbgprint(lambda : 'Removing, not goal.')
                 return False
             # else:
-            #     nixprint('Keeping, goal.')
+            #     dbgprint(lambda : 'Keeping, goal.')
 
     return None

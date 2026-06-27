@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from collections import defaultdict
 
 from .DataClasses import DLC, CheckLocation, GameInfo, Region, SecretDeliveryLetter, TruckModel
-from .Func import nixprint, snake_case
+from .Func import dbgprint, snake_case
 
 from ..Helpers import load_data_csv
 
@@ -18,7 +18,7 @@ def dlc_of(line: dict[str, str], key: str = 'DLC') -> str:
 dlc_dict: dict[str, DLC] = {get_dlc(line['DLC']): DLC(get_dlc(line['DLC']), int(line['Release']), line['MainMap'] != 'false')
                             for line in load_data_csv('csv', 'dlcs.csv')}
 dlc_name_list: list[str] = [*dlc_dict.keys()]
-nixprint(f'DLCs: {dlc_dict}', 6)
+dbgprint(lambda : f'DLCs: {dlc_dict}')
 #endregion
 
 #region Regions

@@ -1,11 +1,12 @@
 from collections import Counter, defaultdict
 from dataclasses import dataclass
+from math import floor
 from typing import Any, Optional
 
 from BaseClasses import MultiWorld
 from worlds.AutoWorld import World
 from .CsvData import Region, city_dict, company_list, photo_trophies_dict, viewpoints_dict, company_regions_dict
-from .Func import nixprint, pop_iter
+from .Func import dbgprint, pop_iter
 from .OptionDefs import KeyItemChoice
 from .Options import get_starting_state
 from .DataClasses import Region
@@ -54,6 +55,8 @@ class CheckInfo:
     region: Optional[Region] # Companies do not have a singular region
     count_early: bool
 
+    def __str__(self): return f'{self.check_type} - {self.name}'
+
 def implement_checks_reduction(world: World):
     # do nothing in a fake gen (UT)
     if hasattr(world.multiworld, 'generation_is_fake'): return []
@@ -73,44 +76,43 @@ def implement_checks_reduction(world: World):
     max_count_companies: int = options.company_checks_count.value
     max_check_count: int = options.max_checks_count.value
 
-    nixprint(f'chance_of_state: {chance_of_state}', 10)
-    nixprint(f'chance_of_check: {chance_of_check}', 10)
-    nixprint(f'max_check_count: {max_check_count}', 10)
-    nixprint(f'max_count_per_state: {max_count_per_state}', 10)
-    nixprint(f'max_count_companies: {max_count_companies}', 10)
-    nixprint(f'max_check_count: {max_check_count}', 10)
+    dbgprint(lambda : f'chance_of_state: {chance_of_state}')
+    dbgprint(lambda : f'chance_of_check: {chance_of_check}')
+    dbgprint(lambda : f'max_check_count: {max_check_count}')
+    dbgprint(lambda : f'max_count_per_state: {max_count_per_state}')
+    dbgprint(lambda : f'max_count_companies: {max_count_companies}')
+    dbgprint(lambda : f'max_check_count: {max_check_count}')
 
     progression_count = count_progression_items(options)
 
-    nixprint(f'progression_count.mandatory: {progression_count.mandatory}', 10)
-    nixprint(f'progression_count.total(): {progression_count.total()}', 10)
+    dbgprint(lambda : f'progression_count.mandatory: {progression_count.mandatory}')
+    dbgprint(lambda : f'progression_count.total(): {progression_count.total()}')
 
     all_states = list[str](options.states_available.value)
     available_dlcs = set[str](options.dlcs_available.value)
-    nixprint(f'all_states: {all_states}', 10)
+    dbgprint(lambda : f'all_states: {all_states}')
 
     starting_state = get_starting_state()
-    nixprint(f'starting_state: {get_starting_state()}', 10)
+    dbgprint(lambda : f'starting_state: {get_starting_state()}')
     all_states.remove(get_starting_state())
     randomizer.shuffle(all_states)
 
     accepted_states: list[str] = [starting_state]
     rejected_states: list[str] = []
 
-    if max_state_count != 1:
-        for state in pop_iter(all_states):
-            # Don't call for randomization if min check count isn't met or chance is guaranteed:
-            if chance_of_state == 1 or randomizer.random() <= chance_of_state:
-                nixprint(f'added state: {state}', 10)
-                accepted_states.add(state)
-                if len(all_checks_set) > progression_count.mandatory and max_state_count and len(accepted_states) >= max_state_count:
-                    nixprint(f'max state count reached!', 10)
-                    break
-            else:
-                nixprint(f'skipped state: {state}', 10)
-                rejected_states.append(state)
+    for state in pop_iter(all_states):
+        # Don't call for randomization if min check count isn't met or chance is guaranteed:
+        if chance_of_state == 1 or randomizer.random() <= chance_of_state:
+            dbgprint(lambda : f'added state: {state}')
+            accepted_states.append(state)
+            if max_state_count and len(accepted_states) >= max_state_count:
+                dbgprint(lambda : f'max state count reached!')
+                break
+        else:
+            dbgprint(lambda : f'skipped state: {state}')
+            rejected_states.append(state)
 
-    nixprint(f'accepted_states (without min check check): {accepted_states}')
+    dbgprint(lambda : f'accepted_states (without min check check): {accepted_states}')
 
     # Build the list of potential checks
     potential_checks_dict: defaultdict[str, set[CheckInfo]] = defaultdict(set)
@@ -145,75 +147,120 @@ def implement_checks_reduction(world: World):
                 if region.dlc in available_dlcs:
                     potential_checks_dict[region.state].add(CheckInfo(company, 'Company', None, False))
 
-    all_checks_set = set[CheckInfo]()
+    available_checks_set = set[CheckInfo]()
 
     # Now populate the all_checks_set with potential checks from selected states
     for state in accepted_states:
-        all_checks_set |= potential_checks_dict[state]
+        dbgprint(lambda : f'Adding checks from {state}:')
+        dbgprint(lambda : f'Added {len(potential_checks_dict[state])} checks')
+        available_checks_set |= potential_checks_dict[state]
+        del potential_checks_dict[state]
+        dbgprint(lambda : f'New all checks length: {len(available_checks_set)}')
 
-    while rejected_states and len(all_checks_set) < progression_count.mandatory:
-        nixprint(f'Moved state {state} to accepted for check count.')
+    while rejected_states and len(available_checks_set) < progression_count.mandatory:
+        dbgprint(lambda : f'Moved state {state} to accepted for check count.')
         state = rejected_states.pop()
         accepted_states.append(state)
-        all_checks_set |= potential_checks_dict[state]
+        dbgprint(lambda : f'Adding checks from {state}:')
+        dbgprint(lambda : f'Added {len(potential_checks_dict[state])} checks')
+        available_checks_set |= potential_checks_dict[state]
+        del potential_checks_dict[state]
+        dbgprint(lambda : f'New all checks length: {len(available_checks_set)}')
 
-    all_checks_list = list(all_checks_set)
-    randomizer.shuffle(all_checks_list)
+    available_checks_list = list(available_checks_set)
+    randomizer.shuffle(available_checks_list)
 
-    nixprint(f'length of all_checks_list: {len(all_checks_list)}', 10)
+    dbgprint(lambda : f'length of all_checks_list: {len(available_checks_list)}')
 
     # And start tearing it down
     checks_to_remove: list[str] = []
+    checks_to_keep: list[str] = []
     sum_checks = 0
     deleted_checks = 0
     reject_all = True
 
-    for check in pop_iter(all_checks_list):
+    for check in pop_iter(available_checks_list):
         reject: bool = False
 
         state = check.region.state if check.region else None
         if state:
             if max_count_per_state and total_checks[state] >= max_count_per_state:
                 reject = True
-                nixprint(f'Removing check: {check.check_type} - {check.name} (max checks reached for {state})', 10)
+                dbgprint(lambda : f'Removing check: {check} (max checks reached for {state})')
         else:
             if max_count_companies and total_checks[None] >= max_count_companies:
-                nixprint(f'Removing check: {check.check_type} - {check.name} (max companies reached)', 10)
+                dbgprint(lambda : f'Removing check: {check} (max companies reached)')
                 reject = True
 
         if (not reject) and chance_of_check < 1 and randomizer.random() > chance_of_check:
-            nixprint(f'Removing check: {check.check_type} - {check.name} (chance failed)', 10)
+            dbgprint(lambda : f'Removing check: {check} (chance failed)')
             reject = True
 
         if reject:
-            # nixprint(f'Removing check: {check.check_type} - {check.name}', 10)
-            checks_to_remove.append(f'{check.check_type} - {check.name}')
+            # dbgprint(lambda : f'Removing check: {check}')
+            checks_to_remove.append(f'{check}')
             deleted_checks += 1
-            if progression_count.mandatory >= sum_checks + len(all_checks_list):
-                nixprint(f'Min check count reached! Accepting all other checks.', 10)
+            if progression_count.mandatory >= sum_checks + len(available_checks_list):
+                dbgprint(lambda : f'Min check count reached! Accepting all other checks.')
                 reject_all = False
+                break
         else:
-            nixprint(f'Keeping check: {check.check_type} - {check.name}', 10)
+            dbgprint(lambda : f'Keeping check: {check}')
+            checks_to_keep.append(f'{check}')
             sum_checks += 1
             total_checks[state] += 1
             if check.count_early:
-                nixprint(f'  (added to early list)', 10)
+                dbgprint(lambda : f'  (added to early list)')
                 early_checks[state] += 1
             if max_check_count and sum_checks >= max_check_count:
-                nixprint(f'Max check count reached! Removing all other checks.', 10)
+                dbgprint(lambda : f'Max check count reached! Removing all other checks.')
                 break
 
     if reject_all:
-        for check in all_checks_list:
-            checks_to_remove.append(f'{check.check_type} - {check.name}')
+        for check in available_checks_list:
+            checks_to_remove.append(f'{check}')
     else:
-        for check in all_checks_list:
+        for check in available_checks_list:
+            checks_to_keep.append(f'{check}')
             sum_checks += 1
             total_checks[state] += 1
             if check.count_early:
                 early_checks[state] += 1
 
-    nixprint(f'sum_checks: {sum_checks}', 10)
-    nixprint(f'len(checks_to_remove): {checks_to_remove}', 10)
+    for state, state_set in potential_checks_dict.items():
+        for check in state_set:
+            if f'{check}' not in checks_to_keep and f'{check}' not in checks_to_remove:
+                checks_to_remove.append(f'{check}')
+
+    dbgprint(lambda : f'sum_checks: {sum_checks}')
+    dbgprint(lambda : f'checks_to_remove: {checks_to_remove}')
+
+    progression_to_remove = progression_count.total() - sum_checks
+    dbgprint(lambda : f'progression_to_remove: {progression_to_remove}')
+
+    if progression_to_remove > 0 and progression_count.levels > 0:
+        dbgprint(lambda : f'Removing {progression_count.levels} levels')
+        progression_to_remove -= progression_count.levels
+    if progression_to_remove > 0:
+        dbgprint(lambda : f'Still need to remove {progression_to_remove} progression items')
+        if progression_count.tokens > 0:
+            tokens_to_remove = min(progression_to_remove, progression_count.tokens)
+            dbgprint(lambda : f'Removing {tokens_to_remove} tokens')
+            tokens_to_keep = options.delivery_tokens_available.value - tokens_to_remove
+            factor = options.delivery_tokens_required.value / options.delivery_tokens_available.value
+            requirement_to_keep = max(1, floor(tokens_to_keep * factor))
+            dbgprint(lambda : f'New tokens requirement: {requirement_to_keep} req. / {tokens_to_keep} avail.')
+            options.delivery_tokens_available.value = tokens_to_keep
+            options.delivery_tokens_required.value = requirement_to_keep
+        elif progression_count.deliveries > 0:
+            deliveries_to_remove = min(progression_to_remove, progression_count.deliveries)
+            delivery_count_to_remove = deliveries_to_remove / progression_count.delivery_pieces
+            dbgprint(lambda : f'Removing {delivery_count_to_remove} deliveries')
+            delivery_count_to_keep = options.secret_deliveries_available.value - delivery_count_to_remove
+            factor = options.secret_deliveries_required.value / options.secret_deliveries_available.value
+            requirement_to_keep = max(1, floor(delivery_count_to_keep * factor))
+            dbgprint(lambda : f'New deliveries requirement: {requirement_to_keep} req. / {delivery_count_to_keep} avail.')
+            options.secret_deliveries_available.value = delivery_count_to_keep
+            options.secret_deliveries_required.value = requirement_to_keep
 
     return checks_to_remove

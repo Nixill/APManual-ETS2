@@ -6,7 +6,7 @@ from BaseClasses import MultiWorld, CollectionState, Item
 
 from .CsvData import dlc_connections, dlc_aliases_dict, dlc_states_dict, dlc_name_list, state_list, dlc_dict
 from .OptionDefs import QuickTravelTicketItem, StartingLocation
-from .Func import get_case_key_opt, get_case_opt, in_case, nixprint, snake_case, random_string, fullprint
+from .Func import get_case_key_opt, get_case_opt, in_case, dbgprint, snake_case, random_string, fullprint
 from ..Helpers import is_option_enabled, get_option_value
 
 starting_state = ''
@@ -28,33 +28,33 @@ def validate_options_early(world: World):
     global starting_state
     options = world.options
 
-    nixprint(f'Options before validation: {world.options}', 9)
+    dbgprint(lambda : f'Options before validation: {world.options}')
 
     options.dlcs_available.value = chosen_dlcs = get_enabled_dlcs_and_base_game(options.dlcs_available.value)
     available_states = get_available_states(chosen_dlcs)
     options.states_available.value = enabled_states = get_enabled_states(options.states_available.value, chosen_dlcs)
 
-    nixprint(f'DLCs available: {world.options.dlcs_available}', 9)
+    dbgprint(lambda : f'DLCs available: {world.options.dlcs_available}')
 
-    nixprint(f'Options after DLC and State validation: {world.options}', 9)
+    dbgprint(lambda : f'Options after DLC and State validation: {world.options}')
 
     # If enabled DLCs are not all connected and the Quick Travel Ticket is disabled, enable it.
     if not options.quick_travel_item and not are_dlcs_connected(chosen_dlcs):
         fullprint('Starting with Quick Travel Ticket.')
         options.quick_travel_item.value = QuickTravelTicketItem.option_start_with_item
 
-    nixprint(f'Options after Quick Travel Item validation: {world.options}', 9)
+    dbgprint(lambda : f'Options after Quick Travel Item validation: {world.options}')
 
     # Ensure required counts don't exceed available counts.
     if options.delivery_tokens_required > options.delivery_tokens_available:
         options.delivery_tokens_required.value = options.delivery_tokens_available.value
 
-    nixprint(f'Options after Delivery Token validation: {world.options}', 9)
+    dbgprint(lambda : f'Options after Delivery Token validation: {world.options}')
 
     if options.secret_deliveries_required > options.secret_deliveries_available:
         options.secret_deliveries_required.value = options.secret_deliveries_available.value
 
-    nixprint(f'Options after Secret Delivery validation: {world.options}', 9)
+    dbgprint(lambda : f'Options after Secret Delivery validation: {world.options}')
 
     # Validates the starting state, re-choosing if necessary.
     starting_location = options.starting_location.current_key
@@ -65,18 +65,18 @@ def validate_options_early(world: World):
         starting_state = world.random.choice([*available_states])
         options.starting_location.value = getattr(StartingLocation, f'option_{snake_case(starting_state)}')
 
-    nixprint(f'Options after Starting State Exists validation: {world.options}', 9)
+    dbgprint(lambda : f'Options after Starting State Exists validation: {world.options}')
 
     # Ensures that the starting state has checks that exist.
     options.states_available.value.add(starting_state)
 
-    nixprint(f'Options after Starting State Has Checks validation: {world.options}', 9)
+    dbgprint(lambda : f'Options after Starting State Has Checks validation: {world.options}')
 
     # Ensures that at least one level is enabled if the goal is player level checks.
     if options.goal.value == getattr(options.goal, 'option_Max Player Level Check Reached') and options.player_level_checks.value < 5:
         options.player_level_checks.value = 5
 
-    nixprint(f'Options after Min Player Level Check validation: {world.options}', 9)
+    dbgprint(lambda : f'Options after Min Player Level Check validation: {world.options}')
 
     # Ensures that at least one check type is enabled
     if not options.enable_citysanity and \
@@ -86,7 +86,7 @@ def validate_options_early(world: World):
         not options.player_level_checks:
             options.enable_citysanity.value = 1
 
-    nixprint(f'Options after All validation: {world.options}', 9)
+    dbgprint(lambda : f'Options after All validation: {world.options}')
 
 def are_dlcs_connected(dlcs: set[str]) -> bool:
     """
@@ -98,18 +98,26 @@ def are_dlcs_connected(dlcs: set[str]) -> bool:
     # unprocessed: set[str] = {unconnected.pop}
     processed: set[str] = set()
 
+    dbgprint(lambda : f'unconnected: {unconnected}')
+    dbgprint(lambda : f'unprocessed: {unprocessed}')
+
     while unconnected and unprocessed:
         this = unprocessed.pop()
+        dbgprint(lambda : f'next dlc: {this}')
         new_connections = set(dlc_connections[this]) & unconnected
+        dbgprint(lambda : f'new connections: {new_connections}')
         unconnected -= new_connections
+        dbgprint(lambda : f'now unconnected: {unconnected}')
         unprocessed |= new_connections
+        dbgprint(lambda : f'now unprocessed: {unprocessed}')
         processed.add(this)
 
+    dbgprint(lambda : f'unconnected at end: {unconnected}')
     return not unconnected
 
 def get_enabled_dlcs_and_base_game(dlcs_in: set[str]) -> set[str]:
     result = {"Base Game", *get_enabled_dlcs(dlcs_in)}
-    nixprint(f'Enabled DLCs: {result}', 8)
+    dbgprint(lambda : f'Enabled DLCs: {result}')
     return result
 
 def get_enabled_dlcs(dlcs_in: set[str]) -> set[str]:
@@ -118,11 +126,11 @@ def get_enabled_dlcs(dlcs_in: set[str]) -> set[str]:
     """
     if 'all' in {a.lower() for a in dlcs_in}:
         result = {dlc.name for dlc in dlc_dict.values() if dlc.is_main_map}
-        nixprint(f'ALL detected, returning {result}', 5)
+        dbgprint(lambda : f'ALL detected, returning {result}')
         return result
     if 'really_all' in {snake_case(a) for a in dlcs_in}:
         result = {*dlc_name_list}
-        nixprint(f'REALLY_ALL detected, returning {result}', 5)
+        dbgprint(lambda : f'REALLY_ALL detected, returning {result}')
         return result
     return [*parse_dlc_names(dlcs_in)]
     # dlc_aliases_dict[dlc_in.lower()] for dlc_in in dlcs_in
@@ -154,8 +162,8 @@ def get_available_states(dlcs: set[str]) -> set[str]:
         if dlc in dlcs or dlc == 'Base Game':
             states_out = states_out.union(states)
 
-    nixprint(f'DLCs: {dlcs}', 8)
-    nixprint(f'Available states: {states_out}', 8)
+    dbgprint(lambda : f'DLCs: {dlcs}')
+    dbgprint(lambda : f'Available states: {states_out}')
     return states_out
 
 def get_enabled_states(states: set[str], dlcs: set[str]) -> set[str]:
@@ -164,9 +172,9 @@ def get_enabled_states(states: set[str], dlcs: set[str]) -> set[str]:
     and parsing DLC names as well.
     """
     available_states = get_available_states(dlcs)
-    nixprint(f'States selected: {states}', 7)
+    dbgprint(lambda : f'States selected: {states}')
     if not states or in_case(states, 'all'):
-        # nixprint('No states specified in option. Returning all available, which was just printed above.')
+        # dbgprint(lambda : 'No states specified in option. Returning all available, which was just printed above.')
         return available_states
 
     states_output = set[str]()
@@ -178,5 +186,5 @@ def get_enabled_states(states: set[str], dlcs: set[str]) -> set[str]:
             states_output.update(states_by_dlc)
 
     result = states_output.intersection(available_states)
-    nixprint(f'Enabled states: {result}', 7)
+    dbgprint(lambda : f'Enabled states: {result}')
     return result

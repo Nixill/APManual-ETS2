@@ -1,29 +1,33 @@
+from inspect import stack
 from random import Random
-from typing import Iterable, Any, Optional, Sequence, TypeVar
+from typing import Callable, Iterable, Any, Optional, Sequence, TypeVar
 from unicodedata import normalize
 
-ENABLE_NIXPRINT = True
-# Disabled nixprint versions: 1, 2, 3, 4, 5, 6, 7, 8, 9
-# may still need 5 for now
-NIXPRINT_VERSIONS = [10]
+ENABLE_DBGPRINT = False
+DBGPRINT_FUNCTIONS = [
+    # 'implement_checks_reduction',
+    # 'perform_final_grants',
+    # 'start_with_item',
+    # 'are_dlcs_connected',
+]
+
+def dbgprint(msg: Callable[[], str]) -> None:
+    """
+    Prints a given message with function info if it's an allowlisted function.
+    """
+    if not ENABLE_DBGPRINT: return
+    stk = stack()
+    if len(stk) < 2: return
+    if stk[1].function in DBGPRINT_FUNCTIONS:
+        print(f'[Manual_EuroTruckSimulator2_Nixill / {stk[1].function} @ {stk[1].lineno}] {msg()}')
 
 T = TypeVar('T')
-
-def nixprint(msg: Optional[str] = None, version: int = 1) -> None:
-    """
-    Prints the message. It's an external method just for ease of turning off.
-    """
-    if ENABLE_NIXPRINT and version in NIXPRINT_VERSIONS:
-        if msg:
-            print(f'{msg}')
-        else:
-            print()
 
 def fullprint(msg: str):
     """
     Prints the message, prefixing it with "Euro Truck Simulator 2: "
     """
-    print(f'Euro Truck Simulator 2: {msg}')
+    print(f'[Manual_EuroTruckSimulator2_Nixill] {msg}')
 
 def get_case_key(input: dict[str, T], match: str) -> T:
     """

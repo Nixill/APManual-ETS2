@@ -2,7 +2,7 @@
 from typing import Any, Type
 from worlds.AutoWorld import World
 from Options import Option, FreeText, NumericOption, Toggle, DefaultOnToggle, Choice, TextChoice, Range, NamedRange, OptionGroup, PerGameCommonOptions, OptionSet
-from .Func import nixprint, snake_case
+from .Func import dbgprint, snake_case
 from .CsvData import state_list, dlc_name_list, truck_makes_list, company_list, photo_trophies_dict, viewpoints_dict, city_dict, dlc_aliases_dict
 
 start_args = {f'option_{snake_case(s)}': i for i, s in enumerate(state_list)} | {
@@ -173,11 +173,11 @@ class KeyItemChoice(Choice):
     option_find_item_early_with_hint = 4
     default = option_start_with_item = 5
 
-class _KeyItemChoiceWithDisable(KeyItemChoice):
+class KeyItemChoiceWithDisable(KeyItemChoice):
     rich_text_doc = True
     default = option_disabled = 0
 
-class EnablePhotosanity(_KeyItemChoiceWithDisable):
+class EnablePhotosanity(KeyItemChoiceWithDisable):
     """
     Whether or not photo trophies are checks. If so, the check is performed when the picture of the
     named monument is taken. The Camera item is required before you can take photos; it can be part
@@ -185,7 +185,7 @@ class EnablePhotosanity(_KeyItemChoiceWithDisable):
     """
     display_name = 'Enable Photosanity'
 
-class EnableViewpointsanity(_KeyItemChoiceWithDisable):
+class EnableViewpointsanity(KeyItemChoiceWithDisable):
     """
     Whether or not viewpoints are checks. If so, the check is performed when you've begun watching
     the viewpoint cutscene. The Television item is required before you can watch viewpoints; it can
@@ -323,7 +323,7 @@ class TrailerContractItem(KeyItemChoice):
     """
     display_name = 'Trailer Contract Item'
 
-class QuickTravelTicketItem(_KeyItemChoiceWithDisable):
+class QuickTravelTicketItem(KeyItemChoiceWithDisable):
     """
     A Quick Travel Ticket is required before quick traveling to any undiscovered city (through its
     DLC opening or through Convoy). Should it be part of the player's starting inventory or
@@ -481,6 +481,6 @@ def group_options(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[
         MaxChecksCount
     ]
 
-    # nixprint(groups)
+    # dbgprint(lambda : groups)
 
     return groups
